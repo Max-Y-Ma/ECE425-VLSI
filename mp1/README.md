@@ -4,7 +4,7 @@
 
 ## Standard Cells
 
-These deliverable are useful in MP2, and required in MP3. 
+These deliverable are useful in MP2, and required in MP3.
 
 Your design should be in a new virtuoso library: `ece425mp1_<netid>`. Say for example, `ece425mp1_zaizhou3`.
 
@@ -31,6 +31,9 @@ All gate should have length of 50nm. Assume NMOS is twice as conductive as PMOS.
 
 All your combinational cells need to be CMOS.
 
+For all input, no complementary of them should be used as input
+i.e. if you need complementaries, use inverters inside your cell.
+
 You are required to implement the following standard cells:
 
 | Name      | Description | Remarks |
@@ -38,8 +41,8 @@ You are required to implement the following standard cells:
 |`AND2`     | `Z = A & B`                       | |
 |`AOI21`    | `Z = ~((A & B) \| C)`             | |
 |`BUF`      | `Z = A`                           | two `INV` chained |
-|`DFF`      | d-flip-flop                       | 22 transistors |
-|`LATCH`    | d-latch                           | 12 transistors |
+|`DFF`      | d-flip-flop                       | See guide |
+|`LATCH`    | d-latch                           | See guide |
 |`INV`      | `Z = ~A`                          | |
 |`MUX2`     | `Z = (~S0 & A) \| (S0 & B)`       | |
 |`NAND2`    | `Z = ~(A & B)`                    | |
@@ -125,7 +128,7 @@ You should also include the drc and lvs report summary for each of your cells. T
 and `<ece425_folder>/lvs/<cell>.lvs.report`.
 
 Include the screenshots of your analog simulation in a folder named `sim`. The screenshot should be clean and include the axis.
-Include a txt file briefly explaining the observation. 
+Include a txt file briefly explaining the observation.
 
 Lastly, include your entire design library as a tar file. The design library is the `<ece425_folder>/ece425mp1_<netid>` folder.
 

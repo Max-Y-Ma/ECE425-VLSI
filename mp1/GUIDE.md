@@ -32,6 +32,15 @@ You can also see that the drain of the PMOS are merged. Since they are in parall
 we can choose either the source or the drain to be merged.
 We cannot merge both because the gate will be very hard to route.
 
+A good technique to draw compact cells with as many S/D merged is to try to trace all the (N-side)
+transistors with one line without lifting your pen. Here is a example:
+
+![merge](./docs/images/merge.png)
+
+Then you use other method to connect the reset of the connection.
+
+When there are multiple possible way to trace, try to find the better one.
+
 ## Transistor Sizing
 
 Recall that the resistance of a material is proportional to its width and inversely proportional to its length.
@@ -47,6 +56,25 @@ it could be the case that only one input is low, or both is low.
 The worst case here is that only one is low, thus we size both PMOS to be 180nm
 so either PMOS can drive like a 90nm NMOS.
 
+## Latch and D-flip-flop
+
+Here is the suggested schematic of a latch:
+
+![latch](./docs/images/latch.svg)
+
+Here is the suggested schematic of a DFF:
+
+![dff](./docs/images/dff.svg)
+
+These 2 schematic have adequate amount of input/output buffering (to reduce fanout and good drive strength).
+You are free to deviate from these schematics, as long as they still perform the same functionality.
+
+It is recommended to construct your DFF using two latches.
+
+For the transmission gate, make sure:
+- The input is at the sources of both transistors, the output is at the drain of both transistors
+- The input is of type `input` and the output is of type `tristate`
+
 ## Tips for Compact and Clean Design
 
 Most of the time poly should be vertical only.
@@ -60,14 +88,6 @@ Use M1 primarily vertically, and M2 primarily horizontally.
 Have `/class/ece425/FreePDK45/ncsu_basekit/techfile/calibre/calibreDRC.rul`
 opened on the side so you can check the rule while you draw.
 
-A good technique to draw compact cells with as many S/D merged is to try to trace all the (N-side)
-transistors with one line without lifting your pen. Here is a example:
-
-![merge](./docs/images/merge.png)
-
-Then you use other method to connect the reset of the connection.
-
-When there are multiple possible way to trace, try to find the better one.
 
 ## Tar?
 ```bash
