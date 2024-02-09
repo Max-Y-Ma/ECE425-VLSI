@@ -1,0 +1,24 @@
+// Library - ece425_mp0, Cell - inv, View - schematic
+// LAST TIME SAVED: Feb 23 17:00:21 2024
+// NETLIST TIME: Feb 24 11:01:02 2024
+`timescale 1ns / 1ns 
+
+module inv ( Z, A );
+
+output  Z;
+
+input  A;
+
+
+specify 
+    specparam CDS_LIBNAME  = "ece425_mp0";
+    specparam CDS_CELLNAME = "inv";
+    specparam CDS_VIEWNAME = "schematic";
+endspecify
+
+NMOS_VTL  M0 ( .D(Z), .B(), .G(A),
+     .S());
+PMOS_VTL  M1 ( .D(Z), .B(), .G(A),
+     .S());
+
+endmodule

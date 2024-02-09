@@ -1,0 +1,8 @@
+cellViewCounterTable = makeTable('cellViewCounterTableType nil)
+cellViewCounterTable['("basic" "vdd" "symbol" )] =  21
+cellViewCounterTable['("ece425_mp0" "inv" "schematic" )] =  238
+cellViewCounterTable['("NCSU_Devices_FreePDK45" "PMOS_VTL" "symbol" )] =  47
+cellViewCounterTable['("basic" "opin" "symbol" )] =  22
+cellViewCounterTable['("basic" "vss" "symbol" )] =  20
+cellViewCounterTable['("NCSU_Devices_FreePDK45" "NMOS_VTL" "symbol" )] =  47
+cellViewCounterTable['("basic" "ipin" "symbol" )] =  22

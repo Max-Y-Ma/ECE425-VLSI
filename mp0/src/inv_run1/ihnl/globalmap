@@ -1,0 +1,12 @@
+CADENCE IHNL11140
+$model
+PMOS_VTL PMOS_VTL
+NMOS_VTL NMOS_VTL
+ece425_mp0/inv/schematic inv
+$endmodel
+$net
+vss! cds_globals.vss_
+vdd! cds_globals.vdd_
+$endnet
+$param
+$endparam

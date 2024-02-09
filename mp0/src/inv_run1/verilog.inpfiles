@@ -1,0 +1,14 @@
+// Verilog HDL and netlist files of
+// "ece425_mp0 inv schematic"
+
+// Netlisted models
+
+// netlist file - ece425_mp0, inv, schematic.
+ihnl/cds0/netlist
+
+
+// End HDL models
+
+// globals file 
+hdlFilesDir/cds_globals.v
+
