@@ -10,15 +10,7 @@ module NMOS_VTL(
         wack = B;
     end
 
-    always_comb begin
-        if (G) begin
-            D = S;
-        end else if (~G) begin
-            D = 1'bz;
-        end else begin
-            D = 1'bx;
-        end
-    end
+    nmos (D, S, G);
 
 endmodule
 
@@ -34,14 +26,6 @@ module PMOS_VTL(
         wack = B;
     end
 
-    always_comb begin
-        if (G) begin
-            D = 1'bz;
-        end else if (~G) begin
-            D = S;
-        end else begin
-            D = 1'bx;
-        end
-    end
+    pmos (D, S, G);
 
 endmodule
