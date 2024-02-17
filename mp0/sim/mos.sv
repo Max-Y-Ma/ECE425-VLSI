@@ -1,8 +1,8 @@
 module NMOS_VTL(
-    output  logic   D,
-    input   logic   B,
-    input   logic   G,
-    input   logic   S
+    output  wire   D,
+    input   wire   B,
+    input   wire   G,
+    input   wire   S
 );
 
     always_comb begin
@@ -11,23 +11,15 @@ module NMOS_VTL(
         wack = S;
     end
 
-    always_comb begin
-        if (G) begin
-            D = 1'b0;
-        end else if (~G) begin
-            D = 1'bz;
-        end else begin
-            D = 1'bx;
-        end
-    end
+    nmos (D, S, G);
 
 endmodule
 
 module PMOS_VTL(
-    output  logic   D,
-    input   logic   B,
-    input   logic   G,
-    input   logic   S
+    output  wire   D,
+    input   wire   B,
+    input   wire   G,
+    input   wire   S
 );
 
     always_comb begin
@@ -36,14 +28,6 @@ module PMOS_VTL(
         wack = S;
     end
 
-    always_comb begin
-        if (G) begin
-            D = 1'bz;
-        end else if (~G) begin
-            D = 1'b1;
-        end else begin
-            D = 1'bx;
-        end
-    end
+    pmos (D, S, G);
 
 endmodule
