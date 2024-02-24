@@ -1,0 +1,11 @@
+
+
+
+Configuration checks failed on this workstation (linux-ssh-08.ews.illinois.edu), status is: FAIL
+
+Your system is Linux, but apparently not a supported distribution.
+Only RHEL, SLES and Ubuntu are supported by CheckSysConf at this time.
+
+
+Exiting checkSysConf ... Good-bye
+Output is saved as /tmp/checkSysConf.linux-ssh-08.ews.illinois.edu-2024.02.24.10:56.98302.log

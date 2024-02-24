@@ -1,0 +1,16 @@
+#
+# Edit Lock-Stake file. CAUTION: Please do not change.
+#
+# Information about current Edit Lock Owner.
+#
+LockStakeVersion               1.1
+LoginName                      maxma2
+HostName                       linux-ssh-08.ews.illinois.edu
+ProcessIdentifier              71207
+ProcessCreationTime_UTC        1708792140
+ProcessCreationTime_Readable   Sat Feb 24 10:29:00 2024 CST
+AppIdentifier                  OA File System Design Manager
+OSType                         unix
+ReasonForPlacingEditLock       OpenAccess edit lock
+FilePathUsedToEditLock         /home/maxma2/Documents/Coursework/ece425/mp0/src/ece425_mp0/buf/schematic/sch.oa.cdslck
+TimeEditLocked                 Sat Feb 24 10:29:54 2024 CST
