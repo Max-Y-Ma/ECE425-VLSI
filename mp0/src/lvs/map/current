@@ -1,0 +1,17 @@
+( ( nil
+  version "2.1"
+  mapType "incremental"
+  blockName "buf"
+  repList "auCdl schematic netlist"
+  stopList "auCdl"
+  globalList "vdd! vss!"
+  hierDelim "."
+  netlistDir "/home/maxma2/Documents/Coursework/ece425/mp0/src/lvs"
+ )
+( model
+( "ece425_mp0/inv/schematic" "inv" )
+( "ece425_mp0/buf/schematic" "buf" )
+ )
+( "inv" "ihnl/cds0/map" )
+( "buf" "ihnl/cds1/map" )
+ )

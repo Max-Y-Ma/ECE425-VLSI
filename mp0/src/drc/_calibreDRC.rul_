@@ -1,0 +1,24 @@
+//
+//  Rule file generated on Sat Feb 24 15:07:51 2024
+//  by Calibre Interactive v2022.4_16.8    Mon Oct 3 17:12:31 PDT 2022
+//
+//      *** PLEASE DO NOT MODIFY THIS FILE ***
+//
+//
+
+LAYOUT PATH "inv.calibre.db"
+LAYOUT SYSTEM GDSII
+LAYOUT PRIMARY "inv"
+
+DRC RESULTS DATABASE "inv.drc.results" ASCII
+DRC CELL NAME YES CELL SPACE XFORM
+
+DRC SUMMARY REPORT "inv.drc.summary" REPLACE HIER
+
+DRC MAXIMUM RESULTS 1000
+
+DRC MAXIMUM VERTEX 4096
+
+DRC ICSTATION YES
+
+INCLUDE "/class/ece425/FreePDK45/ncsu_basekit/techfile/calibre/calibreDRC.rul"

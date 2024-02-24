@@ -45,3 +45,8 @@ srcDeselectAll -win $_nTrace1
 debReload
 srcDeselectAll -win $_nTrace1
 debReload
+srcDeselectAll -win $_nTrace1
+debReload
+srcDeselectAll -win $_nTrace1
+debReload
+debExit

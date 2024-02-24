@@ -16,9 +16,9 @@ specify
     specparam CDS_VIEWNAME = "schematic";
 endspecify
 
-NMOS_VTL  M0 ( .D(Z), .B(), .G(A),
-     .S());
-PMOS_VTL  M1 ( .D(Z), .B(), .G(A),
-     .S());
+NMOS_VTL  M0 ( .D(Z), .B(1'b0), .G(A),
+     .S(1'b0));
+PMOS_VTL  M1 ( .D(Z), .B(1'b1), .G(A),
+     .S(1'b1));
 
 endmodule

@@ -1,0 +1,11 @@
+CADENCE IHNL11140
+$model
+ece425_mp0/buf/schematic buf
+ece425_mp0/inv/schematic inv
+$endmodel
+$net
+vss! vss!
+vdd! vdd!
+$endnet
+$param
+$endparam

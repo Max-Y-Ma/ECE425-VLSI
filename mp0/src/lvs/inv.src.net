@@ -1,0 +1,40 @@
+************************************************************************
+* auCdl Netlist:
+* 
+* Library Name:  ece425_mp0
+* Top Cell Name: inv
+* View Name:     schematic
+* Netlisted on:  Feb 24 16:38:04 2024
+************************************************************************
+
+*.EQUATION
+*.SCALE METER
+*.MEGA
+.PARAM
+
+*.GLOBAL vdd!
++        vss!
++        vdd:P
++        VDD:P
++        vss:G
++        VSS:G
+
+*.PIN vdd!
+*+    vss!
+*+    vdd
+*+    VDD
+*+    vss
+*+    VSS
+
+************************************************************************
+* Library Name: ece425_mp0
+* Cell Name:    inv
+* View Name:    schematic
+************************************************************************
+
+.SUBCKT inv A Z
+*.PININFO A:I Z:O
+MM0 Z A vss! vss! NMOS_VTL W=90n L=50n m=1
+MM1 Z A vdd! vdd! PMOS_VTL W=180.0n L=50n m=1
+.ENDS
+
