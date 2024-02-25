@@ -3,8 +3,8 @@
 	<active>Active Setup</active>
 	<history>History
 		<historyentry assemblerOrExplorer="explorer" roOrView="view" runningOrFinished="finished">ExplorerRun.0
-			<timestamp>Feb 24 18:49:02 2024</timestamp>
-			<uuid>{4a5f9ce6-a95f-4a77-b64b-278ac7e785ca}</uuid>
+			<timestamp>Feb 25 16:43:03 2024</timestamp>
+			<uuid>{6593c662-d964-4df6-891d-1722644617e6}</uuid>
 			<locked>0</locked>
 			<mode>Single Run, Sweeps and Corners</mode>
 			<resultsname>/home/maxma2/Documents/Coursework/ece425/mp1/lib/stdcell_425Lib/dlatch/maestro/results/maestro/$AXL_HISTORY_NAME.rdb</resultsname>
