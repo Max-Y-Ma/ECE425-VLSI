@@ -1,0 +1,74 @@
+************************************************************************
+* auCdl Netlist:
+* 
+* Library Name:  stdcell_425Lib
+* Top Cell Name: dff
+* View Name:     schematic
+* Netlisted on:  Feb 26 14:05:56 2024
+************************************************************************
+
+*.EQUATION
+*.SCALE METER
+*.MEGA
+.PARAM
+
+*.GLOBAL vss!
++        vdd!
++        vdd:P
++        VDD:P
++        vss:G
++        VSS:G
+
+*.PIN vss!
+*+    vdd!
+*+    vdd
+*+    VDD
+*+    vss
+*+    VSS
+
+************************************************************************
+* Library Name: stdcell_425Lib
+* Cell Name:    inv
+* View Name:    schematic
+************************************************************************
+
+.SUBCKT inv A Z
+*.PININFO A:I Z:O
+MM0 Z A vdd! vdd! PMOS_VTL W=180.0n L=50n m=1
+MM1 Z A vss! vss! NMOS_VTL W=90n L=50n m=1
+.ENDS
+
+************************************************************************
+* Library Name: stdcell_425Lib
+* Cell Name:    transmission
+* View Name:    schematic
+************************************************************************
+
+.SUBCKT transmission A Z g gb
+*.PININFO g:I gb:I A:B Z:B
+MM1 A g Z vss! NMOS_VTL W=90n L=50n m=1
+MM0 A gb Z vdd! PMOS_VTL W=180.0n L=50n m=1
+.ENDS
+
+************************************************************************
+* Library Name: stdcell_425Lib
+* Cell Name:    dff
+* View Name:    schematic
+************************************************************************
+
+.SUBCKT dff CLK D Q Qb
+*.PININFO CLK:I D:I Q:O Qb:O
+XI21 Qb Q / inv
+XI13 Qb net1 / inv
+XI12 net8 Qb / inv
+XI10 clkb clk1 / inv
+XI9 CLK clkb / inv
+XI3 net4 net3 / inv
+XI2 net2 net4 / inv
+XI0 D net5 / inv
+XI14 net1 net8 clkb clk1 / transmission
+XI11 net4 net8 clk1 clkb / transmission
+XI4 net3 net2 clk1 clkb / transmission
+XI1 net5 net2 clkb clk1 / transmission
+.ENDS
+

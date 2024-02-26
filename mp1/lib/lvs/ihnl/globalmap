@@ -1,0 +1,12 @@
+CADENCE IHNL11140
+$model
+stdcell_425Lib/inv/schematic inv
+stdcell_425Lib/dff/schematic dff
+stdcell_425Lib/transmission/schematic transmission
+$endmodel
+$net
+vss! vss!
+vdd! vdd!
+$endnet
+$param
+$endparam

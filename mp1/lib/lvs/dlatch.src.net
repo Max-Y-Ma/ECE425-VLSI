@@ -1,0 +1,69 @@
+************************************************************************
+* auCdl Netlist:
+* 
+* Library Name:  stdcell_425Lib
+* Top Cell Name: dlatch
+* View Name:     schematic
+* Netlisted on:  Feb 26 11:39:23 2024
+************************************************************************
+
+*.EQUATION
+*.SCALE METER
+*.MEGA
+.PARAM
+
+*.GLOBAL vdd!
++        vss!
++        vdd:P
++        VDD:P
++        vss:G
++        VSS:G
+
+*.PIN vdd!
+*+    vss!
+*+    vdd
+*+    VDD
+*+    vss
+*+    VSS
+
+************************************************************************
+* Library Name: stdcell_425Lib
+* Cell Name:    inv
+* View Name:    schematic
+************************************************************************
+
+.SUBCKT inv A Z
+*.PININFO A:I Z:O
+MM0 Z A vdd! vdd! PMOS_VTL W=180.0n L=50n m=1
+MM1 Z A vss! vss! NMOS_VTL W=90n L=50n m=1
+.ENDS
+
+************************************************************************
+* Library Name: stdcell_425Lib
+* Cell Name:    transmission
+* View Name:    schematic
+************************************************************************
+
+.SUBCKT transmission A Z g gb
+*.PININFO g:I gb:I A:B Z:B
+MM1 A g Z vss! NMOS_VTL W=90n L=50n m=1
+MM0 A gb Z vdd! PMOS_VTL W=180.0n L=50n m=1
+.ENDS
+
+************************************************************************
+* Library Name: stdcell_425Lib
+* Cell Name:    dlatch
+* View Name:    schematic
+************************************************************************
+
+.SUBCKT dlatch D EN Q Qb
+*.PININFO D:I EN:I Q:O Qb:O
+XI7 net3 Q / inv
+XI8 Q Qb / inv
+XI10 ENB1 EN1 / inv
+XI5 EN ENB1 / inv
+XI3 D net2 / inv
+XI9 Qb net3 ENB1 EN1 / transmission
+XI4 net2 net3 EN1 ENB1 / transmission
+.ENDS
+

@@ -1,0 +1,19 @@
+( ( nil
+  version "2.1"
+  mapType "incremental"
+  blockName "dff"
+  repList "auCdl schematic netlist"
+  stopList "auCdl"
+  globalList "vss! vdd!"
+  hierDelim "."
+  netlistDir "/home/maxma2/Documents/Coursework/ece425/mp1/lib/lvs"
+ )
+( model
+( "stdcell_425Lib/inv/schematic" "inv" )
+( "stdcell_425Lib/transmission/schematic" "transmission" )
+( "stdcell_425Lib/dff/schematic" "dff" )
+ )
+( "dff" "ihnl/cds2/map" )
+( "inv" "ihnl/cds0/map" )
+( "transmission" "ihnl/cds1/map" )
+ )

@@ -1,0 +1,28 @@
+//
+//  Rule file generated on Mon Feb 26 14:05:56 2024
+//  by Calibre Interactive v2022.4_16.8    Mon Oct 3 17:12:31 PDT 2022
+//
+//      *** PLEASE DO NOT MODIFY THIS FILE ***
+//
+//
+
+LAYOUT PATH "dff.calibre.db"
+LAYOUT SYSTEM GDSII
+LAYOUT PRIMARY "dff"
+
+SOURCE PATH "dff.src.net"
+SOURCE SYSTEM SPICE
+SOURCE PRIMARY "dff"
+
+MASK SVDB DIRECTORY "svdb" QUERY
+
+LVS REPORT "dff.lvs.report"
+
+LVS EXECUTE ERC YES
+
+ERC RESULTS DATABASE "dff.erc.results"
+ERC CELL NAME YES CELL SPACE XFORM
+
+DRC ICSTATION YES
+
+INCLUDE "/class/ece425/FreePDK45/ncsu_basekit/techfile/calibre/calibreLVS.rul"
