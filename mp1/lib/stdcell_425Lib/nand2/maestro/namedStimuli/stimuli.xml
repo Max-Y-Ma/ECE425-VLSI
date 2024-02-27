@@ -54,7 +54,7 @@
     </namedstimuli>
     <namedstimuli>
         <stimuliname>a</stimuliname>
-        <timeStamp>25/02/2024;1:15:20:PM</timeStamp>
+        <timeStamp>27/02/2024;10:47:35:AM</timeStamp>
         <simStopTime>1n</simStopTime>
         <isourceResistorValue>1k</isourceResistorValue>
         <libname></libname>
@@ -66,7 +66,7 @@
                 <cdfname>data</cdfname>
                 <prompt>Pattern Parameter data</prompt>
                 <datatype>string</datatype>
-                <value>0011</value>
+                <value>010010111</value>
                 <defvalue></defvalue>
             </parameter>
             <parameter>
@@ -122,14 +122,14 @@
                 <cdfname>tr</cdfname>
                 <prompt>Rise time</prompt>
                 <datatype>string</datatype>
-                <value>10p</value>
+                <value>5p</value>
                 <defvalue></defvalue>
             </parameter>
             <parameter>
                 <cdfname>tf</cdfname>
                 <prompt>Fall time</prompt>
                 <datatype>string</datatype>
-                <value>10p</value>
+                <value>5p</value>
                 <defvalue></defvalue>
             </parameter>
             <parameter>
@@ -143,7 +143,7 @@
     </namedstimuli>
     <namedstimuli>
         <stimuliname>b</stimuliname>
-        <timeStamp>25/02/2024;1:15:26:PM</timeStamp>
+        <timeStamp>27/02/2024;10:47:50:AM</timeStamp>
         <simStopTime>1n</simStopTime>
         <isourceResistorValue>1k</isourceResistorValue>
         <libname></libname>
@@ -155,7 +155,7 @@
                 <cdfname>data</cdfname>
                 <prompt>Pattern Parameter data</prompt>
                 <datatype>string</datatype>
-                <value>0101</value>
+                <value>010111010</value>
                 <defvalue></defvalue>
             </parameter>
             <parameter>
@@ -211,14 +211,14 @@
                 <cdfname>tr</cdfname>
                 <prompt>Rise time</prompt>
                 <datatype>string</datatype>
-                <value>10p</value>
+                <value>5p</value>
                 <defvalue></defvalue>
             </parameter>
             <parameter>
                 <cdfname>tf</cdfname>
                 <prompt>Fall time</prompt>
                 <datatype>string</datatype>
-                <value>10p</value>
+                <value>5p</value>
                 <defvalue></defvalue>
             </parameter>
             <parameter>

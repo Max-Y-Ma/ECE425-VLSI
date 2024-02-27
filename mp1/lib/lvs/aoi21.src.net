@@ -1,0 +1,44 @@
+************************************************************************
+* auCdl Netlist:
+* 
+* Library Name:  stdcell_425Lib
+* Top Cell Name: aoi21
+* View Name:     schematic
+* Netlisted on:  Feb 27 09:53:16 2024
+************************************************************************
+
+*.EQUATION
+*.SCALE METER
+*.MEGA
+.PARAM
+
+*.GLOBAL vss!
++        vdd!
++        vdd:P
++        VDD:P
++        vss:G
++        VSS:G
+
+*.PIN vss!
+*+    vdd!
+*+    vdd
+*+    VDD
+*+    vss
+*+    VSS
+
+************************************************************************
+* Library Name: stdcell_425Lib
+* Cell Name:    aoi21
+* View Name:    schematic
+************************************************************************
+
+.SUBCKT aoi21 A B C Z
+*.PININFO A:I B:I C:I Z:O
+MM2 Z C net1 vdd! PMOS_VTL W=360.0n L=50n m=1
+MM1 net1 B vdd! vdd! PMOS_VTL W=360.0n L=50n m=1
+MM0 net1 A vdd! vdd! PMOS_VTL W=360.0n L=50n m=1
+MM5 net17 B vss! vss! NMOS_VTL W=180.0n L=50n m=1
+MM4 Z A net17 vss! NMOS_VTL W=180.0n L=50n m=1
+MM3 Z C vss! vss! NMOS_VTL W=90n L=50n m=1
+.ENDS
+

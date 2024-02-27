@@ -1,0 +1,60 @@
+************************************************************************
+* auCdl Netlist:
+* 
+* Library Name:  stdcell_425Lib
+* Top Cell Name: mux2
+* View Name:     schematic
+* Netlisted on:  Feb 27 10:35:09 2024
+************************************************************************
+
+*.EQUATION
+*.SCALE METER
+*.MEGA
+.PARAM
+
+*.GLOBAL vss!
++        vdd!
++        vdd:P
++        VDD:P
++        vss:G
++        VSS:G
+
+*.PIN vss!
+*+    vdd!
+*+    vdd
+*+    VDD
+*+    vss
+*+    VSS
+
+************************************************************************
+* Library Name: stdcell_425Lib
+* Cell Name:    inv
+* View Name:    schematic
+************************************************************************
+
+.SUBCKT inv A Z
+*.PININFO A:I Z:O
+MM0 Z A vdd! vdd! PMOS_VTL W=180.0n L=50n m=1
+MM1 Z A vss! vss! NMOS_VTL W=90n L=50n m=1
+.ENDS
+
+************************************************************************
+* Library Name: stdcell_425Lib
+* Cell Name:    mux2
+* View Name:    schematic
+************************************************************************
+
+.SUBCKT mux2 A B S Z
+*.PININFO A:I B:I S:I Z:O
+XI4 net8 Z / inv
+XI0 S Sb / inv
+MM3 net9 S vss! vss! NMOS_VTL W=180.0n L=50n m=1
+MM2 net8 B net9 vss! NMOS_VTL W=180.0n L=50n m=1
+MM1 net8 A net4 vss! NMOS_VTL W=180.0n L=50n m=1
+MM0 net4 Sb vss! vss! NMOS_VTL W=180.0n L=50n m=1
+MM7 net8 S net20 vdd! PMOS_VTL W=360.0n L=50n m=1
+MM6 net8 B net20 vdd! PMOS_VTL W=360.0n L=50n m=1
+MM5 net20 Sb vdd! vdd! PMOS_VTL W=360.0n L=50n m=1
+MM4 net20 A vdd! vdd! PMOS_VTL W=360.0n L=50n m=1
+.ENDS
+

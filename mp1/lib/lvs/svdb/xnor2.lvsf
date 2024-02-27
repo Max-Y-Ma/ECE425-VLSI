@@ -11,4 +11,4 @@ lvs_GroundName GROUND
 lvs_LvsOutFile LVS_REPORT xnor2.lvs.report
 lvs_LvsOutFile SOURCE_NETLIST xnor2.src.net
 lvs_LvsOutFile RULES_FILE _calibreLVS.rul_
-lvs_LvsRunTimes 1709008956 1709008956
+lvs_LvsRunTimes 1709046784 1709046785
