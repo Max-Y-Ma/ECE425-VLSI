@@ -1,0 +1,66 @@
+************************************************************************
+* auCdl Netlist:
+* 
+* Library Name:  stdcell_425Lib
+* Top Cell Name: and2
+* View Name:     schematic
+* Netlisted on:  Feb 26 17:42:50 2024
+************************************************************************
+
+*.EQUATION
+*.SCALE METER
+*.MEGA
+.PARAM
+
+*.GLOBAL vdd!
++        vss!
++        vdd:P
++        VDD:P
++        vss:G
++        VSS:G
+
+*.PIN vdd!
+*+    vss!
+*+    vdd
+*+    VDD
+*+    vss
+*+    VSS
+
+************************************************************************
+* Library Name: stdcell_425Lib
+* Cell Name:    nand2
+* View Name:    schematic
+************************************************************************
+
+.SUBCKT nand2 A B Z
+*.PININFO A:I B:I Z:O
+MM1 net8 A vss! vss! NMOS_VTL W=180.0n L=50n m=1
+MM0 Z B net8 vss! NMOS_VTL W=180.0n L=50n m=1
+MM3 Z B vdd! vdd! PMOS_VTL W=180.0n L=50n m=1
+MM2 Z A vdd! vdd! PMOS_VTL W=180.0n L=50n m=1
+.ENDS
+
+************************************************************************
+* Library Name: stdcell_425Lib
+* Cell Name:    inv
+* View Name:    schematic
+************************************************************************
+
+.SUBCKT inv A Z
+*.PININFO A:I Z:O
+MM0 Z A vdd! vdd! PMOS_VTL W=180.0n L=50n m=1
+MM1 Z A vss! vss! NMOS_VTL W=90n L=50n m=1
+.ENDS
+
+************************************************************************
+* Library Name: stdcell_425Lib
+* Cell Name:    and2
+* View Name:    schematic
+************************************************************************
+
+.SUBCKT and2 A B Z
+*.PININFO A:I B:I Z:O
+XI0 A B net3 / nand2
+XI1 net3 Z / inv
+.ENDS
+

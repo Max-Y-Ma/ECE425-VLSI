@@ -1,0 +1,78 @@
+********************************************************************************
+Product   : Virtuoso(R) XStream Out
+Program   : @(#)$CDS: strmout version ICADVM20.1-64b 05/03/2023 09:29 (cpgsrv12) $
+          : sub-version  ICADVM20.1-64b.500.32 
+Started at: 26-Feb-2024  16:46:58
+User Name : maxma2
+Host Name : eceb-2022-40.ews.illinois.edu
+Directory : /home/maxma2/Documents/Coursework/ece425/mp1/lib
+CADENCE Design Systems, Inc.
+********************************************************************************
+Info: Cellview Rev Num:99,  Tech Rev Num:59
+
+
+                       Individual Cell Statistics - Basic Objects
+---------------------------------------------------------------------------------------------------------------------------------------
+Library/Cell/View               Instance Array   Polygon  Rect   Path   PathSeg   Text   TextDisplay   Line   Dot   Arc   Donut   Ellipse 
+---------------------------------------------------------------------------------------------------------------------------------------
+stdcell_425Lib/inv/layout       0        0       0        17     4      0         4      0             0      0     0     0       0       
+NCSU_TechLib_FreePDK45/NTAP/layout                              0        0       0        5      0      0         0      0             0      0     0     0       0       
+NCSU_TechLib_FreePDK45/M1_POLY/layout                           0        0       0        3      0      0         0      0             0      0     0     0       0       
+NCSU_TechLib_FreePDK45/PTAP/layout                              0        0       0        5      0      0         0      0             0      0     0     0       0       
+---------------------------------------------------------------------------------------------------------------------------------------
+
+                       Individual Cell Statistics - Advanced Objects
+--------------------------------------------------------------------------------------------------------------------------------------------
+Library/Cell/View               PRBdy    OtherBdy   AreaBlkg   LayerBlkg  AreaHalo   Row   Marker   Stitch   CustVia   StdVia    CdsGenVia
+--------------------------------------------------------------------------------------------------------------------------------------------
+stdcell_425Lib/inv/layout       0        0          0          0          0          0     0        0        0         3         0        
+NCSU_TechLib_FreePDK45/NTAP/layout                              0        0          0          0          0          0     0        0        0         0         0        
+NCSU_TechLib_FreePDK45/M1_POLY/layout                           0        0          0          0          0          0     0        0        0         0         0        
+NCSU_TechLib_FreePDK45/PTAP/layout                              0        0          0          0          0          0     0        0        0         0         0        
+---------------------------------------------------------------------------------------------------------------------------------------
+
+                       Statistics of Layers 
+---------------------------------------------------------------------------------------------------------------------------------------
+Cadence         Cadence         Stream  Stream   
+Layer           Purpose         Layer   Datatype  Polygon  Rect     Path     Text     TextDisplay   Line Dot Arc Donut Ellipse Pathseg
+---------------------------------------------------------------------------------------------------------------------------------------
+metal1          drawing         11      0         0        5        3        4        0             0    0   0   0     0      0      
+nimplant        drawing         4       0         0        2        0        0        0             0    0   0   0     0      0      
+nwell           drawing         3       0         0        3        0        0        0             0    0   0   0     0      0      
+contact         drawing         10      0         0        7        0        0        0             0    0   0   0     0      0      
+poly            drawing         9       0         0        2        1        0        0             0    0   0   0     0      0      
+pwell           drawing         2       0         0        3        0        0        0             0    0   0   0     0      0      
+pimplant        drawing         5       0         0        2        0        0        0             0    0   0   0     0      0      
+background      drawing         254     0         0        2        0        0        0             0    0   0   0     0      0      
+active          drawing         1       0         0        4        0        0        0             0    0   0   0     0      0      
+---------------------------------------------------------------------------------------------------------------------------------------
+
+Summary of Objects Translated:
+	Scalar Instances:		0
+	Array Instances:		0
+	Polygons:			0
+	Paths:				4
+	Rectangles:			30
+	Lines:				0
+	Arcs:				0
+	Donuts:				0
+	Dots:				0
+	Ellipses:			0
+	Boundaries:			0
+	Area Blockages:			0
+	Layer Blockages:		0
+	Area Halos:			0
+	Markers:			0
+	Rows:				0
+	Stitches:			0
+	Standard Vias:			3
+	Custom Vias:			0
+	CdsGen Vias:			0
+	Pathsegs:			0
+	Text:				4
+	TextDisplay:		0
+	Cells:				4
+Design Libraries: 
+
+DEFINE NCSU_TechLib_FreePDK45	/class/ece425/FreePDK45/ncsu_basekit/lib/NCSU_TechLib_FreePDK45
+DEFINE stdcell_425Lib	/home/maxma2/Documents/Coursework/ece425/mp1/lib/stdcell_425Lib

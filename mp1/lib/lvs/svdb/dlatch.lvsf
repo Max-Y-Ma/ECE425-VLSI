@@ -11,4 +11,4 @@ lvs_GroundName GROUND
 lvs_LvsOutFile LVS_REPORT dlatch.lvs.report
 lvs_LvsOutFile SOURCE_NETLIST dlatch.src.net
 lvs_LvsOutFile RULES_FILE _calibreLVS.rul_
-lvs_LvsRunTimes 1708969166 1708969166
+lvs_LvsRunTimes 1708987565 1708987565

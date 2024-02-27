@@ -16,7 +16,7 @@ LAYOUT NAME:              dff.sp ('dff')
 SOURCE NAME:              dff.src.net ('dff')
 RULE FILE:                _calibreLVS.rul_
 RULE FILE TITLE:          LVS Rule File for FreePDK45
-CREATION TIME:            Mon Feb 26 14:05:59 2024
+CREATION TIME:            Mon Feb 26 16:43:49 2024
 CURRENT DIRECTORY:        /home/maxma2/Documents/Coursework/ece425/mp1/lib/lvs
 USER NAME:                maxma2
 CALIBRE VERSION:          v2022.4_16.8    Mon Oct 3 17:12:27 PDT 2022

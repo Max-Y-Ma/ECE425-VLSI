@@ -1,8 +1,7 @@
 CADENCE IHNL11140
 $model
 stdcell_425Lib/inv/schematic inv
-stdcell_425Lib/dff/schematic dff
-stdcell_425Lib/transmission/schematic transmission
+stdcell_425Lib/xnor2/schematic xnor2
 $endmodel
 $net
 vss! vss!

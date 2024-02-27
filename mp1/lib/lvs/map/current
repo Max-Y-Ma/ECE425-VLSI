@@ -1,7 +1,7 @@
 ( ( nil
   version "2.1"
   mapType "incremental"
-  blockName "dff"
+  blockName "xnor2"
   repList "auCdl schematic netlist"
   stopList "auCdl"
   globalList "vss! vdd!"
@@ -10,10 +10,8 @@
  )
 ( model
 ( "stdcell_425Lib/inv/schematic" "inv" )
-( "stdcell_425Lib/transmission/schematic" "transmission" )
-( "stdcell_425Lib/dff/schematic" "dff" )
+( "stdcell_425Lib/xnor2/schematic" "xnor2" )
  )
-( "dff" "ihnl/cds2/map" )
 ( "inv" "ihnl/cds0/map" )
-( "transmission" "ihnl/cds1/map" )
+( "xnor2" "ihnl/cds1/map" )
  )
