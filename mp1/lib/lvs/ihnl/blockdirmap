@@ -1,4 +1,3 @@
-CADENCE IHNL11142
+CADENCE IHNL11141
 
-stdcell_425Lib inv schematic cds0
-stdcell_425Lib mux2 schematic cds1
+stdcell_425Lib xnor2 schematic cds0

@@ -16,7 +16,7 @@ LAYOUT NAME:              xnor2.sp ('xnor2')
 SOURCE NAME:              xnor2.src.net ('xnor2')
 RULE FILE:                _calibreLVS.rul_
 RULE FILE TITLE:          LVS Rule File for FreePDK45
-CREATION TIME:            Tue Feb 27 09:13:05 2024
+CREATION TIME:            Wed Feb 28 10:01:50 2024
 CURRENT DIRECTORY:        /home/maxma2/Documents/Coursework/ece425/mp1/lib/lvs
 USER NAME:                maxma2
 CALIBRE VERSION:          v2022.4_16.8    Mon Oct 3 17:12:27 PDT 2022
@@ -180,12 +180,12 @@ INITIAL NUMBERS OF OBJECTS
                 ------    ------         --------------
  Ports:              5         7    *
 
- Nets:              10        12    *
+ Nets:               9        11    *
 
- Instances:          6         6         MN (4 pins)
-                     6         6         MP (4 pins)
+ Instances:          5         5         MN (4 pins)
+                     5         5         MP (4 pins)
                 ------    ------
- Total Inst:        12        12
+ Total Inst:        10        10
 
 
 NUMBERS OF OBJECTS AFTER TRANSFORMATION
@@ -195,13 +195,14 @@ NUMBERS OF OBJECTS AFTER TRANSFORMATION
                 ------    ------         --------------
  Ports:              5         5
 
- Nets:               7         7
+ Nets:               6         6
 
- Instances:          1         1         SPMP_2_2 (6 pins)
-                     2         2         _invv (4 pins)
-                     2         2         _smn2v (4 pins)
+ Instances:          1         1         MP (4 pins)
+                     1         1         SPMN_2_1 (5 pins)
+                     1         1         _nand2v (5 pins)
+                     1         1         _smp2v (4 pins)
                 ------    ------
- Total Inst:         5         5
+ Total Inst:         4         4
 
 
        * = Number of objects in layout different from number in source.
@@ -218,13 +219,14 @@ NUMBERS OF OBJECTS AFTER TRANSFORMATION
                   -------    -------    ---------    ---------    ---------
    Ports:               5          5            0            0
 
-   Nets:                7          7            0            0
+   Nets:                6          6            0            0
 
-   Instances:           1          1            0            0    SPMP_2_2
-                        2          2            0            0    _invv
-                        2          2            0            0    _smn2v
+   Instances:           1          1            0            0    MP(PMOS_VTL)
+                        1          1            0            0    SPMN_2_1
+                        1          1            0            0    _nand2v
+                        1          1            0            0    _smp2v
                   -------    -------    ---------    ---------
-   Total Inst:          5          5            0            0
+   Total Inst:          4          4            0            0
 
 
 o Statistics:
@@ -234,7 +236,7 @@ o Statistics:
 
 o Initial Correspondence Points:
 
-   Ports:        A B VDD! Z VSS!
+   Ports:        A B Z VSS! VDD!
 
 
 **************************************************************************************************************

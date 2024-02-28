@@ -4,7 +4,7 @@
 * Library Name:  stdcell_425Lib
 * Top Cell Name: xnor2
 * View Name:     schematic
-* Netlisted on:  Feb 27 09:13:01 2024
+* Netlisted on:  Feb 28 10:01:48 2024
 ************************************************************************
 
 *.EQUATION
@@ -12,31 +12,19 @@
 *.MEGA
 .PARAM
 
-*.GLOBAL vss!
-+        vdd!
+*.GLOBAL vdd!
++        vss!
 +        vdd:P
 +        VDD:P
 +        vss:G
 +        VSS:G
 
-*.PIN vss!
-*+    vdd!
+*.PIN vdd!
+*+    vss!
 *+    vdd
 *+    VDD
 *+    vss
 *+    VSS
-
-************************************************************************
-* Library Name: stdcell_425Lib
-* Cell Name:    inv
-* View Name:    schematic
-************************************************************************
-
-.SUBCKT inv A Z
-*.PININFO A:I Z:O
-MM0 Z A vdd! vdd! PMOS_VTL W=180.0n L=50n m=1
-MM1 Z A vss! vss! NMOS_VTL W=90n L=50n m=1
-.ENDS
 
 ************************************************************************
 * Library Name: stdcell_425Lib
@@ -46,15 +34,15 @@ MM1 Z A vss! vss! NMOS_VTL W=90n L=50n m=1
 
 .SUBCKT xnor2 A B Z
 *.PININFO A:I B:I Z:O
-XI1 A Ab / inv
-XI0 B Bb / inv
-MM3 Z Bb net1 vdd! PMOS_VTL W=360.0n L=50n m=1
-MM2 net1 B vdd! vdd! PMOS_VTL W=360.0n L=50n m=1
-MM1 Z A net1 vdd! PMOS_VTL W=360.0n L=50n m=1
-MM0 net1 Ab vdd! vdd! PMOS_VTL W=360.0n L=50n m=1
-MM7 net21 Bb vss! vss! NMOS_VTL W=180.0n L=50n m=1
-MM6 net17 B vss! vss! NMOS_VTL W=180.0n L=50n m=1
-MM5 Z A net21 vss! NMOS_VTL W=180.0n L=50n m=1
-MM4 Z Ab net17 vss! NMOS_VTL W=180.0n L=50n m=1
+MM6 net8 A vdd! vdd! PMOS_VTL W=360.0n L=50n m=1
+MM5 Z B net8 vdd! PMOS_VTL W=360.0n L=50n m=1
+MM4 Z net4 vdd! vdd! PMOS_VTL W=180.0n L=50n m=1
+MM1 net4 B vdd! vdd! PMOS_VTL W=180.0n L=50n m=1
+MM0 net4 A vdd! vdd! PMOS_VTL W=180.0n L=50n m=1
+MM9 net3 net4 vss! vss! NMOS_VTL W=180.0n L=50n m=1
+MM8 Z B net3 vss! NMOS_VTL W=180.0n L=50n m=1
+MM7 Z A net3 vss! NMOS_VTL W=180.0n L=50n m=1
+MM3 net1 B vss! vss! NMOS_VTL W=180.0n L=50n m=1
+MM2 net4 A net1 vss! NMOS_VTL W=180.0n L=50n m=1
 .ENDS
 

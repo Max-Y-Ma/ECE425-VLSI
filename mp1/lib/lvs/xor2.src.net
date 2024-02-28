@@ -4,7 +4,7 @@
 * Library Name:  stdcell_425Lib
 * Top Cell Name: xor2
 * View Name:     schematic
-* Netlisted on:  Feb 27 09:35:02 2024
+* Netlisted on:  Feb 28 09:51:37 2024
 ************************************************************************
 
 *.EQUATION
@@ -28,33 +28,21 @@
 
 ************************************************************************
 * Library Name: stdcell_425Lib
-* Cell Name:    inv
-* View Name:    schematic
-************************************************************************
-
-.SUBCKT inv A Z
-*.PININFO A:I Z:O
-MM0 Z A vdd! vdd! PMOS_VTL W=180.0n L=50n m=1
-MM1 Z A vss! vss! NMOS_VTL W=90n L=50n m=1
-.ENDS
-
-************************************************************************
-* Library Name: stdcell_425Lib
 * Cell Name:    xor2
 * View Name:    schematic
 ************************************************************************
 
 .SUBCKT xor2 A B Z
 *.PININFO A:I B:I Z:O
-XI1 A Ab / inv
-XI0 B Bb / inv
-MM3 net9 Bb vss! vss! NMOS_VTL W=180.0n L=50n m=1
-MM2 Z Ab net9 vss! NMOS_VTL W=180.0n L=50n m=1
-MM1 Z A net4 vss! NMOS_VTL W=180.0n L=50n m=1
-MM0 net4 B vss! vss! NMOS_VTL W=180.0n L=50n m=1
-MM7 Z Bb net20 vdd! PMOS_VTL W=360.0n L=50n m=1
-MM6 net20 B vdd! vdd! PMOS_VTL W=360.0n L=50n m=1
-MM5 Z Ab net20 vdd! PMOS_VTL W=360.0n L=50n m=1
-MM4 net20 A vdd! vdd! PMOS_VTL W=360.0n L=50n m=1
+MM4 Z net13 net12 vdd! PMOS_VTL W=360.0n L=50n m=1
+MM3 net12 B vdd! vdd! PMOS_VTL W=360.0n L=50n m=1
+MM2 net12 A vdd! vdd! PMOS_VTL W=360.0n L=50n m=1
+MM1 net13 A net4 vdd! PMOS_VTL W=360.0n L=50n m=1
+MM0 net4 B vdd! vdd! PMOS_VTL W=360.0n L=50n m=1
+MM9 net3 B vss! vss! NMOS_VTL W=180.0n L=50n m=1
+MM8 Z A net3 vss! NMOS_VTL W=180.0n L=50n m=1
+MM7 Z net13 vss! vss! NMOS_VTL W=90n L=50n m=1
+MM6 net13 B vss! vss! NMOS_VTL W=90n L=50n m=1
+MM5 net13 A vss! vss! NMOS_VTL W=90n L=50n m=1
 .ENDS
 

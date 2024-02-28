@@ -1,17 +1,15 @@
 ( ( nil
   version "2.1"
   mapType "incremental"
-  blockName "mux2"
+  blockName "xnor2"
   repList "auCdl schematic netlist"
   stopList "auCdl"
-  globalList "vss! vdd!"
+  globalList "vdd! vss!"
   hierDelim "."
   netlistDir "/home/maxma2/Documents/Coursework/ece425/mp1/lib/lvs"
  )
 ( model
-( "stdcell_425Lib/inv/schematic" "inv" )
-( "stdcell_425Lib/mux2/schematic" "mux2" )
+( "stdcell_425Lib/xnor2/schematic" "xnor2" )
  )
-( "inv" "ihnl/cds0/map" )
-( "mux2" "ihnl/cds1/map" )
+( "xnor2" "ihnl/cds0/map" )
  )

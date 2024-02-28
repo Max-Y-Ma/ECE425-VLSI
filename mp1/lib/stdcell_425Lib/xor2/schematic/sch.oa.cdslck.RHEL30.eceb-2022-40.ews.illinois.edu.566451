@@ -6,11 +6,11 @@
 LockStakeVersion               1.1
 LoginName                      maxma2
 HostName                       eceb-2022-40.ews.illinois.edu
-ProcessIdentifier              306937
-ProcessCreationTime_UTC        1709046492
-ProcessCreationTime_Readable   Tue Feb 27 09:08:12 2024 CST
+ProcessIdentifier              566451
+ProcessCreationTime_UTC        1709134147
+ProcessCreationTime_Readable   Wed Feb 28 09:29:07 2024 CST
 AppIdentifier                  OA File System Design Manager
 OSType                         unix
 ReasonForPlacingEditLock       OpenAccess edit lock
-FilePathUsedToEditLock         /home/maxma2/Documents/Coursework/ece425/mp1/lib/stdcell_425Lib/oai21/layout/layout.oa.cdslck
-TimeEditLocked                 Tue Feb 27 12:14:31 2024 CST
+FilePathUsedToEditLock         /home/maxma2/Documents/Coursework/ece425/mp1/lib/stdcell_425Lib/xor2/schematic/sch.oa.cdslck
+TimeEditLocked                 Wed Feb 28 09:29:23 2024 CST
