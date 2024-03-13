@@ -1,9 +1,12 @@
+# File Created by maxma2 at Wed Mar 13 16:23:13 2024
+# assisted by CdsLibEditor
 DEFINE analogLib $CDSHOME/tools/dfII/etc/cdslib/artist/analogLib
-DEFINE US_8ths   $CDSHOME/tools/dfII/etc/cdslib/sheets/US_8ths
-DEFINE basic     $CDSHOME/tools/dfII/etc/cdslib/basic
+DEFINE US_8ths $CDSHOME/tools/dfII/etc/cdslib/sheets/US_8ths
+DEFINE basic $CDSHOME/tools/dfII/etc/cdslib/basic
 DEFINE cdsDefTechLib $CDSHOME/tools/dfII/etc/cdsDefTechLib
-DEFINE NCSU_TechLib_FreePDK45  $PDK_DIR/ncsu_basekit/lib/NCSU_TechLib_FreePDK45
-DEFINE NCSU_Devices_FreePDK45  $PDK_DIR/ncsu_basekit/lib/NCSU_Devices_FreePDK45
+DEFINE NCSU_TechLib_FreePDK45 $PDK_DIR/ncsu_basekit/lib/NCSU_TechLib_FreePDK45
+DEFINE NCSU_Devices_FreePDK45 $PDK_DIR/ncsu_basekit/lib/NCSU_Devices_FreePDK45
 #Removed by ddDeleteObj: DEFINE stdcell_riscv32Lib /home/maxma2/Documents/Coursework/ece425/mp2/lib/stdcell_riscv32Lib
 DEFINE stdcell_rv32Lib /home/maxma2/Documents/Coursework/ece425/mp2/lib/stdcell_rv32Lib
 DEFINE bitslice_rv32Lib /home/maxma2/Documents/Coursework/ece425/mp2/lib/bitslice_rv32Lib
+DEFINE stdcell_425Lib /home/maxma2/Documents/Coursework/ece425/mp1/lib/stdcell_425Lib
