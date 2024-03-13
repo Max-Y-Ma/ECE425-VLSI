@@ -1,7 +1,7 @@
-mgc_rve_context_lcv "stdcell_425Lib" "oai21" "layout" 2000
-mgc_rve_highlight_index 0 "B" "#8080FFFF8080"
+mgc_rve_context_lcv "stdcell_425Lib" "buf" "layout" 2000
+mgc_rve_highlight_index 0 "3" "#00000000FFFF"
 mgc_rve_layer "metal1"
-mr 0.3725 0.585 0.5075 0.65
+mr 0.295 0.5925 0.36 0.7275
 mgc_rve_layer "poly"
-mp 8 0.345 0.25 0.395 0.25 0.395 0.58 0.4775 0.58 0.4775 0.655 0.395 0.655 0.395 1.2575 0.345 1.2575
-mgc_rve_zoom 0.3105 0.0345 0.542 1.473 1
+mp 8 0.29 0.6225 0.345 0.6225 0.345 0.25 0.395 0.25 0.395 1.2575 0.345 1.2575 0.345 0.6975 0.29 0.6975
+mgc_rve_zoom 0.2675 0.0345 0.4175 1.473 1

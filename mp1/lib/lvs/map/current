@@ -1,7 +1,7 @@
 ( ( nil
   version "2.1"
   mapType "incremental"
-  blockName "xnor2"
+  blockName "buf"
   repList "auCdl schematic netlist"
   stopList "auCdl"
   globalList "vdd! vss!"
@@ -9,7 +9,9 @@
   netlistDir "/home/maxma2/Documents/Coursework/ece425/mp1/lib/lvs"
  )
 ( model
-( "stdcell_425Lib/xnor2/schematic" "xnor2" )
+( "stdcell_425Lib/inv/schematic" "inv" )
+( "stdcell_425Lib/buf/schematic" "buf" )
  )
-( "xnor2" "ihnl/cds0/map" )
+( "inv" "ihnl/cds0/map" )
+( "buf" "ihnl/cds1/map" )
  )

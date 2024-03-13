@@ -1,0 +1,91 @@
+.
+├── AND2
+│   ├── and2.drc.summary
+│   ├── AND2.hd.layout.png
+│   ├── AND2.layout.png
+│   ├── and2.lvs.report
+│   └── AND2.schematic.png
+├── AOI21
+│   ├── aoi21.drc.summary
+│   ├── AOI21.hd.layout.png
+│   ├── AOI21.layout.png
+│   ├── aoi21.lvs.report
+│   └── AOI21.schematic.png
+├── BUF
+│   ├── buf.drc.summary
+│   ├── BUF.hd.layout.png
+│   ├── BUF.layout.png
+│   ├── buf.lvs.report
+│   └── BUF.schematic.png
+├── DFF
+│   ├── dff.drc.summary
+│   ├── DFF.hd.layout.png
+│   ├── DFF.layout.png
+│   ├── dff.lvs.report
+│   └── DFF.schematic.png
+├── DLATCH
+│   ├── dlatch.drc.summary
+│   ├── DLATCH.hd.layout.png
+│   ├── DLATCH.layout.png
+│   ├── dlatch.lvs.report
+│   └── DLATCH.schematic.png
+├── ece425mp1_maxma2.tar
+├── INV
+│   ├── inv.drc.summary
+│   ├── INV.hd.layout.png
+│   ├── INV.layout.png
+│   ├── inv.lvs.report
+│   └── INV.schematic.png
+├── MUX2
+│   ├── mux2.drc.summary
+│   ├── MUX2.hd.layout.png
+│   ├── MUX2.layout.png
+│   ├── mux2.lvs.report
+│   └── MUX2.schematic.png
+├── NAND2
+│   ├── nand2.drc.summary
+│   ├── NAND2.hd.layout.png
+│   ├── NAND2.layout.png
+│   ├── nand2.lvs.report
+│   └── NAND2.schematic.png
+├── NOR2
+│   ├── nor2.drc.summary
+│   ├── NOR2.hd.layout.png
+│   ├── NOR2.layout.png
+│   ├── nor2.lvs.report
+│   └── NOR2.schematic.png
+├── OAI21
+│   ├── oai21.drc.summary
+│   ├── OAI21.hd.layout.png
+│   ├── OAI21.layout.png
+│   ├── oai21.lvs.report
+│   └── OAI21.schematic.png
+├── OR2
+│   ├── or2.drc.summary
+│   ├── OR2.hd.layout.png
+│   ├── OR2.layout.png
+│   ├── or2.lvs.report
+│   └── OR2.schematic.png
+├── sim
+│   ├── NAND2.fall.AB.png
+│   ├── NAND2.fall.A.png
+│   ├── NAND2.fall.B.png
+│   ├── NAND2.rise.AB.png
+│   ├── NAND2.rise.A.png
+│   ├── NAND2.rise.B.png
+│   └── what.md
+├── tree.txt
+├── XNOR2
+│   ├── xnor2.drc.summary
+│   ├── XNOR2.hd.layout.png
+│   ├── XNOR2.layout.png
+│   ├── xnor2.lvs.report
+│   └── XNOR2.schematic.png
+└── XOR2
+    ├── xor2.drc.summary
+    ├── XOR2.hd.layout.png
+    ├── XOR2.layout.png
+    ├── xor2.lvs.report
+    └── XOR2.schematic.png
+
+14 directories, 74 files

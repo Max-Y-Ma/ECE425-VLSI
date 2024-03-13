@@ -1,26 +1,26 @@
 //
-//  Rule file generated on Wed Feb 28 10:01:48 2024
+//  Rule file generated on Mon Mar 11 15:11:20 2024
 //  by Calibre Interactive v2022.4_16.8    Mon Oct 3 17:12:31 PDT 2022
 //
 //      *** PLEASE DO NOT MODIFY THIS FILE ***
 //
 //
 
-LAYOUT PATH "xnor2.calibre.db"
+LAYOUT PATH "buf.calibre.db"
 LAYOUT SYSTEM GDSII
-LAYOUT PRIMARY "xnor2"
+LAYOUT PRIMARY "buf"
 
-SOURCE PATH "xnor2.src.net"
+SOURCE PATH "buf.src.net"
 SOURCE SYSTEM SPICE
-SOURCE PRIMARY "xnor2"
+SOURCE PRIMARY "buf"
 
 MASK SVDB DIRECTORY "svdb" QUERY
 
-LVS REPORT "xnor2.lvs.report"
+LVS REPORT "buf.lvs.report"
 
 LVS EXECUTE ERC YES
 
-ERC RESULTS DATABASE "xnor2.erc.results"
+ERC RESULTS DATABASE "buf.erc.results"
 ERC CELL NAME YES CELL SPACE XFORM
 
 DRC ICSTATION YES
