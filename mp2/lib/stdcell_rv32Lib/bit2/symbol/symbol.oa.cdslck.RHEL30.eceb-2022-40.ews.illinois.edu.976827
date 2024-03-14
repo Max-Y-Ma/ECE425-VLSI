@@ -12,5 +12,5 @@ ProcessCreationTime_Readable   Wed Mar 13 19:01:31 2024 CDT
 AppIdentifier                  OA File System Design Manager
 OSType                         unix
 ReasonForPlacingEditLock       OpenAccess edit lock
-FilePathUsedToEditLock         /home/maxma2/Documents/Coursework/ece425/mp2/lib/stdcell_rv32Lib/trans/schematic/sch.oa.cdslck.dirlck
-TimeEditLocked                 Wed Mar 13 20:00:45 2024 CDT
+FilePathUsedToEditLock         /home/maxma2/Documents/Coursework/ece425/mp2/lib/stdcell_rv32Lib/bit2/symbol/symbol.oa.cdslck
+TimeEditLocked                 Wed Mar 13 21:19:55 2024 CDT
