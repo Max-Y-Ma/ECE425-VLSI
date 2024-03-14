@@ -101,7 +101,7 @@ module rs2_inverter(
     assign rs2_after_inv = rs2_rdata ^ alu_inv_rs2;
 endmodule
 
-module mux2 (
+module mux2_stub (
     input   logic           a, b, s,
     output  logic           z
 );

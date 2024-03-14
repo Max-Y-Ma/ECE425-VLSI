@@ -74,22 +74,22 @@ module bitslice (
     cmp             cmp             (.*);
 
     mux2 alu_mux_1(
-        .a(rs1_rdata),
-        .b(pc),
-        .s(alu_mux_1_sel),
-        .z(alu_mux_1_out)
+        .A(rs1_rdata),
+        .B(pc),
+        .S0(alu_mux_1_sel),
+        .Z(alu_mux_1_out)
     );
     mux2 alu_mux_2(
-        .a(rs2_after_inv),
-        .b(imm),
-        .s(alu_mux_2_sel),
-        .z(alu_mux_2_out)
+        .A(rs2_after_inv),
+        .B(imm),
+        .S0(alu_mux_2_sel),
+        .Z(alu_mux_2_out)
     );
     mux2 cmp_mux(
-        .a(rs2_rdata),
-        .b(imm),
-        .s(cmp_mux_sel),
-        .z(cmp_mux_out)
+        .A(rs2_rdata),
+        .B(imm),
+        .S0(cmp_mux_sel),
+        .Z(cmp_mux_out)
     );
 
 endmodule

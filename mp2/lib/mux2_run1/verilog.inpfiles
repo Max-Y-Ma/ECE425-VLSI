@@ -1,0 +1,18 @@
+// Verilog HDL and netlist files of
+// "stdcell_rv32Lib mux2 schematic"
+
+// Netlisted models
+
+// netlist file - stdcell_rv32Lib, trans, schematic.
+ihnl/cds0/netlist
+// netlist file - stdcell_rv32Lib, inv, schematic.
+ihnl/cds1/netlist
+// netlist file - stdcell_rv32Lib, mux2, schematic.
+ihnl/cds2/netlist
+
+
+// End HDL models
+
+// globals file 
+hdlFilesDir/cds_globals.v
+

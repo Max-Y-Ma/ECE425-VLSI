@@ -1,7 +1,7 @@
 SHELL=/bin/bash -o pipefail
 .SHELLFLAGS += -e
 
-NET_SRC  := $(shell find $(PWD)/../../ihnl -name "netlist")
+NET_SRC  := $(shell find $(PWD)/../../lib/ -name "netlist")
 HDL_SRCS := $(shell find $(PWD)/../hdl -name '*.sv')
 HVL_SRCS := $(shell find $(PWD)/../hvl -name '*.sv' -o -name '*.v')
 SRCS := $(NET_SRC) $(HDL_SRCS) $(HVL_SRCS)
