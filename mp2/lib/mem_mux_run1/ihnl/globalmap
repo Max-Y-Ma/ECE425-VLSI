@@ -1,0 +1,16 @@
+CADENCE IHNL11140
+$model
+stdcell_rv32Lib/mux6/schematic mux6
+PMOS_VTL PMOS_VTL
+stdcell_rv32Lib/mux5/schematic mux5
+NMOS_VTL NMOS_VTL
+stdcell_rv32Lib/inv/schematic inv
+stdcell_rv32Lib/trans/schematic trans
+bitslice_rv32Lib/mem_mux/schematic mem_mux
+$endmodel
+$net
+vss! cds_globals.vss_
+vdd! cds_globals.vdd_
+$endnet
+$param
+$endparam

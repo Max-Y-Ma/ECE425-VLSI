@@ -1,0 +1,28 @@
+
+`timescale 1ns / 1ns
+
+module test;
+
+
+wire  rs1_rdata, rs2_rdata;
+
+reg  clk, rd_mux_out;
+
+reg [31:0]  rd_sel;
+reg [31:0]  rs2_sel;
+reg [31:0]  rs1_sel;
+
+
+
+regfile top(rs1_rdata, rs2_rdata, clk, rd_mux_out, rd_sel, rs1_sel, 
+     rs2_sel); 
+ 
+
+`ifdef verilog
+
+ //please enter any additional verilog stimulus in the /home/maxma2/Documents/Coursework/ece425/mp2/lib/regfile_run1/testfixture.verilog file
+`include "/home/maxma2/Documents/Coursework/ece425/mp2/lib/regfile_run1/testfixture.verilog"
+
+`endif
+
+endmodule 

@@ -1,0 +1,22 @@
+// Library - bitslice_rv32Lib, Cell - rs2_inverter, View - schematic
+// LAST TIME SAVED: Mar 14 15:17:43 2024
+// NETLIST TIME: Mar 14 15:17:51 2024
+`timescale 1ns / 1ns 
+
+module rs2_inverter ( rs2_after_inv, alu_inv_rs2, rs2_rdata );
+
+output  rs2_after_inv;
+
+input  alu_inv_rs2, rs2_rdata;
+
+
+specify 
+    specparam CDS_LIBNAME  = "bitslice_rv32Lib";
+    specparam CDS_CELLNAME = "rs2_inverter";
+    specparam CDS_VIEWNAME = "schematic";
+endspecify
+
+mux2 I0 ( rs2_after_inv, rs2_rdata, rs2_data_inv, alu_inv_rs2);
+inv I1 ( rs2_data_inv, rs2_rdata);
+
+endmodule

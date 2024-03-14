@@ -63,6 +63,42 @@ module bitslice (
     assign cmp_src_a = rs1_rdata;
     assign cmp_src_b = cmp_mux_out;
 
+    // Assign rf_data
+    always_comb begin
+        rf_data[0] = regfile.I0.I0.Bit;
+        rf_data[1] = regfile.I0.I1.Bit;
+        rf_data[2] = regfile.I0.I2.Bit;
+        rf_data[3] = regfile.I0.I3.Bit;
+        rf_data[4] = regfile.I0.I4.Bit;
+        rf_data[5] = regfile.I0.I5.Bit;
+        rf_data[6] = regfile.I0.I6.Bit;
+        rf_data[7] = regfile.I0.I7.Bit;
+        rf_data[8] = regfile.I0.I8.Bit;
+        rf_data[9] = regfile.I0.I9.Bit;
+        rf_data[10] = regfile.I0.I10.Bit;
+        rf_data[11] = regfile.I0.I11.Bit;
+        rf_data[12] = regfile.I0.I12.Bit;
+        rf_data[13] = regfile.I0.I13.Bit;
+        rf_data[14] = regfile.I0.I14.Bit;
+        rf_data[15] = regfile.I0.I15.Bit;
+        rf_data[16] = regfile.I0.I16.Bit;
+        rf_data[17] = regfile.I0.I17.Bit;
+        rf_data[18] = regfile.I0.I18.Bit;
+        rf_data[19] = regfile.I0.I19.Bit;
+        rf_data[20] = regfile.I0.I20.Bit;
+        rf_data[21] = regfile.I0.I21.Bit;
+        rf_data[22] = regfile.I0.I22.Bit;
+        rf_data[23] = regfile.I0.I23.Bit;
+        rf_data[24] = regfile.I0.I24.Bit;
+        rf_data[25] = regfile.I0.I25.Bit;
+        rf_data[26] = regfile.I0.I26.Bit;
+        rf_data[27] = regfile.I0.I27.Bit;
+        rf_data[28] = regfile.I0.I28.Bit;
+        rf_data[29] = regfile.I0.I29.Bit;
+        rf_data[30] = regfile.I0.I30.Bit;
+        rf_data[31] = regfile.I0.I31.Bit;
+    end
+
     mem_mux         mem_mux         (.*);
     rd_mux          rd_mux          (.shift_out(shift_out[5]), .*);
     pcadder         pcadder         (.*);

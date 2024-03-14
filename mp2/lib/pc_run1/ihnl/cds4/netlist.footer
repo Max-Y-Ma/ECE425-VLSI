@@ -1,0 +1,4 @@
+bit1 I0 ( net4, D, RE, WE);
+dlatch I1 ( Q, Qb, net4, CLK);
+
+endmodule

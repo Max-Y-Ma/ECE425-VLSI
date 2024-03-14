@@ -1,0 +1,18 @@
+// Library - stdcell_rv32Lib, Cell - bit1, View - schematic
+// LAST TIME SAVED: Mar 14 16:06:37 2024
+// NETLIST TIME: Mar 14 16:08:26 2024
+`timescale 1ns / 1ns 
+
+module bit1 ( Z, A, R, W );
+
+output  Z;
+
+input  A, R, W;
+
+
+specify 
+    specparam CDS_LIBNAME  = "stdcell_rv32Lib";
+    specparam CDS_CELLNAME = "bit1";
+    specparam CDS_VIEWNAME = "schematic";
+endspecify
+

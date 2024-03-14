@@ -1,0 +1,9 @@
+CADENCE IHNL11147
+
+stdcell_rv32Lib inv schematic cds0
+stdcell_rv32Lib trans schematic cds1
+stdcell_rv32Lib bit1 schematic cds2
+stdcell_rv32Lib dlatch schematic cds3
+stdcell_rv32Lib reg1w1 schematic cds4
+stdcell_rv32Lib mux2 schematic cds5
+bitslice_rv32Lib pc schematic cds6

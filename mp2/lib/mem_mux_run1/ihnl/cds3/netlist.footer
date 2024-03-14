@@ -1,0 +1,4 @@
+mux6 I1 ( mem_mux_out, lb, lh, lw, cds_globals.vss_, lbu, lhu,
+     mem_mux_sel[0], mem_mux_sel[1], mem_mux_sel[2]);
+
+endmodule

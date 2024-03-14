@@ -1,0 +1,25 @@
+// Library - bitslice_rv32Lib, Cell - rd_mux, View - schematic
+// LAST TIME SAVED: Mar 14 14:50:09 2024
+// NETLIST TIME: Mar 14 14:50:30 2024
+`timescale 1ns / 1ns 
+
+module rd_mux ( rd_mux_out, alu_out, cmp_out, imm, mem_mux_out, pcp4,
+     rd_mux_sel, shift_out );
+
+output  rd_mux_out;
+
+input  alu_out, cmp_out, imm, mem_mux_out, pcp4, shift_out;
+
+input [2:0]  rd_mux_sel;
+
+
+specify 
+    specparam CDS_LIBNAME  = "bitslice_rv32Lib";
+    specparam CDS_CELLNAME = "rd_mux";
+    specparam CDS_VIEWNAME = "schematic";
+endspecify
+
+mux6 I1 ( rd_mux_out, alu_out, shift_out, cmp_out, imm, pcp4,
+     mem_mux_out, rd_mux_sel[0], rd_mux_sel[1], rd_mux_sel[2]);
+
+endmodule

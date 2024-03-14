@@ -1,0 +1,24 @@
+simVerilogNetlistFileList = '(
+    (("bitslice_rv32Lib" "rd_mux") 
+	("cds3/netlist" "cds3/map" "schematic")
+    ) 
+    (("stdcell_rv32Lib" "mux6") 
+	("cds2/netlist" "cds2/map" "schematic")
+    ) 
+    (("stdcell_rv32Lib" "inv") 
+	("cds1/netlist" "cds1/map" "schematic")
+    ) 
+    (("stdcell_rv32Lib" "trans") 
+	("cds0/netlist" "cds0/map" "schematic")
+    )
+)
+simVerilogNetlistFileLibList = '("bitslice_rv32Lib" "stdcell_rv32Lib")
+simVerilogNetlistFileCellList = '(
+    ("stdcell_rv32Lib" 
+	("trans" "inv" "mux6")
+    ) 
+    ("bitslice_rv32Lib" 
+	("rd_mux")
+    )
+)
+hnlIncrementalDirectory = '"ihnl"

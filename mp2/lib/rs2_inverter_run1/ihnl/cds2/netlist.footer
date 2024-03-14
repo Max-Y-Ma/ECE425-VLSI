@@ -1,0 +1,5 @@
+trans I2 ( B, Z, S0, net1);
+trans I1 ( A, Z, net1, S0);
+inv I3 ( net1, S0);
+
+endmodule

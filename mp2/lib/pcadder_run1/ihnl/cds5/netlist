@@ -1,0 +1,21 @@
+// Library - bitslice_rv32Lib, Cell - pcadder, View - schematic
+// LAST TIME SAVED: Mar 14 15:06:54 2024
+// NETLIST TIME: Mar 14 15:07:03 2024
+`timescale 1ns / 1ns 
+
+module pcadder ( pc_cout, pcp4, pc, pc_adder_4, pc_cin );
+
+output  pc_cout, pcp4;
+
+input  pc, pc_adder_4, pc_cin;
+
+
+specify 
+    specparam CDS_LIBNAME  = "bitslice_rv32Lib";
+    specparam CDS_CELLNAME = "pcadder";
+    specparam CDS_VIEWNAME = "schematic";
+endspecify
+
+fa I4 ( pc_cout, pcp4, pc, pc_adder_4, pc_cin);
+
+endmodule

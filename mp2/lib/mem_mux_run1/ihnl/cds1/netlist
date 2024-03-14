@@ -1,0 +1,24 @@
+// Library - stdcell_rv32Lib, Cell - inv, View - schematic
+// LAST TIME SAVED: Mar 13 12:57:03 2024
+// NETLIST TIME: Mar 14 14:23:17 2024
+`timescale 1ns / 1ns 
+
+module inv ( Z, A );
+
+output  Z;
+
+input  A;
+
+
+specify 
+    specparam CDS_LIBNAME  = "stdcell_rv32Lib";
+    specparam CDS_CELLNAME = "inv";
+    specparam CDS_VIEWNAME = "schematic";
+endspecify
+
+PMOS_VTL  M0 ( .D(Z), .B(1'b1), .G(A),
+     .S(1'b1));
+NMOS_VTL  M1 ( .D(Z), .B(1'b0), .G(A),
+     .S(1'b0));
+
+endmodule

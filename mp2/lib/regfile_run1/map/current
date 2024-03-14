@@ -1,0 +1,41 @@
+( ( nil
+  version "2.1"
+  mapType "incremental"
+  blockName "regfile"
+  repList "behavioral functional system verilog pld_verilog lai_verilog lmsi_verilog schematic symbol"
+  stopList "verilog pld_verilog lai_verilog lmsi_verilog symbol"
+  globalList "vss! vdd!"
+  hierDelim "."
+  hierPrefix "test.top"
+  globalHierPrefix "cds_globals."
+  netlistDir "/home/maxma2/Documents/Coursework/ece425/mp2/lib/regfile_run1"
+  busRef   "ORDERED"
+  netType   "BUS"
+  leftStr  "["
+  rangeStr  ":"
+  rightStr  "]"
+ )
+( defbus
+( "rs1_sel" 31 0  "rs1_sel" 31 0  )
+( "rs2_sel" 31 0  "rs2_sel" 31 0  )
+( "rd_sel" 31 0  "rd_sel" 31 0  )
+ )
+( net
+( "vss!" "cds_globals.vss_" )
+( "vdd!" "cds_globals.vdd_" )
+ )
+( model
+( "stdcell_rv32Lib/bit2/schematic" "bit2" )
+( "bitslice_rv32Lib/regfile/schematic" "regfile" )
+( "stdcell_rv32Lib/trans/schematic" "trans" )
+( "stdcell_rv32Lib/reg2w32/schematic" "reg2w32" )
+( "stdcell_rv32Lib/inv/schematic" "inv" )
+( "stdcell_rv32Lib/dlatch/schematic" "dlatch" )
+ )
+( "bit2" "ihnl/cds2/map" )
+( "dlatch" "ihnl/cds3/map" )
+( "inv" "ihnl/cds0/map" )
+( "trans" "ihnl/cds1/map" )
+( "reg2w32" "ihnl/cds4/map" )
+( "regfile" "ihnl/cds5/map" )
+ )

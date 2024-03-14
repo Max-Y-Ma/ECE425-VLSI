@@ -1,0 +1,14 @@
+
+`timescale 1ns / 1ns
+
+module test;
+
+
+wire  pc;
+
+reg  alu_out, clk, pc_mux_sel, pc_reset_value, pcp4, rst;
+
+
+
+pc top(pc, alu_out, clk, pc_mux_sel, pc_reset_value, pcp4, rst); 
+ 

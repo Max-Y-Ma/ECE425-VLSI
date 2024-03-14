@@ -1,4 +1,4 @@
-module mem_mux(
+module mem_mux_stub(
     input   logic           lb, lh, lw, lbu, lhu,
     input   logic   [2:0]   mem_mux_sel,
     output  logic           mem_mux_out
@@ -15,7 +15,7 @@ module mem_mux(
     end
 endmodule
 
-module rd_mux(
+module rd_mux_stub(
     input   logic           alu_out, shift_out, cmp_out, imm, pcp4, mem_mux_out,
     input   logic   [2:0]   rd_mux_sel,
     output  logic           rd_mux_out
@@ -33,7 +33,7 @@ module rd_mux(
     end
 endmodule
 
-module pcadder(
+module pcadder_stub(
     input   logic           pc,
     input   logic           pc_adder_4,
     input   logic           pc_cin,
@@ -46,7 +46,7 @@ module pcadder(
     assign pcp4     = add_temp[0];
 endmodule
 
-module regfile(
+module regfile_stub(
     input   logic           clk,
     input   logic   [31:0]  rd_sel,
     input   logic   [31:0]  rs1_sel,
@@ -78,7 +78,7 @@ module regfile(
     end
 endmodule
 
-module pc(
+module pc_stub(
     input   logic           clk,
     input   logic           rst,
     input   logic           pc_reset_value,
@@ -94,7 +94,7 @@ module pc(
     end
 endmodule
 
-module rs2_inverter(
+module rs2_inverter_stub(
     input   logic           rs2_rdata, alu_inv_rs2,
     output  logic           rs2_after_inv
 );
@@ -102,13 +102,13 @@ module rs2_inverter(
 endmodule
 
 module mux2_stub (
-    input   logic           a, b, s,
-    output  logic           z
+    input   logic           A, B, S0,
+    output  logic           Z
 );
     always_comb begin
-        if      (~s) z = a;
-        else if ( s) z = b;
-        else         z = 'x;
+        if      (~S0) Z = A;
+        else if ( S0) Z = B;
+        else          Z = 'x;
     end
 endmodule
 

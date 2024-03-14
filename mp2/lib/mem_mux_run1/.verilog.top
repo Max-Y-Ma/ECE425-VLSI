@@ -1,0 +1,16 @@
+
+`timescale 1ns / 1ns
+
+module test;
+
+
+wire  mem_mux_out;
+
+reg  lb, lbu, lh, lhu, lw;
+
+reg [2:0]  mem_mux_sel;
+
+
+
+mem_mux top(mem_mux_out, lb, lbu, lh, lhu, lw, mem_mux_sel); 
+ 
