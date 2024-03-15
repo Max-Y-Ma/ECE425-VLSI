@@ -1,0 +1,90 @@
+( ( nil
+  version "2.1"
+  mapType "incremental"
+  blockName "bitslice"
+  repList "behavioral functional system verilog pld_verilog lai_verilog lmsi_verilog schematic symbol"
+  stopList "verilog pld_verilog lai_verilog lmsi_verilog symbol"
+  globalList "vss! vdd!"
+  hierDelim "."
+  hierPrefix "test.top"
+  globalHierPrefix "cds_globals."
+  netlistDir "/home/maxma2/Documents/Coursework/ece425/mp2/lib/bitslice_run1"
+  busRef   "ORDERED"
+  netType   "BUS"
+  leftStr  "["
+  rangeStr  ":"
+  rightStr  "]"
+ )
+( defbus
+( "rs1_sel" 31 0  "rs1_sel" 31 0  )
+( "rs2_sel" 31 0  "rs2_sel" 31 0  )
+( "rd_sel" 31 0  "rd_sel" 31 0  )
+( "alu_op" 1 0  "alu_op" 1 0  )
+( "mem_mux_sel" 2 0  "mem_mux_sel" 2 0  )
+( "rd_mux_sel" 2 0  "rd_mux_sel" 2 0  )
+( "shift_amount" 4 0  "shift_amount" 4 0  )
+( "shift_in_from_right" 4 0  "shift_in_from_right" 4 0  )
+( "shift_in_from_left" 4 0  "shift_in_from_left" 4 0  )
+( "shift_out" 5 0  "shift_out" 5 0  )
+ )
+( net
+( "vss!" "cds_globals.vss_" )
+( "vdd!" "cds_globals.vdd_" )
+ )
+( model
+( "stdcell_rv32Lib/bit2/schematic" "bit2" )
+( "stdcell_rv32Lib/reg1w1/schematic" "reg1w1" )
+( "bitslice_rv32Lib/mem_mux/schematic" "mem_mux" )
+( "bitslice_rv32Lib/pcadder/schematic" "pcadder" )
+( "bitslice_rv32Lib/regfile/schematic" "regfile" )
+( "stdcell_rv32Lib/muxinv2/schematic" "muxinv2" )
+( "stdcell_rv32Lib/trans/schematic" "trans" )
+( "stdcell_rv32Lib/xnor2/schematic" "xnor2" )
+( "stdcell_rv32Lib/reg2w32/schematic" "reg2w32" )
+( "stdcell_rv32Lib/nor2/schematic" "nor2" )
+( "bitslice_rv32Lib/alu/schematic" "alu" )
+( "stdcell_rv32Lib/mux2/schematic" "mux2" )
+( "stdcell_rv32Lib/mux4/schematic" "mux4" )
+( "bitslice_rv32Lib/rs2_inverter/schematic" "rs2_inverter" )
+( "bitslice_rv32Lib/cmp/schematic" "cmp" )
+( "stdcell_rv32Lib/inv/schematic" "inv" )
+( "bitslice_rv32Lib/shift/schematic" "shift" )
+( "stdcell_rv32Lib/mux6/schematic" "mux6" )
+( "stdcell_rv32Lib/muxinv4/schematic" "muxinv4" )
+( "bitslice_rv32Lib/rd_mux/schematic" "rd_mux" )
+( "stdcell_rv32Lib/nand2/schematic" "nand2" )
+( "stdcell_rv32Lib/buf/schematic" "buf_" )
+( "bitslice_rv32Lib/bitslice/schematic" "bitslice" )
+( "stdcell_rv32Lib/bit1/schematic" "bit1" )
+( "stdcell_rv32Lib/fa/schematic" "fa" )
+( "stdcell_rv32Lib/dlatch/schematic" "dlatch" )
+( "bitslice_rv32Lib/pc/schematic" "pc" )
+ )
+( "bitslice" "ihnl/cds26/map" )
+( "bit2" "ihnl/cds20/map" )
+( "buf_" "ihnl/cds11/map" )
+( "muxinv4" "ihnl/cds6/map" )
+( "nor2" "ihnl/cds8/map" )
+( "dlatch" "ihnl/cds16/map" )
+( "inv" "ihnl/cds0/map" )
+( "rs2_inverter" "ihnl/cds14/map" )
+( "rd_mux" "ihnl/cds25/map" )
+( "pc" "ihnl/cds18/map" )
+( "nand2" "ihnl/cds7/map" )
+( "mux6" "ihnl/cds23/map" )
+( "xnor2" "ihnl/cds9/map" )
+( "bit1" "ihnl/cds15/map" )
+( "mux4" "ihnl/cds5/map" )
+( "mux2" "ihnl/cds2/map" )
+( "reg1w1" "ihnl/cds17/map" )
+( "cmp" "ihnl/cds13/map" )
+( "muxinv2" "ihnl/cds3/map" )
+( "shift" "ihnl/cds12/map" )
+( "mem_mux" "ihnl/cds24/map" )
+( "fa" "ihnl/cds4/map" )
+( "trans" "ihnl/cds1/map" )
+( "reg2w32" "ihnl/cds21/map" )
+( "regfile" "ihnl/cds22/map" )
+( "pcadder" "ihnl/cds19/map" )
+( "alu" "ihnl/cds10/map" )
+ )

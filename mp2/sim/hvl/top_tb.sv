@@ -27,10 +27,10 @@ module top_tb;
             logic [31:0] pc_wdata;
 
     generate for (genvar i = 0; i < 32; i++) begin : rvfi_sig
-        assign rs1_rdata[i] = dut.datapath.bitslices[i].bitslice.rs1_rdata;
-        assign rd_wdata [i] = dut.datapath.bitslices[i].bitslice.rd_mux_out;
+        assign rs1_rdata[i] = dut.datapath.bitslices[i].bitslice.cmp_src_a;
+        assign rd_wdata [i] = dut.datapath.bitslices[i].bitslice.net7;
         // assign pc_wdata [i] = dut.datapath.bitslices[i].bitslice.pc_.pc_next; // For pc_stub
-        assign pc_wdata [i] = dut.datapath.bitslices[i].bitslice.pc_.net2;       // For generated pc slice
+        assign pc_wdata [i] = dut.datapath.bitslices[i].bitslice.I7.net2;       // For generated pc slice
     end endgenerate
 
     always_comb begin

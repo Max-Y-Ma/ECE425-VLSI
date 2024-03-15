@@ -1,0 +1,32 @@
+// Library - stdcell_rv32Lib, Cell - reg2w32, View - schematic
+// LAST TIME SAVED: Mar 14 21:46:09 2024
+// NETLIST TIME: Mar 15 14:00:07 2024
+`timescale 1ns / 1ns 
+
+module reg2w32 ( Q1, Q1b, Q2, Q2b, CLK, D, RE1, RE2, WE );
+
+output  Q1, Q1b, Q2, Q2b;
+
+input  CLK, D;
+
+input [31:0]  RE2;
+input [31:0]  RE1;
+input [31:0]  WE;
+
+
+specify 
+    specparam CDS_LIBNAME  = "stdcell_rv32Lib";
+    specparam CDS_CELLNAME = "reg2w32";
+    specparam CDS_VIEWNAME = "schematic";
+endspecify
+
+generate for (genvar i = 1; i < 32; i++) begin : bits
+    bit2 bit2 ( net12, net3, D, RE1[i], RE2[i], WE[i]);
+end endgenerate
+
+dlatch I33 ( Q1, Q1b, net12, CLK);
+dlatch I32 ( Q2, Q2b, net3, CLK);
+trans I43 ( 1'b0, net3, RE2[0], 1'b1);
+trans I44 ( 1'b0, net12, RE1[0], 1'b1);
+
+endmodule

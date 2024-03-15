@@ -75,12 +75,20 @@ module datapath(
                 shift_in_from_left      [i][j] = (i+2**j > 31) ? shift_msb : shift_out[i+2**j][j];
             end
         end
-        for (int i = 0; i < 32; i++) begin
-            for (int j = 0; j < 32; j++) begin
-                real_rf_data[i][j] = rf_data[j][i];
+    end
+
+    generate 
+        for (genvar i = 0; i < 32; i++) begin : reg_assign
+            for (genvar j = 0; j < 32; j++) begin : bit_assign
+                if (i == 0) begin
+                    assign real_rf_data[i][j] = 1'b0;
+                end
+                else begin
+                    assign real_rf_data[i][j] = bitslices[j].bitslice.I9.I0.bits[i].bit2.Bit;
+                end
             end
         end
-    end
+    endgenerate
 
     generate for (genvar i = 0; i < 32; i++) begin : bitslices
         bitslice bitslice(
@@ -111,7 +119,6 @@ module datapath(
             .cmp_src_a                  (b_cmp_a[i]                     ),
             .cmp_src_b                  (b_cmp_b[i]                     ),
             .pc                         (imem_addr[i]                   ),
-            .rf_data                    (rf_data[i]                     ),
             .*
         );
     end endgenerate

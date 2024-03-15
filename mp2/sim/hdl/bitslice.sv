@@ -1,4 +1,4 @@
-module bitslice (
+module bitslice_stub (
     input   logic           clk,
     input   logic           rst,
 
@@ -65,16 +65,16 @@ module bitslice (
 
     // Assign rf_data
     always_comb begin
-        rf_data[0] = 1'b0;
-        rf_data[1] = regfile.I0.I1.Bit;
-        rf_data[2] = regfile.I0.I2.Bit;
-        rf_data[3] = regfile.I0.I3.Bit;
-        rf_data[4] = regfile.I0.I4.Bit;
-        rf_data[5] = regfile.I0.I5.Bit;
-        rf_data[6] = regfile.I0.I6.Bit;
-        rf_data[7] = regfile.I0.I7.Bit;
-        rf_data[8] = regfile.I0.I8.Bit;
-        rf_data[9] = regfile.I0.I9.Bit;
+        rf_data[0]  = 1'b0;
+        rf_data[1]  = regfile.I0.I1.Bit;
+        rf_data[2]  = regfile.I0.I2.Bit;
+        rf_data[3]  = regfile.I0.I3.Bit;
+        rf_data[4]  = regfile.I0.I4.Bit;
+        rf_data[5]  = regfile.I0.I5.Bit;
+        rf_data[6]  = regfile.I0.I6.Bit;
+        rf_data[7]  = regfile.I0.I7.Bit;
+        rf_data[8]  = regfile.I0.I8.Bit;
+        rf_data[9]  = regfile.I0.I9.Bit;
         rf_data[10] = regfile.I0.I10.Bit;
         rf_data[11] = regfile.I0.I11.Bit;
         rf_data[12] = regfile.I0.I12.Bit;

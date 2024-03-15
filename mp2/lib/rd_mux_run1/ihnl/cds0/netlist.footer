@@ -1,4 +1,0 @@
-PMOS_VTL  M0 ( .D(Z), .B(cds_globals.vdd_), .G(Gb), .S(A));
-NMOS_VTL  M1 ( .D(Z), .B(cds_globals.vss_), .G(G), .S(A));
-
-endmodule

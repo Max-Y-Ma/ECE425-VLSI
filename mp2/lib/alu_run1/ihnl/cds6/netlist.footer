@@ -1,4 +1,0 @@
-mux4 I0 ( net7, A, B, C, D, S0, S1);
-inv I1 ( Z, net7);
-
-endmodule

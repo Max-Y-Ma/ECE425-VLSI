@@ -1,0 +1,27 @@
+// Library - stdcell_rv32Lib, Cell - dlatch, View - schematic
+// LAST TIME SAVED: Mar 13 16:30:40 2024
+// NETLIST TIME: Mar 15 14:00:07 2024
+`timescale 1ns / 1ns 
+
+module dlatch ( Q, Qb, D, EN );
+
+output  Q, Qb;
+
+input  D, EN;
+
+
+specify 
+    specparam CDS_LIBNAME  = "stdcell_rv32Lib";
+    specparam CDS_CELLNAME = "dlatch";
+    specparam CDS_VIEWNAME = "schematic";
+endspecify
+
+inv I16 ( net2, D);
+inv I18 ( EN1, ENB1);
+inv I17 ( ENB1, EN);
+inv I20 ( Qb, Q);
+inv I19 ( Q, net3);
+trans I21 ( Qb, net3, ENB1, EN1);
+trans I15 ( net2, net3, EN1, ENB1);
+
+endmodule

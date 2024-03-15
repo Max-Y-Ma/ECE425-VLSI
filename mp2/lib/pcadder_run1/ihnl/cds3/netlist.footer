@@ -1,4 +1,0 @@
-mux2 I0 ( net1, A, B, S0);
-inv I1 ( Z, net1);
-
-endmodule

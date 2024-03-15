@@ -1,7 +1,0 @@
-inv I1 ( Cinb, Cin);
-inv I13 ( net10, Cout);
-muxinv2 I11 ( mux1, Cin, Cinb, A);
-mux2 I14 ( Sum, net10, B, mux1);
-mux2 I12 ( Cout, B, A, mux1);
-
-endmodule

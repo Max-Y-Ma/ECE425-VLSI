@@ -1,0 +1,34 @@
+// Library - stdcell_rv32Lib, Cell - mux6, View - schematic
+// LAST TIME SAVED: Mar 13 16:04:25 2024
+// NETLIST TIME: Mar 15 14:00:07 2024
+`timescale 1ns / 1ns 
+
+module mux6 ( Z, A, B, C, D, E, F, S0, S1, S2 );
+
+output  Z;
+
+input  A, B, C, D, E, F, S0, S1, S2;
+
+
+specify 
+    specparam CDS_LIBNAME  = "stdcell_rv32Lib";
+    specparam CDS_CELLNAME = "mux6";
+    specparam CDS_VIEWNAME = "schematic";
+endspecify
+
+trans I7 ( F, net4, S0, S0b);
+trans I0 ( A, net2, S0b, S0);
+trans I9 ( net5, Z, S2, S2b);
+trans I8 ( net1, Z, S2b, S2);
+trans I13 ( net4, net5, S1b, S1);
+trans I6 ( net3, net1, S1, S1b);
+trans I5 ( net2, net1, S1b, S1);
+trans I4 ( E, net4, S0b, S0);
+trans I3 ( D, net3, S0, S0b);
+trans I2 ( C, net3, S0b, S0);
+trans I1 ( B, net2, S0, S0b);
+inv I12 ( S2b, S2);
+inv I11 ( S1b, S1);
+inv I10 ( S0b, S0);
+
+endmodule
