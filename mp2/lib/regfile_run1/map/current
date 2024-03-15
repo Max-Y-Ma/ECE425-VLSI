@@ -16,9 +16,9 @@
   rightStr  "]"
  )
 ( defbus
-( "rs1_sel" 31 0  "rs1_sel" 31 0  )
-( "rs2_sel" 31 0  "rs2_sel" 31 0  )
-( "rd_sel" 31 0  "rd_sel" 31 0  )
+( "WE" 31 0  "WE" 31 0  )
+( "RE1" 31 0  "RE1" 31 0  )
+( "RE2" 31 0  "RE2" 31 0  )
  )
 ( net
 ( "vss!" "cds_globals.vss_" )

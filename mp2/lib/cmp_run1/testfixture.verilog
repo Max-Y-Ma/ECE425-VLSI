@@ -1,0 +1,15 @@
+
+// Verilog stimulus file.
+// Please do not create a module in this file.
+
+
+// Default verilog stimulus. 
+
+initial
+begin 
+
+   cmp_eq_in = 1'b0;
+   cmp_lt_in = 1'b0;
+   cmp_mux_out = 1'b0;
+   rs1_rdata = 1'b0;
+end 

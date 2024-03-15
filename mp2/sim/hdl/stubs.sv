@@ -112,7 +112,7 @@ module mux2_stub (
     end
 endmodule
 
-module alu(
+module alu_stub(
     input   logic           alu_mux_1_out,
     input   logic           alu_mux_2_out,
     input   logic           alu_cin,
@@ -134,7 +134,7 @@ module alu(
     end
 endmodule
 
-module shift(
+module shift_stub(
     input   logic           alu_mux_1_out,
     input   logic   [4:0]   shift_amount,
     input   logic           shift_dir,
@@ -150,7 +150,7 @@ module shift(
     end endgenerate
 endmodule
 
-module cmp(
+module cmp_stub(
     input   logic           rs1_rdata,
     input   logic           cmp_mux_out,
     input   logic           cmp_eq_in,

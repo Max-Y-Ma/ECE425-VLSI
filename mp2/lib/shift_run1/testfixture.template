@@ -1,0 +1,29 @@
+
+`timescale 1ns / 1ns
+
+module test;
+
+
+
+reg  alu_mux_1_out, shift_dir;
+
+wire [5:0]  shift_out;
+
+reg [4:0]  shift_in_from_left;
+reg [4:0]  shift_in_from_right;
+reg [4:0]  shift_amount;
+
+
+
+shift top(shift_out, alu_mux_1_out, shift_amount, shift_dir, 
+     shift_in_from_left, shift_in_from_right); 
+ 
+
+`ifdef verilog
+
+ //please enter any additional verilog stimulus in the /home/maxma2/Documents/Coursework/ece425/mp2/lib/shift_run1/testfixture.verilog file
+`include "/home/maxma2/Documents/Coursework/ece425/mp2/lib/shift_run1/testfixture.verilog"
+
+`endif
+
+endmodule 

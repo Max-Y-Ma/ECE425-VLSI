@@ -6,11 +6,11 @@
 LockStakeVersion               1.1
 LoginName                      maxma2
 HostName                       eceb-2022-41.ews.illinois.edu
-ProcessIdentifier              12066
-ProcessCreationTime_UTC        1710438523
-ProcessCreationTime_Readable   Thu Mar 14 12:48:43 2024 CDT
+ProcessIdentifier              146510
+ProcessCreationTime_UTC        1710457722
+ProcessCreationTime_Readable   Thu Mar 14 18:08:42 2024 CDT
 AppIdentifier                  /software/cadence-2023-05/ICADVM201/tools/dfII/bin/64bit/libManager
 OSType                         lnx86
 ReasonForPlacingEditLock       log file
 FilePathUsedToEditLock         /home/maxma2/Documents/Coursework/ece425/mp2/lib/libManager.log.1
-TimeEditLocked                 Thu Mar 14 12:48:43 2024 CDT
+TimeEditLocked                 Thu Mar 14 18:08:42 2024 CDT

@@ -1,0 +1,22 @@
+// Library - stdcell_rv32Lib, Cell - buf, View - schematic
+// LAST TIME SAVED: Mar 13 13:05:42 2024
+// NETLIST TIME: Mar 14 20:06:12 2024
+`timescale 1ns / 1ns 
+
+module buf_ ( Z, A );
+
+output  Z;
+
+input  A;
+
+
+specify 
+    specparam CDS_LIBNAME  = "stdcell_rv32Lib";
+    specparam CDS_CELLNAME = "buf";
+    specparam CDS_VIEWNAME = "schematic";
+endspecify
+
+inv I1 ( Z, net2);
+inv I0 ( net2, A);
+
+endmodule

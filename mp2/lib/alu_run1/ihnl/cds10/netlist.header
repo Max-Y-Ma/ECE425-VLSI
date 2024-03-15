@@ -1,0 +1,21 @@
+// Library - bitslice_rv32Lib, Cell - alu, View - schematic
+// LAST TIME SAVED: Mar 14 19:05:03 2024
+// NETLIST TIME: Mar 14 19:05:08 2024
+`timescale 1ns / 1ns 
+
+module alu ( alu_cout, alu_out, alu_cin, alu_mux_1_out, alu_mux_2_out,
+     alu_op );
+
+output  alu_cout, alu_out;
+
+input  alu_cin, alu_mux_1_out, alu_mux_2_out;
+
+input [1:0]  alu_op;
+
+
+specify 
+    specparam CDS_LIBNAME  = "bitslice_rv32Lib";
+    specparam CDS_CELLNAME = "alu";
+    specparam CDS_VIEWNAME = "schematic";
+endspecify
+

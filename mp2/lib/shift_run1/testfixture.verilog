@@ -1,0 +1,19 @@
+
+// Verilog stimulus file.
+// Please do not create a module in this file.
+
+
+// Default verilog stimulus. 
+
+initial
+begin 
+
+   alu_mux_1_out = 1'b0;
+   shift_amount[4:0] = 5'b00000;
+
+   shift_dir = 1'b0;
+   shift_in_from_left[4:0] = 5'b00000;
+
+   shift_in_from_right[4:0] = 5'b00000;
+
+end 

@@ -1,6 +1,6 @@
 // Library - bitslice_rv32Lib, Cell - regfile, View - schematic
-// LAST TIME SAVED: Mar 14 16:28:14 2024
-// NETLIST TIME: Mar 14 16:29:37 2024
+// LAST TIME SAVED: Mar 14 20:33:40 2024
+// NETLIST TIME: Mar 14 21:18:31 2024
 `timescale 1ns / 1ns 
 
 module regfile ( rs1_rdata, rs2_rdata, clk, rd_mux_out, rd_sel,

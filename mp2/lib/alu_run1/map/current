@@ -1,0 +1,49 @@
+( ( nil
+  version "2.1"
+  mapType "incremental"
+  blockName "alu"
+  repList "behavioral functional system verilog pld_verilog lai_verilog lmsi_verilog schematic symbol"
+  stopList "verilog pld_verilog lai_verilog lmsi_verilog symbol"
+  globalList "vss! vdd!"
+  hierDelim "."
+  hierPrefix "test.top"
+  globalHierPrefix "cds_globals."
+  netlistDir "/home/maxma2/Documents/Coursework/ece425/mp2/lib/alu_run1"
+  busRef   "ORDERED"
+  netType   "BUS"
+  leftStr  "["
+  rangeStr  ":"
+  rightStr  "]"
+ )
+( defbus
+( "alu_op" 1 0  "alu_op" 1 0  )
+ )
+( net
+( "vss!" "cds_globals.vss_" )
+( "vdd!" "cds_globals.vdd_" )
+ )
+( model
+( "stdcell_rv32Lib/muxinv2/schematic" "muxinv2" )
+( "stdcell_rv32Lib/xnor2/schematic" "xnor2" )
+( "stdcell_rv32Lib/trans/schematic" "trans" )
+( "stdcell_rv32Lib/nor2/schematic" "nor2" )
+( "bitslice_rv32Lib/alu/schematic" "alu" )
+( "stdcell_rv32Lib/mux2/schematic" "mux2" )
+( "stdcell_rv32Lib/mux4/schematic" "mux4" )
+( "stdcell_rv32Lib/inv/schematic" "inv" )
+( "stdcell_rv32Lib/muxinv4/schematic" "muxinv4" )
+( "stdcell_rv32Lib/nand2/schematic" "nand2" )
+( "stdcell_rv32Lib/fa/schematic" "fa" )
+ )
+( "muxinv4" "ihnl/cds11/map" )
+( "nor2" "ihnl/cds8/map" )
+( "inv" "ihnl/cds0/map" )
+( "nand2" "ihnl/cds7/map" )
+( "xnor2" "ihnl/cds9/map" )
+( "mux4" "ihnl/cds5/map" )
+( "mux2" "ihnl/cds2/map" )
+( "muxinv2" "ihnl/cds3/map" )
+( "fa" "ihnl/cds4/map" )
+( "trans" "ihnl/cds1/map" )
+( "alu" "ihnl/cds10/map" )
+ )

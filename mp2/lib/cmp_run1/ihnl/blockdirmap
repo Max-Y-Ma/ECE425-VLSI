@@ -1,0 +1,6 @@
+CADENCE IHNL11144
+
+stdcell_rv32Lib nand2 schematic cds0
+stdcell_rv32Lib nor2 schematic cds1
+stdcell_rv32Lib inv schematic cds2
+bitslice_rv32Lib cmp schematic cds3

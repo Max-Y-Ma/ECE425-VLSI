@@ -1,0 +1,18 @@
+// Library - stdcell_rv32Lib, Cell - inv, View - schematic
+// LAST TIME SAVED: Mar 13 12:57:03 2024
+// NETLIST TIME: Mar 14 18:24:38 2024
+`timescale 1ns / 1ns 
+
+module inv ( Z, A );
+
+output  Z;
+
+input  A;
+
+
+specify 
+    specparam CDS_LIBNAME  = "stdcell_rv32Lib";
+    specparam CDS_CELLNAME = "inv";
+    specparam CDS_VIEWNAME = "schematic";
+endspecify
+

@@ -1,6 +1,6 @@
 // Library - stdcell_rv32Lib, Cell - bit2, View - schematic
-// LAST TIME SAVED: Mar 14 16:13:41 2024
-// NETLIST TIME: Mar 14 16:29:37 2024
+// LAST TIME SAVED: Mar 14 21:20:39 2024
+// NETLIST TIME: Mar 14 21:38:22 2024
 `timescale 1ns / 1ns 
 
 module bit2 ( Z1, Z2, A, R1, R2, W );

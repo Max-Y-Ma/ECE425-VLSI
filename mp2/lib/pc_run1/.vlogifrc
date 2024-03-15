@@ -406,7 +406,7 @@ simNCVerilogVCompScriptFile = "compare.rule"
 simNCVerilogVCompMaxCompareMismatches = 200
 
 ;Path to Database
-simNCVerilogVCompCompareResultsDirPath = "/home/maxma2/Documents/Coursework/ece425/mp2/lib/mux2_run1"
+simNCVerilogVCompCompareResultsDirPath = "/home/maxma2/Documents/Coursework/ece425/mp2/lib/cmp_run1"
 
 ;Difference Database
 simNCVerilogVCompCompareResultsDirName = "diff.db.out"

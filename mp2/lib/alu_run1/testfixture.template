@@ -1,0 +1,26 @@
+
+`timescale 1ns / 1ns
+
+module test;
+
+
+wire  alu_cout, alu_out;
+
+reg  alu_cin, alu_mux_1_out, alu_mux_2_out;
+
+reg [1:0]  alu_op;
+
+
+
+alu top(alu_cout, alu_out, alu_cin, alu_mux_1_out, alu_mux_2_out, 
+     alu_op); 
+ 
+
+`ifdef verilog
+
+ //please enter any additional verilog stimulus in the /home/maxma2/Documents/Coursework/ece425/mp2/lib/alu_run1/testfixture.verilog file
+`include "/home/maxma2/Documents/Coursework/ece425/mp2/lib/alu_run1/testfixture.verilog"
+
+`endif
+
+endmodule 

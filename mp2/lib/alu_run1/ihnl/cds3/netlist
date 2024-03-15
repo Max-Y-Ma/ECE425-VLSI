@@ -1,0 +1,22 @@
+// Library - stdcell_rv32Lib, Cell - muxinv2, View - schematic
+// LAST TIME SAVED: Mar 13 14:26:03 2024
+// NETLIST TIME: Mar 14 18:44:51 2024
+`timescale 1ns / 1ns 
+
+module muxinv2 ( Z, A, B, S0 );
+
+output  Z;
+
+input  A, B, S0;
+
+
+specify 
+    specparam CDS_LIBNAME  = "stdcell_rv32Lib";
+    specparam CDS_CELLNAME = "muxinv2";
+    specparam CDS_VIEWNAME = "schematic";
+endspecify
+
+mux2 I0 ( net1, A, B, S0);
+inv I1 ( Z, net1);
+
+endmodule

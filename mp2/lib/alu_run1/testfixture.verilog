@@ -1,0 +1,16 @@
+
+// Verilog stimulus file.
+// Please do not create a module in this file.
+
+
+// Default verilog stimulus. 
+
+initial
+begin 
+
+   alu_cin = 1'b0;
+   alu_mux_1_out = 1'b0;
+   alu_mux_2_out = 1'b0;
+   alu_op[1:0] = 2'b00;
+
+end 

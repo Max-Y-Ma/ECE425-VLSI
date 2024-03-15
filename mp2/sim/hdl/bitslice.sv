@@ -65,7 +65,7 @@ module bitslice (
 
     // Assign rf_data
     always_comb begin
-        rf_data[0] = regfile.I0.I0.Bit;
+        rf_data[0] = 1'b0;
         rf_data[1] = regfile.I0.I1.Bit;
         rf_data[2] = regfile.I0.I2.Bit;
         rf_data[3] = regfile.I0.I3.Bit;
