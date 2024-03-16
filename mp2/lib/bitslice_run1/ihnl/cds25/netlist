@@ -1,6 +1,6 @@
 // Library - bitslice_rv32Lib, Cell - rd_mux, View - schematic
 // LAST TIME SAVED: Mar 14 14:50:09 2024
-// NETLIST TIME: Mar 15 14:00:07 2024
+// NETLIST TIME: Mar 16 14:28:29 2024
 `timescale 1ns / 1ns 
 
 module rd_mux ( rd_mux_out, alu_out, cmp_out, imm, mem_mux_out, pcp4,

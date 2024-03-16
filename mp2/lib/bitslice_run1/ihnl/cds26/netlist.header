@@ -1,6 +1,6 @@
 // Library - bitslice_rv32Lib, Cell - bitslice, View - schematic
-// LAST TIME SAVED: Mar 15 13:56:56 2024
-// NETLIST TIME: Mar 15 14:00:07 2024
+// LAST TIME SAVED: Mar 16 12:41:41 2024
+// NETLIST TIME: Mar 16 14:28:29 2024
 `timescale 1ns / 1ns 
 
 module bitslice ( alu_cout, alu_mux_2_out, alu_out, cmp_eq_out,

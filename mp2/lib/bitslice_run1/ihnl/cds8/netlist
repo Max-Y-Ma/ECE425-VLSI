@@ -1,6 +1,6 @@
 // Library - stdcell_rv32Lib, Cell - nor2, View - schematic
 // LAST TIME SAVED: Feb 25 13:43:05 2024
-// NETLIST TIME: Mar 15 14:00:07 2024
+// NETLIST TIME: Mar 16 14:28:29 2024
 `timescale 1ns / 1ns 
 
 module nor2 ( Z, A, B );

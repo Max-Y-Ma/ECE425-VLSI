@@ -1,6 +1,6 @@
 // Library - stdcell_rv32Lib, Cell - reg2w32, View - schematic
-// LAST TIME SAVED: Mar 14 21:46:09 2024
-// NETLIST TIME: Mar 15 14:00:07 2024
+// LAST TIME SAVED: Mar 16 14:24:03 2024
+// NETLIST TIME: Mar 16 14:28:29 2024
 `timescale 1ns / 1ns 
 
 module reg2w32 ( Q1, Q1b, Q2, Q2b, CLK, D, RE1, RE2, WE );
@@ -20,13 +20,42 @@ specify
     specparam CDS_VIEWNAME = "schematic";
 endspecify
 
-generate for (genvar i = 1; i < 32; i++) begin : bits
-    bit2 bit2 ( net12, net3, D, RE1[i], RE2[i], WE[i]);
-end endgenerate
-
-dlatch I33 ( Q1, Q1b, net12, CLK);
-dlatch I32 ( Q2, Q2b, net3, CLK);
-trans I43 ( 1'b0, net3, RE2[0], 1'b1);
-trans I44 ( 1'b0, net12, RE1[0], 1'b1);
+bit2 I1 ( net2, net7, D, RE1[1], RE2[1], WE[1]);
+bit2 I2 ( net2, net7, D, RE1[2], RE2[2], WE[2]);
+bit2 I3 ( net2, net7, D, RE1[3], RE2[3], WE[3]);
+bit2 I4 ( net2, net7, D, RE1[4], RE2[4], WE[4]);
+bit2 I5 ( net2, net7, D, RE1[5], RE2[5], WE[5]);
+bit2 I6 ( net2, net7, D, RE1[6], RE2[6], WE[6]);
+bit2 I7 ( net2, net7, D, RE1[7], RE2[7], WE[7]);
+bit2 I8 ( net2, net7, D, RE1[8], RE2[8], WE[8]);
+bit2 I9 ( net2, net7, D, RE1[9], RE2[9], WE[9]);
+bit2 I10 ( net2, net7, D, RE1[10], RE2[10], WE[10]);
+bit2 I11 ( net2, net7, D, RE1[11], RE2[11], WE[11]);
+bit2 I12 ( net2, net7, D, RE1[12], RE2[12], WE[12]);
+bit2 I13 ( net2, net7, D, RE1[13], RE2[13], WE[13]);
+bit2 I14 ( net2, net7, D, RE1[14], RE2[14], WE[14]);
+bit2 I15 ( net2, net7, D, RE1[15], RE2[15], WE[15]);
+bit2 I16 ( net2, net7, D, RE1[16], RE2[16], WE[16]);
+bit2 I17 ( net2, net7, D, RE1[17], RE2[17], WE[17]);
+bit2 I18 ( net2, net7, D, RE1[18], RE2[18], WE[18]);
+bit2 I19 ( net2, net7, D, RE1[19], RE2[19], WE[19]);
+bit2 I20 ( net2, net7, D, RE1[20], RE2[20], WE[20]);
+bit2 I21 ( net2, net7, D, RE1[21], RE2[21], WE[21]);
+bit2 I22 ( net2, net7, D, RE1[22], RE2[22], WE[22]);
+bit2 I23 ( net2, net7, D, RE1[23], RE2[23], WE[23]);
+bit2 I24 ( net2, net7, D, RE1[24], RE2[24], WE[24]);
+bit2 I25 ( net2, net7, D, RE1[25], RE2[25], WE[25]);
+bit2 I26 ( net2, net7, D, RE1[26], RE2[26], WE[26]);
+bit2 I27 ( net2, net7, D, RE1[27], RE2[27], WE[27]);
+bit2 I28 ( net2, net7, D, RE1[28], RE2[28], WE[28]);
+bit2 I29 ( net2, net7, D, RE1[29], RE2[29], WE[29]);
+bit2 I30 ( net2, net7, D, RE1[30], RE2[30], WE[30]);
+bit2 I31 ( net2, net7, D, RE1[31], RE2[31], WE[31]);
+dlatch I33 ( Q1, Q1b, net2, CLK);
+dlatch I32 ( Q2, Q2b, net7, CLK);
+trans I62 ( net2, 1'b0, RE1[0], RE1b);
+trans I61 ( net7, 1'b0, RE2[0], RE2b);
+inv I66 ( RE2b, RE2[0]);
+inv I65 ( RE1b, RE1[0]);
 
 endmodule

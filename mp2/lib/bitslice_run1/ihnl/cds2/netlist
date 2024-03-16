@@ -1,6 +1,6 @@
 // Library - stdcell_rv32Lib, Cell - mux2, View - schematic
 // LAST TIME SAVED: Mar 13 14:18:56 2024
-// NETLIST TIME: Mar 15 14:00:07 2024
+// NETLIST TIME: Mar 16 14:28:29 2024
 `timescale 1ns / 1ns 
 
 module mux2 ( Z, A, B, S0 );
@@ -16,8 +16,8 @@ specify
     specparam CDS_VIEWNAME = "schematic";
 endspecify
 
-trans I2 ( B, Z, S0, net1);
-trans I1 ( A, Z, net1, S0);
+trans I2 ( Z, B, S0, net1);
+trans I1 ( Z, A, net1, S0);
 inv I3 ( net1, S0);
 
 endmodule

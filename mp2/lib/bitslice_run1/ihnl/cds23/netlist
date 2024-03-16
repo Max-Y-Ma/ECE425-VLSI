@@ -1,6 +1,6 @@
 // Library - stdcell_rv32Lib, Cell - mux6, View - schematic
 // LAST TIME SAVED: Mar 13 16:04:25 2024
-// NETLIST TIME: Mar 15 14:00:07 2024
+// NETLIST TIME: Mar 16 14:28:29 2024
 `timescale 1ns / 1ns 
 
 module mux6 ( Z, A, B, C, D, E, F, S0, S1, S2 );
@@ -16,17 +16,17 @@ specify
     specparam CDS_VIEWNAME = "schematic";
 endspecify
 
-trans I7 ( F, net4, S0, S0b);
-trans I0 ( A, net2, S0b, S0);
-trans I9 ( net5, Z, S2, S2b);
-trans I8 ( net1, Z, S2b, S2);
-trans I13 ( net4, net5, S1b, S1);
-trans I6 ( net3, net1, S1, S1b);
-trans I5 ( net2, net1, S1b, S1);
-trans I4 ( E, net4, S0b, S0);
-trans I3 ( D, net3, S0, S0b);
-trans I2 ( C, net3, S0b, S0);
-trans I1 ( B, net2, S0, S0b);
+trans I7 ( net4, F, S0, S0b);
+trans I0 ( net2, A, S0b, S0);
+trans I9 ( Z, net5, S2, S2b);
+trans I8 ( Z, net1, S2b, S2);
+trans I13 ( net5, net4, S1b, S1);
+trans I6 ( net1, net3, S1, S1b);
+trans I5 ( net1, net2, S1b, S1);
+trans I4 ( net4, E, S0b, S0);
+trans I3 ( net3, D, S0, S0b);
+trans I2 ( net3, C, S0b, S0);
+trans I1 ( net2, B, S0, S0b);
 inv I12 ( S2b, S2);
 inv I11 ( S1b, S1);
 inv I10 ( S0b, S0);

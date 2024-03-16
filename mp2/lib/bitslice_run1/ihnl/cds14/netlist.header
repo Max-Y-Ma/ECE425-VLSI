@@ -1,6 +1,6 @@
 // Library - bitslice_rv32Lib, Cell - rs2_inverter, View - schematic
 // LAST TIME SAVED: Mar 14 15:17:43 2024
-// NETLIST TIME: Mar 15 14:00:07 2024
+// NETLIST TIME: Mar 16 14:28:29 2024
 `timescale 1ns / 1ns 
 
 module rs2_inverter ( rs2_after_inv, alu_inv_rs2, rs2_rdata );

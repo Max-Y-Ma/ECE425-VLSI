@@ -1,13 +1,13 @@
 // Library - stdcell_rv32Lib, Cell - trans, View - schematic
-// LAST TIME SAVED: Mar 14 13:47:31 2024
-// NETLIST TIME: Mar 15 14:00:07 2024
+// LAST TIME SAVED: Mar 16 13:58:43 2024
+// NETLIST TIME: Mar 16 14:28:29 2024
 `timescale 1ns / 1ns 
 
-module trans ( A, Z, G, Gb );
+module trans ( Z, A, G, Gb );
 
-inout  A, Z;
+inout  Z;
 
-input  G, Gb;
+input  A, G, Gb;
 
 
 specify 

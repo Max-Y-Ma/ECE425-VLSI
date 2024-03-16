@@ -1,6 +1,6 @@
 // Library - stdcell_rv32Lib, Cell - inv, View - schematic
 // LAST TIME SAVED: Mar 13 12:57:03 2024
-// NETLIST TIME: Mar 15 14:00:07 2024
+// NETLIST TIME: Mar 16 14:28:28 2024
 `timescale 1ns / 1ns 
 
 module inv ( Z, A );

@@ -1,6 +1,6 @@
 // Library - stdcell_rv32Lib, Cell - mux6, View - schematic
 // LAST TIME SAVED: Mar 13 16:04:25 2024
-// NETLIST TIME: Mar 15 14:00:07 2024
+// NETLIST TIME: Mar 16 14:28:29 2024
 `timescale 1ns / 1ns 
 
 module mux6 ( Z, A, B, C, D, E, F, S0, S1, S2 );

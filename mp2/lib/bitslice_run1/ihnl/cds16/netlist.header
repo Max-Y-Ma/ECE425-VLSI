@@ -1,6 +1,6 @@
 // Library - stdcell_rv32Lib, Cell - dlatch, View - schematic
 // LAST TIME SAVED: Mar 13 16:30:40 2024
-// NETLIST TIME: Mar 15 14:00:07 2024
+// NETLIST TIME: Mar 16 14:28:29 2024
 `timescale 1ns / 1ns 
 
 module dlatch ( Q, Qb, D, EN );

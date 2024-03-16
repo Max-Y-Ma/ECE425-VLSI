@@ -2,8 +2,8 @@ inv I13 ( Wb, W);
 inv I15 ( Rb, R);
 inv I2 ( Bit, net1);
 inv I1 ( net1, net2);
-trans I14 ( Bit, Z, R, Rb);
-trans I12 ( A, net2, W, Wb);
-trans I16 ( Bit, net2, Wb, W);
+trans I14 ( Z, Bit, R, Rb);
+trans I12 ( net2, A, W, Wb);
+trans I16 ( net2, Bit, Wb, W);
 
 endmodule

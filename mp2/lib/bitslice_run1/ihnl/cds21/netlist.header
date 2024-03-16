@@ -1,6 +1,6 @@
 // Library - stdcell_rv32Lib, Cell - reg2w32, View - schematic
-// LAST TIME SAVED: Mar 14 21:46:09 2024
-// NETLIST TIME: Mar 15 14:00:07 2024
+// LAST TIME SAVED: Mar 16 14:24:03 2024
+// NETLIST TIME: Mar 16 14:28:29 2024
 `timescale 1ns / 1ns 
 
 module reg2w32 ( Q1, Q1b, Q2, Q2b, CLK, D, RE1, RE2, WE );

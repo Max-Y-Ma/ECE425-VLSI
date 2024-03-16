@@ -1,6 +1,6 @@
 // Library - stdcell_rv32Lib, Cell - fa, View - schematic
 // LAST TIME SAVED: Mar 13 17:09:20 2024
-// NETLIST TIME: Mar 15 14:00:07 2024
+// NETLIST TIME: Mar 16 14:28:29 2024
 `timescale 1ns / 1ns 
 
 module fa ( Cout, Sum, A, B, Cin );

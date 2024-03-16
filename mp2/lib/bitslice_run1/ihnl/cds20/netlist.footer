@@ -1,11 +1,11 @@
-inv I10 ( Bit, net4);
-inv I4 ( net4, net1);
+inv I10 ( Bit, net2);
+inv I4 ( net2, net1);
 inv I0 ( R1b, R1);
 inv I13 ( Wb, W);
 inv I15 ( R2b, R2);
-trans I16 ( Bit, net1, Wb, W);
-trans I5 ( A, net1, W, Wb);
-trans I3 ( Bit, Z2, R2, R2b);
-trans I14 ( Bit, Z1, R1, R1b);
+trans I16 ( net1, Bit, Wb, W);
+trans I5 ( net1, A, W, Wb);
+trans I3 ( Z2, Bit, R2, R2b);
+trans I14 ( Z1, Bit, R1, R1b);
 
 endmodule

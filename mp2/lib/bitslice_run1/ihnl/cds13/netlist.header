@@ -1,6 +1,6 @@
 // Library - bitslice_rv32Lib, Cell - cmp, View - schematic
 // LAST TIME SAVED: Mar 14 18:19:35 2024
-// NETLIST TIME: Mar 15 14:00:07 2024
+// NETLIST TIME: Mar 16 14:28:29 2024
 `timescale 1ns / 1ns 
 
 module cmp ( cmp_eq_out, cmp_lt_out, cmp_eq_in, cmp_lt_in, cmp_mux_out,
