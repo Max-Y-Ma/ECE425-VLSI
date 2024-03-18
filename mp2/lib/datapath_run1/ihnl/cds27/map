@@ -371,7 +371,6 @@
 ( "dmem_rdata<18>" "dmem_rdata[18]" )
 ( "rd_sel<3>" "rd_sel[3]" )
 ( "dmem_addr<19>" "dmem_addr[19]" )
-( "shift_out<4:0>" "{shift_out[4], shift_out[3], shift_out[2], shift_out[1], shift_out[0]}" )
 ( "shift_out<118>" "shift_out[118]" )
 ( "dmem_rdata<14>" "dmem_rdata[14]" )
 ( "rd_sel<28>" "rd_sel[28]" )

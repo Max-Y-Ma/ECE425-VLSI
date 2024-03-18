@@ -1,6 +1,6 @@
 // Library - bitslice_rv32Lib, Cell - datapath, View - schematic
-// LAST TIME SAVED: Mar 17 20:36:57 2024
-// NETLIST TIME: Mar 17 20:37:02 2024
+// LAST TIME SAVED: Mar 17 21:33:10 2024
+// NETLIST TIME: Mar 17 21:33:18 2024
 `timescale 1ns / 1ns 
 
 module datapath ( cmp_a_31, cmp_b_31, cmp_eq, cmp_lt, dmem_addr,
