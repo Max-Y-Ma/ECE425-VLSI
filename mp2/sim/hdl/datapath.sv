@@ -1,4 +1,4 @@
-module datapath(
+module datapath_stub (
     input   logic               clk,
     input   logic               rst,
 
@@ -51,7 +51,6 @@ module datapath(
             logic   [31:0]      b_cmp_b;
 
             logic   [31:0][31:0] rf_data;
-            logic   [31:0]      real_rf_data[32];
 
     always_comb begin
         b_cmp_out           = {31'd0, cmp_out};
@@ -77,112 +76,14 @@ module datapath(
         end
     end
 
-    generate
-        // Stub Code
+    // Stub Code
+    // generate
         // for (genvar i = 0; i < 32; i++) begin : reg_assign
             // for (genvar j = 0; j < 32; j++) begin : bit_assign
                 // assign real_rf_data[i][j] = rf_data[j][i];
             // end
         // end
-
-        // Bitslice Code
-        for (genvar j = 0; j < 32; j++) begin : bit_assign0
-            assign real_rf_data[0][j] = 1'b0;
-        end
-        for (genvar j = 0; j < 32; j++) begin : bit_assign1
-            assign real_rf_data[1][j] = bitslices[j].bitslice.I9.I0.I1.Bit;
-        end
-        for (genvar j = 0; j < 32; j++) begin : bit_assign2
-            assign real_rf_data[2][j] = bitslices[j].bitslice.I9.I0.I2.Bit;
-        end
-        for (genvar j = 0; j < 32; j++) begin : bit_assign3
-            assign real_rf_data[3][j] = bitslices[j].bitslice.I9.I0.I3.Bit;
-        end
-        for (genvar j = 0; j < 32; j++) begin : bit_assign4
-            assign real_rf_data[4][j] = bitslices[j].bitslice.I9.I0.I4.Bit;
-        end
-        for (genvar j = 0; j < 32; j++) begin : bit_assign5
-            assign real_rf_data[5][j] = bitslices[j].bitslice.I9.I0.I5.Bit;
-        end
-        for (genvar j = 0; j < 32; j++) begin : bit_assign6
-            assign real_rf_data[6][j] = bitslices[j].bitslice.I9.I0.I6.Bit;
-        end
-        for (genvar j = 0; j < 32; j++) begin : bit_assign7
-            assign real_rf_data[7][j] = bitslices[j].bitslice.I9.I0.I7.Bit;
-        end
-        for (genvar j = 0; j < 32; j++) begin : bit_assign8
-            assign real_rf_data[8][j] = bitslices[j].bitslice.I9.I0.I8.Bit;
-        end
-        for (genvar j = 0; j < 32; j++) begin : bit_assign9
-            assign real_rf_data[9][j] = bitslices[j].bitslice.I9.I0.I9.Bit;
-        end
-        for (genvar j = 0; j < 32; j++) begin : bit_assign10
-            assign real_rf_data[10][j] = bitslices[j].bitslice.I9.I0.I10.Bit;
-        end
-        for (genvar j = 0; j < 32; j++) begin : bit_assign11
-            assign real_rf_data[11][j] = bitslices[j].bitslice.I9.I0.I11.Bit;
-        end
-        for (genvar j = 0; j < 32; j++) begin : bit_assign12
-            assign real_rf_data[12][j] = bitslices[j].bitslice.I9.I0.I12.Bit;
-        end
-        for (genvar j = 0; j < 32; j++) begin : bit_assign13
-            assign real_rf_data[13][j] = bitslices[j].bitslice.I9.I0.I13.Bit;
-        end
-        for (genvar j = 0; j < 32; j++) begin : bit_assign14
-            assign real_rf_data[14][j] = bitslices[j].bitslice.I9.I0.I14.Bit;
-        end
-        for (genvar j = 0; j < 32; j++) begin : bit_assign15
-            assign real_rf_data[15][j] = bitslices[j].bitslice.I9.I0.I15.Bit;
-        end
-        for (genvar j = 0; j < 32; j++) begin : bit_assign16
-            assign real_rf_data[16][j] = bitslices[j].bitslice.I9.I0.I16.Bit;
-        end
-        for (genvar j = 0; j < 32; j++) begin : bit_assign17
-            assign real_rf_data[17][j] = bitslices[j].bitslice.I9.I0.I17.Bit;
-        end
-        for (genvar j = 0; j < 32; j++) begin : bit_assign18
-            assign real_rf_data[18][j] = bitslices[j].bitslice.I9.I0.I18.Bit;
-        end
-        for (genvar j = 0; j < 32; j++) begin : bit_assign19
-            assign real_rf_data[19][j] = bitslices[j].bitslice.I9.I0.I19.Bit;
-        end
-        for (genvar j = 0; j < 32; j++) begin : bit_assign20
-            assign real_rf_data[20][j] = bitslices[j].bitslice.I9.I0.I20.Bit;
-        end
-        for (genvar j = 0; j < 32; j++) begin : bit_assign21
-            assign real_rf_data[21][j] = bitslices[j].bitslice.I9.I0.I21.Bit;
-        end
-        for (genvar j = 0; j < 32; j++) begin : bit_assign22
-            assign real_rf_data[22][j] = bitslices[j].bitslice.I9.I0.I22.Bit;
-        end
-        for (genvar j = 0; j < 32; j++) begin : bit_assign23
-            assign real_rf_data[23][j] = bitslices[j].bitslice.I9.I0.I23.Bit;
-        end
-        for (genvar j = 0; j < 32; j++) begin : bit_assign24
-            assign real_rf_data[24][j] = bitslices[j].bitslice.I9.I0.I24.Bit;
-        end
-        for (genvar j = 0; j < 32; j++) begin : bit_assign25
-            assign real_rf_data[25][j] = bitslices[j].bitslice.I9.I0.I25.Bit;
-        end
-        for (genvar j = 0; j < 32; j++) begin : bit_assign26
-            assign real_rf_data[26][j] = bitslices[j].bitslice.I9.I0.I26.Bit;
-        end
-        for (genvar j = 0; j < 32; j++) begin : bit_assign27
-            assign real_rf_data[27][j] = bitslices[j].bitslice.I9.I0.I27.Bit;
-        end
-        for (genvar j = 0; j < 32; j++) begin : bit_assign28
-            assign real_rf_data[28][j] = bitslices[j].bitslice.I9.I0.I28.Bit;
-        end
-        for (genvar j = 0; j < 32; j++) begin : bit_assign29
-            assign real_rf_data[29][j] = bitslices[j].bitslice.I9.I0.I29.Bit;
-        end
-        for (genvar j = 0; j < 32; j++) begin : bit_assign30
-            assign real_rf_data[30][j] = bitslices[j].bitslice.I9.I0.I30.Bit;
-        end
-        for (genvar j = 0; j < 32; j++) begin : bit_assign31
-            assign real_rf_data[31][j] = bitslices[j].bitslice.I9.I0.I31.Bit;
-        end
-    endgenerate
+    // endgenerate
 
     generate for (genvar i = 0; i < 32; i++) begin : bitslices
         bitslice bitslice(
@@ -213,7 +114,7 @@ module datapath(
             .cmp_src_a                  (b_cmp_a[i]                     ),
             .cmp_src_b                  (b_cmp_b[i]                     ),
             .pc                         (imem_addr[i]                   ),
-            // .rf_data                    (rf_data[i]                     ),      // Comment for bitslice 
+            // .rf_data                    (rf_data[i]                     ),      // Comment for bitslice stub code 
             .*
         );
     end endgenerate

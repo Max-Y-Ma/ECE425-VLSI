@@ -1,0 +1,42 @@
+// Library - bitslice_rv32Lib, Cell - datapath, View - schematic
+// LAST TIME SAVED: Mar 17 20:36:57 2024
+// NETLIST TIME: Mar 17 20:37:02 2024
+`timescale 1ns / 1ns 
+
+module datapath ( cmp_a_31, cmp_b_31, cmp_eq, cmp_lt, dmem_addr,
+     dmem_wdata, imem_addr, alu_cin, alu_inv_rs2, alu_mux_1_sel,
+     alu_mux_2_sel, alu_op, clk, cmp_mux_sel, cmp_out, dmem_rdata, imm,
+     mem_mux_sel, pc_mux_sel, rd_mux_sel, rd_sel, rs1_sel, rs2_sel,
+     rst, shift_dir, shift_msb );
+
+output  cmp_a_31, cmp_b_31, cmp_eq, cmp_lt;
+
+input  alu_cin, alu_inv_rs2, alu_mux_1_sel, alu_mux_2_sel, clk,
+     cmp_mux_sel, cmp_out, pc_mux_sel, rst, shift_dir, shift_msb;
+
+output [31:0]  dmem_wdata;
+output [31:0]  dmem_addr;
+output [31:0]  imem_addr;
+
+input [31:0]  dmem_rdata;
+input [31:0]  imm;
+input [2:0]  rd_mux_sel;
+input [2:0]  mem_mux_sel;
+input [1:0]  alu_op;
+input [31:0]  rd_sel;
+input [31:0]  rs2_sel;
+input [31:0]  rs1_sel;
+
+// Buses in the design
+
+wire  [4:0]  alu_mux_2_out;
+
+wire  [0:159]  shift_out;
+
+
+specify 
+    specparam CDS_LIBNAME  = "bitslice_rv32Lib";
+    specparam CDS_CELLNAME = "datapath";
+    specparam CDS_VIEWNAME = "schematic";
+endspecify
+

@@ -1,0 +1,19 @@
+alu I0 ( alu_cout, alu_out, alu_cin, alu_mux_1_out, alu_mux_2_out,
+     alu_op[1:0]);
+shift I1 ( shift_out[5:0], alu_mux_1_out, shift_amount[4:0], shift_dir,
+     shift_in_from_left[4:0], shift_in_from_right[4:0]);
+cmp I2 ( cmp_eq_out, cmp_lt_out, cmp_eq_in, cmp_lt_in, cmp_src_b,
+     cmp_src_a);
+mux2 I5 ( cmp_src_b, rs2_rdata, imm, cmp_mux_sel);
+mux2 I4 ( alu_mux_2_out, net3, imm, alu_mux_2_sel);
+mux2 I3 ( alu_mux_1_out, cmp_src_a, pc, alu_mux_1_sel);
+rs2_inverter I6 ( net3, alu_inv_rs2, rs2_rdata);
+pc I7 ( pc, alu_out, clk, pc_mux_sel, pc_reset_value, pcp4, rst);
+pcadder I8 ( pc_cout, pcp4, pc, pc_adder_4, pc_cin);
+regfile I9 ( cmp_src_a, rs2_rdata, clk, rd_mux_out, rd_sel[31:0],
+     rs1_sel[31:0], rs2_sel[31:0]);
+mem_mux I10 ( mem_mux_out, lb, lbu, lh, lhu, lw, mem_mux_sel[2:0]);
+rd_mux I11 ( rd_mux_out, alu_out, cmp_out, imm, mem_mux_out, pcp4,
+     rd_mux_sel[2:0], shift_out[5]);
+
+endmodule

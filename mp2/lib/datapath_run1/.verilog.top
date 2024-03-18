@@ -1,0 +1,38 @@
+
+`timescale 1ns / 1ns
+
+module test;
+
+
+wire  cmp_a_31, cmp_b_31, cmp_eq, cmp_lt;
+
+reg  alu_cin, alu_inv_rs2, alu_mux_1_sel, alu_mux_2_sel, clk, 
+     cmp_mux_sel, cmp_out, pc_mux_sel, rst, shift_dir, shift_msb;
+
+wire [31:0]  dmem_wdata;
+wire [31:0]  dmem_addr;
+wire [31:0]  imem_addr;
+
+reg [31:0]  dmem_rdata;
+reg [31:0]  imm;
+reg [2:0]  rd_mux_sel;
+reg [2:0]  mem_mux_sel;
+reg [1:0]  alu_op;
+reg [31:0]  rd_sel;
+reg [31:0]  rs2_sel;
+reg [31:0]  rs1_sel;
+
+// Buses in the design
+
+wire  [4:0]  alu_mux_2_out;
+
+wire  [0:159]  shift_out;
+
+
+
+datapath top(cmp_a_31, cmp_b_31, cmp_eq, cmp_lt, dmem_addr, dmem_wdata
+     , imem_addr, alu_cin, alu_inv_rs2, alu_mux_1_sel, alu_mux_2_sel, 
+     alu_op, clk, cmp_mux_sel, cmp_out, dmem_rdata, imm, mem_mux_sel, 
+     pc_mux_sel, rd_mux_sel, rd_sel, rs1_sel, rs2_sel, rst, shift_dir, 
+     shift_msb); 
+ 
