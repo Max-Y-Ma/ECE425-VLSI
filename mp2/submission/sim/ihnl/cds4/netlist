@@ -1,0 +1,25 @@
+// Library - stdcell_rv32Lib, Cell - fa, View - schematic
+// LAST TIME SAVED: Mar 13 17:09:20 2024
+// NETLIST TIME: Mar 17 20:29:13 2024
+`timescale 1ns / 1ns 
+
+module fa ( Cout, Sum, A, B, Cin );
+
+output  Cout, Sum;
+
+input  A, B, Cin;
+
+
+specify 
+    specparam CDS_LIBNAME  = "stdcell_rv32Lib";
+    specparam CDS_CELLNAME = "fa";
+    specparam CDS_VIEWNAME = "schematic";
+endspecify
+
+inv I1 ( Cinb, Cin);
+inv I13 ( net10, Cout);
+muxinv2 I11 ( mux1, Cin, Cinb, A);
+mux2 I14 ( Sum, net10, B, mux1);
+mux2 I12 ( Cout, B, A, mux1);
+
+endmodule

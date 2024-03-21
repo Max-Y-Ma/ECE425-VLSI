@@ -1,0 +1,12 @@
+CADENCE IHNL11140
+$model
+stdcell_rv32Lib/inv/schematic inv
+stdcell_rv32Lib/trans/schematic trans
+stdcell_rv32Lib/dlatch/schematic dlatch
+$endmodel
+$net
+vss! vss!
+vdd! vdd!
+$endnet
+$param
+$endparam

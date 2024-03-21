@@ -1,0 +1,8 @@
+fa I0 ( alu_cout, net5, alu_mux_1_out, alu_mux_2_out, alu_cin);
+muxinv4 I15 ( alu_out, net1, xor_, or_, and_, alu_op[0], alu_op[1]);
+nand2 I3 ( and_, alu_mux_1_out, alu_mux_2_out);
+nor2 I4 ( or_, alu_mux_1_out, alu_mux_2_out);
+xnor2 I5 ( xor_, alu_mux_1_out, alu_mux_2_out);
+inv I16 ( net1, net5);
+
+endmodule

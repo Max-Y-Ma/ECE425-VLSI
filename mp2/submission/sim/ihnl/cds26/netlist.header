@@ -1,0 +1,46 @@
+// Library - bitslice_rv32Lib, Cell - bitslice, View - schematic
+// LAST TIME SAVED: Mar 17 13:00:53 2024
+// NETLIST TIME: Mar 17 21:33:18 2024
+`timescale 1ns / 1ns 
+
+module bitslice ( alu_cout, alu_mux_2_out, alu_out, cmp_eq_out,
+     cmp_lt_out, cmp_src_a, cmp_src_b, pc, pc_cout, rs2_rdata,
+     shift_out[0], shift_out[1], shift_out[2], shift_out[3],
+     shift_out[4], shift_out[5], alu_cin, alu_inv_rs2, alu_mux_1_sel,
+     alu_mux_2_sel, alu_op, clk, cmp_eq_in, cmp_lt_in, cmp_mux_sel,
+     cmp_out, imm, lb, lbu, lh, lhu, lw, mem_mux_sel, pc_adder_4,
+     pc_cin, pc_mux_sel, pc_reset_value, rd_mux_sel, rd_sel, rs1_sel,
+     rs2_sel, rst, shift_amount, shift_dir, shift_in_from_left[0],
+     shift_in_from_left[1], shift_in_from_left[2],
+     shift_in_from_left[3], shift_in_from_left[4],
+     shift_in_from_right[0], shift_in_from_right[1],
+     shift_in_from_right[2], shift_in_from_right[3],
+     shift_in_from_right[4] );
+
+output  alu_cout, alu_mux_2_out, alu_out, cmp_eq_out, cmp_lt_out,
+     cmp_src_a, cmp_src_b, pc, pc_cout, rs2_rdata;
+
+input  alu_cin, alu_inv_rs2, alu_mux_1_sel, alu_mux_2_sel, clk,
+     cmp_eq_in, cmp_lt_in, cmp_mux_sel, cmp_out, imm, lb, lbu, lh, lhu,
+     lw, pc_adder_4, pc_cin, pc_mux_sel, pc_reset_value, rst,
+     shift_dir;
+
+output [5:0]  shift_out;
+
+input [4:0]  shift_in_from_left;
+input [4:0]  shift_in_from_right;
+input [4:0]  shift_amount;
+input [2:0]  rd_mux_sel;
+input [2:0]  mem_mux_sel;
+input [1:0]  alu_op;
+input [31:0]  rd_sel;
+input [31:0]  rs2_sel;
+input [31:0]  rs1_sel;
+
+
+specify 
+    specparam CDS_LIBNAME  = "bitslice_rv32Lib";
+    specparam CDS_CELLNAME = "bitslice";
+    specparam CDS_VIEWNAME = "schematic";
+endspecify
+

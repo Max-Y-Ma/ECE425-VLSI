@@ -1,0 +1,6 @@
+reg1w1 I0 ( pc, net4, clk, pc_next, clk, clkb);
+mux2 I2 ( pc_next, net7, pc_reset_value, rst);
+mux2 I1 ( net7, pcp4, alu_out, pc_mux_sel);
+inv I12 ( clkb, clk);
+
+endmodule

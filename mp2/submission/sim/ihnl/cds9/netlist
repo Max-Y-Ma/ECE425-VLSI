@@ -1,0 +1,36 @@
+// Library - stdcell_rv32Lib, Cell - xnor2, View - schematic
+// LAST TIME SAVED: Feb 28 10:01:39 2024
+// NETLIST TIME: Mar 17 20:29:13 2024
+`timescale 1ns / 1ns 
+
+module xnor2 ( Z, A, B );
+
+output  Z;
+
+input  A, B;
+
+
+specify 
+    specparam CDS_LIBNAME  = "stdcell_rv32Lib";
+    specparam CDS_CELLNAME = "xnor2";
+    specparam CDS_VIEWNAME = "schematic";
+endspecify
+
+PMOS_VTL  M6 ( .D(net8), .B(1'b1), .G(A),
+     .S(1'b1));
+PMOS_VTL  M5 ( .D(Z), .B(1'b1), .G(B), .S(net8));
+PMOS_VTL  M4 ( .D(Z), .B(1'b1), .G(net4),
+     .S(1'b1));
+PMOS_VTL  M1 ( .D(net4), .B(1'b1), .G(B),
+     .S(1'b1));
+PMOS_VTL  M0 ( .D(net4), .B(1'b1), .G(A),
+     .S(1'b1));
+NMOS_VTL  M9 ( .D(net3), .B(1'b0), .G(net4),
+     .S(1'b0));
+NMOS_VTL  M8 ( .D(Z), .B(1'b0), .G(B), .S(net3));
+NMOS_VTL  M7 ( .D(Z), .B(1'b0), .G(A), .S(net3));
+NMOS_VTL  M3 ( .D(net1), .B(1'b0), .G(B),
+     .S(1'b0));
+NMOS_VTL  M2 ( .D(net4), .B(1'b0), .G(A), .S(net1));
+
+endmodule

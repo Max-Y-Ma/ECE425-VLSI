@@ -1,0 +1,22 @@
+// Library - stdcell_rv32Lib, Cell - trans, View - schematic
+// LAST TIME SAVED: Mar 16 13:58:43 2024
+// NETLIST TIME: Mar 17 20:29:13 2024
+`timescale 1ns / 1ns 
+
+module trans ( Z, A, G, Gb );
+
+inout  Z;
+
+input  A, G, Gb;
+
+
+specify 
+    specparam CDS_LIBNAME  = "stdcell_rv32Lib";
+    specparam CDS_CELLNAME = "trans";
+    specparam CDS_VIEWNAME = "schematic";
+endspecify
+
+PMOS_VTL  M0 ( .D(Z), .B(1'b1), .G(Gb), .S(A));
+NMOS_VTL  M1 ( .D(Z), .B(1'b0), .G(G), .S(A));
+
+endmodule

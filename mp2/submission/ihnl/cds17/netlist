@@ -1,0 +1,22 @@
+// Library - stdcell_rv32Lib, Cell - reg1w1, View - schematic
+// LAST TIME SAVED: Mar 14 16:06:53 2024
+// NETLIST TIME: Mar 17 20:29:13 2024
+`timescale 1ns / 1ns 
+
+module reg1w1 ( Q, Qb, CLK, D, RE, WE );
+
+output  Q, Qb;
+
+input  CLK, D, RE, WE;
+
+
+specify 
+    specparam CDS_LIBNAME  = "stdcell_rv32Lib";
+    specparam CDS_CELLNAME = "reg1w1";
+    specparam CDS_VIEWNAME = "schematic";
+endspecify
+
+bit1 I0 ( net4, D, RE, WE);
+dlatch I1 ( Q, Qb, net4, CLK);
+
+endmodule

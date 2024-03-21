@@ -1,0 +1,9 @@
+( ( defbus
+( "rd_mux_sel" 2 0  "rd_mux_sel" 2 0  )
+ )
+( net
+( "rd_mux_sel<0>" "rd_mux_sel[0]" )
+( "rd_mux_sel<1>" "rd_mux_sel[1]" )
+( "rd_mux_sel<2>" "rd_mux_sel[2]" )
+ )
+ )

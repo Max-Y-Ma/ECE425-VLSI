@@ -1,0 +1,10 @@
+trans I5 ( Z, net12, S1, S1b);
+trans I4 ( Z, net4, S1b, S1);
+trans I3 ( net12, D, S0, S0b);
+trans I2 ( net12, C, S0b, S0);
+trans I1 ( net4, B, S0, S0b);
+trans I0 ( net4, A, S0b, S0);
+inv I7 ( S1b, S1);
+inv I6 ( S0b, S0);
+
+endmodule

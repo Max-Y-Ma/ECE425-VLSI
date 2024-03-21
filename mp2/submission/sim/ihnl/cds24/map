@@ -1,0 +1,10 @@
+( ( defbus
+( "mem_mux_sel" 2 0  "mem_mux_sel" 2 0  )
+ )
+( net
+( "vss!" "cds_globals.vss_" )
+( "mem_mux_sel<2>" "mem_mux_sel[2]" )
+( "mem_mux_sel<0>" "mem_mux_sel[0]" )
+( "mem_mux_sel<1>" "mem_mux_sel[1]" )
+ )
+ )

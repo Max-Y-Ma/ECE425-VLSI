@@ -1,0 +1,4 @@
+mux6 I1 ( rd_mux_out, alu_out, shift_out, cmp_out, imm, pcp4,
+     mem_mux_out, rd_mux_sel[0], rd_mux_sel[1], rd_mux_sel[2]);
+
+endmodule

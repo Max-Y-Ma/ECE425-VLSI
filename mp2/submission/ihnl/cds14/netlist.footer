@@ -1,0 +1,4 @@
+mux2 I0 ( rs2_after_inv, rs2_rdata, rs2_data_inv, alu_inv_rs2);
+inv I1 ( rs2_data_inv, rs2_rdata);
+
+endmodule

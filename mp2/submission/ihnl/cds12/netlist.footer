@@ -1,0 +1,18 @@
+mux2 I10 ( shift_out[1], shift_out[0], net5, shift_amount[0]);
+mux2 I9 ( shift_out[2], shift_out[1], net4, shift_amount[1]);
+mux2 I8 ( shift_out[3], shift_out[2], net3, shift_amount[2]);
+mux2 I7 ( shift_out[4], shift_out[3], net2, shift_amount[3]);
+mux2 I6 ( shift_out[5], shift_out[4], net1, shift_amount[4]);
+mux2 I5 ( net5, shift_in_from_right[0], shift_in_from_left[0],
+     shift_dir);
+mux2 I4 ( net4, shift_in_from_right[1], shift_in_from_left[1],
+     shift_dir);
+mux2 I3 ( net3, shift_in_from_right[2], shift_in_from_left[2],
+     shift_dir);
+mux2 I2 ( net2, shift_in_from_right[3], shift_in_from_left[3],
+     shift_dir);
+mux2 I1 ( net1, shift_in_from_right[4], shift_in_from_left[4],
+     shift_dir);
+buf_ I29 ( shift_out[0], alu_mux_1_out);
+
+endmodule

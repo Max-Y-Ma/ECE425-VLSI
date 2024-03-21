@@ -1,0 +1,21 @@
+* SPICE NETLIST
+***************************************
+
+.SUBCKT dlatch EN D Q vss! vdd! Qb
+** N=10 EP=6 IP=0 FDC=14
+M0 vss! 2 1 vss! NMOS_VTL L=5e-08 W=9e-08 AD=1.26e-14 AS=9e-15 PD=4.6e-07 PS=3.8e-07 $X=310 $Y=600 $D=1
+M1 2 EN vss! vss! NMOS_VTL L=5e-08 W=9e-08 AD=9e-15 AS=1.26e-14 PD=3.8e-07 PS=4.6e-07 $X=690 $Y=600 $D=1
+M2 6 D vss! vss! NMOS_VTL L=5e-08 W=9e-08 AD=1.5525e-14 AS=9e-15 PD=5.25e-07 PS=3.8e-07 $X=1350 $Y=600 $D=1
+M3 3 1 6 vss! NMOS_VTL L=5e-08 W=9e-08 AD=1.2375e-14 AS=1.5525e-14 PD=4.55e-07 PS=5.25e-07 $X=1795 $Y=600 $D=1
+M4 vss! 3 Q vss! NMOS_VTL L=5e-08 W=9e-08 AD=1.26e-14 AS=9e-15 PD=4.6e-07 PS=3.8e-07 $X=2530 $Y=600 $D=1
+M5 Qb Q vss! vss! NMOS_VTL L=5e-08 W=9e-08 AD=1.26e-14 AS=1.26e-14 PD=4.6e-07 PS=4.6e-07 $X=2910 $Y=600 $D=1
+M6 3 2 Qb vss! NMOS_VTL L=5e-08 W=9e-08 AD=2.4975e-14 AS=1.26e-14 PD=7.35e-07 PS=4.6e-07 $X=3290 $Y=600 $D=1
+M7 vdd! 2 1 vdd! PMOS_VTL L=5e-08 W=1.8e-07 AD=2.52e-14 AS=1.8e-14 PD=6.4e-07 PS=5.6e-07 $X=310 $Y=1850 $D=0
+M8 2 EN vdd! vdd! PMOS_VTL L=5e-08 W=1.8e-07 AD=1.8e-14 AS=2.52e-14 PD=5.6e-07 PS=6.4e-07 $X=690 $Y=1850 $D=0
+M9 6 D vdd! vdd! PMOS_VTL L=5e-08 W=1.8e-07 AD=3.105e-14 AS=1.8e-14 PD=7.05e-07 PS=5.6e-07 $X=1350 $Y=1850 $D=0
+M10 3 2 6 vdd! PMOS_VTL L=5e-08 W=1.8e-07 AD=2.475e-14 AS=3.105e-14 PD=6.35e-07 PS=7.05e-07 $X=1795 $Y=1850 $D=0
+M11 vdd! 3 Q vdd! PMOS_VTL L=5e-08 W=1.8e-07 AD=2.52e-14 AS=1.8e-14 PD=6.4e-07 PS=5.6e-07 $X=2530 $Y=1850 $D=0
+M12 Qb Q vdd! vdd! PMOS_VTL L=5e-08 W=1.8e-07 AD=5.58e-14 AS=2.52e-14 PD=9.8e-07 PS=6.4e-07 $X=2910 $Y=1850 $D=0
+M13 3 1 Qb vdd! PMOS_VTL L=5e-08 W=1.8e-07 AD=1.935e-14 AS=5.58e-14 PD=5.75e-07 PS=9.8e-07 $X=3630 $Y=1850 $D=0
+.ENDS
+***************************************
