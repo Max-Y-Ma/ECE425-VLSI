@@ -16,7 +16,7 @@ LAYOUT NAME:              dlatch.sp ('dlatch')
 SOURCE NAME:              dlatch.src.net ('dlatch')
 RULE FILE:                _calibreLVS.rul_
 RULE FILE TITLE:          LVS Rule File for FreePDK45
-CREATION TIME:            Wed Mar 20 20:57:57 2024
+CREATION TIME:            Thu Mar 21 09:50:05 2024
 CURRENT DIRECTORY:        /home/maxma2/Documents/Coursework/ece425/mp2/lib/lvs
 USER NAME:                maxma2
 CALIBRE VERSION:          v2022.4_16.8    Mon Oct 3 17:12:27 PDT 2022

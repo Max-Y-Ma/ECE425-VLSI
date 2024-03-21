@@ -3,16 +3,16 @@
 	<active>Active Setup</active>
 	<history>History
 		<historyentry assemblerOrExplorer="explorer" roOrView="view" runningOrFinished="finished">ExplorerRun.0
-			<timestamp>Feb 28 09:41:37 2024</timestamp>
-			<uuid>{d25a15c1-f198-44ab-8176-9f4c97bef1fe}</uuid>
+			<timestamp>Mar 21 11:03:40 2024</timestamp>
+			<uuid>{f23922f5-7ade-4049-abec-897447890c14}</uuid>
 			<locked>0</locked>
 			<mode>Single Run, Sweeps and Corners</mode>
-			<resultsname></resultsname>
-			<simresults></simresults>
-			<runlog></runlog>
-			<runlogfile></runlogfile>
-			<psfdir></psfdir>
-			<simdir></simdir>
+			<resultsname>/home/maxma2/Documents/Coursework/ece425/mp2/lib/stdcell_rv32Lib/xnor2/maestro/results/maestro/$AXL_HISTORY_NAME.rdb</resultsname>
+			<simresults>$AXL_SETUPDB_DIR/results/maestro/$AXL_HISTORY_NAME.rdb</simresults>
+			<runlog>/home/maxma2/Documents/Coursework/ece425/mp2/lib/stdcell_rv32Lib/xnor2/maestro/results/maestro/$AXL_HISTORY_NAME.log</runlog>
+			<runlogfile>$AXL_SETUPDB_DIR/results/maestro/$AXL_HISTORY_NAME.log</runlogfile>
+			<psfdir>/home/maxma2/simulation/stdcell_rv32Lib/xnor2/maestro/results/maestro/$AXL_HISTORY_NAME</psfdir>
+			<simdir>$AXL_PROJECT_DIR/stdcell_rv32Lib/xnor2/maestro/results/maestro/$AXL_HISTORY_NAME</simdir>
 		</historyentry>
 	</history>
 </setupdb>

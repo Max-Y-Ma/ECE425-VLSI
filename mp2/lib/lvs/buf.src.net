@@ -1,0 +1,52 @@
+************************************************************************
+* auCdl Netlist:
+* 
+* Library Name:  stdcell_rv32Lib
+* Top Cell Name: buf
+* View Name:     schematic
+* Netlisted on:  Mar 21 11:27:52 2024
+************************************************************************
+
+*.EQUATION
+*.SCALE METER
+*.MEGA
+.PARAM
+
+*.GLOBAL vss!
++        vdd!
++        vdd:P
++        VDD:P
++        vss:G
++        VSS:G
+
+*.PIN vss!
+*+    vdd!
+*+    vdd
+*+    VDD
+*+    vss
+*+    VSS
+
+************************************************************************
+* Library Name: stdcell_rv32Lib
+* Cell Name:    inv
+* View Name:    schematic
+************************************************************************
+
+.SUBCKT inv A Z
+*.PININFO A:I Z:O
+MM0 Z A vdd! vdd! PMOS_VTL W=180.0n L=50n m=1
+MM1 Z A vss! vss! NMOS_VTL W=90n L=50n m=1
+.ENDS
+
+************************************************************************
+* Library Name: stdcell_rv32Lib
+* Cell Name:    buf
+* View Name:    schematic
+************************************************************************
+
+.SUBCKT buf A Z
+*.PININFO A:I Z:O
+XI1 net2 Z / inv
+XI0 A net2 / inv
+.ENDS
+

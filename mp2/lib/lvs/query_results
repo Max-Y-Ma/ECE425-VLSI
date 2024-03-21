@@ -1,0 +1,2 @@
+mgc_rve_context_lcv "stdcell_rv32Lib" "nor2" "layout" 2000
+mgc_rve_zoom -0.845 -0.185 1.155 1.815 0.7

@@ -1,6 +1,6 @@
 // Library - stdcell_rv32Lib, Cell - nand2, View - schematic
 // LAST TIME SAVED: Feb 25 13:26:59 2024
-// NETLIST TIME: Mar 17 20:29:13 2024
+// NETLIST TIME: Mar 21 11:09:33 2024
 `timescale 1ns / 1ns 
 
 module nand2 ( Z, A, B );

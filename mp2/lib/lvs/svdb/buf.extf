@@ -1,0 +1,9 @@
+# Automagically generated file: Please do not edit!
+lvs_ExtfVersion 3
+lvs_ExtRunTimes 1711038474 1711038475
+lvs_ExtOutFile RUNDIR /home/maxma2/Documents/Coursework/ece425/mp2/lib/lvs
+lvs_ExtOutFile RULES_FILE _calibreLVS.rul_
+lvs_ExtInfoExtSummary {0 0 0 0 0 0 0 0 0 0 0}
+lvs_ExtInfoDfmSummary {0}
+lvs_ExtOutFile LAYOUT_NETLIST buf.sp
+lvs_ExtOutFile EXTRACTION_REPORT buf.lvs.report.ext

@@ -1,0 +1,42 @@
+************************************************************************
+* auCdl Netlist:
+* 
+* Library Name:  stdcell_rv32Lib
+* Top Cell Name: nand2
+* View Name:     schematic
+* Netlisted on:  Mar 21 11:16:42 2024
+************************************************************************
+
+*.EQUATION
+*.SCALE METER
+*.MEGA
+.PARAM
+
+*.GLOBAL vss!
++        vdd!
++        vdd:P
++        VDD:P
++        vss:G
++        VSS:G
+
+*.PIN vss!
+*+    vdd!
+*+    vdd
+*+    VDD
+*+    vss
+*+    VSS
+
+************************************************************************
+* Library Name: stdcell_rv32Lib
+* Cell Name:    nand2
+* View Name:    schematic
+************************************************************************
+
+.SUBCKT nand2 A B Z
+*.PININFO A:I B:I Z:O
+MM1 net8 A vss! vss! NMOS_VTL W=180.0n L=50n m=1
+MM0 Z B net8 vss! NMOS_VTL W=180.0n L=50n m=1
+MM3 Z B vdd! vdd! PMOS_VTL W=180.0n L=50n m=1
+MM2 Z A vdd! vdd! PMOS_VTL W=180.0n L=50n m=1
+.ENDS
+

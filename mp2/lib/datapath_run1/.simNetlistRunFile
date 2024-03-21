@@ -1,5 +1,4 @@
-simVerilogNetlistFileList = '(
-    (("bitslice_rv32Lib" "datapath") 
+simVerilogNetlistFileList = '((("bitslice_rv32Lib" "datapath") 
 	("cds27/netlist" "cds27/map" "schematic")
     ) 
     (("bitslice_rv32Lib" "bitslice") 

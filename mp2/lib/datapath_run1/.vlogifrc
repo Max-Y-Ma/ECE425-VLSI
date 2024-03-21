@@ -38,7 +38,7 @@ vlogifMultipleSDFFileList = 'nil
 
 ;Verilog Netlisting Options
 ;Netlist Entire Design
-simReNetlistAll = 'nil
+simReNetlistAll = t
 
 ;Netlist For LAI/LMSI Models
 simVerilogLaiLmsiNetlisting = 'nil
@@ -121,10 +121,14 @@ simVerilogLeapfrogCosimWarnOff = t
 verilogSimStopList = '("verilog" "pld_verilog" "lai_verilog" "lmsi_verilog" "symbol")
 
 ;Global Power Nets
-simVerilogPwrNetList = '("VDD!")
+simVerilogPwrNetList = '("vdd!" "vdda!" "vddd!" "vcc!" "vcca!"
+    "vccd!"
+)
 
 ;Global Ground Nets
-simVerilogGndNetList = '("GND!")
+simVerilogGndNetList = '("gnd!" "gnda!" "gndd!" "vss!" "vssa!"
+    "vssd!" "vee!" "veea!" "veed!"
+)
 
 ;Pre-Module Include File
 vlogifPreModuleIncludeFile = ""
@@ -406,7 +410,7 @@ simNCVerilogVCompScriptFile = "compare.rule"
 simNCVerilogVCompMaxCompareMismatches = 200
 
 ;Path to Database
-simNCVerilogVCompCompareResultsDirPath = ""
+simNCVerilogVCompCompareResultsDirPath = "/home/maxma2/Documents/Coursework/ece425/mp2/lib/datapath_run1"
 
 ;Difference Database
 simNCVerilogVCompCompareResultsDirName = "diff.db.out"

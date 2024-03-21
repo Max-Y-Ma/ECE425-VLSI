@@ -446,4 +446,5 @@
 ( "rd_sel<25>" "rd_sel[25]" )
 ( "shift_out<52>" "shift_out[52]" )
  )
+( "buf" "buf_" )
  )

@@ -6,7 +6,7 @@ module cds_globals;
 
 supply1 vdd_;
 
-wire vss_;
+supply0 vss_;
 
 
 endmodule

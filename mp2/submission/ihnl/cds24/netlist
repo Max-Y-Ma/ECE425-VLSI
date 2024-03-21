@@ -1,6 +1,6 @@
 // Library - bitslice_rv32Lib, Cell - mem_mux, View - schematic
 // LAST TIME SAVED: Mar 14 14:27:07 2024
-// NETLIST TIME: Mar 17 20:29:14 2024
+// NETLIST TIME: Mar 21 11:09:33 2024
 `timescale 1ns / 1ns 
 
 module mem_mux ( mem_mux_out, lb, lbu, lh, lhu, lw, mem_mux_sel );
