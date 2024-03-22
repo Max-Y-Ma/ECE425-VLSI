@@ -1,0 +1,6 @@
+# CALIBRE-LVS DISCREPANCY VIEWER TCL FILE 
+# FILE: svdb/bit2.dv
+dv_start matched                                  
+dv_cell {bit2} {bit2} matched
+dv_obj_count -transformed_nets {12 12} -transformed_inst {8 8} -transformed_port {8 8}
+dv_end

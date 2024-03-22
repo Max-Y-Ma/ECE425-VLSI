@@ -1,8 +1,10 @@
 CADENCE IHNL11140
 $model
 stdcell_rv32Lib/bit1/schematic bit1
+stdcell_rv32Lib/reg1w1/schematic reg1w1
 stdcell_rv32Lib/inv/schematic inv
 stdcell_rv32Lib/trans/schematic trans
+stdcell_rv32Lib/dlatch/schematic dlatch
 $endmodel
 $net
 vss! vss!

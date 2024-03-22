@@ -1,19 +1,19 @@
 //
-//  Rule file generated on Thu Mar 21 23:41:25 2024
+//  Rule file generated on Fri Mar 22 10:38:27 2024
 //  by Calibre Interactive v2022.4_16.8    Mon Oct 3 17:12:31 PDT 2022
 //
 //      *** PLEASE DO NOT MODIFY THIS FILE ***
 //
 //
 
-LAYOUT PATH "bit1.calibre.db"
+LAYOUT PATH "reg2w32.calibre.db"
 LAYOUT SYSTEM GDSII
-LAYOUT PRIMARY "bit1"
+LAYOUT PRIMARY "reg2w32"
 
-DRC RESULTS DATABASE "bit1.drc.results" ASCII
+DRC RESULTS DATABASE "reg2w32.drc.results" ASCII
 DRC CELL NAME YES CELL SPACE XFORM
 
-DRC SUMMARY REPORT "bit1.drc.summary" REPLACE HIER
+DRC SUMMARY REPORT "reg2w32.drc.summary" REPLACE HIER
 
 DRC MAXIMUM RESULTS 1000
 

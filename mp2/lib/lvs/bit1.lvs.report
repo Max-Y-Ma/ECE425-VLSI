@@ -16,7 +16,7 @@ LAYOUT NAME:              bit1.sp ('bit1')
 SOURCE NAME:              bit1.src.net ('bit1')
 RULE FILE:                _calibreLVS.rul_
 RULE FILE TITLE:          LVS Rule File for FreePDK45
-CREATION TIME:            Thu Mar 21 23:43:31 2024
+CREATION TIME:            Fri Mar 22 09:24:05 2024
 CURRENT DIRECTORY:        /home/maxma2/Documents/Coursework/ece425/mp2/lib/lvs
 USER NAME:                maxma2
 CALIBRE VERSION:          v2022.4_16.8    Mon Oct 3 17:12:27 PDT 2022

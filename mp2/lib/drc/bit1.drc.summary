@@ -3,7 +3,7 @@
 ==================================================================================
 === CALIBRE::DRC-H SUMMARY REPORT
 ===
-Execution Date/Time:       Thu Mar 21 23:41:26 2024
+Execution Date/Time:       Fri Mar 22 09:23:42 2024
 Calibre Version:           v2022.4_16.8    Mon Oct 3 17:12:27 PDT 2022
 Rule File Pathname:        _calibreDRC.rul_
 Rule File Title:           
@@ -30,17 +30,17 @@ Keep Empty Checks:         YES
 ----------------------------------------------------------------------------------
 --- ORIGINAL LAYER STATISTICS
 ---
-LAYER pwell ...... TOTAL Original Geometry Count = 11 (15)
-LAYER nwell ...... TOTAL Original Geometry Count = 11 (15)
-LAYER active ..... TOTAL Original Geometry Count = 12 (20)
+LAYER pwell ...... TOTAL Original Geometry Count = 6  (9)
+LAYER nwell ...... TOTAL Original Geometry Count = 6  (9)
+LAYER active ..... TOTAL Original Geometry Count = 12 (18)
 LAYER poly ....... TOTAL Original Geometry Count = 12 (20)
-LAYER pimplant ... TOTAL Original Geometry Count = 6  (10)
-LAYER nimplant ... TOTAL Original Geometry Count = 6  (10)
+LAYER pimplant ... TOTAL Original Geometry Count = 6  (9)
+LAYER nimplant ... TOTAL Original Geometry Count = 6  (9)
 LAYER vth ........ TOTAL Original Geometry Count = 0  (0)
 LAYER vtg ........ TOTAL Original Geometry Count = 0  (0)
-LAYER metal1 ..... TOTAL Original Geometry Count = 29 (59)
-LAYER contact .... TOTAL Original Geometry Count = 26 (42)
-LAYER metal2 ..... TOTAL Original Geometry Count = 11 (25)
+LAYER metal1 ..... TOTAL Original Geometry Count = 21 (49)
+LAYER contact .... TOTAL Original Geometry Count = 26 (40)
+LAYER metal2 ..... TOTAL Original Geometry Count = 7  (21)
 LAYER metal3 ..... TOTAL Original Geometry Count = 0  (0)
 LAYER metal4 ..... TOTAL Original Geometry Count = 0  (0)
 LAYER metal5 ..... TOTAL Original Geometry Count = 0  (0)
@@ -236,6 +236,6 @@ RULECHECK Antenna.metal10 ... TOTAL Result Count = 0 (0)
 ---
 TOTAL CPU Time:                  0
 TOTAL REAL Time:                 0
-TOTAL Original Layer Geometries: 125 (231)
+TOTAL Original Layer Geometries: 103 (199)
 TOTAL DRC RuleChecks Executed:   167
 TOTAL DRC Results Generated:     0 (0)

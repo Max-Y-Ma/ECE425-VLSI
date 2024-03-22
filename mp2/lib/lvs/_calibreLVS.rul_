@@ -1,26 +1,26 @@
 //
-//  Rule file generated on Thu Mar 21 23:43:29 2024
+//  Rule file generated on Fri Mar 22 10:01:42 2024
 //  by Calibre Interactive v2022.4_16.8    Mon Oct 3 17:12:31 PDT 2022
 //
 //      *** PLEASE DO NOT MODIFY THIS FILE ***
 //
 //
 
-LAYOUT PATH "bit1.calibre.db"
+LAYOUT PATH "reg1w1.calibre.db"
 LAYOUT SYSTEM GDSII
-LAYOUT PRIMARY "bit1"
+LAYOUT PRIMARY "reg1w1"
 
-SOURCE PATH "bit1.src.net"
+SOURCE PATH "reg1w1.src.net"
 SOURCE SYSTEM SPICE
-SOURCE PRIMARY "bit1"
+SOURCE PRIMARY "reg1w1"
 
 MASK SVDB DIRECTORY "svdb" QUERY
 
-LVS REPORT "bit1.lvs.report"
+LVS REPORT "reg1w1.lvs.report"
 
 LVS EXECUTE ERC YES
 
-ERC RESULTS DATABASE "bit1.erc.results"
+ERC RESULTS DATABASE "reg1w1.erc.results"
 ERC CELL NAME YES CELL SPACE XFORM
 
 DRC ICSTATION YES

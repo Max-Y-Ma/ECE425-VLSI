@@ -2,7 +2,7 @@
 Product   : Virtuoso(R) XStream Out
 Program   : @(#)$CDS: strmout version ICADVM20.1-64b 05/03/2023 09:29 (cpgsrv12) $
           : sub-version  ICADVM20.1-64b.500.32 
-Started at: 21-Mar-2024  23:43:28
+Started at: 22-Mar-2024  09:24:01
 User Name : maxma2
 Host Name : eceb-2022-40.ews.illinois.edu
 Directory : /home/maxma2/Documents/Coursework/ece425/mp2/lib
@@ -26,20 +26,20 @@ case                                    Preserve
 convertDot                              node
 convertPcellPin                         geometry
 
-INFO (XSTRM-223): 1. Translating stdVia NCSU_TechLib_FreePDK45/PTAP/layout as STRUCTURE PTAP_CDNS_711082608320.
-INFO (XSTRM-223): 2. Translating stdVia NCSU_TechLib_FreePDK45/NTAP/layout as STRUCTURE NTAP_CDNS_711082608321.
-INFO (XSTRM-223): 3. Translating stdVia NCSU_TechLib_FreePDK45/M1_POLY/layout as STRUCTURE M1_POLY_CDNS_711082608322.
-INFO (XSTRM-223): 4. Translating stdVia NCSU_TechLib_FreePDK45/M2_M1/layout as STRUCTURE M2_M1_CDNS_711082608323.
-INFO (XSTRM-223): 5. Translating stdVia NCSU_TechLib_FreePDK45/M1_POLY/layout as STRUCTURE M1_POLY_CDNS_711082608324.
+INFO (XSTRM-223): 1. Translating stdVia NCSU_TechLib_FreePDK45/PTAP/layout as STRUCTURE PTAP_CDNS_711117441780.
+INFO (XSTRM-223): 2. Translating stdVia NCSU_TechLib_FreePDK45/NTAP/layout as STRUCTURE NTAP_CDNS_711117441781.
+INFO (XSTRM-223): 3. Translating stdVia NCSU_TechLib_FreePDK45/M1_POLY/layout as STRUCTURE M1_POLY_CDNS_711117441782.
+INFO (XSTRM-223): 4. Translating stdVia NCSU_TechLib_FreePDK45/M2_M1/layout as STRUCTURE M2_M1_CDNS_711117441783.
+INFO (XSTRM-223): 5. Translating stdVia NCSU_TechLib_FreePDK45/M1_POLY/layout as STRUCTURE M1_POLY_CDNS_711117441784.
 INFO (XSTRM-223): 6. Translating cellView stdcell_rv32Lib/bit1/layout as STRUCTURE bit1.
 INFO (XSTRM-180): You have not used the '-objectMap' option. The design has instance(s) of at least one of following OpenAccess objects: oaBlockage, oaBoundary, oaRow, and oaMarker. Any information about these objects will not be translated into the generated stream file. Use the '-objectMap' option to translate/preserve these objects using XStream.
 
 Summary of Objects Translated:
 	Scalar Instances:                       0
 	Array Instances:                        0
-	Polygons:                               0
-	Paths:                                  34
-	Rectangles:                             91
+	Polygons:                               2
+	Paths:                                  28
+	Rectangles:                             73
 	Lines:                                  0
 	Arcs:                                   0
 	Donuts:                                 0
@@ -52,11 +52,11 @@ Summary of Objects Translated:
 	Markers:                                0
 	Rows:                                   0
 	Stitch:                                 0
-	Standard Vias                           35
+	Standard Vias                           33
 	Custom Vias:                            0
 	CdsGen Vias:                            0
 	Pathsegs:                               0
-	Text:                                   14
+	Text:                                   6
 	TextDisplay:                            0
 	Cells:                                  6
 

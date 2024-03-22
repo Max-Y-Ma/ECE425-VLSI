@@ -2,7 +2,7 @@
 Product   : Virtuoso(R) XStream Out
 Program   : @(#)$CDS: strmout version ICADVM20.1-64b 05/03/2023 09:29 (cpgsrv12) $
           : sub-version  ICADVM20.1-64b.500.32 
-Started at: 21-Mar-2024  23:43:28
+Started at: 22-Mar-2024  09:24:01
 User Name : maxma2
 Host Name : eceb-2022-40.ews.illinois.edu
 Directory : /home/maxma2/Documents/Coursework/ece425/mp2/lib
@@ -15,9 +15,9 @@ Info: Cellview Rev Num:99,  Tech Rev Num:59
 ---------------------------------------------------------------------------------------------------------------------------------------
 Library/Cell/View               Instance Array   Polygon  Rect   Path   PathSeg   Text   TextDisplay   Line   Dot   Arc   Donut   Ellipse 
 ---------------------------------------------------------------------------------------------------------------------------------------
-stdcell_rv32Lib/bit1/layout     0        0       0        72     34     0         14     0             0      0     0     0       0       
-NCSU_TechLib_FreePDK45/M2_M1/layout                             0        0       0        3      0      0         0      0             0      0     0     0       0       
 NCSU_TechLib_FreePDK45/M1_POLY/layout                           0        0       0        3      0      0         0      0             0      0     0     0       0       
+stdcell_rv32Lib/bit1/layout     0        0       2        54     28     0         6      0             0      0     0     0       0       
+NCSU_TechLib_FreePDK45/M2_M1/layout                             0        0       0        3      0      0         0      0             0      0     0     0       0       
 NCSU_TechLib_FreePDK45/NTAP/layout                              0        0       0        5      0      0         0      0             0      0     0     0       0       
 NCSU_TechLib_FreePDK45/M1_POLY/layout                           0        0       0        3      0      0         0      0             0      0     0     0       0       
 NCSU_TechLib_FreePDK45/PTAP/layout                              0        0       0        5      0      0         0      0             0      0     0     0       0       
@@ -27,9 +27,9 @@ NCSU_TechLib_FreePDK45/PTAP/layout                              0        0      
 --------------------------------------------------------------------------------------------------------------------------------------------
 Library/Cell/View               PRBdy    OtherBdy   AreaBlkg   LayerBlkg  AreaHalo   Row   Marker   Stitch   CustVia   StdVia    CdsGenVia
 --------------------------------------------------------------------------------------------------------------------------------------------
-stdcell_rv32Lib/bit1/layout     0        0          0          0          0          0     0        0        0         35        0        
-NCSU_TechLib_FreePDK45/M2_M1/layout                             0        0          0          0          0          0     0        0        0         0         0        
 NCSU_TechLib_FreePDK45/M1_POLY/layout                           0        0          0          0          0          0     0        0        0         0         0        
+stdcell_rv32Lib/bit1/layout     0        0          0          0          0          0     0        0        0         33        0        
+NCSU_TechLib_FreePDK45/M2_M1/layout                             0        0          0          0          0          0     0        0        0         0         0        
 NCSU_TechLib_FreePDK45/NTAP/layout                              0        0          0          0          0          0     0        0        0         0         0        
 NCSU_TechLib_FreePDK45/M1_POLY/layout                           0        0          0          0          0          0     0        0        0         0         0        
 NCSU_TechLib_FreePDK45/PTAP/layout                              0        0          0          0          0          0     0        0        0         0         0        
@@ -41,23 +41,23 @@ Cadence         Cadence         Stream  Stream
 Layer           Purpose         Layer   Datatype  Polygon  Rect     Path     Text     TextDisplay   Line Dot Arc Donut Ellipse Pathseg
 ---------------------------------------------------------------------------------------------------------------------------------------
 nimplant        drawing         4       0         0        6        0        0        0             0    0   0   0     0      0      
-nwell           drawing         3       0         0        11       0        0        0             0    0   0   0     0      0      
-metal2          drawing         13      0         0        1        10       0        0             0    0   0   0     0      0      
-metal1          drawing         11      0         0        15       14       14       0             0    0   0   0     0      0      
+nwell           drawing         3       0         0        6        0        0        0             0    0   0   0     0      0      
+metal2          drawing         13      0         2        1        4        0        0             0    0   0   0     0      0      
+metal1          drawing         11      0         0        7        14       6        0             0    0   0   0     0      0      
 via1            drawing         12      0         0        1        0        0        0             0    0   0   0     0      0      
 poly            drawing         9       0         0        2        10       0        0             0    0   0   0     0      0      
 contact         drawing         10      0         0        26       0        0        0             0    0   0   0     0      0      
 pimplant        drawing         5       0         0        6        0        0        0             0    0   0   0     0      0      
-pwell           drawing         2       0         0        11       0        0        0             0    0   0   0     0      0      
+pwell           drawing         2       0         0        6        0        0        0             0    0   0   0     0      0      
 active          drawing         1       0         0        12       0        0        0             0    0   0   0     0      0      
 ---------------------------------------------------------------------------------------------------------------------------------------
 
 Summary of Objects Translated:
 	Scalar Instances:		0
 	Array Instances:		0
-	Polygons:			0
-	Paths:				34
-	Rectangles:			91
+	Polygons:			2
+	Paths:				28
+	Rectangles:			73
 	Lines:				0
 	Arcs:				0
 	Donuts:				0
@@ -70,11 +70,11 @@ Summary of Objects Translated:
 	Markers:			0
 	Rows:				0
 	Stitches:			0
-	Standard Vias:			35
+	Standard Vias:			33
 	Custom Vias:			0
 	CdsGen Vias:			0
 	Pathsegs:			0
-	Text:				14
+	Text:				6
 	TextDisplay:		0
 	Cells:				6
 Design Libraries: 
