@@ -1,7 +1,7 @@
 ( ( nil
   version "2.1"
   mapType "incremental"
-  blockName "reg1w1"
+  blockName "reg2w32"
   repList "auCdl schematic netlist"
   stopList "auCdl"
   globalList "vss! vdd!"
@@ -9,15 +9,15 @@
   netlistDir "/home/maxma2/Documents/Coursework/ece425/mp2/lib/lvs"
  )
 ( model
-( "stdcell_rv32Lib/reg1w1/schematic" "reg1w1" )
+( "stdcell_rv32Lib/bit2/schematic" "bit2" )
 ( "stdcell_rv32Lib/trans/schematic" "trans" )
+( "stdcell_rv32Lib/reg2w32/schematic" "reg2w32" )
 ( "stdcell_rv32Lib/inv/schematic" "inv" )
-( "stdcell_rv32Lib/bit1/schematic" "bit1" )
 ( "stdcell_rv32Lib/dlatch/schematic" "dlatch" )
  )
+( "bit2" "ihnl/cds2/map" )
 ( "dlatch" "ihnl/cds3/map" )
 ( "inv" "ihnl/cds0/map" )
-( "bit1" "ihnl/cds2/map" )
-( "reg1w1" "ihnl/cds4/map" )
 ( "trans" "ihnl/cds1/map" )
+( "reg2w32" "ihnl/cds4/map" )
  )

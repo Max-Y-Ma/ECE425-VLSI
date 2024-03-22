@@ -2,7 +2,7 @@
 Product   : Virtuoso(R) XStream Out
 Program   : @(#)$CDS: strmout version ICADVM20.1-64b 05/03/2023 09:29 (cpgsrv12) $
           : sub-version  ICADVM20.1-64b.500.32 
-Started at: 22-Mar-2024  10:38:27
+Started at: 22-Mar-2024  16:19:34
 User Name : maxma2
 Host Name : eceb-2022-40.ews.illinois.edu
 Directory : /home/maxma2/Documents/Coursework/ece425/mp2/lib
@@ -26,21 +26,23 @@ case                                    Preserve
 convertDot                              node
 convertPcellPin                         geometry
 
-INFO (XSTRM-223): 1. Translating stdVia NCSU_TechLib_FreePDK45/PTAP/layout as STRUCTURE PTAP_CDNS_711121907880.
-INFO (XSTRM-223): 2. Translating stdVia NCSU_TechLib_FreePDK45/NTAP/layout as STRUCTURE NTAP_CDNS_711121907881.
-INFO (XSTRM-223): 3. Translating stdVia NCSU_TechLib_FreePDK45/M1_POLY/layout as STRUCTURE M1_POLY_CDNS_711121907882.
-INFO (XSTRM-223): 4. Translating stdVia NCSU_TechLib_FreePDK45/M1_POLY/layout as STRUCTURE M1_POLY_CDNS_711121907883.
-INFO (XSTRM-223): 5. Translating stdVia NCSU_TechLib_FreePDK45/M2_M1/layout as STRUCTURE M2_M1_CDNS_711121907884.
-INFO (XSTRM-223): 6. Translating stdVia NCSU_TechLib_FreePDK45/M3_M2/layout as STRUCTURE M3_M2_CDNS_711121907885.
+INFO (XSTRM-223): 1. Translating stdVia NCSU_TechLib_FreePDK45/PTAP/layout as STRUCTURE PTAP_CDNS_711142374650.
+INFO (XSTRM-223): 2. Translating stdVia NCSU_TechLib_FreePDK45/NTAP/layout as STRUCTURE NTAP_CDNS_711142374651.
+INFO (XSTRM-223): 3. Translating stdVia NCSU_TechLib_FreePDK45/M1_POLY/layout as STRUCTURE M1_POLY_CDNS_711142374652.
+INFO (XSTRM-223): 4. Translating stdVia NCSU_TechLib_FreePDK45/M1_POLY/layout as STRUCTURE M1_POLY_CDNS_711142374653.
+INFO (XSTRM-223): 5. Translating stdVia NCSU_TechLib_FreePDK45/M2_M1/layout as STRUCTURE M2_M1_CDNS_711142374654.
+INFO (XSTRM-223): 6. Translating stdVia NCSU_TechLib_FreePDK45/M3_M2/layout as STRUCTURE M3_M2_CDNS_711142374655.
 INFO (XSTRM-223): 7. Translating cellView stdcell_rv32Lib/reg2w32/layout as STRUCTURE reg2w32.
 INFO (XSTRM-180): You have not used the '-objectMap' option. The design has instance(s) of at least one of following OpenAccess objects: oaBlockage, oaBoundary, oaRow, and oaMarker. Any information about these objects will not be translated into the generated stream file. Use the '-objectMap' option to translate/preserve these objects using XStream.
+INFO (XSTRM-275): Number of vertexes in the 'polygon' with starting point (177820, 890) on layer '2' is 656. These vertices will be represented using 657 points in the GDS. This number exceeds the maximum limit, 200, defined by 'maxVertices'. The 'polygon' will be chopped into smaller polygons during XStream Out translation.
+INFO (XSTRM-275): Number of vertexes in the 'polygon' with starting point (177820, 2320) on layer '3' is 658. These vertices will be represented using 659 points in the GDS. This number exceeds the maximum limit, 200, defined by 'maxVertices'. The 'polygon' will be chopped into smaller polygons during XStream Out translation.
 
 Summary of Objects Translated:
 	Scalar Instances:                       0
 	Array Instances:                        0
-	Polygons:                               0
-	Paths:                                  43
-	Rectangles:                             89
+	Polygons:                               8
+	Paths:                                  1442
+	Rectangles:                             1633
 	Lines:                                  0
 	Arcs:                                   0
 	Donuts:                                 0
@@ -53,13 +55,13 @@ Summary of Objects Translated:
 	Markers:                                0
 	Rows:                                   0
 	Stitch:                                 0
-	Standard Vias                           47
+	Standard Vias                           1685
 	Custom Vias:                            0
 	CdsGen Vias:                            0
 	Pathsegs:                               0
-	Text:                                   8
+	Text:                                   171
 	TextDisplay:                            0
 	Cells:                                  7
 
-Elapsed Time: 0.5s   User Time: 0.1s   CPU Time: 0.0s   Peak VM: 2624KB
+Elapsed Time: 0.5s   User Time: 0.1s   CPU Time: 0.0s   Peak VM: 4008KB
 INFO (XSTRM-234): Translation completed. '0' error(s) and '1' warning(s) found.
