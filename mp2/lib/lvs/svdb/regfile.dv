@@ -1,0 +1,6 @@
+# CALIBRE-LVS DISCREPANCY VIEWER TCL FILE 
+# FILE: svdb/regfile.dv
+dv_start matched                                  
+dv_cell {regfile} {regfile} matched
+dv_obj_count -transformed_nets {237 237} -transformed_inst {264 264} -transformed_port {101 101}
+dv_end

@@ -80,5 +80,6 @@ hnlLastTermNameDifferentFrom = '( )
 hnlLastParamNameDifferentFrom = '( )
 hnlLastLibInfo = '(
                     ( "stdcell_rv32Lib" "1710352510" )
+                   ( "bitslice_rv32Lib" "1710443137" )
                   )
 hnlLastDesignVars = '( )

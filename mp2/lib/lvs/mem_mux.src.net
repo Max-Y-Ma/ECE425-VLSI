@@ -1,0 +1,90 @@
+************************************************************************
+* auCdl Netlist:
+* 
+* Library Name:  bitslice_rv32Lib
+* Top Cell Name: mem_mux
+* View Name:     schematic
+* Netlisted on:  Mar 22 16:29:14 2024
+************************************************************************
+
+*.EQUATION
+*.SCALE METER
+*.MEGA
+.PARAM
+
+*.GLOBAL vss!
++        vdd!
++        vdd:P
++        VDD:P
++        vss:G
++        VSS:G
+
+*.PIN vss!
+*+    vdd!
+*+    vdd
+*+    VDD
+*+    vss
+*+    VSS
+
+************************************************************************
+* Library Name: stdcell_rv32Lib
+* Cell Name:    trans
+* View Name:    schematic
+************************************************************************
+
+.SUBCKT trans A G Gb Z
+*.PININFO A:I G:I Gb:I Z:B
+MM0 Z Gb A vdd! PMOS_VTL W=180.0n L=50n m=1
+MM1 Z G A vss! NMOS_VTL W=90n L=50n m=1
+.ENDS
+
+************************************************************************
+* Library Name: stdcell_rv32Lib
+* Cell Name:    inv
+* View Name:    schematic
+************************************************************************
+
+.SUBCKT inv A Z
+*.PININFO A:I Z:O
+MM0 Z A vdd! vdd! PMOS_VTL W=180.0n L=50n m=1
+MM1 Z A vss! vss! NMOS_VTL W=90n L=50n m=1
+.ENDS
+
+************************************************************************
+* Library Name: stdcell_rv32Lib
+* Cell Name:    mux6
+* View Name:    schematic
+************************************************************************
+
+.SUBCKT mux6 A B C D E F S0 S1 S2 Z
+*.PININFO A:I B:I C:I D:I E:I F:I S0:I S1:I S2:I Z:O
+XI7 F S0 S0b net4 / trans
+XI0 A S0b S0 net2 / trans
+XI9 net5 S2 S2b Z / trans
+XI8 net1 S2b S2 Z / trans
+XI13 net4 S1b S1 net5 / trans
+XI6 net3 S1 S1b net1 / trans
+XI5 net2 S1b S1 net1 / trans
+XI4 E S0b S0 net4 / trans
+XI3 D S0 S0b net3 / trans
+XI2 C S0b S0 net3 / trans
+XI1 B S0 S0b net2 / trans
+XI12 S2 S2b / inv
+XI11 S1 S1b / inv
+XI10 S0 S0b / inv
+.ENDS
+
+************************************************************************
+* Library Name: bitslice_rv32Lib
+* Cell Name:    mem_mux
+* View Name:    schematic
+************************************************************************
+
+.SUBCKT mem_mux lb lbu lh lhu lw mem_mux_out mem_mux_sel<2> mem_mux_sel<1> 
++ mem_mux_sel<0>
+*.PININFO lb:I lbu:I lh:I lhu:I lw:I mem_mux_sel<2>:I mem_mux_sel<1>:I 
+*.PININFO mem_mux_sel<0>:I mem_mux_out:O
+XI1 lb lh lw vss! lbu lhu mem_mux_sel<0> mem_mux_sel<1> mem_mux_sel<2> 
++ mem_mux_out / mux6
+.ENDS
+
