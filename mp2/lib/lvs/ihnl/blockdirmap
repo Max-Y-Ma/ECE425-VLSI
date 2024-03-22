@@ -1,4 +1,5 @@
-CADENCE IHNL11142
+CADENCE IHNL11143
 
 stdcell_rv32Lib inv schematic cds0
-stdcell_rv32Lib buf schematic cds1
+stdcell_rv32Lib trans schematic cds1
+stdcell_rv32Lib bit1 schematic cds2

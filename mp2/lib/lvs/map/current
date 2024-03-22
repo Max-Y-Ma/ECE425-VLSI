@@ -1,17 +1,19 @@
 ( ( nil
   version "2.1"
   mapType "incremental"
-  blockName "buf"
+  blockName "bit1"
   repList "auCdl schematic netlist"
   stopList "auCdl"
-  globalList "vss! vdd!"
+  globalList "vdd! vss!"
   hierDelim "."
   netlistDir "/home/maxma2/Documents/Coursework/ece425/mp2/lib/lvs"
  )
 ( model
+( "stdcell_rv32Lib/trans/schematic" "trans" )
 ( "stdcell_rv32Lib/inv/schematic" "inv" )
-( "stdcell_rv32Lib/buf/schematic" "buf" )
+( "stdcell_rv32Lib/bit1/schematic" "bit1" )
  )
 ( "inv" "ihnl/cds0/map" )
-( "buf" "ihnl/cds1/map" )
+( "bit1" "ihnl/cds2/map" )
+( "trans" "ihnl/cds1/map" )
  )

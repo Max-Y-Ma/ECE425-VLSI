@@ -1,0 +1,69 @@
+************************************************************************
+* auCdl Netlist:
+* 
+* Library Name:  stdcell_rv32Lib
+* Top Cell Name: bit1
+* View Name:     schematic
+* Netlisted on:  Mar 21 23:43:29 2024
+************************************************************************
+
+*.EQUATION
+*.SCALE METER
+*.MEGA
+.PARAM
+
+*.GLOBAL vdd!
++        vss!
++        vdd:P
++        VDD:P
++        vss:G
++        VSS:G
+
+*.PIN vdd!
+*+    vss!
+*+    vdd
+*+    VDD
+*+    vss
+*+    VSS
+
+************************************************************************
+* Library Name: stdcell_rv32Lib
+* Cell Name:    inv
+* View Name:    schematic
+************************************************************************
+
+.SUBCKT inv A Z
+*.PININFO A:I Z:O
+MM0 Z A vdd! vdd! PMOS_VTL W=180.0n L=50n m=1
+MM1 Z A vss! vss! NMOS_VTL W=90n L=50n m=1
+.ENDS
+
+************************************************************************
+* Library Name: stdcell_rv32Lib
+* Cell Name:    trans
+* View Name:    schematic
+************************************************************************
+
+.SUBCKT trans A G Gb Z
+*.PININFO A:I G:I Gb:I Z:B
+MM0 Z Gb A vdd! PMOS_VTL W=180.0n L=50n m=1
+MM1 Z G A vss! NMOS_VTL W=90n L=50n m=1
+.ENDS
+
+************************************************************************
+* Library Name: stdcell_rv32Lib
+* Cell Name:    bit1
+* View Name:    schematic
+************************************************************************
+
+.SUBCKT bit1 A R W Z
+*.PININFO A:I R:I W:I Z:O
+XI13 W Wb / inv
+XI15 R Rb / inv
+XI2 net1 Bit / inv
+XI1 net2 net1 / inv
+XI14 Bit R Rb Z / trans
+XI12 A W Wb net2 / trans
+XI16 Bit Wb W net2 / trans
+.ENDS
+

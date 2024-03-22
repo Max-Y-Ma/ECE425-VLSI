@@ -1,0 +1,40 @@
+************************************************************************
+* auCdl Netlist:
+* 
+* Library Name:  stdcell_rv32Lib
+* Top Cell Name: trans
+* View Name:     schematic
+* Netlisted on:  Mar 21 11:38:36 2024
+************************************************************************
+
+*.EQUATION
+*.SCALE METER
+*.MEGA
+.PARAM
+
+*.GLOBAL vss!
++        vdd!
++        vdd:P
++        VDD:P
++        vss:G
++        VSS:G
+
+*.PIN vss!
+*+    vdd!
+*+    vdd
+*+    VDD
+*+    vss
+*+    VSS
+
+************************************************************************
+* Library Name: stdcell_rv32Lib
+* Cell Name:    trans
+* View Name:    schematic
+************************************************************************
+
+.SUBCKT trans A G Gb Z
+*.PININFO A:I G:I Gb:I Z:B
+MM0 Z Gb A vdd! PMOS_VTL W=180.0n L=50n m=1
+MM1 Z G A vss! NMOS_VTL W=90n L=50n m=1
+.ENDS
+

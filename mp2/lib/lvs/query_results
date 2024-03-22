@@ -1,2 +1,5 @@
-mgc_rve_context_lcv "stdcell_rv32Lib" "nor2" "layout" 2000
-mgc_rve_zoom -0.845 -0.185 1.155 1.815 0.7
+mgc_rve_context_lcv "stdcell_rv32Lib" "bit1" "layout" 2000
+mgc_rve_highlight_index 0 "12" "#00000000FFFF"
+mgc_rve_layer "poly"
+mr 1.8975 0.25 1.9475 0.44
+mgc_rve_zoom 1.887 0.2095 1.958 0.4805 1

@@ -1,0 +1,62 @@
+********************************************************************************
+Product   : Virtuoso(R) XStream Out
+Program   : @(#)$CDS: strmout version ICADVM20.1-64b 05/03/2023 09:29 (cpgsrv12) $
+          : sub-version  ICADVM20.1-64b.500.32 
+Started at: 21-Mar-2024  17:15:18
+User Name : maxma2
+Host Name : eceb-2022-05.ews.illinois.edu
+Directory : /home/maxma2/Documents/Coursework/ece425/mp2/lib
+CADENCE Design Systems, Inc.
+********************************************************************************
+Info: Cellview Rev Num:99,  Tech Rev Num:59
+
+INFO (XSTRM-288): Performing automatic layer mapping because either the layer mapping information is not provided or the XST_AUTO_LM  value is used with the '-layerMap' option. Additionally, the  'xStrmOut_layerMap.txt' file has been generated and the mapping information has been added to it.
+INFO (XSTRM-162): You have not used the '-viaMap' option. If the OpenAccess design has native oaVia instances, use the '-viaMap' option for preserving oaVia instances in a XStream Out - XStream In round trip. Using the '-viaMap' option improves performance and VM usage of applications using the Streamed-In design.
+
+Summary of Options :
+library                                 stdcell_rv32Lib
+strmFile                                /home/maxma2/Documents/Coursework/ece425/mp2/lib/drc/mux4.calibre.db
+topCell                                 mux4
+view                                    layout
+runDir                                  /home/maxma2/Documents/Coursework/ece425/mp2/lib/drc/
+logFile                                 PIPO.LOG.mux4
+summaryFile                             PIPO.SUM.mux4
+case                                    Preserve
+convertDot                              node
+convertPcellPin                         geometry
+
+INFO (XSTRM-223): 1. Translating stdVia NCSU_TechLib_FreePDK45/PTAP/layout as STRUCTURE PTAP_CDNS_711059318070.
+INFO (XSTRM-223): 2. Translating stdVia NCSU_TechLib_FreePDK45/NTAP/layout as STRUCTURE NTAP_CDNS_711059318071.
+INFO (XSTRM-223): 3. Translating stdVia NCSU_TechLib_FreePDK45/M1_POLY/layout as STRUCTURE M1_POLY_CDNS_711059318072.
+INFO (XSTRM-223): 4. Translating stdVia NCSU_TechLib_FreePDK45/M2_M1/layout as STRUCTURE M2_M1_CDNS_711059318073.
+INFO (XSTRM-223): 5. Translating cellView stdcell_rv32Lib/mux4/layout as STRUCTURE mux4.
+INFO (XSTRM-180): You have not used the '-objectMap' option. The design has instance(s) of at least one of following OpenAccess objects: oaBlockage, oaBoundary, oaRow, and oaMarker. Any information about these objects will not be translated into the generated stream file. Use the '-objectMap' option to translate/preserve these objects using XStream.
+
+Summary of Objects Translated:
+	Scalar Instances:                       0
+	Array Instances:                        0
+	Polygons:                               2
+	Paths:                                  34
+	Rectangles:                             100
+	Lines:                                  0
+	Arcs:                                   0
+	Donuts:                                 0
+	Dots:                                   0
+	Ellipses:                               0
+	Boundaries:                             0
+	Area Blockages:                         0
+	Layer Blockages:                        0
+	Area Halos:                             0
+	Markers:                                0
+	Rows:                                   0
+	Stitch:                                 0
+	Standard Vias                           51
+	Custom Vias:                            0
+	CdsGen Vias:                            0
+	Pathsegs:                               0
+	Text:                                   13
+	TextDisplay:                            0
+	Cells:                                  5
+
+Elapsed Time: 0.4s   User Time: 0.1s   CPU Time: 0.0s   Peak VM: 2632KB
+INFO (XSTRM-234): Translation completed. '0' error(s) and '0' warning(s) found.
