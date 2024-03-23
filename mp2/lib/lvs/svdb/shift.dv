@@ -1,52 +1,6 @@
 # CALIBRE-LVS DISCREPANCY VIEWER TCL FILE 
 # FILE: svdb/shift.dv
-dv_start unmatched                                
-dv_cell {shift} {shift} unmatched
-dv_obj_count -transformed_nets {35 39} -transformed_inst {30 34} -transformed_port {25 25}
-dv_discrep 1 {Incorrect Nets} -inst_count { 6 0}
-dv_discrep_line {Net } -lnet {2} {                                                     ** no similar net **}
-dv_discrep_line {}
-dv_discrep 2 {Incorrect Nets} -inst_count { 0 2}
-dv_discrep_line {** no similar net **                                      } -snet {XI5/net1} {}
-dv_discrep_line {}
-dv_discrep 3 {Incorrect Nets} -inst_count { 0 2}
-dv_discrep_line {** no similar net **                                      } -snet {XI4/net1} {}
-dv_discrep_line {}
-dv_discrep 4 {Incorrect Nets} -inst_count { 0 2}
-dv_discrep_line {** no similar net **                                      } -snet {XI3/net1} {}
-dv_discrep_line {}
-dv_discrep 5 {Incorrect Nets} -inst_count { 0 2}
-dv_discrep_line {** no similar net **                                      } -snet {XI2/net1} {}
-dv_discrep_line {}
-dv_discrep 6 {Incorrect Nets} -inst_count { 0 2}
-dv_discrep_line {** no similar net **                                      } -snet {XI1/net1} {}
-dv_discrep_line {}
-dv_discrep 7 {Incorrect Instances}
-dv_discrep_line {** missing injected instance **                           (_invv)}
-dv_discrep_line {}
-dv_discrep_line {                                                          Devices: }
-dv_discrep_line {                                                            } -sdev {XI4/XI3/MM0} {  MP(PMOS_VTL)}
-dv_discrep_line {                                                            } -sdev {XI4/XI3/MM1} {  MN(NMOS_VTL)}
-dv_discrep_line {}
-dv_discrep 8 {Incorrect Instances}
-dv_discrep_line {** missing injected instance **                           (_invv)}
-dv_discrep_line {}
-dv_discrep_line {                                                          Devices: }
-dv_discrep_line {                                                            } -sdev {XI3/XI3/MM0} {  MP(PMOS_VTL)}
-dv_discrep_line {                                                            } -sdev {XI3/XI3/MM1} {  MN(NMOS_VTL)}
-dv_discrep_line {}
-dv_discrep 9 {Incorrect Instances}
-dv_discrep_line {** missing injected instance **                           (_invv)}
-dv_discrep_line {}
-dv_discrep_line {                                                          Devices: }
-dv_discrep_line {                                                            } -sdev {XI2/XI3/MM0} {  MP(PMOS_VTL)}
-dv_discrep_line {                                                            } -sdev {XI2/XI3/MM1} {  MN(NMOS_VTL)}
-dv_discrep_line {}
-dv_discrep 10 {Incorrect Instances}
-dv_discrep_line {** missing injected instance **                           (_invv)}
-dv_discrep_line {}
-dv_discrep_line {                                                          Devices: }
-dv_discrep_line {                                                            } -sdev {XI1/XI3/MM0} {  MP(PMOS_VTL)}
-dv_discrep_line {                                                            } -sdev {XI1/XI3/MM1} {  MN(NMOS_VTL)}
-dv_discrep_line {}
+dv_start matched                                  
+dv_cell {shift} {shift} matched
+dv_obj_count -transformed_nets {39 39} -transformed_inst {34 34} -transformed_port {25 25}
 dv_end

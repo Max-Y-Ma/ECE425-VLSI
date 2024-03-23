@@ -16,7 +16,7 @@ LAYOUT NAME:              shift.sp ('shift')
 SOURCE NAME:              shift.src.net ('shift')
 RULE FILE:                _calibreLVS.rul_
 RULE FILE TITLE:          LVS Rule File for FreePDK45
-CREATION TIME:            Fri Mar 22 22:02:41 2024
+CREATION TIME:            Fri Mar 22 22:41:28 2024
 CURRENT DIRECTORY:        /home/maxma2/Documents/Coursework/ece425/mp2/lib/lvs
 USER NAME:                maxma2
 CALIBRE VERSION:          v2022.4_16.8    Mon Oct 3 17:12:27 PDT 2022
@@ -27,16 +27,13 @@ CALIBRE VERSION:          v2022.4_16.8    Mon Oct 3 17:12:27 PDT 2022
 
 
 
-                  #   #         #####################  
-                   # #          #                   #  
-                    #           #     INCORRECT     #  
-                   # #          #                   #  
-                  #   #         #####################  
+                         #       ###################       _   _   
+                        #        #                 #       *   *   
+                   #   #         #     CORRECT     #         |     
+                    # #          #                 #       \___/  
+                     #           ###################               
 
 
-  Error:    Different numbers of nets.
-  Error:    Different numbers of instances.
-  Error:    Connectivity errors.
 
 
 **************************************************************************************************************
@@ -45,7 +42,7 @@ CALIBRE VERSION:          v2022.4_16.8    Mon Oct 3 17:12:27 PDT 2022
 
   Result         Layout                        Source
   -----------    -----------                   --------------
-  INCORRECT      shift                         shift
+  CORRECT        shift                         shift
 
 
 
@@ -163,16 +160,13 @@ o LVS Setup:
 
 
 
-                  #   #         #####################  
-                   # #          #                   #  
-                    #           #     INCORRECT     #  
-                   # #          #                   #  
-                  #   #         #####################  
+                         #       ###################       _   _   
+                        #        #                 #       *   *   
+                   #   #         #     CORRECT     #         |     
+                    # #          #                 #       \___/  
+                     #           ###################               
 
 
-  Error:    Different numbers of nets (see below).
-  Error:    Different numbers of instances (see below).
-  Error:    Connectivity errors.
 
 LAYOUT CELL NAME:         shift
 SOURCE CELL NAME:         shift
@@ -186,12 +180,12 @@ INITIAL NUMBERS OF OBJECTS
                 ------    ------         --------------
  Ports:             25        27    *
 
- Nets:              37        43    *
+ Nets:              41        43    *
 
- Instances:         28        32    *    MN (4 pins)
-                    28        32    *    MP (4 pins)
+ Instances:         32        32         MN (4 pins)
+                    32        32         MP (4 pins)
                 ------    ------
- Total Inst:        56        64
+ Total Inst:        64        64
 
 
 NUMBERS OF OBJECTS AFTER TRANSFORMATION
@@ -201,98 +195,19 @@ NUMBERS OF OBJECTS AFTER TRANSFORMATION
                 ------    ------         --------------
  Ports:             25        25
 
- Nets:              35        39    *
+ Nets:              39        39
 
  Instances:          5         5         MN (4 pins)
                      5         5         MP (4 pins)
                     13        13         _invb (6 pins)
-                     5         9    *    _invv (4 pins)
+                     9         9         _invv (4 pins)
                      1         1         _invx2v (4 pins)
                      1         1         _mx2v (6 pins)
                 ------    ------
- Total Inst:        30        34
+ Total Inst:        34        34
 
 
        * = Number of objects in layout different from number in source.
-
-
-
-**************************************************************************************************************
-                                 INCORRECT OBJECTS
-**************************************************************************************************************
-
-
-LEGEND:
--------
-
-  ne  = Naming Error (same layout name found in source
-        circuit, but object was matched otherwise).
-
-
-**************************************************************************************************************
-                                   INCORRECT NETS
-
-DISC#  LAYOUT NAME                                               SOURCE NAME
-**************************************************************************************************************
-
-  1    Net 2                                                     ** no similar net **
-
---------------------------------------------------------------------------------------------------------------
-
-  2    ** no similar net **                                      XI5/net1
-
---------------------------------------------------------------------------------------------------------------
-
-  3    ** no similar net **                                      XI4/net1
-
---------------------------------------------------------------------------------------------------------------
-
-  4    ** no similar net **                                      XI3/net1
-
---------------------------------------------------------------------------------------------------------------
-
-  5    ** no similar net **                                      XI2/net1
-
---------------------------------------------------------------------------------------------------------------
-
-  6    ** no similar net **                                      XI1/net1
-
-
-**************************************************************************************************************
-                                 INCORRECT INSTANCES
-
-DISC#  LAYOUT NAME                                               SOURCE NAME
-**************************************************************************************************************
-
-  7    ** missing injected instance **                           (_invv)
-
-                                                                 Devices: 
-                                                                   XI4/XI3/MM0  MP(PMOS_VTL)
-                                                                   XI4/XI3/MM1  MN(NMOS_VTL)
-
---------------------------------------------------------------------------------------------------------------
-
-  8    ** missing injected instance **                           (_invv)
-
-                                                                 Devices: 
-                                                                   XI3/XI3/MM0  MP(PMOS_VTL)
-                                                                   XI3/XI3/MM1  MN(NMOS_VTL)
-
---------------------------------------------------------------------------------------------------------------
-
-  9    ** missing injected instance **                           (_invv)
-
-                                                                 Devices: 
-                                                                   XI2/XI3/MM0  MP(PMOS_VTL)
-                                                                   XI2/XI3/MM1  MN(NMOS_VTL)
-
---------------------------------------------------------------------------------------------------------------
-
- 10    ** missing injected instance **                           (_invv)
-
-                                                                 Devices: 
-                                                                   XI1/XI3/MM0  MP(PMOS_VTL)
-                                                                   XI1/XI3/MM1  MN(NMOS_VTL)
 
 
 
@@ -306,16 +221,16 @@ DISC#  LAYOUT NAME                                               SOURCE NAME
                   -------    -------    ---------    ---------    ---------
    Ports:              25         25            0            0
 
-   Nets:               34         34            1            5
+   Nets:               39         39            0            0
 
    Instances:           5          5            0            0    MN(NMOS_VTL)
                         5          5            0            0    MP(PMOS_VTL)
                        13         13            0            0    _invb
-                        5          5            0            4    _invv
+                        9          9            0            0    _invv
                         1          1            0            0    _invx2v
                         1          1            0            0    _mx2v
                   -------    -------    ---------    ---------
-   Total Inst:         30         30            0            4
+   Total Inst:         34         34            0            0
 
 
 o Statistics:
