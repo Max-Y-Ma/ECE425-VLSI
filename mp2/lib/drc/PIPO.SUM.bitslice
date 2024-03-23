@@ -2,7 +2,7 @@
 Product   : Virtuoso(R) XStream Out
 Program   : @(#)$CDS: strmout version ICADVM20.1-64b 05/03/2023 09:29 (cpgsrv12) $
           : sub-version  ICADVM20.1-64b.500.32 
-Started at: 23-Mar-2024  16:11:10
+Started at: 23-Mar-2024  17:17:21
 User Name : maxma2
 Host Name : eceb-2022-40.ews.illinois.edu
 Directory : /home/maxma2/Documents/Coursework/ece425/mp2/lib
@@ -17,10 +17,10 @@ Library/Cell/View               Instance Array   Polygon  Rect   Path   PathSeg 
 ---------------------------------------------------------------------------------------------------------------------------------------
 NCSU_TechLib_FreePDK45/M4_M3/layout                             0        0       0        3      0      0         0      0             0      0     0     0       0       
 NCSU_TechLib_FreePDK45/M2_M1/layout                             0        0       0        3      0      0         0      0             0      0     0     0       0       
-NCSU_TechLib_FreePDK45/M3_M2/layout                             0        0       0        3      0      0         0      0             0      0     0     0       0       
+bitslice_rv32Lib/bitslice/layout                                0        0       24       2612   2166   0         293    0             0      0     0     0       0       
 NCSU_TechLib_FreePDK45/NTAP/layout                              0        0       0        5      0      0         0      0             0      0     0     0       0       
 NCSU_TechLib_FreePDK45/M1_POLY/layout                           0        0       0        3      0      0         0      0             0      0     0     0       0       
-bitslice_rv32Lib/bitslice/layout                                0        0       21       2104   1903   0         220    0             0      0     0     0       0       
+NCSU_TechLib_FreePDK45/M3_M2/layout                             0        0       0        3      0      0         0      0             0      0     0     0       0       
 NCSU_TechLib_FreePDK45/PTAP/layout                              0        0       0        5      0      0         0      0             0      0     0     0       0       
 NCSU_TechLib_FreePDK45/M1_POLY/layout                           0        0       0        3      0      0         0      0             0      0     0     0       0       
 ---------------------------------------------------------------------------------------------------------------------------------------
@@ -31,10 +31,10 @@ Library/Cell/View               PRBdy    OtherBdy   AreaBlkg   LayerBlkg  AreaHa
 --------------------------------------------------------------------------------------------------------------------------------------------
 NCSU_TechLib_FreePDK45/M4_M3/layout                             0        0          0          0          0          0     0        0        0         0         0        
 NCSU_TechLib_FreePDK45/M2_M1/layout                             0        0          0          0          0          0     0        0        0         0         0        
-NCSU_TechLib_FreePDK45/M3_M2/layout                             0        0          0          0          0          0     0        0        0         0         0        
+bitslice_rv32Lib/bitslice/layout                                0        0          0          0          0          0     0        0        0         2574      0        
 NCSU_TechLib_FreePDK45/NTAP/layout                              0        0          0          0          0          0     0        0        0         0         0        
 NCSU_TechLib_FreePDK45/M1_POLY/layout                           0        0          0          0          0          0     0        0        0         0         0        
-bitslice_rv32Lib/bitslice/layout                                0        0          0          0          0          0     0        0        0         2226      0        
+NCSU_TechLib_FreePDK45/M3_M2/layout                             0        0          0          0          0          0     0        0        0         0         0        
 NCSU_TechLib_FreePDK45/PTAP/layout                              0        0          0          0          0          0     0        0        0         0         0        
 NCSU_TechLib_FreePDK45/M1_POLY/layout                           0        0          0          0          0          0     0        0        0         0         0        
 ---------------------------------------------------------------------------------------------------------------------------------------
@@ -44,29 +44,29 @@ NCSU_TechLib_FreePDK45/M1_POLY/layout                           0        0      
 Cadence         Cadence         Stream  Stream   
 Layer           Purpose         Layer   Datatype  Polygon  Rect     Path     Text     TextDisplay   Line Dot Arc Donut Ellipse Pathseg
 ---------------------------------------------------------------------------------------------------------------------------------------
-nimplant        drawing         4       0         0        209      0        0        0             0    0   0   0     0      0      
-nwell           drawing         3       0         8        9        0        0        0             0    0   0   0     0      0      
-metal2          drawing         13      0         3        2        459      0        0             0    0   0   0     0      0      
+nimplant        drawing         4       0         0        252      0        0        0             0    0   0   0     0      0      
+nwell           drawing         3       0         9        74       0        0        0             0    0   0   0     0      0      
+metal2          drawing         13      0         3        2        501      0        0             0    0   0   0     0      0      
 via2            drawing         14      0         0        1        0        0        0             0    0   0   0     0      0      
-metal1          drawing         11      0         0        21       731      94       0             0    0   0   0     0      0      
+metal1          drawing         11      0         0        47       836      134      0             0    0   0   0     0      0      
 background      drawing         254     0         0        4        0        0        0             0    0   0   0     0      0      
 via1            drawing         12      0         0        1        0        0        0             0    0   0   0     0      0      
-poly            drawing         9       0         0        61       538      0        0             0    0   0   0     0      0      
-contact         drawing         10      0         0        1187     0        0        0             0    0   0   0     0      0      
-metal4          drawing         17      0         0        1        8        0        0             0    0   0   0     0      0      
+poly            drawing         9       0         0        87       611      0        0             0    0   0   0     0      0      
+contact         drawing         10      0         0        1367     0        0        0             0    0   0   0     0      0      
+metal4          drawing         17      0         0        1        13       0        0             0    0   0   0     0      0      
 via3            drawing         16      0         0        1        0        0        0             0    0   0   0     0      0      
-pimplant        drawing         5       0         1        208      0        0        0             0    0   0   0     0      0      
-metal3          drawing         15      0         0        2        167      126      0             0    0   0   0     0      0      
-pwell           drawing         2       0         8        9        0        0        0             0    0   0   0     0      0      
-active          drawing         1       0         1        413      0        0        0             0    0   0   0     0      0      
+pimplant        drawing         5       0         2        250      0        0        0             0    0   0   0     0      0      
+metal3          drawing         15      0         0        2        205      159      0             0    0   0   0     0      0      
+pwell           drawing         2       0         8        72       0        0        0             0    0   0   0     0      0      
+active          drawing         1       0         2        476      0        0        0             0    0   0   0     0      0      
 ---------------------------------------------------------------------------------------------------------------------------------------
 
 Summary of Objects Translated:
 	Scalar Instances:		0
 	Array Instances:		0
-	Polygons:			21
-	Paths:				1903
-	Rectangles:			2129
+	Polygons:			24
+	Paths:				2166
+	Rectangles:			2637
 	Lines:				0
 	Arcs:				0
 	Donuts:				0
@@ -79,11 +79,11 @@ Summary of Objects Translated:
 	Markers:			0
 	Rows:				0
 	Stitches:			0
-	Standard Vias:			2226
+	Standard Vias:			2574
 	Custom Vias:			0
 	CdsGen Vias:			0
 	Pathsegs:			0
-	Text:				220
+	Text:				293
 	TextDisplay:		0
 	Cells:				8
 Design Libraries: 
