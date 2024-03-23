@@ -1,0 +1,188 @@
+************************************************************************
+* auCdl Netlist:
+* 
+* Library Name:  bitslice_rv32Lib
+* Top Cell Name: alu
+* View Name:     schematic
+* Netlisted on:  Mar 22 20:22:10 2024
+************************************************************************
+
+*.EQUATION
+*.SCALE METER
+*.MEGA
+.PARAM
+
+*.GLOBAL vss!
++        vdd!
++        vdd:P
++        VDD:P
++        vss:G
++        VSS:G
+
+*.PIN vss!
+*+    vdd!
+*+    vdd
+*+    VDD
+*+    vss
+*+    VSS
+
+************************************************************************
+* Library Name: stdcell_rv32Lib
+* Cell Name:    inv
+* View Name:    schematic
+************************************************************************
+
+.SUBCKT inv A Z
+*.PININFO A:I Z:O
+MM0 Z A vdd! vdd! PMOS_VTL W=180.0n L=50n m=1
+MM1 Z A vss! vss! NMOS_VTL W=90n L=50n m=1
+.ENDS
+
+************************************************************************
+* Library Name: stdcell_rv32Lib
+* Cell Name:    trans
+* View Name:    schematic
+************************************************************************
+
+.SUBCKT trans A G Gb Z
+*.PININFO A:I G:I Gb:I Z:B
+MM0 Z Gb A vdd! PMOS_VTL W=180.0n L=50n m=1
+MM1 Z G A vss! NMOS_VTL W=90n L=50n m=1
+.ENDS
+
+************************************************************************
+* Library Name: stdcell_rv32Lib
+* Cell Name:    mux2
+* View Name:    schematic
+************************************************************************
+
+.SUBCKT mux2 A B S0 Z
+*.PININFO A:I B:I S0:I Z:O
+XI2 B S0 net1 Z / trans
+XI1 A net1 S0 Z / trans
+XI3 S0 net1 / inv
+.ENDS
+
+************************************************************************
+* Library Name: stdcell_rv32Lib
+* Cell Name:    muxinv2
+* View Name:    schematic
+************************************************************************
+
+.SUBCKT muxinv2 A B S0 Z
+*.PININFO A:I B:I S0:I Z:O
+XI0 A B S0 net1 / mux2
+XI1 net1 Z / inv
+.ENDS
+
+************************************************************************
+* Library Name: stdcell_rv32Lib
+* Cell Name:    fa
+* View Name:    schematic
+************************************************************************
+
+.SUBCKT fa A B Cin Cout Sum
+*.PININFO A:I B:I Cin:I Cout:O Sum:O
+XI1 Cin Cinb / inv
+XI13 Cout net10 / inv
+XI11 Cin Cinb A mux1 / muxinv2
+XI14 net10 B mux1 Sum / mux2
+XI12 B A mux1 Cout / mux2
+.ENDS
+
+************************************************************************
+* Library Name: stdcell_rv32Lib
+* Cell Name:    mux4
+* View Name:    schematic
+************************************************************************
+
+.SUBCKT mux4 A B C D S0 S1 Z
+*.PININFO A:I B:I C:I D:I S0:I S1:I Z:O
+XI5 net12 S1 S1b Z / trans
+XI4 net4 S1b S1 Z / trans
+XI3 D S0 S0b net12 / trans
+XI2 C S0b S0 net12 / trans
+XI1 B S0 S0b net4 / trans
+XI0 A S0b S0 net4 / trans
+XI7 S1 S1b / inv
+XI6 S0 S0b / inv
+.ENDS
+
+************************************************************************
+* Library Name: stdcell_rv32Lib
+* Cell Name:    muxinv4
+* View Name:    schematic
+************************************************************************
+
+.SUBCKT muxinv4 A B C D S0 S1 Z
+*.PININFO A:I B:I C:I D:I S0:I S1:I Z:O
+XI0 A B C D S0 S1 net7 / mux4
+XI1 net7 Z / inv
+.ENDS
+
+************************************************************************
+* Library Name: stdcell_rv32Lib
+* Cell Name:    nand2
+* View Name:    schematic
+************************************************************************
+
+.SUBCKT nand2 A B Z
+*.PININFO A:I B:I Z:O
+MM1 net8 A vss! vss! NMOS_VTL W=180.0n L=50n m=1
+MM0 Z B net8 vss! NMOS_VTL W=180.0n L=50n m=1
+MM3 Z B vdd! vdd! PMOS_VTL W=180.0n L=50n m=1
+MM2 Z A vdd! vdd! PMOS_VTL W=180.0n L=50n m=1
+.ENDS
+
+************************************************************************
+* Library Name: stdcell_rv32Lib
+* Cell Name:    nor2
+* View Name:    schematic
+************************************************************************
+
+.SUBCKT nor2 A B Z
+*.PININFO A:I B:I Z:O
+MM1 Z B vss! vss! NMOS_VTL W=90n L=50n m=1
+MM0 Z A vss! vss! NMOS_VTL W=90n L=50n m=1
+MM3 Z B net5 vdd! PMOS_VTL W=360.0n L=50n m=1
+MM2 net5 A vdd! vdd! PMOS_VTL W=360.0n L=50n m=1
+.ENDS
+
+************************************************************************
+* Library Name: stdcell_rv32Lib
+* Cell Name:    xnor2
+* View Name:    schematic
+************************************************************************
+
+.SUBCKT xnor2 A B Z
+*.PININFO A:I B:I Z:O
+MM6 net8 A vdd! vdd! PMOS_VTL W=270.0n L=50n m=1
+MM5 Z B net8 vdd! PMOS_VTL W=270.0n L=50n m=1
+MM4 Z net4 vdd! vdd! PMOS_VTL W=180.0n L=50n m=1
+MM1 net4 B vdd! vdd! PMOS_VTL W=180.0n L=50n m=1
+MM0 net4 A vdd! vdd! PMOS_VTL W=180.0n L=50n m=1
+MM9 net3 net4 vss! vss! NMOS_VTL W=180.0n L=50n m=1
+MM8 Z B net3 vss! NMOS_VTL W=180.0n L=50n m=1
+MM7 Z A net3 vss! NMOS_VTL W=180.0n L=50n m=1
+MM3 net1 B vss! vss! NMOS_VTL W=180.0n L=50n m=1
+MM2 net4 A net1 vss! NMOS_VTL W=180.0n L=50n m=1
+.ENDS
+
+************************************************************************
+* Library Name: bitslice_rv32Lib
+* Cell Name:    alu
+* View Name:    schematic
+************************************************************************
+
+.SUBCKT alu alu_cin alu_cout alu_mux_1_out alu_mux_2_out alu_op<1> alu_op<0> 
++ alu_out
+*.PININFO alu_cin:I alu_mux_1_out:I alu_mux_2_out:I alu_op<1>:I alu_op<0>:I 
+*.PININFO alu_cout:O alu_out:O
+XI0 alu_mux_1_out alu_mux_2_out alu_cin alu_cout net5 / fa
+XI15 net1 xor or and alu_op<0> alu_op<1> alu_out / muxinv4
+XI3 alu_mux_1_out alu_mux_2_out and / nand2
+XI4 alu_mux_1_out alu_mux_2_out or / nor2
+XI5 alu_mux_1_out alu_mux_2_out xor / xnor2
+XI16 net5 net1 / inv
+.ENDS
+

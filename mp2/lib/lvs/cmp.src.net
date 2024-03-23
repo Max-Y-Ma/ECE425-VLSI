@@ -1,0 +1,107 @@
+************************************************************************
+* auCdl Netlist:
+* 
+* Library Name:  bitslice_rv32Lib
+* Top Cell Name: cmp
+* View Name:     schematic
+* Netlisted on:  Mar 22 21:16:12 2024
+************************************************************************
+
+*.EQUATION
+*.SCALE METER
+*.MEGA
+.PARAM
+
+*.GLOBAL vss!
++        vdd!
++        vdd:P
++        VDD:P
++        vss:G
++        VSS:G
+
+*.PIN vss!
+*+    vdd!
+*+    vdd
+*+    VDD
+*+    vss
+*+    VSS
+
+************************************************************************
+* Library Name: stdcell_rv32Lib
+* Cell Name:    nand2
+* View Name:    schematic
+************************************************************************
+
+.SUBCKT nand2 A B Z
+*.PININFO A:I B:I Z:O
+MM1 net8 A vss! vss! NMOS_VTL W=180.0n L=50n m=1
+MM0 Z B net8 vss! NMOS_VTL W=180.0n L=50n m=1
+MM3 Z B vdd! vdd! PMOS_VTL W=180.0n L=50n m=1
+MM2 Z A vdd! vdd! PMOS_VTL W=180.0n L=50n m=1
+.ENDS
+
+************************************************************************
+* Library Name: stdcell_rv32Lib
+* Cell Name:    nor2
+* View Name:    schematic
+************************************************************************
+
+.SUBCKT nor2 A B Z
+*.PININFO A:I B:I Z:O
+MM1 Z B vss! vss! NMOS_VTL W=90n L=50n m=1
+MM0 Z A vss! vss! NMOS_VTL W=90n L=50n m=1
+MM3 Z B net5 vdd! PMOS_VTL W=360.0n L=50n m=1
+MM2 net5 A vdd! vdd! PMOS_VTL W=360.0n L=50n m=1
+.ENDS
+
+************************************************************************
+* Library Name: stdcell_rv32Lib
+* Cell Name:    inv
+* View Name:    schematic
+************************************************************************
+
+.SUBCKT inv A Z
+*.PININFO A:I Z:O
+MM0 Z A vdd! vdd! PMOS_VTL W=180.0n L=50n m=1
+MM1 Z A vss! vss! NMOS_VTL W=90n L=50n m=1
+.ENDS
+
+************************************************************************
+* Library Name: stdcell_rv32Lib
+* Cell Name:    xnor2
+* View Name:    schematic
+************************************************************************
+
+.SUBCKT xnor2 A B Z
+*.PININFO A:I B:I Z:O
+MM6 net8 A vdd! vdd! PMOS_VTL W=270.0n L=50n m=1
+MM5 Z B net8 vdd! PMOS_VTL W=270.0n L=50n m=1
+MM4 Z net4 vdd! vdd! PMOS_VTL W=180.0n L=50n m=1
+MM1 net4 B vdd! vdd! PMOS_VTL W=180.0n L=50n m=1
+MM0 net4 A vdd! vdd! PMOS_VTL W=180.0n L=50n m=1
+MM9 net3 net4 vss! vss! NMOS_VTL W=180.0n L=50n m=1
+MM8 Z B net3 vss! NMOS_VTL W=180.0n L=50n m=1
+MM7 Z A net3 vss! NMOS_VTL W=180.0n L=50n m=1
+MM3 net1 B vss! vss! NMOS_VTL W=180.0n L=50n m=1
+MM2 net4 A net1 vss! NMOS_VTL W=180.0n L=50n m=1
+.ENDS
+
+************************************************************************
+* Library Name: bitslice_rv32Lib
+* Cell Name:    cmp
+* View Name:    schematic
+************************************************************************
+
+.SUBCKT cmp cmp_eq_in cmp_eq_out cmp_lt_in cmp_lt_out cmp_mux_out rs1_rdata
+*.PININFO cmp_eq_in:I cmp_lt_in:I cmp_mux_out:I rs1_rdata:I cmp_eq_out:O 
+*.PININFO cmp_lt_out:O
+XI10 net7 net8 cmp_lt_out / nand2
+XI9 net3 cmp_eq_in net7 / nand2
+XI0 cmp_eq_in net1 net5 / nand2
+XI2 rs1_rdata net2 net3 / nor2
+XI11 cmp_lt_in net8 / inv
+XI8 cmp_mux_out net2 / inv
+XI3 net5 cmp_eq_out / inv
+XI12 rs1_rdata cmp_mux_out net1 / xnor2
+.ENDS
+

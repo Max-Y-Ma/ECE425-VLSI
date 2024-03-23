@@ -1,0 +1,125 @@
+************************************************************************
+* auCdl Netlist:
+* 
+* Library Name:  bitslice_rv32Lib
+* Top Cell Name: pc
+* View Name:     schematic
+* Netlisted on:  Mar 22 19:24:55 2024
+************************************************************************
+
+*.EQUATION
+*.SCALE METER
+*.MEGA
+.PARAM
+
+*.GLOBAL vss!
++        vdd!
++        vdd:P
++        VDD:P
++        vss:G
++        VSS:G
+
+*.PIN vss!
+*+    vdd!
+*+    vdd
+*+    VDD
+*+    vss
+*+    VSS
+
+************************************************************************
+* Library Name: stdcell_rv32Lib
+* Cell Name:    inv
+* View Name:    schematic
+************************************************************************
+
+.SUBCKT inv A Z
+*.PININFO A:I Z:O
+MM0 Z A vdd! vdd! PMOS_VTL W=180.0n L=50n m=1
+MM1 Z A vss! vss! NMOS_VTL W=90n L=50n m=1
+.ENDS
+
+************************************************************************
+* Library Name: stdcell_rv32Lib
+* Cell Name:    trans
+* View Name:    schematic
+************************************************************************
+
+.SUBCKT trans A G Gb Z
+*.PININFO A:I G:I Gb:I Z:B
+MM0 Z Gb A vdd! PMOS_VTL W=180.0n L=50n m=1
+MM1 Z G A vss! NMOS_VTL W=90n L=50n m=1
+.ENDS
+
+************************************************************************
+* Library Name: stdcell_rv32Lib
+* Cell Name:    bit1
+* View Name:    schematic
+************************************************************************
+
+.SUBCKT bit1 A R W Z
+*.PININFO A:I R:I W:I Z:O
+XI13 W Wb / inv
+XI15 R Rb / inv
+XI2 net1 Bit / inv
+XI1 net2 net1 / inv
+XI14 Bit R Rb Z / trans
+XI12 A W Wb net2 / trans
+XI16 Bit Wb W net2 / trans
+.ENDS
+
+************************************************************************
+* Library Name: stdcell_rv32Lib
+* Cell Name:    dlatch
+* View Name:    schematic
+************************************************************************
+
+.SUBCKT dlatch D EN Q Qb
+*.PININFO D:I EN:I Q:O Qb:O
+XI16 D net2 / inv
+XI18 ENB1 EN1 / inv
+XI17 EN ENB1 / inv
+XI20 Q Qb / inv
+XI19 net3 Q / inv
+XI21 Qb ENB1 EN1 net3 / trans
+XI15 net2 EN1 ENB1 net3 / trans
+.ENDS
+
+************************************************************************
+* Library Name: stdcell_rv32Lib
+* Cell Name:    reg1w1
+* View Name:    schematic
+************************************************************************
+
+.SUBCKT reg1w1 CLK D Q Qb RE WE
+*.PININFO CLK:I D:I RE:I WE:I Q:O Qb:O
+XI0 D RE WE net4 / bit1
+XI1 net4 CLK Q Qb / dlatch
+.ENDS
+
+************************************************************************
+* Library Name: stdcell_rv32Lib
+* Cell Name:    mux2
+* View Name:    schematic
+************************************************************************
+
+.SUBCKT mux2 A B S0 Z
+*.PININFO A:I B:I S0:I Z:O
+XI2 B S0 net1 Z / trans
+XI1 A net1 S0 Z / trans
+XI3 S0 net1 / inv
+.ENDS
+
+************************************************************************
+* Library Name: bitslice_rv32Lib
+* Cell Name:    pc
+* View Name:    schematic
+************************************************************************
+
+.SUBCKT pc alu_out clk pc pc_mux_sel pc_reset_value pcp4 rst
+*.PININFO alu_out:I clk:I pc_mux_sel:I pc_reset_value:I pcp4:I rst:I pc:O
+XI0 clk pc_next pc net4 clk clkb / reg1w1
+XI2 net7 pc_reset_value rst pc_next / mux2
+XI1 pcp4 alu_out pc_mux_sel net7 / mux2
+XI12 clk clkb / inv
+.ENDS
+

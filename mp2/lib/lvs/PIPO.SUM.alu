@@ -1,0 +1,85 @@
+********************************************************************************
+Product   : Virtuoso(R) XStream Out
+Program   : @(#)$CDS: strmout version ICADVM20.1-64b 05/03/2023 09:29 (cpgsrv12) $
+          : sub-version  ICADVM20.1-64b.500.32 
+Started at: 22-Mar-2024  20:22:09
+User Name : maxma2
+Host Name : eceb-2022-40.ews.illinois.edu
+Directory : /home/maxma2/Documents/Coursework/ece425/mp2/lib
+CADENCE Design Systems, Inc.
+********************************************************************************
+Info: Cellview Rev Num:99,  Tech Rev Num:59
+
+
+                       Individual Cell Statistics - Basic Objects
+---------------------------------------------------------------------------------------------------------------------------------------
+Library/Cell/View               Instance Array   Polygon  Rect   Path   PathSeg   Text   TextDisplay   Line   Dot   Arc   Donut   Ellipse 
+---------------------------------------------------------------------------------------------------------------------------------------
+NCSU_TechLib_FreePDK45/M3_M2/layout                             0        0       0        3      0      0         0      0             0      0     0     0       0       
+NCSU_TechLib_FreePDK45/M2_M1/layout                             0        0       0        3      0      0         0      0             0      0     0     0       0       
+bitslice_rv32Lib/alu/layout     0        0       7        201    143    0         19     0             0      0     0     0       0       
+NCSU_TechLib_FreePDK45/NTAP/layout                              0        0       0        5      0      0         0      0             0      0     0     0       0       
+NCSU_TechLib_FreePDK45/M1_POLY/layout                           0        0       0        3      0      0         0      0             0      0     0     0       0       
+NCSU_TechLib_FreePDK45/PTAP/layout                              0        0       0        5      0      0         0      0             0      0     0     0       0       
+---------------------------------------------------------------------------------------------------------------------------------------
+
+                       Individual Cell Statistics - Advanced Objects
+--------------------------------------------------------------------------------------------------------------------------------------------
+Library/Cell/View               PRBdy    OtherBdy   AreaBlkg   LayerBlkg  AreaHalo   Row   Marker   Stitch   CustVia   StdVia    CdsGenVia
+--------------------------------------------------------------------------------------------------------------------------------------------
+NCSU_TechLib_FreePDK45/M3_M2/layout                             0        0          0          0          0          0     0        0        0         0         0        
+NCSU_TechLib_FreePDK45/M2_M1/layout                             0        0          0          0          0          0     0        0        0         0         0        
+bitslice_rv32Lib/alu/layout     0        0          0          0          0          0     0        0        0         175       0        
+NCSU_TechLib_FreePDK45/NTAP/layout                              0        0          0          0          0          0     0        0        0         0         0        
+NCSU_TechLib_FreePDK45/M1_POLY/layout                           0        0          0          0          0          0     0        0        0         0         0        
+NCSU_TechLib_FreePDK45/PTAP/layout                              0        0          0          0          0          0     0        0        0         0         0        
+---------------------------------------------------------------------------------------------------------------------------------------
+
+                       Statistics of Layers 
+---------------------------------------------------------------------------------------------------------------------------------------
+Cadence         Cadence         Stream  Stream   
+Layer           Purpose         Layer   Datatype  Polygon  Rect     Path     Text     TextDisplay   Line Dot Arc Donut Ellipse Pathseg
+---------------------------------------------------------------------------------------------------------------------------------------
+nimplant        drawing         4       0         0        20       0        0        0             0    0   0   0     0      0      
+nwell           drawing         3       0         1        1        0        0        0             0    0   0   0     0      0      
+metal2          drawing         13      0         3        2        30       0        0             0    0   0   0     0      0      
+via2            drawing         14      0         0        1        0        0        0             0    0   0   0     0      0      
+metal1          drawing         11      0         0        6        64       19       0             0    0   0   0     0      0      
+via1            drawing         12      0         0        1        0        0        0             0    0   0   0     0      0      
+poly            drawing         9       0         0        17       43       0        0             0    0   0   0     0      0      
+contact         drawing         10      0         0        112      0        0        0             0    0   0   0     0      0      
+pimplant        drawing         5       0         1        19       0        0        0             0    0   0   0     0      0      
+metal3          drawing         15      0         0        1        6        0        0             0    0   0   0     0      0      
+pwell           drawing         2       0         1        1        0        0        0             0    0   0   0     0      0      
+active          drawing         1       0         1        39       0        0        0             0    0   0   0     0      0      
+---------------------------------------------------------------------------------------------------------------------------------------
+
+Summary of Objects Translated:
+	Scalar Instances:		0
+	Array Instances:		0
+	Polygons:			7
+	Paths:				143
+	Rectangles:			220
+	Lines:				0
+	Arcs:				0
+	Donuts:				0
+	Dots:				0
+	Ellipses:			0
+	Boundaries:			0
+	Area Blockages:			0
+	Layer Blockages:		0
+	Area Halos:			0
+	Markers:			0
+	Rows:				0
+	Stitches:			0
+	Standard Vias:			175
+	Custom Vias:			0
+	CdsGen Vias:			0
+	Pathsegs:			0
+	Text:				19
+	TextDisplay:		0
+	Cells:				6
+Design Libraries: 
+
+DEFINE NCSU_TechLib_FreePDK45	/class/ece425/FreePDK45/ncsu_basekit/lib/NCSU_TechLib_FreePDK45
+DEFINE bitslice_rv32Lib	/home/maxma2/Documents/Coursework/ece425/mp2/lib/bitslice_rv32Lib

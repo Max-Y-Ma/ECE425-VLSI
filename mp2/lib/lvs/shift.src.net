@@ -1,0 +1,111 @@
+************************************************************************
+* auCdl Netlist:
+* 
+* Library Name:  bitslice_rv32Lib
+* Top Cell Name: shift
+* View Name:     schematic
+* Netlisted on:  Mar 22 22:02:38 2024
+************************************************************************
+
+*.EQUATION
+*.SCALE METER
+*.MEGA
+.PARAM
+
+*.GLOBAL vss!
++        vdd!
++        vdd:P
++        VDD:P
++        vss:G
++        VSS:G
+
+*.PIN vss!
+*+    vdd!
+*+    vdd
+*+    VDD
+*+    vss
+*+    VSS
+
+************************************************************************
+* Library Name: stdcell_rv32Lib
+* Cell Name:    trans
+* View Name:    schematic
+************************************************************************
+
+.SUBCKT trans A G Gb Z
+*.PININFO A:I G:I Gb:I Z:B
+MM0 Z Gb A vdd! PMOS_VTL W=180.0n L=50n m=1
+MM1 Z G A vss! NMOS_VTL W=90n L=50n m=1
+.ENDS
+
+************************************************************************
+* Library Name: stdcell_rv32Lib
+* Cell Name:    inv
+* View Name:    schematic
+************************************************************************
+
+.SUBCKT inv A Z
+*.PININFO A:I Z:O
+MM0 Z A vdd! vdd! PMOS_VTL W=180.0n L=50n m=1
+MM1 Z A vss! vss! NMOS_VTL W=90n L=50n m=1
+.ENDS
+
+************************************************************************
+* Library Name: stdcell_rv32Lib
+* Cell Name:    mux2
+* View Name:    schematic
+************************************************************************
+
+.SUBCKT mux2 A B S0 Z
+*.PININFO A:I B:I S0:I Z:O
+XI2 B S0 net1 Z / trans
+XI1 A net1 S0 Z / trans
+XI3 S0 net1 / inv
+.ENDS
+
+************************************************************************
+* Library Name: stdcell_rv32Lib
+* Cell Name:    buf
+* View Name:    schematic
+************************************************************************
+
+.SUBCKT buf A Z
+*.PININFO A:I Z:O
+XI1 net2 Z / inv
+XI0 A net2 / inv
+.ENDS
+
+************************************************************************
+* Library Name: bitslice_rv32Lib
+* Cell Name:    shift
+* View Name:    schematic
+************************************************************************
+
+.SUBCKT shift alu_mux_1_out shift_amount<4> shift_amount<3> shift_amount<2> 
++ shift_amount<1> shift_amount<0> shift_dir shift_in_from_left<4> 
++ shift_in_from_left<3> shift_in_from_left<2> shift_in_from_left<1> 
++ shift_in_from_left<0> shift_in_from_right<4> shift_in_from_right<3> 
++ shift_in_from_right<2> shift_in_from_right<1> shift_in_from_right<0> 
++ shift_out<5> shift_out<4> shift_out<3> shift_out<2> shift_out<1> shift_out<0>
+*.PININFO alu_mux_1_out:I shift_amount<4>:I shift_amount<3>:I 
+*.PININFO shift_amount<2>:I shift_amount<1>:I shift_amount<0>:I shift_dir:I 
+*.PININFO shift_in_from_left<4>:I shift_in_from_left<3>:I 
+*.PININFO shift_in_from_left<2>:I shift_in_from_left<1>:I 
+*.PININFO shift_in_from_left<0>:I shift_in_from_right<4>:I 
+*.PININFO shift_in_from_right<3>:I shift_in_from_right<2>:I 
+*.PININFO shift_in_from_right<1>:I shift_in_from_right<0>:I shift_out<5>:O 
+*.PININFO shift_out<4>:O shift_out<3>:O shift_out<2>:O shift_out<1>:O 
+*.PININFO shift_out<0>:O
+XI10 shift_out<0> net5 shift_amount<0> shift_out<1> / mux2
+XI9 shift_out<1> net4 shift_amount<1> shift_out<2> / mux2
+XI8 shift_out<2> net3 shift_amount<2> shift_out<3> / mux2
+XI7 shift_out<3> net2 shift_amount<3> shift_out<4> / mux2
+XI6 shift_out<4> net1 shift_amount<4> shift_out<5> / mux2
+XI5 shift_in_from_right<0> shift_in_from_left<0> shift_dir net5 / mux2
+XI4 shift_in_from_right<1> shift_in_from_left<1> shift_dir net4 / mux2
+XI3 shift_in_from_right<2> shift_in_from_left<2> shift_dir net3 / mux2
+XI2 shift_in_from_right<3> shift_in_from_left<3> shift_dir net2 / mux2
+XI1 shift_in_from_right<4> shift_in_from_left<4> shift_dir net1 / mux2
+XI29 alu_mux_1_out shift_out<0> / buf
+.ENDS
+

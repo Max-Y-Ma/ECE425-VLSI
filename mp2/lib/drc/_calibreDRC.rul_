@@ -1,19 +1,19 @@
 //
-//  Rule file generated on Fri Mar 22 17:06:33 2024
+//  Rule file generated on Fri Mar 22 21:57:49 2024
 //  by Calibre Interactive v2022.4_16.8    Mon Oct 3 17:12:31 PDT 2022
 //
 //      *** PLEASE DO NOT MODIFY THIS FILE ***
 //
 //
 
-LAYOUT PATH "regfile.calibre.db"
+LAYOUT PATH "shift.calibre.db"
 LAYOUT SYSTEM GDSII
-LAYOUT PRIMARY "regfile"
+LAYOUT PRIMARY "shift"
 
-DRC RESULTS DATABASE "regfile.drc.results" ASCII
+DRC RESULTS DATABASE "shift.drc.results" ASCII
 DRC CELL NAME YES CELL SPACE XFORM
 
-DRC SUMMARY REPORT "regfile.drc.summary" REPLACE HIER
+DRC SUMMARY REPORT "shift.drc.summary" REPLACE HIER
 
 DRC MAXIMUM RESULTS 1000
 
