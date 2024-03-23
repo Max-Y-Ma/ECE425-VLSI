@@ -3,7 +3,7 @@
 ==================================================================================
 === CALIBRE::DRC-H SUMMARY REPORT
 ===
-Execution Date/Time:       Fri Mar 22 22:38:49 2024
+Execution Date/Time:       Sat Mar 23 12:05:16 2024
 Calibre Version:           v2022.4_16.8    Mon Oct 3 17:12:27 PDT 2022
 Rule File Pathname:        _calibreDRC.rul_
 Rule File Title:           
@@ -40,7 +40,7 @@ LAYER vth ........ TOTAL Original Geometry Count = 0   (0)
 LAYER vtg ........ TOTAL Original Geometry Count = 0   (0)
 LAYER metal1 ..... TOTAL Original Geometry Count = 83  (271)
 LAYER contact .... TOTAL Original Geometry Count = 129 (238)
-LAYER metal2 ..... TOTAL Original Geometry Count = 24  (110)
+LAYER metal2 ..... TOTAL Original Geometry Count = 28  (114)
 LAYER metal3 ..... TOTAL Original Geometry Count = 7   (14)
 LAYER metal4 ..... TOTAL Original Geometry Count = 0   (0)
 LAYER metal5 ..... TOTAL Original Geometry Count = 0   (0)
@@ -236,6 +236,6 @@ RULECHECK Antenna.metal10 ... TOTAL Result Count = 0 (0)
 ---
 TOTAL CPU Time:                  0
 TOTAL REAL Time:                 0
-TOTAL Original Layer Geometries: 500 (1201)
+TOTAL Original Layer Geometries: 504 (1205)
 TOTAL DRC RuleChecks Executed:   167
 TOTAL DRC Results Generated:     0 (0)

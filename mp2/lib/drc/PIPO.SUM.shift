@@ -2,9 +2,9 @@
 Product   : Virtuoso(R) XStream Out
 Program   : @(#)$CDS: strmout version ICADVM20.1-64b 05/03/2023 09:29 (cpgsrv12) $
           : sub-version  ICADVM20.1-64b.500.32 
-Started at: 22-Mar-2024  22:38:48
+Started at: 23-Mar-2024  12:05:14
 User Name : maxma2
-Host Name : linux-ssh-09.ews.illinois.edu
+Host Name : eceb-2022-40.ews.illinois.edu
 Directory : /home/maxma2/Documents/Coursework/ece425/mp2/lib
 CADENCE Design Systems, Inc.
 ********************************************************************************
@@ -15,24 +15,24 @@ Info: Cellview Rev Num:99,  Tech Rev Num:59
 ---------------------------------------------------------------------------------------------------------------------------------------
 Library/Cell/View               Instance Array   Polygon  Rect   Path   PathSeg   Text   TextDisplay   Line   Dot   Arc   Donut   Ellipse 
 ---------------------------------------------------------------------------------------------------------------------------------------
+bitslice_rv32Lib/shift/layout   0        0       0        336    149    0         49     0             0      0     0     0       0       
+NCSU_TechLib_FreePDK45/M2_M1/layout                             0        0       0        3      0      0         0      0             0      0     0     0       0       
+NCSU_TechLib_FreePDK45/M3_M2/layout                             0        0       0        3      0      0         0      0             0      0     0     0       0       
 NCSU_TechLib_FreePDK45/NTAP/layout                              0        0       0        5      0      0         0      0             0      0     0     0       0       
 NCSU_TechLib_FreePDK45/M1_POLY/layout                           0        0       0        3      0      0         0      0             0      0     0     0       0       
-bitslice_rv32Lib/shift/layout   0        0       0        336    145    0         49     0             0      0     0     0       0       
 NCSU_TechLib_FreePDK45/PTAP/layout                              0        0       0        5      0      0         0      0             0      0     0     0       0       
-NCSU_TechLib_FreePDK45/M3_M2/layout                             0        0       0        3      0      0         0      0             0      0     0     0       0       
-NCSU_TechLib_FreePDK45/M2_M1/layout                             0        0       0        3      0      0         0      0             0      0     0     0       0       
 ---------------------------------------------------------------------------------------------------------------------------------------
 
                        Individual Cell Statistics - Advanced Objects
 --------------------------------------------------------------------------------------------------------------------------------------------
 Library/Cell/View               PRBdy    OtherBdy   AreaBlkg   LayerBlkg  AreaHalo   Row   Marker   Stitch   CustVia   StdVia    CdsGenVia
 --------------------------------------------------------------------------------------------------------------------------------------------
+bitslice_rv32Lib/shift/layout   0        0          0          0          0          0     0        0        0         208       0        
+NCSU_TechLib_FreePDK45/M2_M1/layout                             0        0          0          0          0          0     0        0        0         0         0        
+NCSU_TechLib_FreePDK45/M3_M2/layout                             0        0          0          0          0          0     0        0        0         0         0        
 NCSU_TechLib_FreePDK45/NTAP/layout                              0        0          0          0          0          0     0        0        0         0         0        
 NCSU_TechLib_FreePDK45/M1_POLY/layout                           0        0          0          0          0          0     0        0        0         0         0        
-bitslice_rv32Lib/shift/layout   0        0          0          0          0          0     0        0        0         208       0        
 NCSU_TechLib_FreePDK45/PTAP/layout                              0        0          0          0          0          0     0        0        0         0         0        
-NCSU_TechLib_FreePDK45/M3_M2/layout                             0        0          0          0          0          0     0        0        0         0         0        
-NCSU_TechLib_FreePDK45/M2_M1/layout                             0        0          0          0          0          0     0        0        0         0         0        
 ---------------------------------------------------------------------------------------------------------------------------------------
 
                        Statistics of Layers 
@@ -42,7 +42,7 @@ Layer           Purpose         Layer   Datatype  Polygon  Rect     Path     Tex
 ---------------------------------------------------------------------------------------------------------------------------------------
 nimplant        drawing         4       0         0        32       0        0        0             0    0   0   0     0      0      
 nwell           drawing         3       0         0        42       0        0        0             0    0   0   0     0      0      
-metal2          drawing         13      0         0        2        22       0        0             0    0   0   0     0      0      
+metal2          drawing         13      0         0        2        26       0        0             0    0   0   0     0      0      
 via2            drawing         14      0         0        1        0        0        0             0    0   0   0     0      0      
 metal1          drawing         11      0         0        18       65       49       0             0    0   0   0     0      0      
 via1            drawing         12      0         0        1        0        0        0             0    0   0   0     0      0      
@@ -58,7 +58,7 @@ Summary of Objects Translated:
 	Scalar Instances:		0
 	Array Instances:		0
 	Polygons:			0
-	Paths:				145
+	Paths:				149
 	Rectangles:			355
 	Lines:				0
 	Arcs:				0

@@ -16,7 +16,7 @@ LAYOUT NAME:              shift.sp ('shift')
 SOURCE NAME:              shift.src.net ('shift')
 RULE FILE:                _calibreLVS.rul_
 RULE FILE TITLE:          LVS Rule File for FreePDK45
-CREATION TIME:            Fri Mar 22 22:41:28 2024
+CREATION TIME:            Sat Mar 23 12:05:48 2024
 CURRENT DIRECTORY:        /home/maxma2/Documents/Coursework/ece425/mp2/lib/lvs
 USER NAME:                maxma2
 CALIBRE VERSION:          v2022.4_16.8    Mon Oct 3 17:12:27 PDT 2022

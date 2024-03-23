@@ -11,4 +11,4 @@ lvs_GroundName GROUND
 lvs_LvsOutFile LVS_REPORT shift.lvs.report
 lvs_LvsOutFile SOURCE_NETLIST shift.src.net
 lvs_LvsOutFile RULES_FILE _calibreLVS.rul_
-lvs_LvsRunTimes 1711165288 1711165288
+lvs_LvsRunTimes 1711213548 1711213548
