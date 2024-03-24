@@ -140,7 +140,7 @@ module shift_stub(
     input   logic           shift_dir,
     input   logic   [4:0]   shift_in_from_right,
     input   logic   [4:0]   shift_in_from_left,
-    output  logic   [5:0]   shift_out
+    output  loFgic   [5:0]   shift_out
 );
             logic   [4:0]   shift_in;
     assign shift_out[0]   = alu_mux_1_out;

@@ -1,19 +1,19 @@
 //
-//  Rule file generated on Sat Mar 23 21:03:22 2024
+//  Rule file generated on Sat Mar 23 22:44:26 2024
 //  by Calibre Interactive v2022.4_16.8    Mon Oct 3 17:12:31 PDT 2022
 //
 //      *** PLEASE DO NOT MODIFY THIS FILE ***
 //
 //
 
-LAYOUT PATH "bitslice.calibre.db"
+LAYOUT PATH "datapath.calibre.db"
 LAYOUT SYSTEM GDSII
-LAYOUT PRIMARY "bitslice"
+LAYOUT PRIMARY "datapath"
 
-DRC RESULTS DATABASE "bitslice.drc.results" ASCII
+DRC RESULTS DATABASE "datapath.drc.results" ASCII
 DRC CELL NAME YES CELL SPACE XFORM
 
-DRC SUMMARY REPORT "bitslice.drc.summary" REPLACE HIER
+DRC SUMMARY REPORT "datapath.drc.summary" REPLACE HIER
 
 DRC MAXIMUM RESULTS 1000
 
