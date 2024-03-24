@@ -16,7 +16,7 @@ LAYOUT NAME:              bitslice.sp ('bitslice')
 SOURCE NAME:              bitslice.src.net ('bitslice')
 RULE FILE:                _calibreLVS.rul_
 RULE FILE TITLE:          LVS Rule File for FreePDK45
-CREATION TIME:            Sat Mar 23 20:35:50 2024
+CREATION TIME:            Sat Mar 23 21:02:24 2024
 CURRENT DIRECTORY:        /home/maxma2/Documents/Coursework/ece425/mp2/lib/lvs
 USER NAME:                maxma2
 CALIBRE VERSION:          v2022.4_16.8    Mon Oct 3 17:12:27 PDT 2022
@@ -27,16 +27,13 @@ CALIBRE VERSION:          v2022.4_16.8    Mon Oct 3 17:12:27 PDT 2022
 
 
 
-                  #   #         #####################  
-                   # #          #                   #  
-                    #           #     INCORRECT     #  
-                   # #          #                   #  
-                  #   #         #####################  
+                         #       ###################       _   _   
+                        #        #                 #       *   *   
+                   #   #         #     CORRECT     #         |     
+                    # #          #                 #       \___/  
+                     #           ###################               
 
 
-  Error:    Different numbers of nets.
-  Error:    Different numbers of instances.
-  Error:    Connectivity errors.
 
 
 **************************************************************************************************************
@@ -45,7 +42,7 @@ CALIBRE VERSION:          v2022.4_16.8    Mon Oct 3 17:12:27 PDT 2022
 
   Result         Layout                        Source
   -----------    -----------                   --------------
-  INCORRECT      bitslice                      bitslice
+  CORRECT        bitslice                      bitslice
 
 
 
@@ -163,16 +160,13 @@ o LVS Setup:
 
 
 
-                  #   #         #####################  
-                   # #          #                   #  
-                    #           #     INCORRECT     #  
-                   # #          #                   #  
-                  #   #         #####################  
+                         #       ###################       _   _   
+                        #        #                 #       *   *   
+                   #   #         #     CORRECT     #         |     
+                    # #          #                 #       \___/  
+                     #           ###################               
 
 
-  Error:    Different numbers of nets (see below).
-  Error:    Different numbers of instances (see below).
-  Error:    Connectivity errors.
 
 LAYOUT CELL NAME:         bitslice
 SOURCE CELL NAME:         bitslice
@@ -186,7 +180,7 @@ INITIAL NUMBERS OF OBJECTS
                 ------    ------         --------------
  Ports:            157       160    *
 
- Nets:             462       462
+ Nets:             459       462    *
 
  Instances:        450       450         MN (4 pins)
                    450       450         MP (4 pins)
@@ -201,158 +195,23 @@ NUMBERS OF OBJECTS AFTER TRANSFORMATION
                 ------    ------         --------------
  Ports:            157       157
 
- Nets:             374       372    *
+ Nets:             372       372
 
  Instances:         73        73         MN (4 pins)
                     75        75         MP (4 pins)
                      2         2         SPMN_2_1 (5 pins)
-                    48        50    *    _invb (6 pins)
-                   112       113    *    _invv (4 pins)
+                    50        50         _invb (6 pins)
+                   113       113         _invv (4 pins)
                     33        33         _invx2v (4 pins)
-                    43        42    *    _mx2v (6 pins)
+                    42        42         _mx2v (6 pins)
                      6         6         _nand2v (5 pins)
                      2         2         _nor2v (5 pins)
                      2         2         _smp2v (4 pins)
                 ------    ------
- Total Inst:       396       398
+ Total Inst:       398       398
 
 
        * = Number of objects in layout different from number in source.
-
-
-
-**************************************************************************************************************
-                                 INCORRECT OBJECTS
-**************************************************************************************************************
-
-
-LEGEND:
--------
-
-  ne  = Naming Error (same layout name found in source
-        circuit, but object was matched otherwise).
-
-
-**************************************************************************************************************
-                                   INCORRECT NETS
-
-DISC#  LAYOUT NAME                                               SOURCE NAME
-**************************************************************************************************************
-
-  1    Net ALU_MUX_2_OUT                                         ALU_MUX_2_OUT
-       --- 2 Connections On This Net ---                         --- 10 Connections On This Net ---
-       --------------------------                                --------------------------
-       
-       (_mx2v):out                                               ** missing connection **
-         M333(101.0200,0.3000):d
-         M334(101.2800,0.3000):s
-         M784(101.2800,0.9250):s
-         M783(101.0200,0.9250):d
-       
-       
-       ** missing connection **                                  (SPMN_2_1):input
-                                                                   XI0/XI5/MM8:g
-       
-       
-       ** missing connection **                                  (_smp2v):in1
-                                                                   XI0/XI5/MM5:g
-       
-       
-       ** missing connection **                                  (_nand2v):in2
-                                                                   XI0/XI3/MM3:g
-                                                                   XI0/XI3/MM0:g
-       
-       
-       ** missing connection **                                  (_nor2v):in2
-                                                                   XI0/XI4/MM1:g
-                                                                   XI0/XI4/MM3:g
-       
-       
-       ** missing connection **                                  (_nand2v):in2
-                                                                   XI0/XI5/MM1:g
-                                                                   XI0/XI5/MM3:g
-       
-       
-       ** missing connection **                                  (_invb):out
-                                                                   XI4/XI1/MM1:d
-                                                                   XI4/XI2/MM0:d
-       
-       
-       ** missing connection **                                  (_invb):out
-                                                                   XI4/XI2/MM1:d
-                                                                   XI4/XI1/MM0:d
-       
-       
-       ** missing connection **                                  (_mx2v):in2
-                                                                   XI0/XI0/XI14/XI2/MM1:s
-                                                                   XI0/XI0/XI14/XI2/MM0:s
-       
-       
-       ** missing connection **                                  (_mx2v):in1
-                                                                   XI0/XI0/XI12/XI1/MM1:s
-                                                                   XI0/XI0/XI12/XI1/MM0:s
-       
-
---------------------------------------------------------------------------------------------------------------
-
-  2    Net RS2_RDATA                                             RS2_RDATA
-           369                                                  
-       --- 7 Connections On This Net ---                         --- 7 Connections On This Net ---
-
---------------------------------------------------------------------------------------------------------------
-
-  3    Net PC                                                    PC
-           444                                                  
-       --- 7 Connections On This Net ---                         --- 7 Connections On This Net ---
-
---------------------------------------------------------------------------------------------------------------
-
-  4    Net 313                                                   ** no similar net **
-
---------------------------------------------------------------------------------------------------------------
-
-  5    ** no similar net **                                      XI4/net1
-
-
-**************************************************************************************************************
-                                 INCORRECT INSTANCES
-
-DISC#  LAYOUT NAME                                               SOURCE NAME
-**************************************************************************************************************
-
-  6    (_mx2v)                                                   ** missing injected instance **
-
-       Devices: 
-         M783(101.0200,0.9250)  MP(PMOS_VTL)
-         M784(101.2800,0.9250)  MP(PMOS_VTL)
-         M334(101.2800,0.3000)  MN(NMOS_VTL)
-         M333(101.0200,0.3000)  MN(NMOS_VTL)
-         M782(100.6525,0.9250)  MP(PMOS_VTL)
-         M332(100.6525,0.3000)  MN(NMOS_VTL)
-
---------------------------------------------------------------------------------------------------------------
-
-  7    ** missing injected instance **                           (_invb)
-
-                                                                 Devices: 
-                                                                   XI4/XI1/MM0  MP(PMOS_VTL)
-                                                                   XI4/XI2/MM1  MN(NMOS_VTL)
-
---------------------------------------------------------------------------------------------------------------
-
-  8    ** missing injected instance **                           (_invb)
-
-                                                                 Devices: 
-                                                                   XI4/XI2/MM0  MP(PMOS_VTL)
-                                                                   XI4/XI1/MM1  MN(NMOS_VTL)
-
---------------------------------------------------------------------------------------------------------------
-
-  9    ** missing injected instance **                           (_invv)
-
-                                                                 Devices: 
-                                                                   XI4/XI3/MM0  MP(PMOS_VTL)
-                                                                   XI4/XI3/MM1  MN(NMOS_VTL)
 
 
 
@@ -366,20 +225,20 @@ DISC#  LAYOUT NAME                                               SOURCE NAME
                   -------    -------    ---------    ---------    ---------
    Ports:             157        157            0            0
 
-   Nets:              373        371            1            1
+   Nets:              372        372            0            0
 
    Instances:          73         73            0            0    MN(NMOS_VTL)
                        75         75            0            0    MP(PMOS_VTL)
                         2          2            0            0    SPMN_2_1
-                       48         48            0            2    _invb
-                      112        112            0            1    _invv
+                       50         50            0            0    _invb
+                      113        113            0            0    _invv
                        33         33            0            0    _invx2v
-                       42         42            1            0    _mx2v
+                       42         42            0            0    _mx2v
                         6          6            0            0    _nand2v
                         2          2            0            0    _nor2v
                         2          2            0            0    _smp2v
                   -------    -------    ---------    ---------
-   Total Inst:        395        395            1            3
+   Total Inst:        398        398            0            0
 
 
 o Statistics:
@@ -397,130 +256,6 @@ o Initial Correspondence Points:
                  RS1_SEL<25> RS2_SEL<25> RD_SEL<24> RS1_SEL<24> RS2_SEL<24> RD_SEL<23>
                  RS1_SEL<23> RS2_SEL<23> RD_SEL<22> RS1_SEL<22> RS2_SEL<22> RD_SEL<21>
                  RS1_SEL<21> RS2_SEL<21> RD_SEL<20> RS1_SEL<20>
-
-
-**************************************************************************************************************
-                             DETAILED INSTANCE CONNECTIONS
-
-       LAYOUT NAME                                               SOURCE NAME
-**************************************************************************************************************
-
-          (This section contains detailed information about connections of
-           matched instances that are involved in net discrepancies).
-
---------------------------------------------------------------------------------------------------------------
-
-       (_mx2v)                                                   (_mx2v)
-         in2: 300                                                  in2: alu_mux_1_out
-         sel: 309                                                  sel: XI0/XI0/mux1
-         out: ALU_COUT                                             out: ALU_COUT
-         sup1: VDD!                                                sup1: VDD!
-         sup2: VSS!                                                sup2: VSS!
-         in1: 313                                                  ** no similar net **
-         ** ALU_MUX_2_OUT **                                       in1: ALU_MUX_2_OUT
-
-       Devices: 
-         M791(103.5325,0.9250)  MP(PMOS_VTL)                       XI0/XI0/XI12/XI1/MM0  MP(PMOS_VTL) 
-         M792(103.7925,0.9250)  MP(PMOS_VTL)                       XI0/XI0/XI12/XI2/MM0  MP(PMOS_VTL) 
-         M342(103.7925,0.3000)  MN(NMOS_VTL)                       XI0/XI0/XI12/XI2/MM1  MN(NMOS_VTL) 
-         M341(103.5325,0.3000)  MN(NMOS_VTL)                       XI0/XI0/XI12/XI1/MM1  MN(NMOS_VTL) 
-         M790(103.1650,0.9250)  MP(PMOS_VTL)                       XI0/XI0/XI12/XI3/MM0  MP(PMOS_VTL) 
-         M340(103.1650,0.3000)  MN(NMOS_VTL)                       XI0/XI0/XI12/XI3/MM1  MN(NMOS_VTL) 
-
---------------------------------------------------------------------------------------------------------------
-
-       (_mx2v)                                                   (_mx2v)
-         in1: 315                                                  in1: XI0/XI0/net10
-         sel: 309                                                  sel: XI0/XI0/mux1
-         out: 317                                                  out: XI0/net5
-         sup1: VDD!                                                sup1: VDD!
-         sup2: VSS!                                                sup2: VSS!
-         in2: 313                                                  ** no similar net **
-         ** ALU_MUX_2_OUT **                                       in2: ALU_MUX_2_OUT
-
-       Devices: 
-         M795(104.8575,0.9250)  MP(PMOS_VTL)                       XI0/XI0/XI14/XI1/MM0  MP(PMOS_VTL) 
-         M796(105.1175,0.9250)  MP(PMOS_VTL)                       XI0/XI0/XI14/XI2/MM0  MP(PMOS_VTL) 
-         M346(105.1175,0.3000)  MN(NMOS_VTL)                       XI0/XI0/XI14/XI2/MM1  MN(NMOS_VTL) 
-         M345(104.8575,0.3000)  MN(NMOS_VTL)                       XI0/XI0/XI14/XI1/MM1  MN(NMOS_VTL) 
-         M794(104.4900,0.9250)  MP(PMOS_VTL)                       XI0/XI0/XI14/XI3/MM0  MP(PMOS_VTL) 
-         M344(104.4900,0.3000)  MN(NMOS_VTL)                       XI0/XI0/XI14/XI3/MM1  MN(NMOS_VTL) 
-
---------------------------------------------------------------------------------------------------------------
-
-       (_nand2v)                                                 (_nand2v)
-         in1: 300                                                  in1: alu_mux_1_out
-         out: 321                                                  out: XI0/XI5/net4
-         sup1: VDD!                                                sup1: VDD!
-         sup2: VSS!                                                sup2: VSS!
-         in2: 313                                                  ** no similar net **
-         ** ALU_MUX_2_OUT **                                       in2: ALU_MUX_2_OUT
-
-       Devices: 
-         M352(106.8550,0.3000)  MN(NMOS_VTL)                       XI0/XI5/MM2  MN(NMOS_VTL) 
-         M353(107.0450,0.3000)  MN(NMOS_VTL)                       XI0/XI5/MM3  MN(NMOS_VTL) 
-         M802(106.8550,0.9250)  MP(PMOS_VTL)                       XI0/XI5/MM0  MP(PMOS_VTL) 
-         M803(107.0450,0.9250)  MP(PMOS_VTL)                       XI0/XI5/MM1  MP(PMOS_VTL) 
-
---------------------------------------------------------------------------------------------------------------
-
-       (_nor2v)                                                  (_nor2v)
-         in1: 300                                                  in1: alu_mux_1_out
-         out: 318                                                  out: XI0/or
-         sup1: VDD!                                                sup1: VDD!
-         sup2: VSS!                                                sup2: VSS!
-         in2: 313                                                  ** no similar net **
-         ** ALU_MUX_2_OUT **                                       in2: ALU_MUX_2_OUT
-
-       Devices: 
-         M797(105.4850,0.7450)  MP(PMOS_VTL)                       XI0/XI4/MM2  MP(PMOS_VTL) 
-         M798(105.6750,0.7450)  MP(PMOS_VTL)                       XI0/XI4/MM3  MP(PMOS_VTL) 
-         M347(105.4850,0.3000)  MN(NMOS_VTL)                       XI0/XI4/MM0  MN(NMOS_VTL) 
-         M348(105.6750,0.3000)  MN(NMOS_VTL)                       XI0/XI4/MM1  MN(NMOS_VTL) 
-
---------------------------------------------------------------------------------------------------------------
-
-       (_nand2v)                                                 (_nand2v)
-         in1: 300                                                  in1: alu_mux_1_out
-         out: 320                                                  out: XI0/and
-         sup1: VDD!                                                sup1: VDD!
-         sup2: VSS!                                                sup2: VSS!
-         in2: 313                                                  ** no similar net **
-         ** ALU_MUX_2_OUT **                                       in2: ALU_MUX_2_OUT
-
-       Devices: 
-         M350(106.3350,0.3000)  MN(NMOS_VTL)                       XI0/XI3/MM1  MN(NMOS_VTL) 
-         M351(106.5250,0.3000)  MN(NMOS_VTL)                       XI0/XI3/MM0  MN(NMOS_VTL) 
-         M800(106.3350,0.9250)  MP(PMOS_VTL)                       XI0/XI3/MM2  MP(PMOS_VTL) 
-         M801(106.5250,0.9250)  MP(PMOS_VTL)                       XI0/XI3/MM3  MP(PMOS_VTL) 
-
---------------------------------------------------------------------------------------------------------------
-
-       (_smp2v)                                                  (_smp2v)
-         in1: 300                                                  in2: alu_mux_1_out
-         out1: 323                                                 out1: XI0/xor
-         out2: VDD!                                                out2: VDD!
-         in2: 313                                                  ** no similar net **
-         ** ALU_MUX_2_OUT **                                       in1: ALU_MUX_2_OUT
-
-       Devices: 
-         M805(107.5650,0.8350)  MP(PMOS_VTL)                       XI0/XI5/MM5  MP(PMOS_VTL) 
-         M804(107.3750,0.8350)  MP(PMOS_VTL)                       XI0/XI5/MM6  MP(PMOS_VTL) 
-
---------------------------------------------------------------------------------------------------------------
-
-       (SPMN_2_1)                                                (SPMN_2_1)
-         output: 323                                               output: XI0/xor
-         output: VSS!                                              output: VSS!
-         input: 300                                                input: alu_mux_1_out
-         input: 321                                                input: XI0/XI5/net4
-         input: 313                                                ** no similar net **
-         ** ALU_MUX_2_OUT **                                       input: ALU_MUX_2_OUT
-
-       Transistors:
-         M355(107.5650,0.3000)  MN(NMOS_VTL)                       XI0/XI5/MM8  MN(NMOS_VTL)
-         M354(107.3750,0.3000)  MN(NMOS_VTL)                       XI0/XI5/MM7  MN(NMOS_VTL)
-         M356(107.7725,0.3000)  MN(NMOS_VTL)                       XI0/XI5/MM9  MN(NMOS_VTL)
 
 
 **************************************************************************************************************
