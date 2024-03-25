@@ -1,26 +1,26 @@
 //
-//  Rule file generated on Sat Mar 23 21:40:57 2024
+//  Rule file generated on Mon Mar 25 17:08:07 2024
 //  by Calibre Interactive v2022.4_16.8    Mon Oct 3 17:12:31 PDT 2022
 //
 //      *** PLEASE DO NOT MODIFY THIS FILE ***
 //
 //
 
-LAYOUT PATH "bitslice.calibre.db"
+LAYOUT PATH "datapath.calibre.db"
 LAYOUT SYSTEM GDSII
-LAYOUT PRIMARY "bitslice"
+LAYOUT PRIMARY "datapath"
 
-SOURCE PATH "bitslice.src.net"
+SOURCE PATH "datapath.src.net"
 SOURCE SYSTEM SPICE
-SOURCE PRIMARY "bitslice"
+SOURCE PRIMARY "datapath"
 
 MASK SVDB DIRECTORY "svdb" QUERY
 
-LVS REPORT "bitslice.lvs.report"
+LVS REPORT "datapath.lvs.report"
 
 LVS EXECUTE ERC YES
 
-ERC RESULTS DATABASE "bitslice.erc.results"
+ERC RESULTS DATABASE "datapath.erc.results"
 ERC CELL NAME YES CELL SPACE XFORM
 
 DRC ICSTATION YES

@@ -1,10 +1,10 @@
 ( ( nil
   version "2.1"
   mapType "incremental"
-  blockName "bitslice"
+  blockName "datapath"
   repList "auCdl schematic netlist"
   stopList "auCdl"
-  globalList "vss! vdd!"
+  globalList "vdd! vss!"
   hierDelim "."
   netlistDir "/home/maxma2/Documents/Coursework/ece425/mp2/lib/lvs"
  )
@@ -19,6 +19,7 @@
 ( "stdcell_rv32Lib/xnor2/schematic" "xnor2" )
 ( "stdcell_rv32Lib/reg2w32/schematic" "reg2w32" )
 ( "stdcell_rv32Lib/nor2/schematic" "nor2" )
+( "bitslice_rv32Lib/datapath/schematic" "datapath" )
 ( "bitslice_rv32Lib/alu/schematic" "alu" )
 ( "stdcell_rv32Lib/mux2/schematic" "mux2" )
 ( "stdcell_rv32Lib/mux4/schematic" "mux4" )
@@ -37,6 +38,7 @@
 ( "stdcell_rv32Lib/dlatch/schematic" "dlatch" )
 ( "bitslice_rv32Lib/pc/schematic" "pc" )
  )
+( "datapath" "ihnl/cds27/map" )
 ( "bitslice" "ihnl/cds26/map" )
 ( "bit2" "ihnl/cds20/map" )
 ( "muxinv4" "ihnl/cds6/map" )

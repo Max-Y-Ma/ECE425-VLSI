@@ -1,0 +1,1566 @@
+************************************************************************
+* auCdl Netlist:
+* 
+* Library Name:  bitslice_rv32Lib
+* Top Cell Name: datapath
+* View Name:     schematic
+* Netlisted on:  Mar 25 17:08:06 2024
+************************************************************************
+
+*.EQUATION
+*.SCALE METER
+*.MEGA
+.PARAM
+
+*.GLOBAL vdd!
++        vss!
++        vdd:P
++        VDD:P
++        vss:G
++        VSS:G
+
+*.PIN vdd!
+*+    vss!
+*+    vdd
+*+    VDD
+*+    vss
+*+    VSS
+
+************************************************************************
+* Library Name: stdcell_rv32Lib
+* Cell Name:    inv
+* View Name:    schematic
+************************************************************************
+
+.SUBCKT inv A Z
+*.PININFO A:I Z:O
+MM0 Z A vdd! vdd! PMOS_VTL W=180.0n L=50n m=1
+MM1 Z A vss! vss! NMOS_VTL W=90n L=50n m=1
+.ENDS
+
+************************************************************************
+* Library Name: stdcell_rv32Lib
+* Cell Name:    trans
+* View Name:    schematic
+************************************************************************
+
+.SUBCKT trans A G Gb Z
+*.PININFO A:I G:I Gb:I Z:B
+MM0 Z Gb A vdd! PMOS_VTL W=180.0n L=50n m=1
+MM1 Z G A vss! NMOS_VTL W=90n L=50n m=1
+.ENDS
+
+************************************************************************
+* Library Name: stdcell_rv32Lib
+* Cell Name:    mux2
+* View Name:    schematic
+************************************************************************
+
+.SUBCKT mux2 A B S0 Z
+*.PININFO A:I B:I S0:I Z:O
+XI2 B S0 net1 Z / trans
+XI1 A net1 S0 Z / trans
+XI3 S0 net1 / inv
+.ENDS
+
+************************************************************************
+* Library Name: stdcell_rv32Lib
+* Cell Name:    muxinv2
+* View Name:    schematic
+************************************************************************
+
+.SUBCKT muxinv2 A B S0 Z
+*.PININFO A:I B:I S0:I Z:O
+XI0 A B S0 net1 / mux2
+XI1 net1 Z / inv
+.ENDS
+
+************************************************************************
+* Library Name: stdcell_rv32Lib
+* Cell Name:    fa
+* View Name:    schematic
+************************************************************************
+
+.SUBCKT fa A B Cin Cout Sum
+*.PININFO A:I B:I Cin:I Cout:O Sum:O
+XI1 Cin Cinb / inv
+XI13 Cout net10 / inv
+XI11 Cin Cinb A mux1 / muxinv2
+XI14 net10 B mux1 Sum / mux2
+XI12 B A mux1 Cout / mux2
+.ENDS
+
+************************************************************************
+* Library Name: stdcell_rv32Lib
+* Cell Name:    mux4
+* View Name:    schematic
+************************************************************************
+
+.SUBCKT mux4 A B C D S0 S1 Z
+*.PININFO A:I B:I C:I D:I S0:I S1:I Z:O
+XI5 net12 S1 S1b Z / trans
+XI4 net4 S1b S1 Z / trans
+XI3 D S0 S0b net12 / trans
+XI2 C S0b S0 net12 / trans
+XI1 B S0 S0b net4 / trans
+XI0 A S0b S0 net4 / trans
+XI7 S1 S1b / inv
+XI6 S0 S0b / inv
+.ENDS
+
+************************************************************************
+* Library Name: stdcell_rv32Lib
+* Cell Name:    muxinv4
+* View Name:    schematic
+************************************************************************
+
+.SUBCKT muxinv4 A B C D S0 S1 Z
+*.PININFO A:I B:I C:I D:I S0:I S1:I Z:O
+XI0 A B C D S0 S1 net7 / mux4
+XI1 net7 Z / inv
+.ENDS
+
+************************************************************************
+* Library Name: stdcell_rv32Lib
+* Cell Name:    nand2
+* View Name:    schematic
+************************************************************************
+
+.SUBCKT nand2 A B Z
+*.PININFO A:I B:I Z:O
+MM1 net8 A vss! vss! NMOS_VTL W=180.0n L=50n m=1
+MM0 Z B net8 vss! NMOS_VTL W=180.0n L=50n m=1
+MM3 Z B vdd! vdd! PMOS_VTL W=180.0n L=50n m=1
+MM2 Z A vdd! vdd! PMOS_VTL W=180.0n L=50n m=1
+.ENDS
+
+************************************************************************
+* Library Name: stdcell_rv32Lib
+* Cell Name:    nor2
+* View Name:    schematic
+************************************************************************
+
+.SUBCKT nor2 A B Z
+*.PININFO A:I B:I Z:O
+MM1 Z B vss! vss! NMOS_VTL W=90n L=50n m=1
+MM0 Z A vss! vss! NMOS_VTL W=90n L=50n m=1
+MM3 Z B net5 vdd! PMOS_VTL W=360.0n L=50n m=1
+MM2 net5 A vdd! vdd! PMOS_VTL W=360.0n L=50n m=1
+.ENDS
+
+************************************************************************
+* Library Name: stdcell_rv32Lib
+* Cell Name:    xnor2
+* View Name:    schematic
+************************************************************************
+
+.SUBCKT xnor2 A B Z
+*.PININFO A:I B:I Z:O
+MM6 net8 A vdd! vdd! PMOS_VTL W=270.0n L=50n m=1
+MM5 Z B net8 vdd! PMOS_VTL W=270.0n L=50n m=1
+MM4 Z net4 vdd! vdd! PMOS_VTL W=180.0n L=50n m=1
+MM1 net4 B vdd! vdd! PMOS_VTL W=180.0n L=50n m=1
+MM0 net4 A vdd! vdd! PMOS_VTL W=180.0n L=50n m=1
+MM9 net3 net4 vss! vss! NMOS_VTL W=180.0n L=50n m=1
+MM8 Z B net3 vss! NMOS_VTL W=180.0n L=50n m=1
+MM7 Z A net3 vss! NMOS_VTL W=180.0n L=50n m=1
+MM3 net1 B vss! vss! NMOS_VTL W=180.0n L=50n m=1
+MM2 net4 A net1 vss! NMOS_VTL W=180.0n L=50n m=1
+.ENDS
+
+************************************************************************
+* Library Name: bitslice_rv32Lib
+* Cell Name:    alu
+* View Name:    schematic
+************************************************************************
+
+.SUBCKT alu alu_cin alu_cout alu_mux_1_out alu_mux_2_out alu_op<1> alu_op<0> 
++ alu_out
+*.PININFO alu_cin:I alu_mux_1_out:I alu_mux_2_out:I alu_op<1>:I alu_op<0>:I 
+*.PININFO alu_cout:O alu_out:O
+XI0 alu_mux_1_out alu_mux_2_out alu_cin alu_cout net5 / fa
+XI15 net1 xor or and alu_op<0> alu_op<1> alu_out / muxinv4
+XI3 alu_mux_1_out alu_mux_2_out and / nand2
+XI4 alu_mux_1_out alu_mux_2_out or / nor2
+XI5 alu_mux_1_out alu_mux_2_out xor / xnor2
+XI16 net5 net1 / inv
+.ENDS
+
+************************************************************************
+* Library Name: stdcell_rv32Lib
+* Cell Name:    buf
+* View Name:    schematic
+************************************************************************
+
+.SUBCKT buf A Z
+*.PININFO A:I Z:O
+XI1 net2 Z / inv
+XI0 A net2 / inv
+.ENDS
+
+************************************************************************
+* Library Name: bitslice_rv32Lib
+* Cell Name:    shift
+* View Name:    schematic
+************************************************************************
+
+.SUBCKT shift alu_mux_1_out shift_amount<4> shift_amount<3> shift_amount<2> 
++ shift_amount<1> shift_amount<0> shift_dir shift_in_from_left<4> 
++ shift_in_from_left<3> shift_in_from_left<2> shift_in_from_left<1> 
++ shift_in_from_left<0> shift_in_from_right<4> shift_in_from_right<3> 
++ shift_in_from_right<2> shift_in_from_right<1> shift_in_from_right<0> 
++ shift_out<5> shift_out<4> shift_out<3> shift_out<2> shift_out<1> shift_out<0>
+*.PININFO alu_mux_1_out:I shift_amount<4>:I shift_amount<3>:I 
+*.PININFO shift_amount<2>:I shift_amount<1>:I shift_amount<0>:I shift_dir:I 
+*.PININFO shift_in_from_left<4>:I shift_in_from_left<3>:I 
+*.PININFO shift_in_from_left<2>:I shift_in_from_left<1>:I 
+*.PININFO shift_in_from_left<0>:I shift_in_from_right<4>:I 
+*.PININFO shift_in_from_right<3>:I shift_in_from_right<2>:I 
+*.PININFO shift_in_from_right<1>:I shift_in_from_right<0>:I shift_out<5>:O 
+*.PININFO shift_out<4>:O shift_out<3>:O shift_out<2>:O shift_out<1>:O 
+*.PININFO shift_out<0>:O
+XI10 shift_out<0> net5 shift_amount<0> shift_out<1> / mux2
+XI9 shift_out<1> net4 shift_amount<1> shift_out<2> / mux2
+XI8 shift_out<2> net3 shift_amount<2> shift_out<3> / mux2
+XI7 shift_out<3> net2 shift_amount<3> shift_out<4> / mux2
+XI6 shift_out<4> net1 shift_amount<4> shift_out<5> / mux2
+XI5 shift_in_from_right<0> shift_in_from_left<0> shift_dir net5 / mux2
+XI4 shift_in_from_right<1> shift_in_from_left<1> shift_dir net4 / mux2
+XI3 shift_in_from_right<2> shift_in_from_left<2> shift_dir net3 / mux2
+XI2 shift_in_from_right<3> shift_in_from_left<3> shift_dir net2 / mux2
+XI1 shift_in_from_right<4> shift_in_from_left<4> shift_dir net1 / mux2
+XI29 alu_mux_1_out shift_out<0> / buf
+.ENDS
+
+************************************************************************
+* Library Name: bitslice_rv32Lib
+* Cell Name:    cmp
+* View Name:    schematic
+************************************************************************
+
+.SUBCKT cmp cmp_eq_in cmp_eq_out cmp_lt_in cmp_lt_out cmp_mux_out rs1_rdata
+*.PININFO cmp_eq_in:I cmp_lt_in:I cmp_mux_out:I rs1_rdata:I cmp_eq_out:O 
+*.PININFO cmp_lt_out:O
+XI10 net7 net8 cmp_lt_out / nand2
+XI9 net3 cmp_eq_in net7 / nand2
+XI0 cmp_eq_in net1 net5 / nand2
+XI2 rs1_rdata net2 net3 / nor2
+XI11 cmp_lt_in net8 / inv
+XI8 cmp_mux_out net2 / inv
+XI3 net5 cmp_eq_out / inv
+XI12 rs1_rdata cmp_mux_out net1 / xnor2
+.ENDS
+
+************************************************************************
+* Library Name: bitslice_rv32Lib
+* Cell Name:    rs2_inverter
+* View Name:    schematic
+************************************************************************
+
+.SUBCKT rs2_inverter alu_inv_rs2 rs2_after_inv rs2_rdata
+*.PININFO alu_inv_rs2:I rs2_rdata:I rs2_after_inv:O
+XI0 rs2_rdata rs2_data_inv alu_inv_rs2 rs2_after_inv / mux2
+XI1 rs2_rdata rs2_data_inv / inv
+.ENDS
+
+************************************************************************
+* Library Name: stdcell_rv32Lib
+* Cell Name:    bit1
+* View Name:    schematic
+************************************************************************
+
+.SUBCKT bit1 A R W Z
+*.PININFO A:I R:I W:I Z:O
+XI13 W Wb / inv
+XI15 R Rb / inv
+XI2 net1 Bit / inv
+XI1 net2 net1 / inv
+XI14 Bit R Rb Z / trans
+XI12 A W Wb net2 / trans
+XI16 Bit Wb W net2 / trans
+.ENDS
+
+************************************************************************
+* Library Name: stdcell_rv32Lib
+* Cell Name:    dlatch
+* View Name:    schematic
+************************************************************************
+
+.SUBCKT dlatch D EN Q Qb
+*.PININFO D:I EN:I Q:O Qb:O
+XI16 D net2 / inv
+XI18 ENB1 EN1 / inv
+XI17 EN ENB1 / inv
+XI20 Q Qb / inv
+XI19 net3 Q / inv
+XI21 Qb ENB1 EN1 net3 / trans
+XI15 net2 EN1 ENB1 net3 / trans
+.ENDS
+
+************************************************************************
+* Library Name: stdcell_rv32Lib
+* Cell Name:    reg1w1
+* View Name:    schematic
+************************************************************************
+
+.SUBCKT reg1w1 CLK D Q Qb RE WE
+*.PININFO CLK:I D:I RE:I WE:I Q:O Qb:O
+XI0 D RE WE net4 / bit1
+XI1 net4 CLK Q Qb / dlatch
+.ENDS
+
+************************************************************************
+* Library Name: bitslice_rv32Lib
+* Cell Name:    pc
+* View Name:    schematic
+************************************************************************
+
+.SUBCKT pc alu_out clk pc pc_mux_sel pc_reset_value pcp4 rst
+*.PININFO alu_out:I clk:I pc_mux_sel:I pc_reset_value:I pcp4:I rst:I pc:O
+XI0 clk pc_next pc net4 clk clkb / reg1w1
+XI2 net7 pc_reset_value rst pc_next / mux2
+XI1 pcp4 alu_out pc_mux_sel net7 / mux2
+XI12 clk clkb / inv
+.ENDS
+
+************************************************************************
+* Library Name: bitslice_rv32Lib
+* Cell Name:    pcadder
+* View Name:    schematic
+************************************************************************
+
+.SUBCKT pcadder pc pc_adder_4 pc_cin pc_cout pcp4
+*.PININFO pc:I pc_adder_4:I pc_cin:I pc_cout:O pcp4:O
+XI4 pc pc_adder_4 pc_cin pc_cout pcp4 / fa
+.ENDS
+
+************************************************************************
+* Library Name: stdcell_rv32Lib
+* Cell Name:    bit2
+* View Name:    schematic
+************************************************************************
+
+.SUBCKT bit2 A R1 R2 W Z1 Z2
+*.PININFO A:I R1:I R2:I W:I Z1:B Z2:B
+XI10 net2 Bit / inv
+XI4 net1 net2 / inv
+XI0 R1 R1b / inv
+XI13 W Wb / inv
+XI15 R2 R2b / inv
+XI16 Bit Wb W net1 / trans
+XI5 A W Wb net1 / trans
+XI3 Bit R2 R2b Z2 / trans
+XI14 Bit R1 R1b Z1 / trans
+.ENDS
+
+************************************************************************
+* Library Name: stdcell_rv32Lib
+* Cell Name:    reg2w32
+* View Name:    schematic
+************************************************************************
+
+.SUBCKT reg2w32 CLK D Q1 Q1b Q2 Q2b RE1<31> RE1<30> RE1<29> RE1<28> RE1<27> 
++ RE1<26> RE1<25> RE1<24> RE1<23> RE1<22> RE1<21> RE1<20> RE1<19> RE1<18> 
++ RE1<17> RE1<16> RE1<15> RE1<14> RE1<13> RE1<12> RE1<11> RE1<10> RE1<9> 
++ RE1<8> RE1<7> RE1<6> RE1<5> RE1<4> RE1<3> RE1<2> RE1<1> RE1<0> RE2<31> 
++ RE2<30> RE2<29> RE2<28> RE2<27> RE2<26> RE2<25> RE2<24> RE2<23> RE2<22> 
++ RE2<21> RE2<20> RE2<19> RE2<18> RE2<17> RE2<16> RE2<15> RE2<14> RE2<13> 
++ RE2<12> RE2<11> RE2<10> RE2<9> RE2<8> RE2<7> RE2<6> RE2<5> RE2<4> RE2<3> 
++ RE2<2> RE2<1> RE2<0> WE<31> WE<30> WE<29> WE<28> WE<27> WE<26> WE<25> WE<24> 
++ WE<23> WE<22> WE<21> WE<20> WE<19> WE<18> WE<17> WE<16> WE<15> WE<14> WE<13> 
++ WE<12> WE<11> WE<10> WE<9> WE<8> WE<7> WE<6> WE<5> WE<4> WE<3> WE<2> WE<1> 
++ WE<0>
+*.PININFO CLK:I D:I RE1<31>:I RE1<30>:I RE1<29>:I RE1<28>:I RE1<27>:I 
+*.PININFO RE1<26>:I RE1<25>:I RE1<24>:I RE1<23>:I RE1<22>:I RE1<21>:I 
+*.PININFO RE1<20>:I RE1<19>:I RE1<18>:I RE1<17>:I RE1<16>:I RE1<15>:I 
+*.PININFO RE1<14>:I RE1<13>:I RE1<12>:I RE1<11>:I RE1<10>:I RE1<9>:I RE1<8>:I 
+*.PININFO RE1<7>:I RE1<6>:I RE1<5>:I RE1<4>:I RE1<3>:I RE1<2>:I RE1<1>:I 
+*.PININFO RE1<0>:I RE2<31>:I RE2<30>:I RE2<29>:I RE2<28>:I RE2<27>:I RE2<26>:I 
+*.PININFO RE2<25>:I RE2<24>:I RE2<23>:I RE2<22>:I RE2<21>:I RE2<20>:I 
+*.PININFO RE2<19>:I RE2<18>:I RE2<17>:I RE2<16>:I RE2<15>:I RE2<14>:I 
+*.PININFO RE2<13>:I RE2<12>:I RE2<11>:I RE2<10>:I RE2<9>:I RE2<8>:I RE2<7>:I 
+*.PININFO RE2<6>:I RE2<5>:I RE2<4>:I RE2<3>:I RE2<2>:I RE2<1>:I RE2<0>:I 
+*.PININFO WE<31>:I WE<30>:I WE<29>:I WE<28>:I WE<27>:I WE<26>:I WE<25>:I 
+*.PININFO WE<24>:I WE<23>:I WE<22>:I WE<21>:I WE<20>:I WE<19>:I WE<18>:I 
+*.PININFO WE<17>:I WE<16>:I WE<15>:I WE<14>:I WE<13>:I WE<12>:I WE<11>:I 
+*.PININFO WE<10>:I WE<9>:I WE<8>:I WE<7>:I WE<6>:I WE<5>:I WE<4>:I WE<3>:I 
+*.PININFO WE<2>:I WE<1>:I WE<0>:I Q1:O Q1b:O Q2:O Q2b:O
+XI1 D RE1<1> RE2<1> WE<1> net2 net7 / bit2
+XI2 D RE1<2> RE2<2> WE<2> net2 net7 / bit2
+XI3 D RE1<3> RE2<3> WE<3> net2 net7 / bit2
+XI4 D RE1<4> RE2<4> WE<4> net2 net7 / bit2
+XI5 D RE1<5> RE2<5> WE<5> net2 net7 / bit2
+XI6 D RE1<6> RE2<6> WE<6> net2 net7 / bit2
+XI7 D RE1<7> RE2<7> WE<7> net2 net7 / bit2
+XI8 D RE1<8> RE2<8> WE<8> net2 net7 / bit2
+XI9 D RE1<9> RE2<9> WE<9> net2 net7 / bit2
+XI10 D RE1<10> RE2<10> WE<10> net2 net7 / bit2
+XI11 D RE1<11> RE2<11> WE<11> net2 net7 / bit2
+XI12 D RE1<12> RE2<12> WE<12> net2 net7 / bit2
+XI13 D RE1<13> RE2<13> WE<13> net2 net7 / bit2
+XI14 D RE1<14> RE2<14> WE<14> net2 net7 / bit2
+XI15 D RE1<15> RE2<15> WE<15> net2 net7 / bit2
+XI16 D RE1<16> RE2<16> WE<16> net2 net7 / bit2
+XI17 D RE1<17> RE2<17> WE<17> net2 net7 / bit2
+XI18 D RE1<18> RE2<18> WE<18> net2 net7 / bit2
+XI19 D RE1<19> RE2<19> WE<19> net2 net7 / bit2
+XI20 D RE1<20> RE2<20> WE<20> net2 net7 / bit2
+XI21 D RE1<21> RE2<21> WE<21> net2 net7 / bit2
+XI22 D RE1<22> RE2<22> WE<22> net2 net7 / bit2
+XI23 D RE1<23> RE2<23> WE<23> net2 net7 / bit2
+XI24 D RE1<24> RE2<24> WE<24> net2 net7 / bit2
+XI25 D RE1<25> RE2<25> WE<25> net2 net7 / bit2
+XI26 D RE1<26> RE2<26> WE<26> net2 net7 / bit2
+XI27 D RE1<27> RE2<27> WE<27> net2 net7 / bit2
+XI28 D RE1<28> RE2<28> WE<28> net2 net7 / bit2
+XI29 D RE1<29> RE2<29> WE<29> net2 net7 / bit2
+XI30 D RE1<30> RE2<30> WE<30> net2 net7 / bit2
+XI31 D RE1<31> RE2<31> WE<31> net2 net7 / bit2
+XI33 net2 CLK Q1 Q1b / dlatch
+XI32 net7 CLK Q2 Q2b / dlatch
+XI61 vss! RE2<0> RE2b net7 / trans
+XI62 vss! RE1<0> RE1b net2 / trans
+XI66 RE2<0> RE2b / inv
+XI65 RE1<0> RE1b / inv
+.ENDS
+
+************************************************************************
+* Library Name: bitslice_rv32Lib
+* Cell Name:    regfile
+* View Name:    schematic
+************************************************************************
+
+.SUBCKT regfile clk rd_mux_out rd_sel<31> rd_sel<30> rd_sel<29> rd_sel<28> 
++ rd_sel<27> rd_sel<26> rd_sel<25> rd_sel<24> rd_sel<23> rd_sel<22> rd_sel<21> 
++ rd_sel<20> rd_sel<19> rd_sel<18> rd_sel<17> rd_sel<16> rd_sel<15> rd_sel<14> 
++ rd_sel<13> rd_sel<12> rd_sel<11> rd_sel<10> rd_sel<9> rd_sel<8> rd_sel<7> 
++ rd_sel<6> rd_sel<5> rd_sel<4> rd_sel<3> rd_sel<2> rd_sel<1> rd_sel<0> 
++ rs1_rdata rs1_sel<31> rs1_sel<30> rs1_sel<29> rs1_sel<28> rs1_sel<27> 
++ rs1_sel<26> rs1_sel<25> rs1_sel<24> rs1_sel<23> rs1_sel<22> rs1_sel<21> 
++ rs1_sel<20> rs1_sel<19> rs1_sel<18> rs1_sel<17> rs1_sel<16> rs1_sel<15> 
++ rs1_sel<14> rs1_sel<13> rs1_sel<12> rs1_sel<11> rs1_sel<10> rs1_sel<9> 
++ rs1_sel<8> rs1_sel<7> rs1_sel<6> rs1_sel<5> rs1_sel<4> rs1_sel<3> rs1_sel<2> 
++ rs1_sel<1> rs1_sel<0> rs2_rdata rs2_sel<31> rs2_sel<30> rs2_sel<29> 
++ rs2_sel<28> rs2_sel<27> rs2_sel<26> rs2_sel<25> rs2_sel<24> rs2_sel<23> 
++ rs2_sel<22> rs2_sel<21> rs2_sel<20> rs2_sel<19> rs2_sel<18> rs2_sel<17> 
++ rs2_sel<16> rs2_sel<15> rs2_sel<14> rs2_sel<13> rs2_sel<12> rs2_sel<11> 
++ rs2_sel<10> rs2_sel<9> rs2_sel<8> rs2_sel<7> rs2_sel<6> rs2_sel<5> 
++ rs2_sel<4> rs2_sel<3> rs2_sel<2> rs2_sel<1> rs2_sel<0>
+*.PININFO clk:I rd_mux_out:I rd_sel<31>:I rd_sel<30>:I rd_sel<29>:I 
+*.PININFO rd_sel<28>:I rd_sel<27>:I rd_sel<26>:I rd_sel<25>:I rd_sel<24>:I 
+*.PININFO rd_sel<23>:I rd_sel<22>:I rd_sel<21>:I rd_sel<20>:I rd_sel<19>:I 
+*.PININFO rd_sel<18>:I rd_sel<17>:I rd_sel<16>:I rd_sel<15>:I rd_sel<14>:I 
+*.PININFO rd_sel<13>:I rd_sel<12>:I rd_sel<11>:I rd_sel<10>:I rd_sel<9>:I 
+*.PININFO rd_sel<8>:I rd_sel<7>:I rd_sel<6>:I rd_sel<5>:I rd_sel<4>:I 
+*.PININFO rd_sel<3>:I rd_sel<2>:I rd_sel<1>:I rd_sel<0>:I rs1_sel<31>:I 
+*.PININFO rs1_sel<30>:I rs1_sel<29>:I rs1_sel<28>:I rs1_sel<27>:I 
+*.PININFO rs1_sel<26>:I rs1_sel<25>:I rs1_sel<24>:I rs1_sel<23>:I 
+*.PININFO rs1_sel<22>:I rs1_sel<21>:I rs1_sel<20>:I rs1_sel<19>:I 
+*.PININFO rs1_sel<18>:I rs1_sel<17>:I rs1_sel<16>:I rs1_sel<15>:I 
+*.PININFO rs1_sel<14>:I rs1_sel<13>:I rs1_sel<12>:I rs1_sel<11>:I 
+*.PININFO rs1_sel<10>:I rs1_sel<9>:I rs1_sel<8>:I rs1_sel<7>:I rs1_sel<6>:I 
+*.PININFO rs1_sel<5>:I rs1_sel<4>:I rs1_sel<3>:I rs1_sel<2>:I rs1_sel<1>:I 
+*.PININFO rs1_sel<0>:I rs2_sel<31>:I rs2_sel<30>:I rs2_sel<29>:I rs2_sel<28>:I 
+*.PININFO rs2_sel<27>:I rs2_sel<26>:I rs2_sel<25>:I rs2_sel<24>:I 
+*.PININFO rs2_sel<23>:I rs2_sel<22>:I rs2_sel<21>:I rs2_sel<20>:I 
+*.PININFO rs2_sel<19>:I rs2_sel<18>:I rs2_sel<17>:I rs2_sel<16>:I 
+*.PININFO rs2_sel<15>:I rs2_sel<14>:I rs2_sel<13>:I rs2_sel<12>:I 
+*.PININFO rs2_sel<11>:I rs2_sel<10>:I rs2_sel<9>:I rs2_sel<8>:I rs2_sel<7>:I 
+*.PININFO rs2_sel<6>:I rs2_sel<5>:I rs2_sel<4>:I rs2_sel<3>:I rs2_sel<2>:I 
+*.PININFO rs2_sel<1>:I rs2_sel<0>:I rs1_rdata:O rs2_rdata:O
+XI0 clk rd_mux_out rs1_rdata net8 rs2_rdata net6 rs1_sel<31> rs1_sel<30> 
++ rs1_sel<29> rs1_sel<28> rs1_sel<27> rs1_sel<26> rs1_sel<25> rs1_sel<24> 
++ rs1_sel<23> rs1_sel<22> rs1_sel<21> rs1_sel<20> rs1_sel<19> rs1_sel<18> 
++ rs1_sel<17> rs1_sel<16> rs1_sel<15> rs1_sel<14> rs1_sel<13> rs1_sel<12> 
++ rs1_sel<11> rs1_sel<10> rs1_sel<9> rs1_sel<8> rs1_sel<7> rs1_sel<6> 
++ rs1_sel<5> rs1_sel<4> rs1_sel<3> rs1_sel<2> rs1_sel<1> rs1_sel<0> 
++ rs2_sel<31> rs2_sel<30> rs2_sel<29> rs2_sel<28> rs2_sel<27> rs2_sel<26> 
++ rs2_sel<25> rs2_sel<24> rs2_sel<23> rs2_sel<22> rs2_sel<21> rs2_sel<20> 
++ rs2_sel<19> rs2_sel<18> rs2_sel<17> rs2_sel<16> rs2_sel<15> rs2_sel<14> 
++ rs2_sel<13> rs2_sel<12> rs2_sel<11> rs2_sel<10> rs2_sel<9> rs2_sel<8> 
++ rs2_sel<7> rs2_sel<6> rs2_sel<5> rs2_sel<4> rs2_sel<3> rs2_sel<2> rs2_sel<1> 
++ rs2_sel<0> rd_sel<31> rd_sel<30> rd_sel<29> rd_sel<28> rd_sel<27> rd_sel<26> 
++ rd_sel<25> rd_sel<24> rd_sel<23> rd_sel<22> rd_sel<21> rd_sel<20> rd_sel<19> 
++ rd_sel<18> rd_sel<17> rd_sel<16> rd_sel<15> rd_sel<14> rd_sel<13> rd_sel<12> 
++ rd_sel<11> rd_sel<10> rd_sel<9> rd_sel<8> rd_sel<7> rd_sel<6> rd_sel<5> 
++ rd_sel<4> rd_sel<3> rd_sel<2> rd_sel<1> rd_sel<0> / reg2w32
+.ENDS
+
+************************************************************************
+* Library Name: stdcell_rv32Lib
+* Cell Name:    mux6
+* View Name:    schematic
+************************************************************************
+
+.SUBCKT mux6 A B C D E F S0 S1 S2 Z
+*.PININFO A:I B:I C:I D:I E:I F:I S0:I S1:I S2:I Z:O
+XI7 F S0 S0b net4 / trans
+XI0 A S0b S0 net2 / trans
+XI9 net5 S2 S2b Z / trans
+XI8 net1 S2b S2 Z / trans
+XI13 net4 S1b S1 net5 / trans
+XI6 net3 S1 S1b net1 / trans
+XI5 net2 S1b S1 net1 / trans
+XI4 E S0b S0 net4 / trans
+XI3 D S0 S0b net3 / trans
+XI2 C S0b S0 net3 / trans
+XI1 B S0 S0b net2 / trans
+XI12 S2 S2b / inv
+XI11 S1 S1b / inv
+XI10 S0 S0b / inv
+.ENDS
+
+************************************************************************
+* Library Name: bitslice_rv32Lib
+* Cell Name:    mem_mux
+* View Name:    schematic
+************************************************************************
+
+.SUBCKT mem_mux lb lbu lh lhu lw mem_mux_out mem_mux_sel<2> mem_mux_sel<1> 
++ mem_mux_sel<0>
+*.PININFO lb:I lbu:I lh:I lhu:I lw:I mem_mux_sel<2>:I mem_mux_sel<1>:I 
+*.PININFO mem_mux_sel<0>:I mem_mux_out:O
+XI1 lb lh lw vss! lbu lhu mem_mux_sel<0> mem_mux_sel<1> mem_mux_sel<2> 
++ mem_mux_out / mux6
+.ENDS
+
+************************************************************************
+* Library Name: bitslice_rv32Lib
+* Cell Name:    rd_mux
+* View Name:    schematic
+************************************************************************
+
+.SUBCKT rd_mux alu_out cmp_out imm mem_mux_out pcp4 rd_mux_out rd_mux_sel<2> 
++ rd_mux_sel<1> rd_mux_sel<0> shift_out
+*.PININFO alu_out:I cmp_out:I imm:I mem_mux_out:I pcp4:I rd_mux_sel<2>:I 
+*.PININFO rd_mux_sel<1>:I rd_mux_sel<0>:I shift_out:I rd_mux_out:O
+XI1 alu_out shift_out cmp_out imm pcp4 mem_mux_out rd_mux_sel<0> rd_mux_sel<1> 
++ rd_mux_sel<2> rd_mux_out / mux6
+.ENDS
+
+************************************************************************
+* Library Name: bitslice_rv32Lib
+* Cell Name:    bitslice
+* View Name:    schematic
+************************************************************************
+
+.SUBCKT bitslice alu_cin alu_cout alu_inv_rs2 alu_mux_1_sel alu_mux_2_out 
++ alu_mux_2_sel alu_op<1> alu_op<0> alu_out clk cmp_eq_in cmp_eq_out cmp_lt_in 
++ cmp_lt_out cmp_mux_sel cmp_out cmp_src_a cmp_src_b imm lb lbu lh lhu lw 
++ mem_mux_sel<2> mem_mux_sel<1> mem_mux_sel<0> pc pc_adder_4 pc_cin pc_cout 
++ pc_mux_sel pc_reset_value rd_mux_sel<2> rd_mux_sel<1> rd_mux_sel<0> 
++ rd_sel<31> rd_sel<30> rd_sel<29> rd_sel<28> rd_sel<27> rd_sel<26> rd_sel<25> 
++ rd_sel<24> rd_sel<23> rd_sel<22> rd_sel<21> rd_sel<20> rd_sel<19> rd_sel<18> 
++ rd_sel<17> rd_sel<16> rd_sel<15> rd_sel<14> rd_sel<13> rd_sel<12> rd_sel<11> 
++ rd_sel<10> rd_sel<9> rd_sel<8> rd_sel<7> rd_sel<6> rd_sel<5> rd_sel<4> 
++ rd_sel<3> rd_sel<2> rd_sel<1> rd_sel<0> rs1_sel<31> rs1_sel<30> rs1_sel<29> 
++ rs1_sel<28> rs1_sel<27> rs1_sel<26> rs1_sel<25> rs1_sel<24> rs1_sel<23> 
++ rs1_sel<22> rs1_sel<21> rs1_sel<20> rs1_sel<19> rs1_sel<18> rs1_sel<17> 
++ rs1_sel<16> rs1_sel<15> rs1_sel<14> rs1_sel<13> rs1_sel<12> rs1_sel<11> 
++ rs1_sel<10> rs1_sel<9> rs1_sel<8> rs1_sel<7> rs1_sel<6> rs1_sel<5> 
++ rs1_sel<4> rs1_sel<3> rs1_sel<2> rs1_sel<1> rs1_sel<0> rs2_rdata rs2_sel<31> 
++ rs2_sel<30> rs2_sel<29> rs2_sel<28> rs2_sel<27> rs2_sel<26> rs2_sel<25> 
++ rs2_sel<24> rs2_sel<23> rs2_sel<22> rs2_sel<21> rs2_sel<20> rs2_sel<19> 
++ rs2_sel<18> rs2_sel<17> rs2_sel<16> rs2_sel<15> rs2_sel<14> rs2_sel<13> 
++ rs2_sel<12> rs2_sel<11> rs2_sel<10> rs2_sel<9> rs2_sel<8> rs2_sel<7> 
++ rs2_sel<6> rs2_sel<5> rs2_sel<4> rs2_sel<3> rs2_sel<2> rs2_sel<1> rs2_sel<0> 
++ rst shift_amount<4> shift_amount<3> shift_amount<2> shift_amount<1> 
++ shift_amount<0> shift_dir shift_in_from_left<0> shift_in_from_left<1> 
++ shift_in_from_left<2> shift_in_from_left<3> shift_in_from_left<4> 
++ shift_in_from_right<0> shift_in_from_right<1> shift_in_from_right<2> 
++ shift_in_from_right<3> shift_in_from_right<4> shift_out<0> shift_out<1> 
++ shift_out<2> shift_out<3> shift_out<4> shift_out<5>
+*.PININFO alu_cin:I alu_inv_rs2:I alu_mux_1_sel:I alu_mux_2_sel:I alu_op<1>:I 
+*.PININFO alu_op<0>:I clk:I cmp_eq_in:I cmp_lt_in:I cmp_mux_sel:I cmp_out:I 
+*.PININFO imm:I lb:I lbu:I lh:I lhu:I lw:I mem_mux_sel<2>:I mem_mux_sel<1>:I 
+*.PININFO mem_mux_sel<0>:I pc_adder_4:I pc_cin:I pc_mux_sel:I pc_reset_value:I 
+*.PININFO rd_mux_sel<2>:I rd_mux_sel<1>:I rd_mux_sel<0>:I rd_sel<31>:I 
+*.PININFO rd_sel<30>:I rd_sel<29>:I rd_sel<28>:I rd_sel<27>:I rd_sel<26>:I 
+*.PININFO rd_sel<25>:I rd_sel<24>:I rd_sel<23>:I rd_sel<22>:I rd_sel<21>:I 
+*.PININFO rd_sel<20>:I rd_sel<19>:I rd_sel<18>:I rd_sel<17>:I rd_sel<16>:I 
+*.PININFO rd_sel<15>:I rd_sel<14>:I rd_sel<13>:I rd_sel<12>:I rd_sel<11>:I 
+*.PININFO rd_sel<10>:I rd_sel<9>:I rd_sel<8>:I rd_sel<7>:I rd_sel<6>:I 
+*.PININFO rd_sel<5>:I rd_sel<4>:I rd_sel<3>:I rd_sel<2>:I rd_sel<1>:I 
+*.PININFO rd_sel<0>:I rs1_sel<31>:I rs1_sel<30>:I rs1_sel<29>:I rs1_sel<28>:I 
+*.PININFO rs1_sel<27>:I rs1_sel<26>:I rs1_sel<25>:I rs1_sel<24>:I 
+*.PININFO rs1_sel<23>:I rs1_sel<22>:I rs1_sel<21>:I rs1_sel<20>:I 
+*.PININFO rs1_sel<19>:I rs1_sel<18>:I rs1_sel<17>:I rs1_sel<16>:I 
+*.PININFO rs1_sel<15>:I rs1_sel<14>:I rs1_sel<13>:I rs1_sel<12>:I 
+*.PININFO rs1_sel<11>:I rs1_sel<10>:I rs1_sel<9>:I rs1_sel<8>:I rs1_sel<7>:I 
+*.PININFO rs1_sel<6>:I rs1_sel<5>:I rs1_sel<4>:I rs1_sel<3>:I rs1_sel<2>:I 
+*.PININFO rs1_sel<1>:I rs1_sel<0>:I rs2_sel<31>:I rs2_sel<30>:I rs2_sel<29>:I 
+*.PININFO rs2_sel<28>:I rs2_sel<27>:I rs2_sel<26>:I rs2_sel<25>:I 
+*.PININFO rs2_sel<24>:I rs2_sel<23>:I rs2_sel<22>:I rs2_sel<21>:I 
+*.PININFO rs2_sel<20>:I rs2_sel<19>:I rs2_sel<18>:I rs2_sel<17>:I 
+*.PININFO rs2_sel<16>:I rs2_sel<15>:I rs2_sel<14>:I rs2_sel<13>:I 
+*.PININFO rs2_sel<12>:I rs2_sel<11>:I rs2_sel<10>:I rs2_sel<9>:I rs2_sel<8>:I 
+*.PININFO rs2_sel<7>:I rs2_sel<6>:I rs2_sel<5>:I rs2_sel<4>:I rs2_sel<3>:I 
+*.PININFO rs2_sel<2>:I rs2_sel<1>:I rs2_sel<0>:I rst:I shift_amount<4>:I 
+*.PININFO shift_amount<3>:I shift_amount<2>:I shift_amount<1>:I 
+*.PININFO shift_amount<0>:I shift_dir:I shift_in_from_left<0>:I 
+*.PININFO shift_in_from_left<1>:I shift_in_from_left<2>:I 
+*.PININFO shift_in_from_left<3>:I shift_in_from_left<4>:I 
+*.PININFO shift_in_from_right<0>:I shift_in_from_right<1>:I 
+*.PININFO shift_in_from_right<2>:I shift_in_from_right<3>:I 
+*.PININFO shift_in_from_right<4>:I alu_cout:O alu_mux_2_out:O alu_out:O 
+*.PININFO cmp_eq_out:O cmp_lt_out:O cmp_src_a:O cmp_src_b:O pc:O pc_cout:O 
+*.PININFO rs2_rdata:O shift_out<0>:O shift_out<1>:O shift_out<2>:O 
+*.PININFO shift_out<3>:O shift_out<4>:O shift_out<5>:O
+XI0 alu_cin alu_cout alu_mux_1_out alu_mux_2_out alu_op<1> alu_op<0> alu_out / 
++ alu
+XI1 alu_mux_1_out shift_amount<4> shift_amount<3> shift_amount<2> 
++ shift_amount<1> shift_amount<0> shift_dir shift_in_from_left<4> 
++ shift_in_from_left<3> shift_in_from_left<2> shift_in_from_left<1> 
++ shift_in_from_left<0> shift_in_from_right<4> shift_in_from_right<3> 
++ shift_in_from_right<2> shift_in_from_right<1> shift_in_from_right<0> 
++ shift_out<5> shift_out<4> shift_out<3> shift_out<2> shift_out<1> 
++ shift_out<0> / shift
+XI2 cmp_eq_in cmp_eq_out cmp_lt_in cmp_lt_out cmp_src_b cmp_src_a / cmp
+XI5 rs2_rdata imm cmp_mux_sel cmp_src_b / mux2
+XI4 net3 imm alu_mux_2_sel alu_mux_2_out / mux2
+XI3 cmp_src_a pc alu_mux_1_sel alu_mux_1_out / mux2
+XI6 alu_inv_rs2 net3 rs2_rdata / rs2_inverter
+XI7 alu_out clk pc pc_mux_sel pc_reset_value pcp4 rst / pc
+XI8 pc pc_adder_4 pc_cin pc_cout pcp4 / pcadder
+XI9 clk rd_mux_out rd_sel<31> rd_sel<30> rd_sel<29> rd_sel<28> rd_sel<27> 
++ rd_sel<26> rd_sel<25> rd_sel<24> rd_sel<23> rd_sel<22> rd_sel<21> rd_sel<20> 
++ rd_sel<19> rd_sel<18> rd_sel<17> rd_sel<16> rd_sel<15> rd_sel<14> rd_sel<13> 
++ rd_sel<12> rd_sel<11> rd_sel<10> rd_sel<9> rd_sel<8> rd_sel<7> rd_sel<6> 
++ rd_sel<5> rd_sel<4> rd_sel<3> rd_sel<2> rd_sel<1> rd_sel<0> cmp_src_a 
++ rs1_sel<31> rs1_sel<30> rs1_sel<29> rs1_sel<28> rs1_sel<27> rs1_sel<26> 
++ rs1_sel<25> rs1_sel<24> rs1_sel<23> rs1_sel<22> rs1_sel<21> rs1_sel<20> 
++ rs1_sel<19> rs1_sel<18> rs1_sel<17> rs1_sel<16> rs1_sel<15> rs1_sel<14> 
++ rs1_sel<13> rs1_sel<12> rs1_sel<11> rs1_sel<10> rs1_sel<9> rs1_sel<8> 
++ rs1_sel<7> rs1_sel<6> rs1_sel<5> rs1_sel<4> rs1_sel<3> rs1_sel<2> rs1_sel<1> 
++ rs1_sel<0> rs2_rdata rs2_sel<31> rs2_sel<30> rs2_sel<29> rs2_sel<28> 
++ rs2_sel<27> rs2_sel<26> rs2_sel<25> rs2_sel<24> rs2_sel<23> rs2_sel<22> 
++ rs2_sel<21> rs2_sel<20> rs2_sel<19> rs2_sel<18> rs2_sel<17> rs2_sel<16> 
++ rs2_sel<15> rs2_sel<14> rs2_sel<13> rs2_sel<12> rs2_sel<11> rs2_sel<10> 
++ rs2_sel<9> rs2_sel<8> rs2_sel<7> rs2_sel<6> rs2_sel<5> rs2_sel<4> rs2_sel<3> 
++ rs2_sel<2> rs2_sel<1> rs2_sel<0> / regfile
+XI10 lb lbu lh lhu lw mem_mux_out mem_mux_sel<2> mem_mux_sel<1> mem_mux_sel<0> 
++ / mem_mux
+XI11 alu_out cmp_out imm mem_mux_out pcp4 rd_mux_out rd_mux_sel<2> 
++ rd_mux_sel<1> rd_mux_sel<0> shift_out<5> / rd_mux
+.ENDS
+
+************************************************************************
+* Library Name: bitslice_rv32Lib
+* Cell Name:    datapath
+* View Name:    schematic
+************************************************************************
+
+.SUBCKT datapath alu_cin alu_inv_rs2 alu_mux_1_sel alu_mux_2_sel alu_op<1> 
++ alu_op<0> clk cmp_a_31 cmp_b_31 cmp_eq cmp_lt cmp_mux_sel cmp_out 
++ dmem_addr<31> dmem_addr<30> dmem_addr<29> dmem_addr<28> dmem_addr<27> 
++ dmem_addr<26> dmem_addr<25> dmem_addr<24> dmem_addr<23> dmem_addr<22> 
++ dmem_addr<21> dmem_addr<20> dmem_addr<19> dmem_addr<18> dmem_addr<17> 
++ dmem_addr<16> dmem_addr<15> dmem_addr<14> dmem_addr<13> dmem_addr<12> 
++ dmem_addr<11> dmem_addr<10> dmem_addr<9> dmem_addr<8> dmem_addr<7> 
++ dmem_addr<6> dmem_addr<5> dmem_addr<4> dmem_addr<3> dmem_addr<2> 
++ dmem_addr<1> dmem_addr<0> dmem_rdata<31> dmem_rdata<30> dmem_rdata<29> 
++ dmem_rdata<28> dmem_rdata<27> dmem_rdata<26> dmem_rdata<25> dmem_rdata<24> 
++ dmem_rdata<23> dmem_rdata<22> dmem_rdata<21> dmem_rdata<20> dmem_rdata<19> 
++ dmem_rdata<18> dmem_rdata<17> dmem_rdata<16> dmem_rdata<15> dmem_rdata<14> 
++ dmem_rdata<13> dmem_rdata<12> dmem_rdata<11> dmem_rdata<10> dmem_rdata<9> 
++ dmem_rdata<8> dmem_rdata<7> dmem_rdata<6> dmem_rdata<5> dmem_rdata<4> 
++ dmem_rdata<3> dmem_rdata<2> dmem_rdata<1> dmem_rdata<0> dmem_wdata<31> 
++ dmem_wdata<30> dmem_wdata<29> dmem_wdata<28> dmem_wdata<27> dmem_wdata<26> 
++ dmem_wdata<25> dmem_wdata<24> dmem_wdata<23> dmem_wdata<22> dmem_wdata<21> 
++ dmem_wdata<20> dmem_wdata<19> dmem_wdata<18> dmem_wdata<17> dmem_wdata<16> 
++ dmem_wdata<15> dmem_wdata<14> dmem_wdata<13> dmem_wdata<12> dmem_wdata<11> 
++ dmem_wdata<10> dmem_wdata<9> dmem_wdata<8> dmem_wdata<7> dmem_wdata<6> 
++ dmem_wdata<5> dmem_wdata<4> dmem_wdata<3> dmem_wdata<2> dmem_wdata<1> 
++ dmem_wdata<0> imem_addr<31> imem_addr<30> imem_addr<29> imem_addr<28> 
++ imem_addr<27> imem_addr<26> imem_addr<25> imem_addr<24> imem_addr<23> 
++ imem_addr<22> imem_addr<21> imem_addr<20> imem_addr<19> imem_addr<18> 
++ imem_addr<17> imem_addr<16> imem_addr<15> imem_addr<14> imem_addr<13> 
++ imem_addr<12> imem_addr<11> imem_addr<10> imem_addr<9> imem_addr<8> 
++ imem_addr<7> imem_addr<6> imem_addr<5> imem_addr<4> imem_addr<3> 
++ imem_addr<2> imem_addr<1> imem_addr<0> imm<31> imm<30> imm<29> imm<28> 
++ imm<27> imm<26> imm<25> imm<24> imm<23> imm<22> imm<21> imm<20> imm<19> 
++ imm<18> imm<17> imm<16> imm<15> imm<14> imm<13> imm<12> imm<11> imm<10> 
++ imm<9> imm<8> imm<7> imm<6> imm<5> imm<4> imm<3> imm<2> imm<1> imm<0> 
++ mem_mux_sel<2> mem_mux_sel<1> mem_mux_sel<0> pc_mux_sel rd_mux_sel<2> 
++ rd_mux_sel<1> rd_mux_sel<0> rd_sel<31> rd_sel<30> rd_sel<29> rd_sel<28> 
++ rd_sel<27> rd_sel<26> rd_sel<25> rd_sel<24> rd_sel<23> rd_sel<22> rd_sel<21> 
++ rd_sel<20> rd_sel<19> rd_sel<18> rd_sel<17> rd_sel<16> rd_sel<15> rd_sel<14> 
++ rd_sel<13> rd_sel<12> rd_sel<11> rd_sel<10> rd_sel<9> rd_sel<8> rd_sel<7> 
++ rd_sel<6> rd_sel<5> rd_sel<4> rd_sel<3> rd_sel<2> rd_sel<1> rd_sel<0> 
++ rs1_sel<31> rs1_sel<30> rs1_sel<29> rs1_sel<28> rs1_sel<27> rs1_sel<26> 
++ rs1_sel<25> rs1_sel<24> rs1_sel<23> rs1_sel<22> rs1_sel<21> rs1_sel<20> 
++ rs1_sel<19> rs1_sel<18> rs1_sel<17> rs1_sel<16> rs1_sel<15> rs1_sel<14> 
++ rs1_sel<13> rs1_sel<12> rs1_sel<11> rs1_sel<10> rs1_sel<9> rs1_sel<8> 
++ rs1_sel<7> rs1_sel<6> rs1_sel<5> rs1_sel<4> rs1_sel<3> rs1_sel<2> rs1_sel<1> 
++ rs1_sel<0> rs2_sel<31> rs2_sel<30> rs2_sel<29> rs2_sel<28> rs2_sel<27> 
++ rs2_sel<26> rs2_sel<25> rs2_sel<24> rs2_sel<23> rs2_sel<22> rs2_sel<21> 
++ rs2_sel<20> rs2_sel<19> rs2_sel<18> rs2_sel<17> rs2_sel<16> rs2_sel<15> 
++ rs2_sel<14> rs2_sel<13> rs2_sel<12> rs2_sel<11> rs2_sel<10> rs2_sel<9> 
++ rs2_sel<8> rs2_sel<7> rs2_sel<6> rs2_sel<5> rs2_sel<4> rs2_sel<3> rs2_sel<2> 
++ rs2_sel<1> rs2_sel<0> rst shift_dir shift_msb
+*.PININFO alu_cin:I alu_inv_rs2:I alu_mux_1_sel:I alu_mux_2_sel:I alu_op<1>:I 
+*.PININFO alu_op<0>:I clk:I cmp_mux_sel:I cmp_out:I dmem_rdata<31>:I 
+*.PININFO dmem_rdata<30>:I dmem_rdata<29>:I dmem_rdata<28>:I dmem_rdata<27>:I 
+*.PININFO dmem_rdata<26>:I dmem_rdata<25>:I dmem_rdata<24>:I dmem_rdata<23>:I 
+*.PININFO dmem_rdata<22>:I dmem_rdata<21>:I dmem_rdata<20>:I dmem_rdata<19>:I 
+*.PININFO dmem_rdata<18>:I dmem_rdata<17>:I dmem_rdata<16>:I dmem_rdata<15>:I 
+*.PININFO dmem_rdata<14>:I dmem_rdata<13>:I dmem_rdata<12>:I dmem_rdata<11>:I 
+*.PININFO dmem_rdata<10>:I dmem_rdata<9>:I dmem_rdata<8>:I dmem_rdata<7>:I 
+*.PININFO dmem_rdata<6>:I dmem_rdata<5>:I dmem_rdata<4>:I dmem_rdata<3>:I 
+*.PININFO dmem_rdata<2>:I dmem_rdata<1>:I dmem_rdata<0>:I imm<31>:I imm<30>:I 
+*.PININFO imm<29>:I imm<28>:I imm<27>:I imm<26>:I imm<25>:I imm<24>:I 
+*.PININFO imm<23>:I imm<22>:I imm<21>:I imm<20>:I imm<19>:I imm<18>:I 
+*.PININFO imm<17>:I imm<16>:I imm<15>:I imm<14>:I imm<13>:I imm<12>:I 
+*.PININFO imm<11>:I imm<10>:I imm<9>:I imm<8>:I imm<7>:I imm<6>:I imm<5>:I 
+*.PININFO imm<4>:I imm<3>:I imm<2>:I imm<1>:I imm<0>:I mem_mux_sel<2>:I 
+*.PININFO mem_mux_sel<1>:I mem_mux_sel<0>:I pc_mux_sel:I rd_mux_sel<2>:I 
+*.PININFO rd_mux_sel<1>:I rd_mux_sel<0>:I rd_sel<31>:I rd_sel<30>:I 
+*.PININFO rd_sel<29>:I rd_sel<28>:I rd_sel<27>:I rd_sel<26>:I rd_sel<25>:I 
+*.PININFO rd_sel<24>:I rd_sel<23>:I rd_sel<22>:I rd_sel<21>:I rd_sel<20>:I 
+*.PININFO rd_sel<19>:I rd_sel<18>:I rd_sel<17>:I rd_sel<16>:I rd_sel<15>:I 
+*.PININFO rd_sel<14>:I rd_sel<13>:I rd_sel<12>:I rd_sel<11>:I rd_sel<10>:I 
+*.PININFO rd_sel<9>:I rd_sel<8>:I rd_sel<7>:I rd_sel<6>:I rd_sel<5>:I 
+*.PININFO rd_sel<4>:I rd_sel<3>:I rd_sel<2>:I rd_sel<1>:I rd_sel<0>:I 
+*.PININFO rs1_sel<31>:I rs1_sel<30>:I rs1_sel<29>:I rs1_sel<28>:I 
+*.PININFO rs1_sel<27>:I rs1_sel<26>:I rs1_sel<25>:I rs1_sel<24>:I 
+*.PININFO rs1_sel<23>:I rs1_sel<22>:I rs1_sel<21>:I rs1_sel<20>:I 
+*.PININFO rs1_sel<19>:I rs1_sel<18>:I rs1_sel<17>:I rs1_sel<16>:I 
+*.PININFO rs1_sel<15>:I rs1_sel<14>:I rs1_sel<13>:I rs1_sel<12>:I 
+*.PININFO rs1_sel<11>:I rs1_sel<10>:I rs1_sel<9>:I rs1_sel<8>:I rs1_sel<7>:I 
+*.PININFO rs1_sel<6>:I rs1_sel<5>:I rs1_sel<4>:I rs1_sel<3>:I rs1_sel<2>:I 
+*.PININFO rs1_sel<1>:I rs1_sel<0>:I rs2_sel<31>:I rs2_sel<30>:I rs2_sel<29>:I 
+*.PININFO rs2_sel<28>:I rs2_sel<27>:I rs2_sel<26>:I rs2_sel<25>:I 
+*.PININFO rs2_sel<24>:I rs2_sel<23>:I rs2_sel<22>:I rs2_sel<21>:I 
+*.PININFO rs2_sel<20>:I rs2_sel<19>:I rs2_sel<18>:I rs2_sel<17>:I 
+*.PININFO rs2_sel<16>:I rs2_sel<15>:I rs2_sel<14>:I rs2_sel<13>:I 
+*.PININFO rs2_sel<12>:I rs2_sel<11>:I rs2_sel<10>:I rs2_sel<9>:I rs2_sel<8>:I 
+*.PININFO rs2_sel<7>:I rs2_sel<6>:I rs2_sel<5>:I rs2_sel<4>:I rs2_sel<3>:I 
+*.PININFO rs2_sel<2>:I rs2_sel<1>:I rs2_sel<0>:I rst:I shift_dir:I shift_msb:I 
+*.PININFO cmp_a_31:O cmp_b_31:O cmp_eq:O cmp_lt:O dmem_addr<31>:O 
+*.PININFO dmem_addr<30>:O dmem_addr<29>:O dmem_addr<28>:O dmem_addr<27>:O 
+*.PININFO dmem_addr<26>:O dmem_addr<25>:O dmem_addr<24>:O dmem_addr<23>:O 
+*.PININFO dmem_addr<22>:O dmem_addr<21>:O dmem_addr<20>:O dmem_addr<19>:O 
+*.PININFO dmem_addr<18>:O dmem_addr<17>:O dmem_addr<16>:O dmem_addr<15>:O 
+*.PININFO dmem_addr<14>:O dmem_addr<13>:O dmem_addr<12>:O dmem_addr<11>:O 
+*.PININFO dmem_addr<10>:O dmem_addr<9>:O dmem_addr<8>:O dmem_addr<7>:O 
+*.PININFO dmem_addr<6>:O dmem_addr<5>:O dmem_addr<4>:O dmem_addr<3>:O 
+*.PININFO dmem_addr<2>:O dmem_addr<1>:O dmem_addr<0>:O dmem_wdata<31>:O 
+*.PININFO dmem_wdata<30>:O dmem_wdata<29>:O dmem_wdata<28>:O dmem_wdata<27>:O 
+*.PININFO dmem_wdata<26>:O dmem_wdata<25>:O dmem_wdata<24>:O dmem_wdata<23>:O 
+*.PININFO dmem_wdata<22>:O dmem_wdata<21>:O dmem_wdata<20>:O dmem_wdata<19>:O 
+*.PININFO dmem_wdata<18>:O dmem_wdata<17>:O dmem_wdata<16>:O dmem_wdata<15>:O 
+*.PININFO dmem_wdata<14>:O dmem_wdata<13>:O dmem_wdata<12>:O dmem_wdata<11>:O 
+*.PININFO dmem_wdata<10>:O dmem_wdata<9>:O dmem_wdata<8>:O dmem_wdata<7>:O 
+*.PININFO dmem_wdata<6>:O dmem_wdata<5>:O dmem_wdata<4>:O dmem_wdata<3>:O 
+*.PININFO dmem_wdata<2>:O dmem_wdata<1>:O dmem_wdata<0>:O imem_addr<31>:O 
+*.PININFO imem_addr<30>:O imem_addr<29>:O imem_addr<28>:O imem_addr<27>:O 
+*.PININFO imem_addr<26>:O imem_addr<25>:O imem_addr<24>:O imem_addr<23>:O 
+*.PININFO imem_addr<22>:O imem_addr<21>:O imem_addr<20>:O imem_addr<19>:O 
+*.PININFO imem_addr<18>:O imem_addr<17>:O imem_addr<16>:O imem_addr<15>:O 
+*.PININFO imem_addr<14>:O imem_addr<13>:O imem_addr<12>:O imem_addr<11>:O 
+*.PININFO imem_addr<10>:O imem_addr<9>:O imem_addr<8>:O imem_addr<7>:O 
+*.PININFO imem_addr<6>:O imem_addr<5>:O imem_addr<4>:O imem_addr<3>:O 
+*.PININFO imem_addr<2>:O imem_addr<1>:O imem_addr<0>:O
+XI6 net1128 net673 alu_inv_rs2 alu_mux_1_sel net42 alu_mux_2_sel alu_op<1> 
++ alu_op<0> dmem_addr<6> clk net1235 net1088 net1204 net1087 cmp_mux_sel vss! 
++ net24 net25 imm<6> dmem_rdata<6> dmem_rdata<6> dmem_rdata<6> dmem_rdata<6> 
++ dmem_rdata<6> mem_mux_sel<2> mem_mux_sel<1> mem_mux_sel<0> imem_addr<6> vss! 
++ net1279 net1250 pc_mux_sel vss! rd_mux_sel<2> rd_mux_sel<1> rd_mux_sel<0> 
++ rd_sel<31> rd_sel<30> rd_sel<29> rd_sel<28> rd_sel<27> rd_sel<26> rd_sel<25> 
++ rd_sel<24> rd_sel<23> rd_sel<22> rd_sel<21> rd_sel<20> rd_sel<19> rd_sel<18> 
++ rd_sel<17> rd_sel<16> rd_sel<15> rd_sel<14> rd_sel<13> rd_sel<12> rd_sel<11> 
++ rd_sel<10> rd_sel<9> rd_sel<8> rd_sel<7> rd_sel<6> rd_sel<5> rd_sel<4> 
++ rd_sel<3> rd_sel<2> rd_sel<1> rd_sel<0> rs1_sel<31> rs1_sel<30> rs1_sel<29> 
++ rs1_sel<28> rs1_sel<27> rs1_sel<26> rs1_sel<25> rs1_sel<24> rs1_sel<23> 
++ rs1_sel<22> rs1_sel<21> rs1_sel<20> rs1_sel<19> rs1_sel<18> rs1_sel<17> 
++ rs1_sel<16> rs1_sel<15> rs1_sel<14> rs1_sel<13> rs1_sel<12> rs1_sel<11> 
++ rs1_sel<10> rs1_sel<9> rs1_sel<8> rs1_sel<7> rs1_sel<6> rs1_sel<5> 
++ rs1_sel<4> rs1_sel<3> rs1_sel<2> rs1_sel<1> rs1_sel<0> dmem_wdata<6> 
++ rs2_sel<31> rs2_sel<30> rs2_sel<29> rs2_sel<28> rs2_sel<27> rs2_sel<26> 
++ rs2_sel<25> rs2_sel<24> rs2_sel<23> rs2_sel<22> rs2_sel<21> rs2_sel<20> 
++ rs2_sel<19> rs2_sel<18> rs2_sel<17> rs2_sel<16> rs2_sel<15> rs2_sel<14> 
++ rs2_sel<13> rs2_sel<12> rs2_sel<11> rs2_sel<10> rs2_sel<9> rs2_sel<8> 
++ rs2_sel<7> rs2_sel<6> rs2_sel<5> rs2_sel<4> rs2_sel<3> rs2_sel<2> rs2_sel<1> 
++ rs2_sel<0> rst alu_mux_2_out<4> alu_mux_2_out<3> alu_mux_2_out<2> 
++ alu_mux_2_out<1> alu_mux_2_out<0> shift_dir shift_out<35> shift_out<41> 
++ shift_out<52> shift_out<73> shift_out<114> shift_out<25> shift_out<21> 
++ shift_out<12> vss! vss! shift_out<30> shift_out<31> shift_out<32> 
++ shift_out<33> shift_out<34> net23 / bitslice
+XI5 net1091 net1128 alu_inv_rs2 alu_mux_1_sel net150 alu_mux_2_sel alu_op<1> 
++ alu_op<0> dmem_addr<5> clk net1088 net1051 net1087 net1050 cmp_mux_sel vss! 
++ net20 net149 imm<5> dmem_rdata<5> dmem_rdata<5> dmem_rdata<5> dmem_rdata<5> 
++ dmem_rdata<5> mem_mux_sel<2> mem_mux_sel<1> mem_mux_sel<0> imem_addr<5> vss! 
++ net1278 net1279 pc_mux_sel vss! rd_mux_sel<2> rd_mux_sel<1> rd_mux_sel<0> 
++ rd_sel<31> rd_sel<30> rd_sel<29> rd_sel<28> rd_sel<27> rd_sel<26> rd_sel<25> 
++ rd_sel<24> rd_sel<23> rd_sel<22> rd_sel<21> rd_sel<20> rd_sel<19> rd_sel<18> 
++ rd_sel<17> rd_sel<16> rd_sel<15> rd_sel<14> rd_sel<13> rd_sel<12> rd_sel<11> 
++ rd_sel<10> rd_sel<9> rd_sel<8> rd_sel<7> rd_sel<6> rd_sel<5> rd_sel<4> 
++ rd_sel<3> rd_sel<2> rd_sel<1> rd_sel<0> rs1_sel<31> rs1_sel<30> rs1_sel<29> 
++ rs1_sel<28> rs1_sel<27> rs1_sel<26> rs1_sel<25> rs1_sel<24> rs1_sel<23> 
++ rs1_sel<22> rs1_sel<21> rs1_sel<20> rs1_sel<19> rs1_sel<18> rs1_sel<17> 
++ rs1_sel<16> rs1_sel<15> rs1_sel<14> rs1_sel<13> rs1_sel<12> rs1_sel<11> 
++ rs1_sel<10> rs1_sel<9> rs1_sel<8> rs1_sel<7> rs1_sel<6> rs1_sel<5> 
++ rs1_sel<4> rs1_sel<3> rs1_sel<2> rs1_sel<1> rs1_sel<0> dmem_wdata<5> 
++ rs2_sel<31> rs2_sel<30> rs2_sel<29> rs2_sel<28> rs2_sel<27> rs2_sel<26> 
++ rs2_sel<25> rs2_sel<24> rs2_sel<23> rs2_sel<22> rs2_sel<21> rs2_sel<20> 
++ rs2_sel<19> rs2_sel<18> rs2_sel<17> rs2_sel<16> rs2_sel<15> rs2_sel<14> 
++ rs2_sel<13> rs2_sel<12> rs2_sel<11> rs2_sel<10> rs2_sel<9> rs2_sel<8> 
++ rs2_sel<7> rs2_sel<6> rs2_sel<5> rs2_sel<4> rs2_sel<3> rs2_sel<2> rs2_sel<1> 
++ rs2_sel<0> rst alu_mux_2_out<4> alu_mux_2_out<3> alu_mux_2_out<2> 
++ alu_mux_2_out<1> alu_mux_2_out<0> shift_dir shift_out<30> shift_out<36> 
++ shift_out<47> shift_out<68> shift_out<109> shift_out<20> shift_out<16> 
++ shift_out<7> vss! vss! shift_out<25> shift_out<26> shift_out<27> 
++ shift_out<28> shift_out<29> net19 / bitslice
+XI4 net1054 net1091 alu_inv_rs2 alu_mux_1_sel alu_mux_2_out<4> alu_mux_2_sel 
++ alu_op<1> alu_op<0> dmem_addr<4> clk net1051 net1014 net1050 net1013 
++ cmp_mux_sel vss! net17 net18 imm<4> dmem_rdata<4> dmem_rdata<4> 
++ dmem_rdata<4> dmem_rdata<4> dmem_rdata<4> mem_mux_sel<2> mem_mux_sel<1> 
++ mem_mux_sel<0> imem_addr<4> vss! net1277 net1278 pc_mux_sel vss! 
++ rd_mux_sel<2> rd_mux_sel<1> rd_mux_sel<0> rd_sel<31> rd_sel<30> rd_sel<29> 
++ rd_sel<28> rd_sel<27> rd_sel<26> rd_sel<25> rd_sel<24> rd_sel<23> rd_sel<22> 
++ rd_sel<21> rd_sel<20> rd_sel<19> rd_sel<18> rd_sel<17> rd_sel<16> rd_sel<15> 
++ rd_sel<14> rd_sel<13> rd_sel<12> rd_sel<11> rd_sel<10> rd_sel<9> rd_sel<8> 
++ rd_sel<7> rd_sel<6> rd_sel<5> rd_sel<4> rd_sel<3> rd_sel<2> rd_sel<1> 
++ rd_sel<0> rs1_sel<31> rs1_sel<30> rs1_sel<29> rs1_sel<28> rs1_sel<27> 
++ rs1_sel<26> rs1_sel<25> rs1_sel<24> rs1_sel<23> rs1_sel<22> rs1_sel<21> 
++ rs1_sel<20> rs1_sel<19> rs1_sel<18> rs1_sel<17> rs1_sel<16> rs1_sel<15> 
++ rs1_sel<14> rs1_sel<13> rs1_sel<12> rs1_sel<11> rs1_sel<10> rs1_sel<9> 
++ rs1_sel<8> rs1_sel<7> rs1_sel<6> rs1_sel<5> rs1_sel<4> rs1_sel<3> rs1_sel<2> 
++ rs1_sel<1> rs1_sel<0> dmem_wdata<4> rs2_sel<31> rs2_sel<30> rs2_sel<29> 
++ rs2_sel<28> rs2_sel<27> rs2_sel<26> rs2_sel<25> rs2_sel<24> rs2_sel<23> 
++ rs2_sel<22> rs2_sel<21> rs2_sel<20> rs2_sel<19> rs2_sel<18> rs2_sel<17> 
++ rs2_sel<16> rs2_sel<15> rs2_sel<14> rs2_sel<13> rs2_sel<12> rs2_sel<11> 
++ rs2_sel<10> rs2_sel<9> rs2_sel<8> rs2_sel<7> rs2_sel<6> rs2_sel<5> 
++ rs2_sel<4> rs2_sel<3> rs2_sel<2> rs2_sel<1> rs2_sel<0> rst alu_mux_2_out<4> 
++ alu_mux_2_out<3> alu_mux_2_out<2> alu_mux_2_out<1> alu_mux_2_out<0> 
++ shift_dir shift_out<25> shift_out<31> shift_out<42> shift_out<63> 
++ shift_out<104> shift_out<15> shift_out<11> shift_out<2> vss! vss! 
++ shift_out<20> shift_out<21> shift_out<22> shift_out<23> shift_out<24> net16 
++ / bitslice
+XI3 net1017 net1054 alu_inv_rs2 alu_mux_1_sel alu_mux_2_out<3> alu_mux_2_sel 
++ alu_op<1> alu_op<0> dmem_addr<3> clk net1014 net977 net1013 net976 
++ cmp_mux_sel vss! net14 net15 imm<3> dmem_rdata<3> dmem_rdata<3> 
++ dmem_rdata<3> dmem_rdata<3> dmem_rdata<3> mem_mux_sel<2> mem_mux_sel<1> 
++ mem_mux_sel<0> imem_addr<3> vss! net1276 net1277 pc_mux_sel vss! 
++ rd_mux_sel<2> rd_mux_sel<1> rd_mux_sel<0> rd_sel<31> rd_sel<30> rd_sel<29> 
++ rd_sel<28> rd_sel<27> rd_sel<26> rd_sel<25> rd_sel<24> rd_sel<23> rd_sel<22> 
++ rd_sel<21> rd_sel<20> rd_sel<19> rd_sel<18> rd_sel<17> rd_sel<16> rd_sel<15> 
++ rd_sel<14> rd_sel<13> rd_sel<12> rd_sel<11> rd_sel<10> rd_sel<9> rd_sel<8> 
++ rd_sel<7> rd_sel<6> rd_sel<5> rd_sel<4> rd_sel<3> rd_sel<2> rd_sel<1> 
++ rd_sel<0> rs1_sel<31> rs1_sel<30> rs1_sel<29> rs1_sel<28> rs1_sel<27> 
++ rs1_sel<26> rs1_sel<25> rs1_sel<24> rs1_sel<23> rs1_sel<22> rs1_sel<21> 
++ rs1_sel<20> rs1_sel<19> rs1_sel<18> rs1_sel<17> rs1_sel<16> rs1_sel<15> 
++ rs1_sel<14> rs1_sel<13> rs1_sel<12> rs1_sel<11> rs1_sel<10> rs1_sel<9> 
++ rs1_sel<8> rs1_sel<7> rs1_sel<6> rs1_sel<5> rs1_sel<4> rs1_sel<3> rs1_sel<2> 
++ rs1_sel<1> rs1_sel<0> dmem_wdata<3> rs2_sel<31> rs2_sel<30> rs2_sel<29> 
++ rs2_sel<28> rs2_sel<27> rs2_sel<26> rs2_sel<25> rs2_sel<24> rs2_sel<23> 
++ rs2_sel<22> rs2_sel<21> rs2_sel<20> rs2_sel<19> rs2_sel<18> rs2_sel<17> 
++ rs2_sel<16> rs2_sel<15> rs2_sel<14> rs2_sel<13> rs2_sel<12> rs2_sel<11> 
++ rs2_sel<10> rs2_sel<9> rs2_sel<8> rs2_sel<7> rs2_sel<6> rs2_sel<5> 
++ rs2_sel<4> rs2_sel<3> rs2_sel<2> rs2_sel<1> rs2_sel<0> rst alu_mux_2_out<4> 
++ alu_mux_2_out<3> alu_mux_2_out<2> alu_mux_2_out<1> alu_mux_2_out<0> 
++ shift_dir shift_out<20> shift_out<26> shift_out<37> shift_out<58> 
++ shift_out<99> shift_out<10> shift_out<6> vss! vss! vss! shift_out<15> 
++ shift_out<16> shift_out<17> shift_out<18> shift_out<19> net13 / bitslice
+XI2 net980 net1017 alu_inv_rs2 alu_mux_1_sel alu_mux_2_out<2> alu_mux_2_sel 
++ alu_op<1> alu_op<0> dmem_addr<2> clk net977 net936 net976 net935 cmp_mux_sel 
++ vss! net11 net12 imm<2> dmem_rdata<2> dmem_rdata<2> dmem_rdata<2> 
++ dmem_rdata<2> dmem_rdata<2> mem_mux_sel<2> mem_mux_sel<1> mem_mux_sel<0> 
++ imem_addr<2> vdd! net1275 net1276 pc_mux_sel vss! rd_mux_sel<2> 
++ rd_mux_sel<1> rd_mux_sel<0> rd_sel<31> rd_sel<30> rd_sel<29> rd_sel<28> 
++ rd_sel<27> rd_sel<26> rd_sel<25> rd_sel<24> rd_sel<23> rd_sel<22> rd_sel<21> 
++ rd_sel<20> rd_sel<19> rd_sel<18> rd_sel<17> rd_sel<16> rd_sel<15> rd_sel<14> 
++ rd_sel<13> rd_sel<12> rd_sel<11> rd_sel<10> rd_sel<9> rd_sel<8> rd_sel<7> 
++ rd_sel<6> rd_sel<5> rd_sel<4> rd_sel<3> rd_sel<2> rd_sel<1> rd_sel<0> 
++ rs1_sel<31> rs1_sel<30> rs1_sel<29> rs1_sel<28> rs1_sel<27> rs1_sel<26> 
++ rs1_sel<25> rs1_sel<24> rs1_sel<23> rs1_sel<22> rs1_sel<21> rs1_sel<20> 
++ rs1_sel<19> rs1_sel<18> rs1_sel<17> rs1_sel<16> rs1_sel<15> rs1_sel<14> 
++ rs1_sel<13> rs1_sel<12> rs1_sel<11> rs1_sel<10> rs1_sel<9> rs1_sel<8> 
++ rs1_sel<7> rs1_sel<6> rs1_sel<5> rs1_sel<4> rs1_sel<3> rs1_sel<2> rs1_sel<1> 
++ rs1_sel<0> dmem_wdata<2> rs2_sel<31> rs2_sel<30> rs2_sel<29> rs2_sel<28> 
++ rs2_sel<27> rs2_sel<26> rs2_sel<25> rs2_sel<24> rs2_sel<23> rs2_sel<22> 
++ rs2_sel<21> rs2_sel<20> rs2_sel<19> rs2_sel<18> rs2_sel<17> rs2_sel<16> 
++ rs2_sel<15> rs2_sel<14> rs2_sel<13> rs2_sel<12> rs2_sel<11> rs2_sel<10> 
++ rs2_sel<9> rs2_sel<8> rs2_sel<7> rs2_sel<6> rs2_sel<5> rs2_sel<4> rs2_sel<3> 
++ rs2_sel<2> rs2_sel<1> rs2_sel<0> rst alu_mux_2_out<4> alu_mux_2_out<3> 
++ alu_mux_2_out<2> alu_mux_2_out<1> alu_mux_2_out<0> shift_dir shift_out<15> 
++ shift_out<21> shift_out<32> shift_out<53> shift_out<94> shift_out<5> 
++ shift_out<1> vss! vss! vss! shift_out<10> shift_out<11> shift_out<12> 
++ shift_out<13> shift_out<14> net9 / bitslice
+XI1 net939 net980 alu_inv_rs2 alu_mux_1_sel alu_mux_2_out<1> alu_mux_2_sel 
++ alu_op<1> alu_op<0> dmem_addr<1> clk net936 net963 net935 net962 cmp_mux_sel 
++ vss! net5 net8 imm<1> dmem_rdata<1> dmem_rdata<1> dmem_rdata<1> 
++ dmem_rdata<1> dmem_rdata<1> mem_mux_sel<2> mem_mux_sel<1> mem_mux_sel<0> 
++ imem_addr<1> vss! net1274 net1275 pc_mux_sel vss! rd_mux_sel<2> 
++ rd_mux_sel<1> rd_mux_sel<0> rd_sel<31> rd_sel<30> rd_sel<29> rd_sel<28> 
++ rd_sel<27> rd_sel<26> rd_sel<25> rd_sel<24> rd_sel<23> rd_sel<22> rd_sel<21> 
++ rd_sel<20> rd_sel<19> rd_sel<18> rd_sel<17> rd_sel<16> rd_sel<15> rd_sel<14> 
++ rd_sel<13> rd_sel<12> rd_sel<11> rd_sel<10> rd_sel<9> rd_sel<8> rd_sel<7> 
++ rd_sel<6> rd_sel<5> rd_sel<4> rd_sel<3> rd_sel<2> rd_sel<1> rd_sel<0> 
++ rs1_sel<31> rs1_sel<30> rs1_sel<29> rs1_sel<28> rs1_sel<27> rs1_sel<26> 
++ rs1_sel<25> rs1_sel<24> rs1_sel<23> rs1_sel<22> rs1_sel<21> rs1_sel<20> 
++ rs1_sel<19> rs1_sel<18> rs1_sel<17> rs1_sel<16> rs1_sel<15> rs1_sel<14> 
++ rs1_sel<13> rs1_sel<12> rs1_sel<11> rs1_sel<10> rs1_sel<9> rs1_sel<8> 
++ rs1_sel<7> rs1_sel<6> rs1_sel<5> rs1_sel<4> rs1_sel<3> rs1_sel<2> rs1_sel<1> 
++ rs1_sel<0> dmem_wdata<1> rs2_sel<31> rs2_sel<30> rs2_sel<29> rs2_sel<28> 
++ rs2_sel<27> rs2_sel<26> rs2_sel<25> rs2_sel<24> rs2_sel<23> rs2_sel<22> 
++ rs2_sel<21> rs2_sel<20> rs2_sel<19> rs2_sel<18> rs2_sel<17> rs2_sel<16> 
++ rs2_sel<15> rs2_sel<14> rs2_sel<13> rs2_sel<12> rs2_sel<11> rs2_sel<10> 
++ rs2_sel<9> rs2_sel<8> rs2_sel<7> rs2_sel<6> rs2_sel<5> rs2_sel<4> rs2_sel<3> 
++ rs2_sel<2> rs2_sel<1> rs2_sel<0> rst alu_mux_2_out<4> alu_mux_2_out<3> 
++ alu_mux_2_out<2> alu_mux_2_out<1> alu_mux_2_out<0> shift_dir shift_out<10> 
++ shift_out<16> shift_out<27> shift_out<48> shift_out<89> shift_out<0> vss! 
++ vss! vss! vss! shift_out<5> shift_out<6> shift_out<7> shift_out<8> 
++ shift_out<9> net4 / bitslice
+XI0 alu_cin net939 alu_inv_rs2 alu_mux_1_sel alu_mux_2_out<0> alu_mux_2_sel 
++ alu_op<1> alu_op<0> dmem_addr<0> clk net963 cmp_eq net962 cmp_lt cmp_mux_sel 
++ cmp_out net137 net3 imm<0> dmem_rdata<0> dmem_rdata<0> dmem_rdata<0> 
++ dmem_rdata<0> dmem_rdata<0> mem_mux_sel<2> mem_mux_sel<1> mem_mux_sel<0> 
++ imem_addr<0> vss! vss! net1274 pc_mux_sel vss! rd_mux_sel<2> rd_mux_sel<1> 
++ rd_mux_sel<0> rd_sel<31> rd_sel<30> rd_sel<29> rd_sel<28> rd_sel<27> 
++ rd_sel<26> rd_sel<25> rd_sel<24> rd_sel<23> rd_sel<22> rd_sel<21> rd_sel<20> 
++ rd_sel<19> rd_sel<18> rd_sel<17> rd_sel<16> rd_sel<15> rd_sel<14> rd_sel<13> 
++ rd_sel<12> rd_sel<11> rd_sel<10> rd_sel<9> rd_sel<8> rd_sel<7> rd_sel<6> 
++ rd_sel<5> rd_sel<4> rd_sel<3> rd_sel<2> rd_sel<1> rd_sel<0> rs1_sel<31> 
++ rs1_sel<30> rs1_sel<29> rs1_sel<28> rs1_sel<27> rs1_sel<26> rs1_sel<25> 
++ rs1_sel<24> rs1_sel<23> rs1_sel<22> rs1_sel<21> rs1_sel<20> rs1_sel<19> 
++ rs1_sel<18> rs1_sel<17> rs1_sel<16> rs1_sel<15> rs1_sel<14> rs1_sel<13> 
++ rs1_sel<12> rs1_sel<11> rs1_sel<10> rs1_sel<9> rs1_sel<8> rs1_sel<7> 
++ rs1_sel<6> rs1_sel<5> rs1_sel<4> rs1_sel<3> rs1_sel<2> rs1_sel<1> rs1_sel<0> 
++ dmem_wdata<0> rs2_sel<31> rs2_sel<30> rs2_sel<29> rs2_sel<28> rs2_sel<27> 
++ rs2_sel<26> rs2_sel<25> rs2_sel<24> rs2_sel<23> rs2_sel<22> rs2_sel<21> 
++ rs2_sel<20> rs2_sel<19> rs2_sel<18> rs2_sel<17> rs2_sel<16> rs2_sel<15> 
++ rs2_sel<14> rs2_sel<13> rs2_sel<12> rs2_sel<11> rs2_sel<10> rs2_sel<9> 
++ rs2_sel<8> rs2_sel<7> rs2_sel<6> rs2_sel<5> rs2_sel<4> rs2_sel<3> rs2_sel<2> 
++ rs2_sel<1> rs2_sel<0> rst alu_mux_2_out<4> alu_mux_2_out<3> alu_mux_2_out<2> 
++ alu_mux_2_out<1> alu_mux_2_out<0> shift_dir shift_out<5> shift_out<11> 
++ shift_out<22> shift_out<43> shift_out<84> vss! vss! vss! vss! vss! 
++ shift_out<0> shift_out<1> shift_out<2> shift_out<3> shift_out<4> net2 / 
++ bitslice
+XI14 net869 net40 alu_inv_rs2 alu_mux_1_sel net60 alu_mux_2_sel alu_op<1> 
++ alu_op<0> dmem_addr<14> clk net1218 net829 net600 net828 cmp_mux_sel vss! 
++ net61 net63 imm<14> dmem_rdata<7> vss! dmem_rdata<14> dmem_rdata<14> 
++ dmem_rdata<14> mem_mux_sel<2> mem_mux_sel<1> mem_mux_sel<0> imem_addr<14> 
++ vss! net1273 net1249 pc_mux_sel vss! rd_mux_sel<2> rd_mux_sel<1> 
++ rd_mux_sel<0> rd_sel<31> rd_sel<30> rd_sel<29> rd_sel<28> rd_sel<27> 
++ rd_sel<26> rd_sel<25> rd_sel<24> rd_sel<23> rd_sel<22> rd_sel<21> rd_sel<20> 
++ rd_sel<19> rd_sel<18> rd_sel<17> rd_sel<16> rd_sel<15> rd_sel<14> rd_sel<13> 
++ rd_sel<12> rd_sel<11> rd_sel<10> rd_sel<9> rd_sel<8> rd_sel<7> rd_sel<6> 
++ rd_sel<5> rd_sel<4> rd_sel<3> rd_sel<2> rd_sel<1> rd_sel<0> rs1_sel<31> 
++ rs1_sel<30> rs1_sel<29> rs1_sel<28> rs1_sel<27> rs1_sel<26> rs1_sel<25> 
++ rs1_sel<24> rs1_sel<23> rs1_sel<22> rs1_sel<21> rs1_sel<20> rs1_sel<19> 
++ rs1_sel<18> rs1_sel<17> rs1_sel<16> rs1_sel<15> rs1_sel<14> rs1_sel<13> 
++ rs1_sel<12> rs1_sel<11> rs1_sel<10> rs1_sel<9> rs1_sel<8> rs1_sel<7> 
++ rs1_sel<6> rs1_sel<5> rs1_sel<4> rs1_sel<3> rs1_sel<2> rs1_sel<1> rs1_sel<0> 
++ dmem_wdata<14> rs2_sel<31> rs2_sel<30> rs2_sel<29> rs2_sel<28> rs2_sel<27> 
++ rs2_sel<26> rs2_sel<25> rs2_sel<24> rs2_sel<23> rs2_sel<22> rs2_sel<21> 
++ rs2_sel<20> rs2_sel<19> rs2_sel<18> rs2_sel<17> rs2_sel<16> rs2_sel<15> 
++ rs2_sel<14> rs2_sel<13> rs2_sel<12> rs2_sel<11> rs2_sel<10> rs2_sel<9> 
++ rs2_sel<8> rs2_sel<7> rs2_sel<6> rs2_sel<5> rs2_sel<4> rs2_sel<3> rs2_sel<2> 
++ rs2_sel<1> rs2_sel<0> rst alu_mux_2_out<4> alu_mux_2_out<3> alu_mux_2_out<2> 
++ alu_mux_2_out<1> alu_mux_2_out<0> shift_dir shift_out<75> shift_out<81> 
++ shift_out<92> shift_out<113> shift_out<154> shift_out<65> shift_out<61> 
++ shift_out<52> shift_out<33> vss! shift_out<70> shift_out<71> shift_out<72> 
++ shift_out<73> shift_out<74> net62 / bitslice
+XI13 net832 net869 alu_inv_rs2 alu_mux_1_sel net56 alu_mux_2_sel alu_op<1> 
++ alu_op<0> dmem_addr<13> clk net829 net792 net828 net791 cmp_mux_sel vss! 
++ net57 net58 imm<13> dmem_rdata<7> vss! dmem_rdata<13> dmem_rdata<13> 
++ dmem_rdata<13> mem_mux_sel<2> mem_mux_sel<1> mem_mux_sel<0> imem_addr<13> 
++ vss! net1272 net1273 pc_mux_sel vss! rd_mux_sel<2> rd_mux_sel<1> 
++ rd_mux_sel<0> rd_sel<31> rd_sel<30> rd_sel<29> rd_sel<28> rd_sel<27> 
++ rd_sel<26> rd_sel<25> rd_sel<24> rd_sel<23> rd_sel<22> rd_sel<21> rd_sel<20> 
++ rd_sel<19> rd_sel<18> rd_sel<17> rd_sel<16> rd_sel<15> rd_sel<14> rd_sel<13> 
++ rd_sel<12> rd_sel<11> rd_sel<10> rd_sel<9> rd_sel<8> rd_sel<7> rd_sel<6> 
++ rd_sel<5> rd_sel<4> rd_sel<3> rd_sel<2> rd_sel<1> rd_sel<0> rs1_sel<31> 
++ rs1_sel<30> rs1_sel<29> rs1_sel<28> rs1_sel<27> rs1_sel<26> rs1_sel<25> 
++ rs1_sel<24> rs1_sel<23> rs1_sel<22> rs1_sel<21> rs1_sel<20> rs1_sel<19> 
++ rs1_sel<18> rs1_sel<17> rs1_sel<16> rs1_sel<15> rs1_sel<14> rs1_sel<13> 
++ rs1_sel<12> rs1_sel<11> rs1_sel<10> rs1_sel<9> rs1_sel<8> rs1_sel<7> 
++ rs1_sel<6> rs1_sel<5> rs1_sel<4> rs1_sel<3> rs1_sel<2> rs1_sel<1> rs1_sel<0> 
++ dmem_wdata<13> rs2_sel<31> rs2_sel<30> rs2_sel<29> rs2_sel<28> rs2_sel<27> 
++ rs2_sel<26> rs2_sel<25> rs2_sel<24> rs2_sel<23> rs2_sel<22> rs2_sel<21> 
++ rs2_sel<20> rs2_sel<19> rs2_sel<18> rs2_sel<17> rs2_sel<16> rs2_sel<15> 
++ rs2_sel<14> rs2_sel<13> rs2_sel<12> rs2_sel<11> rs2_sel<10> rs2_sel<9> 
++ rs2_sel<8> rs2_sel<7> rs2_sel<6> rs2_sel<5> rs2_sel<4> rs2_sel<3> rs2_sel<2> 
++ rs2_sel<1> rs2_sel<0> rst alu_mux_2_out<4> alu_mux_2_out<3> alu_mux_2_out<2> 
++ alu_mux_2_out<1> alu_mux_2_out<0> shift_dir shift_out<70> shift_out<76> 
++ shift_out<87> shift_out<108> shift_out<149> shift_out<60> shift_out<56> 
++ shift_out<47> shift_out<28> vss! shift_out<65> shift_out<66> shift_out<67> 
++ shift_out<68> shift_out<69> net59 / bitslice
+XI12 net795 net832 alu_inv_rs2 alu_mux_1_sel net52 alu_mux_2_sel alu_op<1> 
++ alu_op<0> dmem_addr<12> clk net792 net755 net791 net754 cmp_mux_sel vss! 
++ net54 net55 imm<12> dmem_rdata<7> vss! dmem_rdata<12> dmem_rdata<12> 
++ dmem_rdata<12> mem_mux_sel<2> mem_mux_sel<1> mem_mux_sel<0> imem_addr<12> 
++ vss! net1271 net1272 pc_mux_sel vss! rd_mux_sel<2> rd_mux_sel<1> 
++ rd_mux_sel<0> rd_sel<31> rd_sel<30> rd_sel<29> rd_sel<28> rd_sel<27> 
++ rd_sel<26> rd_sel<25> rd_sel<24> rd_sel<23> rd_sel<22> rd_sel<21> rd_sel<20> 
++ rd_sel<19> rd_sel<18> rd_sel<17> rd_sel<16> rd_sel<15> rd_sel<14> rd_sel<13> 
++ rd_sel<12> rd_sel<11> rd_sel<10> rd_sel<9> rd_sel<8> rd_sel<7> rd_sel<6> 
++ rd_sel<5> rd_sel<4> rd_sel<3> rd_sel<2> rd_sel<1> rd_sel<0> rs1_sel<31> 
++ rs1_sel<30> rs1_sel<29> rs1_sel<28> rs1_sel<27> rs1_sel<26> rs1_sel<25> 
++ rs1_sel<24> rs1_sel<23> rs1_sel<22> rs1_sel<21> rs1_sel<20> rs1_sel<19> 
++ rs1_sel<18> rs1_sel<17> rs1_sel<16> rs1_sel<15> rs1_sel<14> rs1_sel<13> 
++ rs1_sel<12> rs1_sel<11> rs1_sel<10> rs1_sel<9> rs1_sel<8> rs1_sel<7> 
++ rs1_sel<6> rs1_sel<5> rs1_sel<4> rs1_sel<3> rs1_sel<2> rs1_sel<1> rs1_sel<0> 
++ dmem_wdata<12> rs2_sel<31> rs2_sel<30> rs2_sel<29> rs2_sel<28> rs2_sel<27> 
++ rs2_sel<26> rs2_sel<25> rs2_sel<24> rs2_sel<23> rs2_sel<22> rs2_sel<21> 
++ rs2_sel<20> rs2_sel<19> rs2_sel<18> rs2_sel<17> rs2_sel<16> rs2_sel<15> 
++ rs2_sel<14> rs2_sel<13> rs2_sel<12> rs2_sel<11> rs2_sel<10> rs2_sel<9> 
++ rs2_sel<8> rs2_sel<7> rs2_sel<6> rs2_sel<5> rs2_sel<4> rs2_sel<3> rs2_sel<2> 
++ rs2_sel<1> rs2_sel<0> rst alu_mux_2_out<4> alu_mux_2_out<3> alu_mux_2_out<2> 
++ alu_mux_2_out<1> alu_mux_2_out<0> shift_dir shift_out<65> shift_out<71> 
++ shift_out<82> shift_out<103> shift_out<144> shift_out<55> shift_out<51> 
++ shift_out<42> shift_out<23> vss! shift_out<60> shift_out<61> shift_out<62> 
++ shift_out<63> shift_out<64> net53 / bitslice
+XI11 net758 net795 alu_inv_rs2 alu_mux_1_sel net45 alu_mux_2_sel alu_op<1> 
++ alu_op<0> dmem_addr<11> clk net755 net718 net754 net717 cmp_mux_sel vss! 
++ net46 net50 imm<11> dmem_rdata<7> vss! dmem_rdata<11> dmem_rdata<11> 
++ dmem_rdata<11> mem_mux_sel<2> mem_mux_sel<1> mem_mux_sel<0> imem_addr<11> 
++ vss! net1270 net1271 pc_mux_sel vss! rd_mux_sel<2> rd_mux_sel<1> 
++ rd_mux_sel<0> rd_sel<31> rd_sel<30> rd_sel<29> rd_sel<28> rd_sel<27> 
++ rd_sel<26> rd_sel<25> rd_sel<24> rd_sel<23> rd_sel<22> rd_sel<21> rd_sel<20> 
++ rd_sel<19> rd_sel<18> rd_sel<17> rd_sel<16> rd_sel<15> rd_sel<14> rd_sel<13> 
++ rd_sel<12> rd_sel<11> rd_sel<10> rd_sel<9> rd_sel<8> rd_sel<7> rd_sel<6> 
++ rd_sel<5> rd_sel<4> rd_sel<3> rd_sel<2> rd_sel<1> rd_sel<0> rs1_sel<31> 
++ rs1_sel<30> rs1_sel<29> rs1_sel<28> rs1_sel<27> rs1_sel<26> rs1_sel<25> 
++ rs1_sel<24> rs1_sel<23> rs1_sel<22> rs1_sel<21> rs1_sel<20> rs1_sel<19> 
++ rs1_sel<18> rs1_sel<17> rs1_sel<16> rs1_sel<15> rs1_sel<14> rs1_sel<13> 
++ rs1_sel<12> rs1_sel<11> rs1_sel<10> rs1_sel<9> rs1_sel<8> rs1_sel<7> 
++ rs1_sel<6> rs1_sel<5> rs1_sel<4> rs1_sel<3> rs1_sel<2> rs1_sel<1> rs1_sel<0> 
++ dmem_wdata<11> rs2_sel<31> rs2_sel<30> rs2_sel<29> rs2_sel<28> rs2_sel<27> 
++ rs2_sel<26> rs2_sel<25> rs2_sel<24> rs2_sel<23> rs2_sel<22> rs2_sel<21> 
++ rs2_sel<20> rs2_sel<19> rs2_sel<18> rs2_sel<17> rs2_sel<16> rs2_sel<15> 
++ rs2_sel<14> rs2_sel<13> rs2_sel<12> rs2_sel<11> rs2_sel<10> rs2_sel<9> 
++ rs2_sel<8> rs2_sel<7> rs2_sel<6> rs2_sel<5> rs2_sel<4> rs2_sel<3> rs2_sel<2> 
++ rs2_sel<1> rs2_sel<0> rst alu_mux_2_out<4> alu_mux_2_out<3> alu_mux_2_out<2> 
++ alu_mux_2_out<1> alu_mux_2_out<0> shift_dir shift_out<60> shift_out<66> 
++ shift_out<77> shift_out<98> shift_out<139> shift_out<50> shift_out<46> 
++ shift_out<37> shift_out<18> vss! shift_out<55> shift_out<56> shift_out<57> 
++ shift_out<58> shift_out<59> net49 / bitslice
+XI10 net721 net758 alu_inv_rs2 alu_mux_1_sel net44 alu_mux_2_sel alu_op<1> 
++ alu_op<0> dmem_addr<10> clk net718 net681 net717 net680 cmp_mux_sel vss! 
++ net36 net37 imm<10> dmem_rdata<7> vss! dmem_rdata<10> dmem_rdata<10> 
++ dmem_rdata<10> mem_mux_sel<2> mem_mux_sel<1> mem_mux_sel<0> imem_addr<10> 
++ vss! net1269 net1270 pc_mux_sel vss! rd_mux_sel<2> rd_mux_sel<1> 
++ rd_mux_sel<0> rd_sel<31> rd_sel<30> rd_sel<29> rd_sel<28> rd_sel<27> 
++ rd_sel<26> rd_sel<25> rd_sel<24> rd_sel<23> rd_sel<22> rd_sel<21> rd_sel<20> 
++ rd_sel<19> rd_sel<18> rd_sel<17> rd_sel<16> rd_sel<15> rd_sel<14> rd_sel<13> 
++ rd_sel<12> rd_sel<11> rd_sel<10> rd_sel<9> rd_sel<8> rd_sel<7> rd_sel<6> 
++ rd_sel<5> rd_sel<4> rd_sel<3> rd_sel<2> rd_sel<1> rd_sel<0> rs1_sel<31> 
++ rs1_sel<30> rs1_sel<29> rs1_sel<28> rs1_sel<27> rs1_sel<26> rs1_sel<25> 
++ rs1_sel<24> rs1_sel<23> rs1_sel<22> rs1_sel<21> rs1_sel<20> rs1_sel<19> 
++ rs1_sel<18> rs1_sel<17> rs1_sel<16> rs1_sel<15> rs1_sel<14> rs1_sel<13> 
++ rs1_sel<12> rs1_sel<11> rs1_sel<10> rs1_sel<9> rs1_sel<8> rs1_sel<7> 
++ rs1_sel<6> rs1_sel<5> rs1_sel<4> rs1_sel<3> rs1_sel<2> rs1_sel<1> rs1_sel<0> 
++ dmem_wdata<10> rs2_sel<31> rs2_sel<30> rs2_sel<29> rs2_sel<28> rs2_sel<27> 
++ rs2_sel<26> rs2_sel<25> rs2_sel<24> rs2_sel<23> rs2_sel<22> rs2_sel<21> 
++ rs2_sel<20> rs2_sel<19> rs2_sel<18> rs2_sel<17> rs2_sel<16> rs2_sel<15> 
++ rs2_sel<14> rs2_sel<13> rs2_sel<12> rs2_sel<11> rs2_sel<10> rs2_sel<9> 
++ rs2_sel<8> rs2_sel<7> rs2_sel<6> rs2_sel<5> rs2_sel<4> rs2_sel<3> rs2_sel<2> 
++ rs2_sel<1> rs2_sel<0> rst alu_mux_2_out<4> alu_mux_2_out<3> alu_mux_2_out<2> 
++ alu_mux_2_out<1> alu_mux_2_out<0> shift_dir shift_out<55> shift_out<61> 
++ shift_out<72> shift_out<93> shift_out<134> shift_out<45> shift_out<41> 
++ shift_out<32> shift_out<13> vss! shift_out<50> shift_out<51> shift_out<52> 
++ shift_out<53> shift_out<54> net35 / bitslice
+XI9 net684 net721 alu_inv_rs2 alu_mux_1_sel net136 alu_mux_2_sel alu_op<1> 
++ alu_op<0> dmem_addr<9> clk net681 net640 net680 net639 cmp_mux_sel vss! 
++ net33 net34 imm<9> dmem_rdata<7> vss! dmem_rdata<9> dmem_rdata<9> 
++ dmem_rdata<9> mem_mux_sel<2> mem_mux_sel<1> mem_mux_sel<0> imem_addr<9> vss! 
++ net1268 net1269 pc_mux_sel vss! rd_mux_sel<2> rd_mux_sel<1> rd_mux_sel<0> 
++ rd_sel<31> rd_sel<30> rd_sel<29> rd_sel<28> rd_sel<27> rd_sel<26> rd_sel<25> 
++ rd_sel<24> rd_sel<23> rd_sel<22> rd_sel<21> rd_sel<20> rd_sel<19> rd_sel<18> 
++ rd_sel<17> rd_sel<16> rd_sel<15> rd_sel<14> rd_sel<13> rd_sel<12> rd_sel<11> 
++ rd_sel<10> rd_sel<9> rd_sel<8> rd_sel<7> rd_sel<6> rd_sel<5> rd_sel<4> 
++ rd_sel<3> rd_sel<2> rd_sel<1> rd_sel<0> rs1_sel<31> rs1_sel<30> rs1_sel<29> 
++ rs1_sel<28> rs1_sel<27> rs1_sel<26> rs1_sel<25> rs1_sel<24> rs1_sel<23> 
++ rs1_sel<22> rs1_sel<21> rs1_sel<20> rs1_sel<19> rs1_sel<18> rs1_sel<17> 
++ rs1_sel<16> rs1_sel<15> rs1_sel<14> rs1_sel<13> rs1_sel<12> rs1_sel<11> 
++ rs1_sel<10> rs1_sel<9> rs1_sel<8> rs1_sel<7> rs1_sel<6> rs1_sel<5> 
++ rs1_sel<4> rs1_sel<3> rs1_sel<2> rs1_sel<1> rs1_sel<0> dmem_wdata<9> 
++ rs2_sel<31> rs2_sel<30> rs2_sel<29> rs2_sel<28> rs2_sel<27> rs2_sel<26> 
++ rs2_sel<25> rs2_sel<24> rs2_sel<23> rs2_sel<22> rs2_sel<21> rs2_sel<20> 
++ rs2_sel<19> rs2_sel<18> rs2_sel<17> rs2_sel<16> rs2_sel<15> rs2_sel<14> 
++ rs2_sel<13> rs2_sel<12> rs2_sel<11> rs2_sel<10> rs2_sel<9> rs2_sel<8> 
++ rs2_sel<7> rs2_sel<6> rs2_sel<5> rs2_sel<4> rs2_sel<3> rs2_sel<2> rs2_sel<1> 
++ rs2_sel<0> rst alu_mux_2_out<4> alu_mux_2_out<3> alu_mux_2_out<2> 
++ alu_mux_2_out<1> alu_mux_2_out<0> shift_dir shift_out<50> shift_out<56> 
++ shift_out<67> shift_out<88> shift_out<129> shift_out<40> shift_out<36> 
++ shift_out<27> shift_out<8> vss! shift_out<45> shift_out<46> shift_out<47> 
++ shift_out<48> shift_out<49> net32 / bitslice
+XI8 net643 net684 alu_inv_rs2 alu_mux_1_sel net38 alu_mux_2_sel alu_op<1> 
++ alu_op<0> dmem_addr<8> clk net640 net1267 net639 net1205 cmp_mux_sel vss! 
++ net30 net31 imm<8> dmem_rdata<7> vss! dmem_rdata<8> dmem_rdata<8> 
++ dmem_rdata<8> mem_mux_sel<2> mem_mux_sel<1> mem_mux_sel<0> imem_addr<8> vss! 
++ net1266 net1268 pc_mux_sel vss! rd_mux_sel<2> rd_mux_sel<1> rd_mux_sel<0> 
++ rd_sel<31> rd_sel<30> rd_sel<29> rd_sel<28> rd_sel<27> rd_sel<26> rd_sel<25> 
++ rd_sel<24> rd_sel<23> rd_sel<22> rd_sel<21> rd_sel<20> rd_sel<19> rd_sel<18> 
++ rd_sel<17> rd_sel<16> rd_sel<15> rd_sel<14> rd_sel<13> rd_sel<12> rd_sel<11> 
++ rd_sel<10> rd_sel<9> rd_sel<8> rd_sel<7> rd_sel<6> rd_sel<5> rd_sel<4> 
++ rd_sel<3> rd_sel<2> rd_sel<1> rd_sel<0> rs1_sel<31> rs1_sel<30> rs1_sel<29> 
++ rs1_sel<28> rs1_sel<27> rs1_sel<26> rs1_sel<25> rs1_sel<24> rs1_sel<23> 
++ rs1_sel<22> rs1_sel<21> rs1_sel<20> rs1_sel<19> rs1_sel<18> rs1_sel<17> 
++ rs1_sel<16> rs1_sel<15> rs1_sel<14> rs1_sel<13> rs1_sel<12> rs1_sel<11> 
++ rs1_sel<10> rs1_sel<9> rs1_sel<8> rs1_sel<7> rs1_sel<6> rs1_sel<5> 
++ rs1_sel<4> rs1_sel<3> rs1_sel<2> rs1_sel<1> rs1_sel<0> dmem_wdata<8> 
++ rs2_sel<31> rs2_sel<30> rs2_sel<29> rs2_sel<28> rs2_sel<27> rs2_sel<26> 
++ rs2_sel<25> rs2_sel<24> rs2_sel<23> rs2_sel<22> rs2_sel<21> rs2_sel<20> 
++ rs2_sel<19> rs2_sel<18> rs2_sel<17> rs2_sel<16> rs2_sel<15> rs2_sel<14> 
++ rs2_sel<13> rs2_sel<12> rs2_sel<11> rs2_sel<10> rs2_sel<9> rs2_sel<8> 
++ rs2_sel<7> rs2_sel<6> rs2_sel<5> rs2_sel<4> rs2_sel<3> rs2_sel<2> rs2_sel<1> 
++ rs2_sel<0> rst alu_mux_2_out<4> alu_mux_2_out<3> alu_mux_2_out<2> 
++ alu_mux_2_out<1> alu_mux_2_out<0> shift_dir shift_out<45> shift_out<51> 
++ shift_out<62> shift_out<83> shift_out<124> shift_out<35> shift_out<31> 
++ shift_out<22> shift_out<3> vss! shift_out<40> shift_out<41> shift_out<42> 
++ shift_out<43> shift_out<44> net29 / bitslice
+XI7 net673 net643 alu_inv_rs2 alu_mux_1_sel net43 alu_mux_2_sel alu_op<1> 
++ alu_op<0> dmem_addr<7> clk net1267 net1235 net1205 net1204 cmp_mux_sel vss! 
++ net27 net28 imm<7> dmem_rdata<7> dmem_rdata<7> dmem_rdata<7> dmem_rdata<7> 
++ dmem_rdata<7> mem_mux_sel<2> mem_mux_sel<1> mem_mux_sel<0> imem_addr<7> vss! 
++ net1250 net1266 pc_mux_sel vss! rd_mux_sel<2> rd_mux_sel<1> rd_mux_sel<0> 
++ rd_sel<31> rd_sel<30> rd_sel<29> rd_sel<28> rd_sel<27> rd_sel<26> rd_sel<25> 
++ rd_sel<24> rd_sel<23> rd_sel<22> rd_sel<21> rd_sel<20> rd_sel<19> rd_sel<18> 
++ rd_sel<17> rd_sel<16> rd_sel<15> rd_sel<14> rd_sel<13> rd_sel<12> rd_sel<11> 
++ rd_sel<10> rd_sel<9> rd_sel<8> rd_sel<7> rd_sel<6> rd_sel<5> rd_sel<4> 
++ rd_sel<3> rd_sel<2> rd_sel<1> rd_sel<0> rs1_sel<31> rs1_sel<30> rs1_sel<29> 
++ rs1_sel<28> rs1_sel<27> rs1_sel<26> rs1_sel<25> rs1_sel<24> rs1_sel<23> 
++ rs1_sel<22> rs1_sel<21> rs1_sel<20> rs1_sel<19> rs1_sel<18> rs1_sel<17> 
++ rs1_sel<16> rs1_sel<15> rs1_sel<14> rs1_sel<13> rs1_sel<12> rs1_sel<11> 
++ rs1_sel<10> rs1_sel<9> rs1_sel<8> rs1_sel<7> rs1_sel<6> rs1_sel<5> 
++ rs1_sel<4> rs1_sel<3> rs1_sel<2> rs1_sel<1> rs1_sel<0> dmem_wdata<7> 
++ rs2_sel<31> rs2_sel<30> rs2_sel<29> rs2_sel<28> rs2_sel<27> rs2_sel<26> 
++ rs2_sel<25> rs2_sel<24> rs2_sel<23> rs2_sel<22> rs2_sel<21> rs2_sel<20> 
++ rs2_sel<19> rs2_sel<18> rs2_sel<17> rs2_sel<16> rs2_sel<15> rs2_sel<14> 
++ rs2_sel<13> rs2_sel<12> rs2_sel<11> rs2_sel<10> rs2_sel<9> rs2_sel<8> 
++ rs2_sel<7> rs2_sel<6> rs2_sel<5> rs2_sel<4> rs2_sel<3> rs2_sel<2> rs2_sel<1> 
++ rs2_sel<0> rst alu_mux_2_out<4> alu_mux_2_out<3> alu_mux_2_out<2> 
++ alu_mux_2_out<1> alu_mux_2_out<0> shift_dir shift_out<40> shift_out<46> 
++ shift_out<57> shift_out<78> shift_out<119> shift_out<30> shift_out<26> 
++ shift_out<17> vss! vss! shift_out<35> shift_out<36> shift_out<37> 
++ shift_out<38> shift_out<39> net26 / bitslice
+XI31 net569 net39 alu_inv_rs2 alu_mux_1_sel net134 alu_mux_2_sel alu_op<1> 
++ alu_op<0> dmem_addr<31> clk vdd! net529 vss! net528 cmp_mux_sel vss! 
++ cmp_a_31 cmp_b_31 imm<31> dmem_rdata<7> vss! dmem_rdata<15> vss! 
++ dmem_rdata<31> mem_mux_sel<2> mem_mux_sel<1> mem_mux_sel<0> imem_addr<31> 
++ vss! net1265 net598 pc_mux_sel vss! rd_mux_sel<2> rd_mux_sel<1> 
++ rd_mux_sel<0> rd_sel<31> rd_sel<30> rd_sel<29> rd_sel<28> rd_sel<27> 
++ rd_sel<26> rd_sel<25> rd_sel<24> rd_sel<23> rd_sel<22> rd_sel<21> rd_sel<20> 
++ rd_sel<19> rd_sel<18> rd_sel<17> rd_sel<16> rd_sel<15> rd_sel<14> rd_sel<13> 
++ rd_sel<12> rd_sel<11> rd_sel<10> rd_sel<9> rd_sel<8> rd_sel<7> rd_sel<6> 
++ rd_sel<5> rd_sel<4> rd_sel<3> rd_sel<2> rd_sel<1> rd_sel<0> rs1_sel<31> 
++ rs1_sel<30> rs1_sel<29> rs1_sel<28> rs1_sel<27> rs1_sel<26> rs1_sel<25> 
++ rs1_sel<24> rs1_sel<23> rs1_sel<22> rs1_sel<21> rs1_sel<20> rs1_sel<19> 
++ rs1_sel<18> rs1_sel<17> rs1_sel<16> rs1_sel<15> rs1_sel<14> rs1_sel<13> 
++ rs1_sel<12> rs1_sel<11> rs1_sel<10> rs1_sel<9> rs1_sel<8> rs1_sel<7> 
++ rs1_sel<6> rs1_sel<5> rs1_sel<4> rs1_sel<3> rs1_sel<2> rs1_sel<1> rs1_sel<0> 
++ dmem_wdata<31> rs2_sel<31> rs2_sel<30> rs2_sel<29> rs2_sel<28> rs2_sel<27> 
++ rs2_sel<26> rs2_sel<25> rs2_sel<24> rs2_sel<23> rs2_sel<22> rs2_sel<21> 
++ rs2_sel<20> rs2_sel<19> rs2_sel<18> rs2_sel<17> rs2_sel<16> rs2_sel<15> 
++ rs2_sel<14> rs2_sel<13> rs2_sel<12> rs2_sel<11> rs2_sel<10> rs2_sel<9> 
++ rs2_sel<8> rs2_sel<7> rs2_sel<6> rs2_sel<5> rs2_sel<4> rs2_sel<3> rs2_sel<2> 
++ rs2_sel<1> rs2_sel<0> rst alu_mux_2_out<4> alu_mux_2_out<3> alu_mux_2_out<2> 
++ alu_mux_2_out<1> alu_mux_2_out<0> shift_dir shift_msb shift_msb shift_msb 
++ shift_msb shift_msb shift_out<150> shift_out<146> shift_out<137> 
++ shift_out<118> shift_out<79> shift_out<155> shift_out<156> shift_out<157> 
++ shift_out<158> shift_out<159> net135 / bitslice
+XI30 net532 net569 alu_inv_rs2 alu_mux_1_sel net130 alu_mux_2_sel alu_op<1> 
++ alu_op<0> dmem_addr<30> clk net529 net492 net528 net491 cmp_mux_sel vss! 
++ net132 net133 imm<30> dmem_rdata<7> vss! dmem_rdata<15> vss! dmem_rdata<30> 
++ mem_mux_sel<2> mem_mux_sel<1> mem_mux_sel<0> imem_addr<30> vss! net1264 
++ net1265 pc_mux_sel vdd! rd_mux_sel<2> rd_mux_sel<1> rd_mux_sel<0> rd_sel<31> 
++ rd_sel<30> rd_sel<29> rd_sel<28> rd_sel<27> rd_sel<26> rd_sel<25> rd_sel<24> 
++ rd_sel<23> rd_sel<22> rd_sel<21> rd_sel<20> rd_sel<19> rd_sel<18> rd_sel<17> 
++ rd_sel<16> rd_sel<15> rd_sel<14> rd_sel<13> rd_sel<12> rd_sel<11> rd_sel<10> 
++ rd_sel<9> rd_sel<8> rd_sel<7> rd_sel<6> rd_sel<5> rd_sel<4> rd_sel<3> 
++ rd_sel<2> rd_sel<1> rd_sel<0> rs1_sel<31> rs1_sel<30> rs1_sel<29> 
++ rs1_sel<28> rs1_sel<27> rs1_sel<26> rs1_sel<25> rs1_sel<24> rs1_sel<23> 
++ rs1_sel<22> rs1_sel<21> rs1_sel<20> rs1_sel<19> rs1_sel<18> rs1_sel<17> 
++ rs1_sel<16> rs1_sel<15> rs1_sel<14> rs1_sel<13> rs1_sel<12> rs1_sel<11> 
++ rs1_sel<10> rs1_sel<9> rs1_sel<8> rs1_sel<7> rs1_sel<6> rs1_sel<5> 
++ rs1_sel<4> rs1_sel<3> rs1_sel<2> rs1_sel<1> rs1_sel<0> dmem_wdata<30> 
++ rs2_sel<31> rs2_sel<30> rs2_sel<29> rs2_sel<28> rs2_sel<27> rs2_sel<26> 
++ rs2_sel<25> rs2_sel<24> rs2_sel<23> rs2_sel<22> rs2_sel<21> rs2_sel<20> 
++ rs2_sel<19> rs2_sel<18> rs2_sel<17> rs2_sel<16> rs2_sel<15> rs2_sel<14> 
++ rs2_sel<13> rs2_sel<12> rs2_sel<11> rs2_sel<10> rs2_sel<9> rs2_sel<8> 
++ rs2_sel<7> rs2_sel<6> rs2_sel<5> rs2_sel<4> rs2_sel<3> rs2_sel<2> rs2_sel<1> 
++ rs2_sel<0> rst alu_mux_2_out<4> alu_mux_2_out<3> alu_mux_2_out<2> 
++ alu_mux_2_out<1> alu_mux_2_out<0> shift_dir shift_out<155> shift_msb 
++ shift_msb shift_msb shift_msb shift_out<145> shift_out<141> shift_out<132> 
++ shift_out<113> shift_out<74> shift_out<150> shift_out<151> shift_out<152> 
++ shift_out<153> shift_out<154> net131 / bitslice
+XI29 net495 net532 alu_inv_rs2 alu_mux_1_sel net126 alu_mux_2_sel alu_op<1> 
++ alu_op<0> dmem_addr<29> clk net492 net455 net491 net454 cmp_mux_sel vss! 
++ net128 net129 imm<29> dmem_rdata<7> vss! dmem_rdata<15> vss! dmem_rdata<29> 
++ mem_mux_sel<2> mem_mux_sel<1> mem_mux_sel<0> imem_addr<29> vss! net1263 
++ net1264 pc_mux_sel vdd! rd_mux_sel<2> rd_mux_sel<1> rd_mux_sel<0> rd_sel<31> 
++ rd_sel<30> rd_sel<29> rd_sel<28> rd_sel<27> rd_sel<26> rd_sel<25> rd_sel<24> 
++ rd_sel<23> rd_sel<22> rd_sel<21> rd_sel<20> rd_sel<19> rd_sel<18> rd_sel<17> 
++ rd_sel<16> rd_sel<15> rd_sel<14> rd_sel<13> rd_sel<12> rd_sel<11> rd_sel<10> 
++ rd_sel<9> rd_sel<8> rd_sel<7> rd_sel<6> rd_sel<5> rd_sel<4> rd_sel<3> 
++ rd_sel<2> rd_sel<1> rd_sel<0> rs1_sel<31> rs1_sel<30> rs1_sel<29> 
++ rs1_sel<28> rs1_sel<27> rs1_sel<26> rs1_sel<25> rs1_sel<24> rs1_sel<23> 
++ rs1_sel<22> rs1_sel<21> rs1_sel<20> rs1_sel<19> rs1_sel<18> rs1_sel<17> 
++ rs1_sel<16> rs1_sel<15> rs1_sel<14> rs1_sel<13> rs1_sel<12> rs1_sel<11> 
++ rs1_sel<10> rs1_sel<9> rs1_sel<8> rs1_sel<7> rs1_sel<6> rs1_sel<5> 
++ rs1_sel<4> rs1_sel<3> rs1_sel<2> rs1_sel<1> rs1_sel<0> dmem_wdata<29> 
++ rs2_sel<31> rs2_sel<30> rs2_sel<29> rs2_sel<28> rs2_sel<27> rs2_sel<26> 
++ rs2_sel<25> rs2_sel<24> rs2_sel<23> rs2_sel<22> rs2_sel<21> rs2_sel<20> 
++ rs2_sel<19> rs2_sel<18> rs2_sel<17> rs2_sel<16> rs2_sel<15> rs2_sel<14> 
++ rs2_sel<13> rs2_sel<12> rs2_sel<11> rs2_sel<10> rs2_sel<9> rs2_sel<8> 
++ rs2_sel<7> rs2_sel<6> rs2_sel<5> rs2_sel<4> rs2_sel<3> rs2_sel<2> rs2_sel<1> 
++ rs2_sel<0> rst alu_mux_2_out<4> alu_mux_2_out<3> alu_mux_2_out<2> 
++ alu_mux_2_out<1> alu_mux_2_out<0> shift_dir shift_out<150> shift_out<156> 
++ shift_msb shift_msb shift_msb shift_out<140> shift_out<136> shift_out<127> 
++ shift_out<108> shift_out<69> shift_out<145> shift_out<146> shift_out<147> 
++ shift_out<148> shift_out<149> net127 / bitslice
+XI28 net458 net495 alu_inv_rs2 alu_mux_1_sel net119 alu_mux_2_sel alu_op<1> 
++ alu_op<0> dmem_addr<28> clk net455 net418 net454 net417 cmp_mux_sel vss! 
++ net123 net124 imm<28> dmem_rdata<7> vss! dmem_rdata<15> vss! dmem_rdata<28> 
++ mem_mux_sel<2> mem_mux_sel<1> mem_mux_sel<0> imem_addr<28> vss! net1262 
++ net1263 pc_mux_sel vss! rd_mux_sel<2> rd_mux_sel<1> rd_mux_sel<0> rd_sel<31> 
++ rd_sel<30> rd_sel<29> rd_sel<28> rd_sel<27> rd_sel<26> rd_sel<25> rd_sel<24> 
++ rd_sel<23> rd_sel<22> rd_sel<21> rd_sel<20> rd_sel<19> rd_sel<18> rd_sel<17> 
++ rd_sel<16> rd_sel<15> rd_sel<14> rd_sel<13> rd_sel<12> rd_sel<11> rd_sel<10> 
++ rd_sel<9> rd_sel<8> rd_sel<7> rd_sel<6> rd_sel<5> rd_sel<4> rd_sel<3> 
++ rd_sel<2> rd_sel<1> rd_sel<0> rs1_sel<31> rs1_sel<30> rs1_sel<29> 
++ rs1_sel<28> rs1_sel<27> rs1_sel<26> rs1_sel<25> rs1_sel<24> rs1_sel<23> 
++ rs1_sel<22> rs1_sel<21> rs1_sel<20> rs1_sel<19> rs1_sel<18> rs1_sel<17> 
++ rs1_sel<16> rs1_sel<15> rs1_sel<14> rs1_sel<13> rs1_sel<12> rs1_sel<11> 
++ rs1_sel<10> rs1_sel<9> rs1_sel<8> rs1_sel<7> rs1_sel<6> rs1_sel<5> 
++ rs1_sel<4> rs1_sel<3> rs1_sel<2> rs1_sel<1> rs1_sel<0> dmem_wdata<28> 
++ rs2_sel<31> rs2_sel<30> rs2_sel<29> rs2_sel<28> rs2_sel<27> rs2_sel<26> 
++ rs2_sel<25> rs2_sel<24> rs2_sel<23> rs2_sel<22> rs2_sel<21> rs2_sel<20> 
++ rs2_sel<19> rs2_sel<18> rs2_sel<17> rs2_sel<16> rs2_sel<15> rs2_sel<14> 
++ rs2_sel<13> rs2_sel<12> rs2_sel<11> rs2_sel<10> rs2_sel<9> rs2_sel<8> 
++ rs2_sel<7> rs2_sel<6> rs2_sel<5> rs2_sel<4> rs2_sel<3> rs2_sel<2> rs2_sel<1> 
++ rs2_sel<0> rst alu_mux_2_out<4> alu_mux_2_out<3> alu_mux_2_out<2> 
++ alu_mux_2_out<1> alu_mux_2_out<0> shift_dir shift_out<145> shift_out<151> 
++ shift_msb shift_msb shift_msb shift_out<135> shift_out<131> shift_out<122> 
++ shift_out<103> shift_out<64> shift_out<140> shift_out<141> shift_out<142> 
++ shift_out<143> shift_out<144> net120 / bitslice
+XI27 net421 net458 alu_inv_rs2 alu_mux_1_sel net115 alu_mux_2_sel alu_op<1> 
++ alu_op<0> dmem_addr<27> clk net418 net381 net417 net380 cmp_mux_sel vss! 
++ net117 net118 imm<27> dmem_rdata<7> vss! dmem_rdata<15> vss! dmem_rdata<27> 
++ mem_mux_sel<2> mem_mux_sel<1> mem_mux_sel<0> imem_addr<27> vss! net1261 
++ net1262 pc_mux_sel vss! rd_mux_sel<2> rd_mux_sel<1> rd_mux_sel<0> rd_sel<31> 
++ rd_sel<30> rd_sel<29> rd_sel<28> rd_sel<27> rd_sel<26> rd_sel<25> rd_sel<24> 
++ rd_sel<23> rd_sel<22> rd_sel<21> rd_sel<20> rd_sel<19> rd_sel<18> rd_sel<17> 
++ rd_sel<16> rd_sel<15> rd_sel<14> rd_sel<13> rd_sel<12> rd_sel<11> rd_sel<10> 
++ rd_sel<9> rd_sel<8> rd_sel<7> rd_sel<6> rd_sel<5> rd_sel<4> rd_sel<3> 
++ rd_sel<2> rd_sel<1> rd_sel<0> rs1_sel<31> rs1_sel<30> rs1_sel<29> 
++ rs1_sel<28> rs1_sel<27> rs1_sel<26> rs1_sel<25> rs1_sel<24> rs1_sel<23> 
++ rs1_sel<22> rs1_sel<21> rs1_sel<20> rs1_sel<19> rs1_sel<18> rs1_sel<17> 
++ rs1_sel<16> rs1_sel<15> rs1_sel<14> rs1_sel<13> rs1_sel<12> rs1_sel<11> 
++ rs1_sel<10> rs1_sel<9> rs1_sel<8> rs1_sel<7> rs1_sel<6> rs1_sel<5> 
++ rs1_sel<4> rs1_sel<3> rs1_sel<2> rs1_sel<1> rs1_sel<0> dmem_wdata<27> 
++ rs2_sel<31> rs2_sel<30> rs2_sel<29> rs2_sel<28> rs2_sel<27> rs2_sel<26> 
++ rs2_sel<25> rs2_sel<24> rs2_sel<23> rs2_sel<22> rs2_sel<21> rs2_sel<20> 
++ rs2_sel<19> rs2_sel<18> rs2_sel<17> rs2_sel<16> rs2_sel<15> rs2_sel<14> 
++ rs2_sel<13> rs2_sel<12> rs2_sel<11> rs2_sel<10> rs2_sel<9> rs2_sel<8> 
++ rs2_sel<7> rs2_sel<6> rs2_sel<5> rs2_sel<4> rs2_sel<3> rs2_sel<2> rs2_sel<1> 
++ rs2_sel<0> rst alu_mux_2_out<4> alu_mux_2_out<3> alu_mux_2_out<2> 
++ alu_mux_2_out<1> alu_mux_2_out<0> shift_dir shift_out<140> shift_out<146> 
++ shift_out<157> shift_msb shift_msb shift_out<130> shift_out<126> 
++ shift_out<117> shift_out<98> shift_out<59> shift_out<135> shift_out<136> 
++ shift_out<137> shift_out<138> shift_out<139> net116 / bitslice
+XI26 net384 net421 alu_inv_rs2 alu_mux_1_sel net111 alu_mux_2_sel alu_op<1> 
++ alu_op<0> dmem_addr<26> clk net381 net344 net380 net343 cmp_mux_sel vss! 
++ net113 net114 imm<26> dmem_rdata<7> vss! dmem_rdata<15> vss! dmem_rdata<26> 
++ mem_mux_sel<2> mem_mux_sel<1> mem_mux_sel<0> imem_addr<26> vss! net1260 
++ net1261 pc_mux_sel vss! rd_mux_sel<2> rd_mux_sel<1> rd_mux_sel<0> rd_sel<31> 
++ rd_sel<30> rd_sel<29> rd_sel<28> rd_sel<27> rd_sel<26> rd_sel<25> rd_sel<24> 
++ rd_sel<23> rd_sel<22> rd_sel<21> rd_sel<20> rd_sel<19> rd_sel<18> rd_sel<17> 
++ rd_sel<16> rd_sel<15> rd_sel<14> rd_sel<13> rd_sel<12> rd_sel<11> rd_sel<10> 
++ rd_sel<9> rd_sel<8> rd_sel<7> rd_sel<6> rd_sel<5> rd_sel<4> rd_sel<3> 
++ rd_sel<2> rd_sel<1> rd_sel<0> rs1_sel<31> rs1_sel<30> rs1_sel<29> 
++ rs1_sel<28> rs1_sel<27> rs1_sel<26> rs1_sel<25> rs1_sel<24> rs1_sel<23> 
++ rs1_sel<22> rs1_sel<21> rs1_sel<20> rs1_sel<19> rs1_sel<18> rs1_sel<17> 
++ rs1_sel<16> rs1_sel<15> rs1_sel<14> rs1_sel<13> rs1_sel<12> rs1_sel<11> 
++ rs1_sel<10> rs1_sel<9> rs1_sel<8> rs1_sel<7> rs1_sel<6> rs1_sel<5> 
++ rs1_sel<4> rs1_sel<3> rs1_sel<2> rs1_sel<1> rs1_sel<0> dmem_wdata<26> 
++ rs2_sel<31> rs2_sel<30> rs2_sel<29> rs2_sel<28> rs2_sel<27> rs2_sel<26> 
++ rs2_sel<25> rs2_sel<24> rs2_sel<23> rs2_sel<22> rs2_sel<21> rs2_sel<20> 
++ rs2_sel<19> rs2_sel<18> rs2_sel<17> rs2_sel<16> rs2_sel<15> rs2_sel<14> 
++ rs2_sel<13> rs2_sel<12> rs2_sel<11> rs2_sel<10> rs2_sel<9> rs2_sel<8> 
++ rs2_sel<7> rs2_sel<6> rs2_sel<5> rs2_sel<4> rs2_sel<3> rs2_sel<2> rs2_sel<1> 
++ rs2_sel<0> rst alu_mux_2_out<4> alu_mux_2_out<3> alu_mux_2_out<2> 
++ alu_mux_2_out<1> alu_mux_2_out<0> shift_dir shift_out<135> shift_out<141> 
++ shift_out<152> shift_msb shift_msb shift_out<125> shift_out<121> 
++ shift_out<112> shift_out<93> shift_out<54> shift_out<130> shift_out<131> 
++ shift_out<132> shift_out<133> shift_out<134> net112 / bitslice
+XI25 net347 net384 alu_inv_rs2 alu_mux_1_sel net107 alu_mux_2_sel alu_op<1> 
++ alu_op<0> dmem_addr<25> clk net344 net307 net343 net306 cmp_mux_sel vss! 
++ net109 net110 imm<25> dmem_rdata<7> vss! dmem_rdata<15> vss! dmem_rdata<25> 
++ mem_mux_sel<2> mem_mux_sel<1> mem_mux_sel<0> imem_addr<25> vss! net1259 
++ net1260 pc_mux_sel vss! rd_mux_sel<2> rd_mux_sel<1> rd_mux_sel<0> rd_sel<31> 
++ rd_sel<30> rd_sel<29> rd_sel<28> rd_sel<27> rd_sel<26> rd_sel<25> rd_sel<24> 
++ rd_sel<23> rd_sel<22> rd_sel<21> rd_sel<20> rd_sel<19> rd_sel<18> rd_sel<17> 
++ rd_sel<16> rd_sel<15> rd_sel<14> rd_sel<13> rd_sel<12> rd_sel<11> rd_sel<10> 
++ rd_sel<9> rd_sel<8> rd_sel<7> rd_sel<6> rd_sel<5> rd_sel<4> rd_sel<3> 
++ rd_sel<2> rd_sel<1> rd_sel<0> rs1_sel<31> rs1_sel<30> rs1_sel<29> 
++ rs1_sel<28> rs1_sel<27> rs1_sel<26> rs1_sel<25> rs1_sel<24> rs1_sel<23> 
++ rs1_sel<22> rs1_sel<21> rs1_sel<20> rs1_sel<19> rs1_sel<18> rs1_sel<17> 
++ rs1_sel<16> rs1_sel<15> rs1_sel<14> rs1_sel<13> rs1_sel<12> rs1_sel<11> 
++ rs1_sel<10> rs1_sel<9> rs1_sel<8> rs1_sel<7> rs1_sel<6> rs1_sel<5> 
++ rs1_sel<4> rs1_sel<3> rs1_sel<2> rs1_sel<1> rs1_sel<0> dmem_wdata<25> 
++ rs2_sel<31> rs2_sel<30> rs2_sel<29> rs2_sel<28> rs2_sel<27> rs2_sel<26> 
++ rs2_sel<25> rs2_sel<24> rs2_sel<23> rs2_sel<22> rs2_sel<21> rs2_sel<20> 
++ rs2_sel<19> rs2_sel<18> rs2_sel<17> rs2_sel<16> rs2_sel<15> rs2_sel<14> 
++ rs2_sel<13> rs2_sel<12> rs2_sel<11> rs2_sel<10> rs2_sel<9> rs2_sel<8> 
++ rs2_sel<7> rs2_sel<6> rs2_sel<5> rs2_sel<4> rs2_sel<3> rs2_sel<2> rs2_sel<1> 
++ rs2_sel<0> rst alu_mux_2_out<4> alu_mux_2_out<3> alu_mux_2_out<2> 
++ alu_mux_2_out<1> alu_mux_2_out<0> shift_dir shift_out<130> shift_out<136> 
++ shift_out<147> shift_msb shift_msb shift_out<120> shift_out<116> 
++ shift_out<107> shift_out<88> shift_out<49> shift_out<125> shift_out<126> 
++ shift_out<127> shift_out<128> shift_out<129> net108 / bitslice
+XI24 net310 net347 alu_inv_rs2 alu_mux_1_sel net103 alu_mux_2_sel alu_op<1> 
++ alu_op<0> dmem_addr<24> clk net307 net270 net306 net269 cmp_mux_sel vss! 
++ net105 net106 imm<24> dmem_rdata<7> vss! dmem_rdata<15> vss! dmem_rdata<24> 
++ mem_mux_sel<2> mem_mux_sel<1> mem_mux_sel<0> imem_addr<24> vss! net1258 
++ net1259 pc_mux_sel vss! rd_mux_sel<2> rd_mux_sel<1> rd_mux_sel<0> rd_sel<31> 
++ rd_sel<30> rd_sel<29> rd_sel<28> rd_sel<27> rd_sel<26> rd_sel<25> rd_sel<24> 
++ rd_sel<23> rd_sel<22> rd_sel<21> rd_sel<20> rd_sel<19> rd_sel<18> rd_sel<17> 
++ rd_sel<16> rd_sel<15> rd_sel<14> rd_sel<13> rd_sel<12> rd_sel<11> rd_sel<10> 
++ rd_sel<9> rd_sel<8> rd_sel<7> rd_sel<6> rd_sel<5> rd_sel<4> rd_sel<3> 
++ rd_sel<2> rd_sel<1> rd_sel<0> rs1_sel<31> rs1_sel<30> rs1_sel<29> 
++ rs1_sel<28> rs1_sel<27> rs1_sel<26> rs1_sel<25> rs1_sel<24> rs1_sel<23> 
++ rs1_sel<22> rs1_sel<21> rs1_sel<20> rs1_sel<19> rs1_sel<18> rs1_sel<17> 
++ rs1_sel<16> rs1_sel<15> rs1_sel<14> rs1_sel<13> rs1_sel<12> rs1_sel<11> 
++ rs1_sel<10> rs1_sel<9> rs1_sel<8> rs1_sel<7> rs1_sel<6> rs1_sel<5> 
++ rs1_sel<4> rs1_sel<3> rs1_sel<2> rs1_sel<1> rs1_sel<0> dmem_wdata<24> 
++ rs2_sel<31> rs2_sel<30> rs2_sel<29> rs2_sel<28> rs2_sel<27> rs2_sel<26> 
++ rs2_sel<25> rs2_sel<24> rs2_sel<23> rs2_sel<22> rs2_sel<21> rs2_sel<20> 
++ rs2_sel<19> rs2_sel<18> rs2_sel<17> rs2_sel<16> rs2_sel<15> rs2_sel<14> 
++ rs2_sel<13> rs2_sel<12> rs2_sel<11> rs2_sel<10> rs2_sel<9> rs2_sel<8> 
++ rs2_sel<7> rs2_sel<6> rs2_sel<5> rs2_sel<4> rs2_sel<3> rs2_sel<2> rs2_sel<1> 
++ rs2_sel<0> rst alu_mux_2_out<4> alu_mux_2_out<3> alu_mux_2_out<2> 
++ alu_mux_2_out<1> alu_mux_2_out<0> shift_dir shift_out<125> shift_out<131> 
++ shift_out<142> shift_msb shift_msb shift_out<115> shift_out<111> 
++ shift_out<102> shift_out<83> shift_out<44> shift_out<120> shift_out<121> 
++ shift_out<122> shift_out<123> shift_out<124> net104 / bitslice
+XI23 net273 net310 alu_inv_rs2 alu_mux_1_sel net99 alu_mux_2_sel alu_op<1> 
++ alu_op<0> dmem_addr<23> clk net270 net233 net269 net232 cmp_mux_sel vss! 
++ net101 net102 imm<23> dmem_rdata<7> vss! dmem_rdata<15> vss! dmem_rdata<23> 
++ mem_mux_sel<2> mem_mux_sel<1> mem_mux_sel<0> imem_addr<23> vss! net1257 
++ net1258 pc_mux_sel vss! rd_mux_sel<2> rd_mux_sel<1> rd_mux_sel<0> rd_sel<31> 
++ rd_sel<30> rd_sel<29> rd_sel<28> rd_sel<27> rd_sel<26> rd_sel<25> rd_sel<24> 
++ rd_sel<23> rd_sel<22> rd_sel<21> rd_sel<20> rd_sel<19> rd_sel<18> rd_sel<17> 
++ rd_sel<16> rd_sel<15> rd_sel<14> rd_sel<13> rd_sel<12> rd_sel<11> rd_sel<10> 
++ rd_sel<9> rd_sel<8> rd_sel<7> rd_sel<6> rd_sel<5> rd_sel<4> rd_sel<3> 
++ rd_sel<2> rd_sel<1> rd_sel<0> rs1_sel<31> rs1_sel<30> rs1_sel<29> 
++ rs1_sel<28> rs1_sel<27> rs1_sel<26> rs1_sel<25> rs1_sel<24> rs1_sel<23> 
++ rs1_sel<22> rs1_sel<21> rs1_sel<20> rs1_sel<19> rs1_sel<18> rs1_sel<17> 
++ rs1_sel<16> rs1_sel<15> rs1_sel<14> rs1_sel<13> rs1_sel<12> rs1_sel<11> 
++ rs1_sel<10> rs1_sel<9> rs1_sel<8> rs1_sel<7> rs1_sel<6> rs1_sel<5> 
++ rs1_sel<4> rs1_sel<3> rs1_sel<2> rs1_sel<1> rs1_sel<0> dmem_wdata<23> 
++ rs2_sel<31> rs2_sel<30> rs2_sel<29> rs2_sel<28> rs2_sel<27> rs2_sel<26> 
++ rs2_sel<25> rs2_sel<24> rs2_sel<23> rs2_sel<22> rs2_sel<21> rs2_sel<20> 
++ rs2_sel<19> rs2_sel<18> rs2_sel<17> rs2_sel<16> rs2_sel<15> rs2_sel<14> 
++ rs2_sel<13> rs2_sel<12> rs2_sel<11> rs2_sel<10> rs2_sel<9> rs2_sel<8> 
++ rs2_sel<7> rs2_sel<6> rs2_sel<5> rs2_sel<4> rs2_sel<3> rs2_sel<2> rs2_sel<1> 
++ rs2_sel<0> rst alu_mux_2_out<4> alu_mux_2_out<3> alu_mux_2_out<2> 
++ alu_mux_2_out<1> alu_mux_2_out<0> shift_dir shift_out<120> shift_out<126> 
++ shift_out<137> shift_out<158> shift_msb shift_out<110> shift_out<106> 
++ shift_out<97> shift_out<78> shift_out<39> shift_out<115> shift_out<116> 
++ shift_out<117> shift_out<118> shift_out<119> net100 / bitslice
+XI22 net236 net273 alu_inv_rs2 alu_mux_1_sel net95 alu_mux_2_sel alu_op<1> 
++ alu_op<0> dmem_addr<22> clk net233 net196 net232 net195 cmp_mux_sel vss! 
++ net96 net98 imm<22> dmem_rdata<7> vss! dmem_rdata<15> vss! dmem_rdata<22> 
++ mem_mux_sel<2> mem_mux_sel<1> mem_mux_sel<0> imem_addr<22> vss! net1256 
++ net1257 pc_mux_sel vss! rd_mux_sel<2> rd_mux_sel<1> rd_mux_sel<0> rd_sel<31> 
++ rd_sel<30> rd_sel<29> rd_sel<28> rd_sel<27> rd_sel<26> rd_sel<25> rd_sel<24> 
++ rd_sel<23> rd_sel<22> rd_sel<21> rd_sel<20> rd_sel<19> rd_sel<18> rd_sel<17> 
++ rd_sel<16> rd_sel<15> rd_sel<14> rd_sel<13> rd_sel<12> rd_sel<11> rd_sel<10> 
++ rd_sel<9> rd_sel<8> rd_sel<7> rd_sel<6> rd_sel<5> rd_sel<4> rd_sel<3> 
++ rd_sel<2> rd_sel<1> rd_sel<0> rs1_sel<31> rs1_sel<30> rs1_sel<29> 
++ rs1_sel<28> rs1_sel<27> rs1_sel<26> rs1_sel<25> rs1_sel<24> rs1_sel<23> 
++ rs1_sel<22> rs1_sel<21> rs1_sel<20> rs1_sel<19> rs1_sel<18> rs1_sel<17> 
++ rs1_sel<16> rs1_sel<15> rs1_sel<14> rs1_sel<13> rs1_sel<12> rs1_sel<11> 
++ rs1_sel<10> rs1_sel<9> rs1_sel<8> rs1_sel<7> rs1_sel<6> rs1_sel<5> 
++ rs1_sel<4> rs1_sel<3> rs1_sel<2> rs1_sel<1> rs1_sel<0> dmem_wdata<22> 
++ rs2_sel<31> rs2_sel<30> rs2_sel<29> rs2_sel<28> rs2_sel<27> rs2_sel<26> 
++ rs2_sel<25> rs2_sel<24> rs2_sel<23> rs2_sel<22> rs2_sel<21> rs2_sel<20> 
++ rs2_sel<19> rs2_sel<18> rs2_sel<17> rs2_sel<16> rs2_sel<15> rs2_sel<14> 
++ rs2_sel<13> rs2_sel<12> rs2_sel<11> rs2_sel<10> rs2_sel<9> rs2_sel<8> 
++ rs2_sel<7> rs2_sel<6> rs2_sel<5> rs2_sel<4> rs2_sel<3> rs2_sel<2> rs2_sel<1> 
++ rs2_sel<0> rst alu_mux_2_out<4> alu_mux_2_out<3> alu_mux_2_out<2> 
++ alu_mux_2_out<1> alu_mux_2_out<0> shift_dir shift_out<115> shift_out<121> 
++ shift_out<132> shift_out<153> shift_msb shift_out<105> shift_out<101> 
++ shift_out<92> shift_out<73> shift_out<34> shift_out<110> shift_out<111> 
++ shift_out<112> shift_out<113> shift_out<114> net97 / bitslice
+XI21 net199 net236 alu_inv_rs2 alu_mux_1_sel net91 alu_mux_2_sel alu_op<1> 
++ alu_op<0> dmem_addr<21> clk net196 net159 net195 net158 cmp_mux_sel vss! 
++ net92 net94 imm<21> dmem_rdata<7> vss! dmem_rdata<15> vss! dmem_rdata<21> 
++ mem_mux_sel<2> mem_mux_sel<1> mem_mux_sel<0> imem_addr<21> vss! net1255 
++ net1256 pc_mux_sel vss! rd_mux_sel<2> rd_mux_sel<1> rd_mux_sel<0> rd_sel<31> 
++ rd_sel<30> rd_sel<29> rd_sel<28> rd_sel<27> rd_sel<26> rd_sel<25> rd_sel<24> 
++ rd_sel<23> rd_sel<22> rd_sel<21> rd_sel<20> rd_sel<19> rd_sel<18> rd_sel<17> 
++ rd_sel<16> rd_sel<15> rd_sel<14> rd_sel<13> rd_sel<12> rd_sel<11> rd_sel<10> 
++ rd_sel<9> rd_sel<8> rd_sel<7> rd_sel<6> rd_sel<5> rd_sel<4> rd_sel<3> 
++ rd_sel<2> rd_sel<1> rd_sel<0> rs1_sel<31> rs1_sel<30> rs1_sel<29> 
++ rs1_sel<28> rs1_sel<27> rs1_sel<26> rs1_sel<25> rs1_sel<24> rs1_sel<23> 
++ rs1_sel<22> rs1_sel<21> rs1_sel<20> rs1_sel<19> rs1_sel<18> rs1_sel<17> 
++ rs1_sel<16> rs1_sel<15> rs1_sel<14> rs1_sel<13> rs1_sel<12> rs1_sel<11> 
++ rs1_sel<10> rs1_sel<9> rs1_sel<8> rs1_sel<7> rs1_sel<6> rs1_sel<5> 
++ rs1_sel<4> rs1_sel<3> rs1_sel<2> rs1_sel<1> rs1_sel<0> dmem_wdata<21> 
++ rs2_sel<31> rs2_sel<30> rs2_sel<29> rs2_sel<28> rs2_sel<27> rs2_sel<26> 
++ rs2_sel<25> rs2_sel<24> rs2_sel<23> rs2_sel<22> rs2_sel<21> rs2_sel<20> 
++ rs2_sel<19> rs2_sel<18> rs2_sel<17> rs2_sel<16> rs2_sel<15> rs2_sel<14> 
++ rs2_sel<13> rs2_sel<12> rs2_sel<11> rs2_sel<10> rs2_sel<9> rs2_sel<8> 
++ rs2_sel<7> rs2_sel<6> rs2_sel<5> rs2_sel<4> rs2_sel<3> rs2_sel<2> rs2_sel<1> 
++ rs2_sel<0> rst alu_mux_2_out<4> alu_mux_2_out<3> alu_mux_2_out<2> 
++ alu_mux_2_out<1> alu_mux_2_out<0> shift_dir shift_out<110> shift_out<116> 
++ shift_out<127> shift_out<148> shift_msb shift_out<100> shift_out<96> 
++ shift_out<87> shift_out<68> shift_out<29> shift_out<105> shift_out<106> 
++ shift_out<107> shift_out<108> shift_out<109> net93 / bitslice
+XI20 net162 net199 alu_inv_rs2 alu_mux_1_sel net86 alu_mux_2_sel alu_op<1> 
++ alu_op<0> dmem_addr<20> clk net159 net122 net158 net121 cmp_mux_sel vss! 
++ net89 net90 imm<20> dmem_rdata<7> vss! dmem_rdata<15> vss! dmem_rdata<20> 
++ mem_mux_sel<2> mem_mux_sel<1> mem_mux_sel<0> imem_addr<20> vss! net1254 
++ net1255 pc_mux_sel vss! rd_mux_sel<2> rd_mux_sel<1> rd_mux_sel<0> rd_sel<31> 
++ rd_sel<30> rd_sel<29> rd_sel<28> rd_sel<27> rd_sel<26> rd_sel<25> rd_sel<24> 
++ rd_sel<23> rd_sel<22> rd_sel<21> rd_sel<20> rd_sel<19> rd_sel<18> rd_sel<17> 
++ rd_sel<16> rd_sel<15> rd_sel<14> rd_sel<13> rd_sel<12> rd_sel<11> rd_sel<10> 
++ rd_sel<9> rd_sel<8> rd_sel<7> rd_sel<6> rd_sel<5> rd_sel<4> rd_sel<3> 
++ rd_sel<2> rd_sel<1> rd_sel<0> rs1_sel<31> rs1_sel<30> rs1_sel<29> 
++ rs1_sel<28> rs1_sel<27> rs1_sel<26> rs1_sel<25> rs1_sel<24> rs1_sel<23> 
++ rs1_sel<22> rs1_sel<21> rs1_sel<20> rs1_sel<19> rs1_sel<18> rs1_sel<17> 
++ rs1_sel<16> rs1_sel<15> rs1_sel<14> rs1_sel<13> rs1_sel<12> rs1_sel<11> 
++ rs1_sel<10> rs1_sel<9> rs1_sel<8> rs1_sel<7> rs1_sel<6> rs1_sel<5> 
++ rs1_sel<4> rs1_sel<3> rs1_sel<2> rs1_sel<1> rs1_sel<0> dmem_wdata<20> 
++ rs2_sel<31> rs2_sel<30> rs2_sel<29> rs2_sel<28> rs2_sel<27> rs2_sel<26> 
++ rs2_sel<25> rs2_sel<24> rs2_sel<23> rs2_sel<22> rs2_sel<21> rs2_sel<20> 
++ rs2_sel<19> rs2_sel<18> rs2_sel<17> rs2_sel<16> rs2_sel<15> rs2_sel<14> 
++ rs2_sel<13> rs2_sel<12> rs2_sel<11> rs2_sel<10> rs2_sel<9> rs2_sel<8> 
++ rs2_sel<7> rs2_sel<6> rs2_sel<5> rs2_sel<4> rs2_sel<3> rs2_sel<2> rs2_sel<1> 
++ rs2_sel<0> rst alu_mux_2_out<4> alu_mux_2_out<3> alu_mux_2_out<2> 
++ alu_mux_2_out<1> alu_mux_2_out<0> shift_dir shift_out<105> shift_out<111> 
++ shift_out<122> shift_out<143> shift_msb shift_out<95> shift_out<91> 
++ shift_out<82> shift_out<63> shift_out<24> shift_out<100> shift_out<101> 
++ shift_out<102> shift_out<103> shift_out<104> net87 / bitslice
+XI19 net125 net162 alu_inv_rs2 alu_mux_1_sel net80 alu_mux_2_sel alu_op<1> 
++ alu_op<0> dmem_addr<19> clk net122 net85 net121 net84 cmp_mux_sel vss! net82 
++ net83 imm<19> dmem_rdata<7> vss! dmem_rdata<15> vss! dmem_rdata<19> 
++ mem_mux_sel<2> mem_mux_sel<1> mem_mux_sel<0> imem_addr<19> vss! net1253 
++ net1254 pc_mux_sel vss! rd_mux_sel<2> rd_mux_sel<1> rd_mux_sel<0> rd_sel<31> 
++ rd_sel<30> rd_sel<29> rd_sel<28> rd_sel<27> rd_sel<26> rd_sel<25> rd_sel<24> 
++ rd_sel<23> rd_sel<22> rd_sel<21> rd_sel<20> rd_sel<19> rd_sel<18> rd_sel<17> 
++ rd_sel<16> rd_sel<15> rd_sel<14> rd_sel<13> rd_sel<12> rd_sel<11> rd_sel<10> 
++ rd_sel<9> rd_sel<8> rd_sel<7> rd_sel<6> rd_sel<5> rd_sel<4> rd_sel<3> 
++ rd_sel<2> rd_sel<1> rd_sel<0> rs1_sel<31> rs1_sel<30> rs1_sel<29> 
++ rs1_sel<28> rs1_sel<27> rs1_sel<26> rs1_sel<25> rs1_sel<24> rs1_sel<23> 
++ rs1_sel<22> rs1_sel<21> rs1_sel<20> rs1_sel<19> rs1_sel<18> rs1_sel<17> 
++ rs1_sel<16> rs1_sel<15> rs1_sel<14> rs1_sel<13> rs1_sel<12> rs1_sel<11> 
++ rs1_sel<10> rs1_sel<9> rs1_sel<8> rs1_sel<7> rs1_sel<6> rs1_sel<5> 
++ rs1_sel<4> rs1_sel<3> rs1_sel<2> rs1_sel<1> rs1_sel<0> dmem_wdata<19> 
++ rs2_sel<31> rs2_sel<30> rs2_sel<29> rs2_sel<28> rs2_sel<27> rs2_sel<26> 
++ rs2_sel<25> rs2_sel<24> rs2_sel<23> rs2_sel<22> rs2_sel<21> rs2_sel<20> 
++ rs2_sel<19> rs2_sel<18> rs2_sel<17> rs2_sel<16> rs2_sel<15> rs2_sel<14> 
++ rs2_sel<13> rs2_sel<12> rs2_sel<11> rs2_sel<10> rs2_sel<9> rs2_sel<8> 
++ rs2_sel<7> rs2_sel<6> rs2_sel<5> rs2_sel<4> rs2_sel<3> rs2_sel<2> rs2_sel<1> 
++ rs2_sel<0> rst alu_mux_2_out<4> alu_mux_2_out<3> alu_mux_2_out<2> 
++ alu_mux_2_out<1> alu_mux_2_out<0> shift_dir shift_out<100> shift_out<106> 
++ shift_out<117> shift_out<138> shift_msb shift_out<90> shift_out<86> 
++ shift_out<77> shift_out<58> shift_out<19> shift_out<95> shift_out<96> 
++ shift_out<97> shift_out<98> shift_out<99> net81 / bitslice
+XI18 net88 net125 alu_inv_rs2 alu_mux_1_sel net76 alu_mux_2_sel alu_op<1> 
++ alu_op<0> dmem_addr<18> clk net85 net48 net84 net47 cmp_mux_sel vss! net77 
++ net79 imm<18> dmem_rdata<7> vss! dmem_rdata<15> vss! dmem_rdata<18> 
++ mem_mux_sel<2> mem_mux_sel<1> mem_mux_sel<0> imem_addr<18> vss! net1252 
++ net1253 pc_mux_sel vss! rd_mux_sel<2> rd_mux_sel<1> rd_mux_sel<0> rd_sel<31> 
++ rd_sel<30> rd_sel<29> rd_sel<28> rd_sel<27> rd_sel<26> rd_sel<25> rd_sel<24> 
++ rd_sel<23> rd_sel<22> rd_sel<21> rd_sel<20> rd_sel<19> rd_sel<18> rd_sel<17> 
++ rd_sel<16> rd_sel<15> rd_sel<14> rd_sel<13> rd_sel<12> rd_sel<11> rd_sel<10> 
++ rd_sel<9> rd_sel<8> rd_sel<7> rd_sel<6> rd_sel<5> rd_sel<4> rd_sel<3> 
++ rd_sel<2> rd_sel<1> rd_sel<0> rs1_sel<31> rs1_sel<30> rs1_sel<29> 
++ rs1_sel<28> rs1_sel<27> rs1_sel<26> rs1_sel<25> rs1_sel<24> rs1_sel<23> 
++ rs1_sel<22> rs1_sel<21> rs1_sel<20> rs1_sel<19> rs1_sel<18> rs1_sel<17> 
++ rs1_sel<16> rs1_sel<15> rs1_sel<14> rs1_sel<13> rs1_sel<12> rs1_sel<11> 
++ rs1_sel<10> rs1_sel<9> rs1_sel<8> rs1_sel<7> rs1_sel<6> rs1_sel<5> 
++ rs1_sel<4> rs1_sel<3> rs1_sel<2> rs1_sel<1> rs1_sel<0> dmem_wdata<18> 
++ rs2_sel<31> rs2_sel<30> rs2_sel<29> rs2_sel<28> rs2_sel<27> rs2_sel<26> 
++ rs2_sel<25> rs2_sel<24> rs2_sel<23> rs2_sel<22> rs2_sel<21> rs2_sel<20> 
++ rs2_sel<19> rs2_sel<18> rs2_sel<17> rs2_sel<16> rs2_sel<15> rs2_sel<14> 
++ rs2_sel<13> rs2_sel<12> rs2_sel<11> rs2_sel<10> rs2_sel<9> rs2_sel<8> 
++ rs2_sel<7> rs2_sel<6> rs2_sel<5> rs2_sel<4> rs2_sel<3> rs2_sel<2> rs2_sel<1> 
++ rs2_sel<0> rst alu_mux_2_out<4> alu_mux_2_out<3> alu_mux_2_out<2> 
++ alu_mux_2_out<1> alu_mux_2_out<0> shift_dir shift_out<95> shift_out<101> 
++ shift_out<112> shift_out<133> shift_msb shift_out<85> shift_out<81> 
++ shift_out<72> shift_out<53> shift_out<14> shift_out<90> shift_out<91> 
++ shift_out<92> shift_out<93> shift_out<94> net78 / bitslice
+XI17 net51 net88 alu_inv_rs2 alu_mux_1_sel net72 alu_mux_2_sel alu_op<1> 
++ alu_op<0> dmem_addr<17> clk net48 net7 net47 net6 cmp_mux_sel vss! net74 
++ net75 imm<17> dmem_rdata<7> vss! dmem_rdata<15> vss! dmem_rdata<17> 
++ mem_mux_sel<2> mem_mux_sel<1> mem_mux_sel<0> imem_addr<17> vss! net1251 
++ net1252 pc_mux_sel vss! rd_mux_sel<2> rd_mux_sel<1> rd_mux_sel<0> rd_sel<31> 
++ rd_sel<30> rd_sel<29> rd_sel<28> rd_sel<27> rd_sel<26> rd_sel<25> rd_sel<24> 
++ rd_sel<23> rd_sel<22> rd_sel<21> rd_sel<20> rd_sel<19> rd_sel<18> rd_sel<17> 
++ rd_sel<16> rd_sel<15> rd_sel<14> rd_sel<13> rd_sel<12> rd_sel<11> rd_sel<10> 
++ rd_sel<9> rd_sel<8> rd_sel<7> rd_sel<6> rd_sel<5> rd_sel<4> rd_sel<3> 
++ rd_sel<2> rd_sel<1> rd_sel<0> rs1_sel<31> rs1_sel<30> rs1_sel<29> 
++ rs1_sel<28> rs1_sel<27> rs1_sel<26> rs1_sel<25> rs1_sel<24> rs1_sel<23> 
++ rs1_sel<22> rs1_sel<21> rs1_sel<20> rs1_sel<19> rs1_sel<18> rs1_sel<17> 
++ rs1_sel<16> rs1_sel<15> rs1_sel<14> rs1_sel<13> rs1_sel<12> rs1_sel<11> 
++ rs1_sel<10> rs1_sel<9> rs1_sel<8> rs1_sel<7> rs1_sel<6> rs1_sel<5> 
++ rs1_sel<4> rs1_sel<3> rs1_sel<2> rs1_sel<1> rs1_sel<0> dmem_wdata<17> 
++ rs2_sel<31> rs2_sel<30> rs2_sel<29> rs2_sel<28> rs2_sel<27> rs2_sel<26> 
++ rs2_sel<25> rs2_sel<24> rs2_sel<23> rs2_sel<22> rs2_sel<21> rs2_sel<20> 
++ rs2_sel<19> rs2_sel<18> rs2_sel<17> rs2_sel<16> rs2_sel<15> rs2_sel<14> 
++ rs2_sel<13> rs2_sel<12> rs2_sel<11> rs2_sel<10> rs2_sel<9> rs2_sel<8> 
++ rs2_sel<7> rs2_sel<6> rs2_sel<5> rs2_sel<4> rs2_sel<3> rs2_sel<2> rs2_sel<1> 
++ rs2_sel<0> rst alu_mux_2_out<4> alu_mux_2_out<3> alu_mux_2_out<2> 
++ alu_mux_2_out<1> alu_mux_2_out<0> shift_dir shift_out<90> shift_out<96> 
++ shift_out<107> shift_out<128> shift_msb shift_out<80> shift_out<76> 
++ shift_out<67> shift_out<48> shift_out<9> shift_out<85> shift_out<86> 
++ shift_out<87> shift_out<88> shift_out<89> net73 / bitslice
+XI16 net10 net51 alu_inv_rs2 alu_mux_1_sel net68 alu_mux_2_sel alu_op<1> 
++ alu_op<0> dmem_addr<16> clk net7 net655 net6 net601 cmp_mux_sel vss! net70 
++ net71 imm<16> dmem_rdata<7> vss! dmem_rdata<15> vss! dmem_rdata<16> 
++ mem_mux_sel<2> mem_mux_sel<1> mem_mux_sel<0> imem_addr<16> vss! net22 
++ net1251 pc_mux_sel vss! rd_mux_sel<2> rd_mux_sel<1> rd_mux_sel<0> rd_sel<31> 
++ rd_sel<30> rd_sel<29> rd_sel<28> rd_sel<27> rd_sel<26> rd_sel<25> rd_sel<24> 
++ rd_sel<23> rd_sel<22> rd_sel<21> rd_sel<20> rd_sel<19> rd_sel<18> rd_sel<17> 
++ rd_sel<16> rd_sel<15> rd_sel<14> rd_sel<13> rd_sel<12> rd_sel<11> rd_sel<10> 
++ rd_sel<9> rd_sel<8> rd_sel<7> rd_sel<6> rd_sel<5> rd_sel<4> rd_sel<3> 
++ rd_sel<2> rd_sel<1> rd_sel<0> rs1_sel<31> rs1_sel<30> rs1_sel<29> 
++ rs1_sel<28> rs1_sel<27> rs1_sel<26> rs1_sel<25> rs1_sel<24> rs1_sel<23> 
++ rs1_sel<22> rs1_sel<21> rs1_sel<20> rs1_sel<19> rs1_sel<18> rs1_sel<17> 
++ rs1_sel<16> rs1_sel<15> rs1_sel<14> rs1_sel<13> rs1_sel<12> rs1_sel<11> 
++ rs1_sel<10> rs1_sel<9> rs1_sel<8> rs1_sel<7> rs1_sel<6> rs1_sel<5> 
++ rs1_sel<4> rs1_sel<3> rs1_sel<2> rs1_sel<1> rs1_sel<0> dmem_wdata<16> 
++ rs2_sel<31> rs2_sel<30> rs2_sel<29> rs2_sel<28> rs2_sel<27> rs2_sel<26> 
++ rs2_sel<25> rs2_sel<24> rs2_sel<23> rs2_sel<22> rs2_sel<21> rs2_sel<20> 
++ rs2_sel<19> rs2_sel<18> rs2_sel<17> rs2_sel<16> rs2_sel<15> rs2_sel<14> 
++ rs2_sel<13> rs2_sel<12> rs2_sel<11> rs2_sel<10> rs2_sel<9> rs2_sel<8> 
++ rs2_sel<7> rs2_sel<6> rs2_sel<5> rs2_sel<4> rs2_sel<3> rs2_sel<2> rs2_sel<1> 
++ rs2_sel<0> rst alu_mux_2_out<4> alu_mux_2_out<3> alu_mux_2_out<2> 
++ alu_mux_2_out<1> alu_mux_2_out<0> shift_dir shift_out<85> shift_out<91> 
++ shift_out<102> shift_out<123> shift_msb shift_out<75> shift_out<71> 
++ shift_out<62> shift_out<43> shift_out<4> shift_out<80> shift_out<81> 
++ shift_out<82> shift_out<83> shift_out<84> net69 / bitslice
+XI15 net40 net10 alu_inv_rs2 alu_mux_1_sel net64 alu_mux_2_sel alu_op<1> 
++ alu_op<0> dmem_addr<15> clk net655 net1218 net601 net600 cmp_mux_sel vss! 
++ net66 net67 imm<15> dmem_rdata<7> vss! dmem_rdata<15> dmem_rdata<15> 
++ dmem_rdata<15> mem_mux_sel<2> mem_mux_sel<1> mem_mux_sel<0> imem_addr<15> 
++ vss! net1249 net22 pc_mux_sel vss! rd_mux_sel<2> rd_mux_sel<1> rd_mux_sel<0> 
++ rd_sel<31> rd_sel<30> rd_sel<29> rd_sel<28> rd_sel<27> rd_sel<26> rd_sel<25> 
++ rd_sel<24> rd_sel<23> rd_sel<22> rd_sel<21> rd_sel<20> rd_sel<19> rd_sel<18> 
++ rd_sel<17> rd_sel<16> rd_sel<15> rd_sel<14> rd_sel<13> rd_sel<12> rd_sel<11> 
++ rd_sel<10> rd_sel<9> rd_sel<8> rd_sel<7> rd_sel<6> rd_sel<5> rd_sel<4> 
++ rd_sel<3> rd_sel<2> rd_sel<1> rd_sel<0> rs1_sel<31> rs1_sel<30> rs1_sel<29> 
++ rs1_sel<28> rs1_sel<27> rs1_sel<26> rs1_sel<25> rs1_sel<24> rs1_sel<23> 
++ rs1_sel<22> rs1_sel<21> rs1_sel<20> rs1_sel<19> rs1_sel<18> rs1_sel<17> 
++ rs1_sel<16> rs1_sel<15> rs1_sel<14> rs1_sel<13> rs1_sel<12> rs1_sel<11> 
++ rs1_sel<10> rs1_sel<9> rs1_sel<8> rs1_sel<7> rs1_sel<6> rs1_sel<5> 
++ rs1_sel<4> rs1_sel<3> rs1_sel<2> rs1_sel<1> rs1_sel<0> dmem_wdata<15> 
++ rs2_sel<31> rs2_sel<30> rs2_sel<29> rs2_sel<28> rs2_sel<27> rs2_sel<26> 
++ rs2_sel<25> rs2_sel<24> rs2_sel<23> rs2_sel<22> rs2_sel<21> rs2_sel<20> 
++ rs2_sel<19> rs2_sel<18> rs2_sel<17> rs2_sel<16> rs2_sel<15> rs2_sel<14> 
++ rs2_sel<13> rs2_sel<12> rs2_sel<11> rs2_sel<10> rs2_sel<9> rs2_sel<8> 
++ rs2_sel<7> rs2_sel<6> rs2_sel<5> rs2_sel<4> rs2_sel<3> rs2_sel<2> rs2_sel<1> 
++ rs2_sel<0> rst alu_mux_2_out<4> alu_mux_2_out<3> alu_mux_2_out<2> 
++ alu_mux_2_out<1> alu_mux_2_out<0> shift_dir shift_out<80> shift_out<86> 
++ shift_out<97> shift_out<118> shift_out<159> shift_out<70> shift_out<66> 
++ shift_out<57> shift_out<38> vss! shift_out<75> shift_out<76> shift_out<77> 
++ shift_out<78> shift_out<79> net65 / bitslice
+.ENDS
+

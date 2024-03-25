@@ -2,6 +2,7 @@ CADENCE IHNL11140
 $model
 bitslice_rv32Lib/pc/schematic pc
 stdcell_rv32Lib/bit1/schematic bit1
+bitslice_rv32Lib/datapath/schematic datapath
 stdcell_rv32Lib/mux6/schematic mux6
 bitslice_rv32Lib/bitslice/schematic bitslice
 stdcell_rv32Lib/reg2w32/schematic reg2w32

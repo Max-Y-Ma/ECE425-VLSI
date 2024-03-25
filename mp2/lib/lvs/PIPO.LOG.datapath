@@ -1,0 +1,133 @@
+********************************************************************************
+Product   : Virtuoso(R) XStream Out
+Program   : @(#)$CDS: strmout version ICADVM20.1-64b 05/03/2023 09:29 (cpgsrv12) $
+          : sub-version  ICADVM20.1-64b.500.32 
+Started at: 25-Mar-2024  17:08:04
+User Name : maxma2
+Host Name : eceb-2022-40.ews.illinois.edu
+Directory : /home/maxma2/Documents/Coursework/ece425/mp2/lib
+CADENCE Design Systems, Inc.
+********************************************************************************
+Info: Cellview Rev Num:99,  Tech Rev Num:59
+
+WARNING (XSTRM-20): Output Stream file '/home/maxma2/Documents/Coursework/ece425/mp2/lib/lvs/datapath.calibre.db' already exists. It will be overwritten.
+INFO (XSTRM-288): Performing automatic layer mapping because either the layer mapping information is not provided or the XST_AUTO_LM  value is used with the '-layerMap' option. Additionally, the  'xStrmOut_layerMap.txt' file has been generated and the mapping information has been added to it.
+INFO (XSTRM-162): You have not used the '-viaMap' option. If the OpenAccess design has native oaVia instances, use the '-viaMap' option for preserving oaVia instances in a XStream Out - XStream In round trip. Using the '-viaMap' option improves performance and VM usage of applications using the Streamed-In design.
+
+Summary of Options :
+library                                 bitslice_rv32Lib
+strmFile                                /home/maxma2/Documents/Coursework/ece425/mp2/lib/lvs/datapath.calibre.db
+topCell                                 datapath
+view                                    layout
+runDir                                  /home/maxma2/Documents/Coursework/ece425/mp2/lib/lvs/
+logFile                                 PIPO.LOG.datapath
+summaryFile                             PIPO.SUM.datapath
+case                                    Preserve
+convertDot                              node
+convertPcellPin                         geometry
+
+INFO (XSTRM-223): 1. Translating stdVia NCSU_TechLib_FreePDK45/PTAP/layout as STRUCTURE PTAP_CDNS_711404484900.
+INFO (XSTRM-223): 2. Translating stdVia NCSU_TechLib_FreePDK45/NTAP/layout as STRUCTURE NTAP_CDNS_711404484901.
+INFO (XSTRM-223): 3. Translating stdVia NCSU_TechLib_FreePDK45/M1_POLY/layout as STRUCTURE M1_POLY_CDNS_711404484902.
+INFO (XSTRM-223): 4. Translating stdVia NCSU_TechLib_FreePDK45/M2_M1/layout as STRUCTURE M2_M1_CDNS_711404484903.
+INFO (XSTRM-223): 5. Translating stdVia NCSU_TechLib_FreePDK45/M3_M2/layout as STRUCTURE M3_M2_CDNS_711404484904.
+INFO (XSTRM-223): 6. Translating stdVia NCSU_TechLib_FreePDK45/M1_POLY/layout as STRUCTURE M1_POLY_CDNS_711404484905.
+INFO (XSTRM-223): 7. Translating stdVia NCSU_TechLib_FreePDK45/M2_M1/layout as STRUCTURE M2_M1_CDNS_711404484906.
+INFO (XSTRM-223): 8. Translating stdVia NCSU_TechLib_FreePDK45/M4_M3/layout as STRUCTURE M4_M3_CDNS_711404484907.
+INFO (XSTRM-223): 9. Translating stdVia NCSU_TechLib_FreePDK45/M5_M4/layout as STRUCTURE M5_M4_CDNS_711404484908.
+INFO (XSTRM-223): 10. Translating stdVia NCSU_TechLib_FreePDK45/M6_M5/layout as STRUCTURE M6_M5_CDNS_711404484909.
+INFO (XSTRM-223): 11. Translating cellView bitslice_rv32Lib/datapath/layout as STRUCTURE datapath.
+INFO (XSTRM-180): You have not used the '-objectMap' option. The design has instance(s) of at least one of following OpenAccess objects: oaBlockage, oaBoundary, oaRow, and oaMarker. Any information about these objects will not be translated into the generated stream file. Use the '-objectMap' option to translate/preserve these objects using XStream.
+INFO (XSTRM-275): Number of vertexes in the 'polygon' with starting point (196700, 141220) on layer '3' is 658. These vertices will be represented using 659 points in the GDS. This number exceeds the maximum limit, 200, defined by 'maxVertices'. The 'polygon' will be chopped into smaller polygons during XStream Out translation.
+INFO (XSTRM-275): Number of vertexes in the 'polygon' with starting point (196700, 136590) on layer '3' is 658. These vertices will be represented using 659 points in the GDS. This number exceeds the maximum limit, 200, defined by 'maxVertices'. The 'polygon' will be chopped into smaller polygons during XStream Out translation.
+INFO (XSTRM-275): Number of vertexes in the 'polygon' with starting point (196700, 131960) on layer '3' is 658. These vertices will be represented using 659 points in the GDS. This number exceeds the maximum limit, 200, defined by 'maxVertices'. The 'polygon' will be chopped into smaller polygons during XStream Out translation.
+INFO (XSTRM-275): Number of vertexes in the 'polygon' with starting point (196700, 127330) on layer '3' is 658. These vertices will be represented using 659 points in the GDS. This number exceeds the maximum limit, 200, defined by 'maxVertices'. The 'polygon' will be chopped into smaller polygons during XStream Out translation.
+INFO (XSTRM-275): Number of vertexes in the 'polygon' with starting point (196700, 122700) on layer '3' is 658. These vertices will be represented using 659 points in the GDS. This number exceeds the maximum limit, 200, defined by 'maxVertices'. The 'polygon' will be chopped into smaller polygons during XStream Out translation.
+INFO (XSTRM-275): Number of vertexes in the 'polygon' with starting point (196700, 118070) on layer '3' is 658. These vertices will be represented using 659 points in the GDS. This number exceeds the maximum limit, 200, defined by 'maxVertices'. The 'polygon' will be chopped into smaller polygons during XStream Out translation.
+INFO (XSTRM-275): Number of vertexes in the 'polygon' with starting point (196700, 113440) on layer '3' is 658. These vertices will be represented using 659 points in the GDS. This number exceeds the maximum limit, 200, defined by 'maxVertices'. The 'polygon' will be chopped into smaller polygons during XStream Out translation.
+INFO (XSTRM-275): Number of vertexes in the 'polygon' with starting point (196700, 108810) on layer '3' is 658. These vertices will be represented using 659 points in the GDS. This number exceeds the maximum limit, 200, defined by 'maxVertices'. The 'polygon' will be chopped into smaller polygons during XStream Out translation.
+INFO (XSTRM-275): Number of vertexes in the 'polygon' with starting point (196700, 104180) on layer '3' is 658. These vertices will be represented using 659 points in the GDS. This number exceeds the maximum limit, 200, defined by 'maxVertices'. The 'polygon' will be chopped into smaller polygons during XStream Out translation.
+INFO (XSTRM-275): Number of vertexes in the 'polygon' with starting point (196700, 99550) on layer '3' is 658. These vertices will be represented using 659 points in the GDS. This number exceeds the maximum limit, 200, defined by 'maxVertices'. The 'polygon' will be chopped into smaller polygons during XStream Out translation.
+INFO (XSTRM-275): Number of vertexes in the 'polygon' with starting point (196700, 94920) on layer '3' is 658. These vertices will be represented using 659 points in the GDS. This number exceeds the maximum limit, 200, defined by 'maxVertices'. The 'polygon' will be chopped into smaller polygons during XStream Out translation.
+INFO (XSTRM-275): Number of vertexes in the 'polygon' with starting point (196700, 90290) on layer '3' is 658. These vertices will be represented using 659 points in the GDS. This number exceeds the maximum limit, 200, defined by 'maxVertices'. The 'polygon' will be chopped into smaller polygons during XStream Out translation.
+INFO (XSTRM-275): Number of vertexes in the 'polygon' with starting point (196700, 85660) on layer '3' is 658. These vertices will be represented using 659 points in the GDS. This number exceeds the maximum limit, 200, defined by 'maxVertices'. The 'polygon' will be chopped into smaller polygons during XStream Out translation.
+INFO (XSTRM-275): Number of vertexes in the 'polygon' with starting point (196700, 81030) on layer '3' is 658. These vertices will be represented using 659 points in the GDS. This number exceeds the maximum limit, 200, defined by 'maxVertices'. The 'polygon' will be chopped into smaller polygons during XStream Out translation.
+INFO (XSTRM-275): Number of vertexes in the 'polygon' with starting point (196700, 76400) on layer '3' is 658. These vertices will be represented using 659 points in the GDS. This number exceeds the maximum limit, 200, defined by 'maxVertices'. The 'polygon' will be chopped into smaller polygons during XStream Out translation.
+INFO (XSTRM-275): Number of vertexes in the 'polygon' with starting point (196700, 71770) on layer '3' is 658. These vertices will be represented using 659 points in the GDS. This number exceeds the maximum limit, 200, defined by 'maxVertices'. The 'polygon' will be chopped into smaller polygons during XStream Out translation.
+INFO (XSTRM-275): Number of vertexes in the 'polygon' with starting point (196700, 67140) on layer '3' is 658. These vertices will be represented using 659 points in the GDS. This number exceeds the maximum limit, 200, defined by 'maxVertices'. The 'polygon' will be chopped into smaller polygons during XStream Out translation.
+INFO (XSTRM-275): Number of vertexes in the 'polygon' with starting point (196700, 62510) on layer '3' is 658. These vertices will be represented using 659 points in the GDS. This number exceeds the maximum limit, 200, defined by 'maxVertices'. The 'polygon' will be chopped into smaller polygons during XStream Out translation.
+INFO (XSTRM-275): Number of vertexes in the 'polygon' with starting point (196700, 57880) on layer '3' is 658. These vertices will be represented using 659 points in the GDS. This number exceeds the maximum limit, 200, defined by 'maxVertices'. The 'polygon' will be chopped into smaller polygons during XStream Out translation.
+INFO (XSTRM-275): Number of vertexes in the 'polygon' with starting point (196700, 53250) on layer '3' is 658. These vertices will be represented using 659 points in the GDS. This number exceeds the maximum limit, 200, defined by 'maxVertices'. The 'polygon' will be chopped into smaller polygons during XStream Out translation.
+INFO (XSTRM-275): Number of vertexes in the 'polygon' with starting point (196700, 48620) on layer '3' is 658. These vertices will be represented using 659 points in the GDS. This number exceeds the maximum limit, 200, defined by 'maxVertices'. The 'polygon' will be chopped into smaller polygons during XStream Out translation.
+INFO (XSTRM-275): Number of vertexes in the 'polygon' with starting point (196700, 43990) on layer '3' is 658. These vertices will be represented using 659 points in the GDS. This number exceeds the maximum limit, 200, defined by 'maxVertices'. The 'polygon' will be chopped into smaller polygons during XStream Out translation.
+INFO (XSTRM-275): Number of vertexes in the 'polygon' with starting point (196700, 39360) on layer '3' is 658. These vertices will be represented using 659 points in the GDS. This number exceeds the maximum limit, 200, defined by 'maxVertices'. The 'polygon' will be chopped into smaller polygons during XStream Out translation.
+INFO (XSTRM-275): Number of vertexes in the 'polygon' with starting point (196700, 34730) on layer '3' is 658. These vertices will be represented using 659 points in the GDS. This number exceeds the maximum limit, 200, defined by 'maxVertices'. The 'polygon' will be chopped into smaller polygons during XStream Out translation.
+INFO (XSTRM-275): Number of vertexes in the 'polygon' with starting point (196700, 30100) on layer '3' is 658. These vertices will be represented using 659 points in the GDS. This number exceeds the maximum limit, 200, defined by 'maxVertices'. The 'polygon' will be chopped into smaller polygons during XStream Out translation.
+INFO (XSTRM-275): Number of vertexes in the 'polygon' with starting point (196700, 25470) on layer '3' is 658. These vertices will be represented using 659 points in the GDS. This number exceeds the maximum limit, 200, defined by 'maxVertices'. The 'polygon' will be chopped into smaller polygons during XStream Out translation.
+INFO (XSTRM-275): Number of vertexes in the 'polygon' with starting point (196700, 20840) on layer '3' is 658. These vertices will be represented using 659 points in the GDS. This number exceeds the maximum limit, 200, defined by 'maxVertices'. The 'polygon' will be chopped into smaller polygons during XStream Out translation.
+INFO (XSTRM-275): Number of vertexes in the 'polygon' with starting point (196700, 16210) on layer '3' is 658. These vertices will be represented using 659 points in the GDS. This number exceeds the maximum limit, 200, defined by 'maxVertices'. The 'polygon' will be chopped into smaller polygons during XStream Out translation.
+INFO (XSTRM-275): Number of vertexes in the 'polygon' with starting point (196700, 11580) on layer '3' is 658. These vertices will be represented using 659 points in the GDS. This number exceeds the maximum limit, 200, defined by 'maxVertices'. The 'polygon' will be chopped into smaller polygons during XStream Out translation.
+INFO (XSTRM-275): Number of vertexes in the 'polygon' with starting point (196700, 6950) on layer '3' is 658. These vertices will be represented using 659 points in the GDS. This number exceeds the maximum limit, 200, defined by 'maxVertices'. The 'polygon' will be chopped into smaller polygons during XStream Out translation.
+INFO (XSTRM-275): Number of vertexes in the 'polygon' with starting point (196700, 2320) on layer '3' is 658. These vertices will be represented using 659 points in the GDS. This number exceeds the maximum limit, 200, defined by 'maxVertices'. The 'polygon' will be chopped into smaller polygons during XStream Out translation.
+INFO (XSTRM-275): Number of vertexes in the 'polygon' with starting point (196700, 145850) on layer '3' is 658. These vertices will be represented using 659 points in the GDS. This number exceeds the maximum limit, 200, defined by 'maxVertices'. The 'polygon' will be chopped into smaller polygons during XStream Out translation.
+INFO (XSTRM-275): Number of vertexes in the 'polygon' with starting point (196700, 139790) on layer '2' is 656. These vertices will be represented using 657 points in the GDS. This number exceeds the maximum limit, 200, defined by 'maxVertices'. The 'polygon' will be chopped into smaller polygons during XStream Out translation.
+INFO (XSTRM-275): Number of vertexes in the 'polygon' with starting point (196700, 135160) on layer '2' is 656. These vertices will be represented using 657 points in the GDS. This number exceeds the maximum limit, 200, defined by 'maxVertices'. The 'polygon' will be chopped into smaller polygons during XStream Out translation.
+INFO (XSTRM-275): Number of vertexes in the 'polygon' with starting point (196700, 130530) on layer '2' is 656. These vertices will be represented using 657 points in the GDS. This number exceeds the maximum limit, 200, defined by 'maxVertices'. The 'polygon' will be chopped into smaller polygons during XStream Out translation.
+INFO (XSTRM-275): Number of vertexes in the 'polygon' with starting point (196700, 125900) on layer '2' is 656. These vertices will be represented using 657 points in the GDS. This number exceeds the maximum limit, 200, defined by 'maxVertices'. The 'polygon' will be chopped into smaller polygons during XStream Out translation.
+INFO (XSTRM-275): Number of vertexes in the 'polygon' with starting point (196700, 121270) on layer '2' is 656. These vertices will be represented using 657 points in the GDS. This number exceeds the maximum limit, 200, defined by 'maxVertices'. The 'polygon' will be chopped into smaller polygons during XStream Out translation.
+INFO (XSTRM-275): Number of vertexes in the 'polygon' with starting point (196700, 116640) on layer '2' is 656. These vertices will be represented using 657 points in the GDS. This number exceeds the maximum limit, 200, defined by 'maxVertices'. The 'polygon' will be chopped into smaller polygons during XStream Out translation.
+INFO (XSTRM-275): Number of vertexes in the 'polygon' with starting point (196700, 112010) on layer '2' is 656. These vertices will be represented using 657 points in the GDS. This number exceeds the maximum limit, 200, defined by 'maxVertices'. The 'polygon' will be chopped into smaller polygons during XStream Out translation.
+INFO (XSTRM-275): Number of vertexes in the 'polygon' with starting point (196700, 107380) on layer '2' is 656. These vertices will be represented using 657 points in the GDS. This number exceeds the maximum limit, 200, defined by 'maxVertices'. The 'polygon' will be chopped into smaller polygons during XStream Out translation.
+INFO (XSTRM-275): Number of vertexes in the 'polygon' with starting point (196700, 102750) on layer '2' is 656. These vertices will be represented using 657 points in the GDS. This number exceeds the maximum limit, 200, defined by 'maxVertices'. The 'polygon' will be chopped into smaller polygons during XStream Out translation.
+INFO (XSTRM-275): Number of vertexes in the 'polygon' with starting point (196700, 98120) on layer '2' is 656. These vertices will be represented using 657 points in the GDS. This number exceeds the maximum limit, 200, defined by 'maxVertices'. The 'polygon' will be chopped into smaller polygons during XStream Out translation.
+INFO (XSTRM-275): Number of vertexes in the 'polygon' with starting point (196700, 93490) on layer '2' is 656. These vertices will be represented using 657 points in the GDS. This number exceeds the maximum limit, 200, defined by 'maxVertices'. The 'polygon' will be chopped into smaller polygons during XStream Out translation.
+INFO (XSTRM-275): Number of vertexes in the 'polygon' with starting point (196700, 88860) on layer '2' is 656. These vertices will be represented using 657 points in the GDS. This number exceeds the maximum limit, 200, defined by 'maxVertices'. The 'polygon' will be chopped into smaller polygons during XStream Out translation.
+INFO (XSTRM-275): Number of vertexes in the 'polygon' with starting point (196700, 84230) on layer '2' is 656. These vertices will be represented using 657 points in the GDS. This number exceeds the maximum limit, 200, defined by 'maxVertices'. The 'polygon' will be chopped into smaller polygons during XStream Out translation.
+INFO (XSTRM-275): Number of vertexes in the 'polygon' with starting point (196700, 79600) on layer '2' is 656. These vertices will be represented using 657 points in the GDS. This number exceeds the maximum limit, 200, defined by 'maxVertices'. The 'polygon' will be chopped into smaller polygons during XStream Out translation.
+INFO (XSTRM-275): Number of vertexes in the 'polygon' with starting point (196700, 74970) on layer '2' is 656. These vertices will be represented using 657 points in the GDS. This number exceeds the maximum limit, 200, defined by 'maxVertices'. The 'polygon' will be chopped into smaller polygons during XStream Out translation.
+INFO (XSTRM-275): Number of vertexes in the 'polygon' with starting point (196700, 70340) on layer '2' is 656. These vertices will be represented using 657 points in the GDS. This number exceeds the maximum limit, 200, defined by 'maxVertices'. The 'polygon' will be chopped into smaller polygons during XStream Out translation.
+INFO (XSTRM-275): Number of vertexes in the 'polygon' with starting point (196700, 65710) on layer '2' is 656. These vertices will be represented using 657 points in the GDS. This number exceeds the maximum limit, 200, defined by 'maxVertices'. The 'polygon' will be chopped into smaller polygons during XStream Out translation.
+INFO (XSTRM-275): Number of vertexes in the 'polygon' with starting point (196700, 61080) on layer '2' is 656. These vertices will be represented using 657 points in the GDS. This number exceeds the maximum limit, 200, defined by 'maxVertices'. The 'polygon' will be chopped into smaller polygons during XStream Out translation.
+INFO (XSTRM-275): Number of vertexes in the 'polygon' with starting point (196700, 56450) on layer '2' is 656. These vertices will be represented using 657 points in the GDS. This number exceeds the maximum limit, 200, defined by 'maxVertices'. The 'polygon' will be chopped into smaller polygons during XStream Out translation.
+INFO (XSTRM-275): Number of vertexes in the 'polygon' with starting point (196700, 51820) on layer '2' is 656. These vertices will be represented using 657 points in the GDS. This number exceeds the maximum limit, 200, defined by 'maxVertices'. The 'polygon' will be chopped into smaller polygons during XStream Out translation.
+INFO (XSTRM-275): Number of vertexes in the 'polygon' with starting point (196700, 47190) on layer '2' is 656. These vertices will be represented using 657 points in the GDS. This number exceeds the maximum limit, 200, defined by 'maxVertices'. The 'polygon' will be chopped into smaller polygons during XStream Out translation.
+INFO (XSTRM-275): Number of vertexes in the 'polygon' with starting point (196700, 42560) on layer '2' is 656. These vertices will be represented using 657 points in the GDS. This number exceeds the maximum limit, 200, defined by 'maxVertices'. The 'polygon' will be chopped into smaller polygons during XStream Out translation.
+INFO (XSTRM-275): Number of vertexes in the 'polygon' with starting point (196700, 37930) on layer '2' is 656. These vertices will be represented using 657 points in the GDS. This number exceeds the maximum limit, 200, defined by 'maxVertices'. The 'polygon' will be chopped into smaller polygons during XStream Out translation.
+INFO (XSTRM-275): Number of vertexes in the 'polygon' with starting point (196700, 33300) on layer '2' is 656. These vertices will be represented using 657 points in the GDS. This number exceeds the maximum limit, 200, defined by 'maxVertices'. The 'polygon' will be chopped into smaller polygons during XStream Out translation.
+INFO (XSTRM-275): Number of vertexes in the 'polygon' with starting point (196700, 28670) on layer '2' is 656. These vertices will be represented using 657 points in the GDS. This number exceeds the maximum limit, 200, defined by 'maxVertices'. The 'polygon' will be chopped into smaller polygons during XStream Out translation.
+INFO (XSTRM-275): Number of vertexes in the 'polygon' with starting point (196700, 24040) on layer '2' is 656. These vertices will be represented using 657 points in the GDS. This number exceeds the maximum limit, 200, defined by 'maxVertices'. The 'polygon' will be chopped into smaller polygons during XStream Out translation.
+INFO (XSTRM-275): Number of vertexes in the 'polygon' with starting point (196700, 19410) on layer '2' is 656. These vertices will be represented using 657 points in the GDS. This number exceeds the maximum limit, 200, defined by 'maxVertices'. The 'polygon' will be chopped into smaller polygons during XStream Out translation.
+INFO (XSTRM-275): Number of vertexes in the 'polygon' with starting point (196700, 14780) on layer '2' is 656. These vertices will be represented using 657 points in the GDS. This number exceeds the maximum limit, 200, defined by 'maxVertices'. The 'polygon' will be chopped into smaller polygons during XStream Out translation.
+INFO (XSTRM-275): Number of vertexes in the 'polygon' with starting point (196700, 10150) on layer '2' is 656. These vertices will be represented using 657 points in the GDS. This number exceeds the maximum limit, 200, defined by 'maxVertices'. The 'polygon' will be chopped into smaller polygons during XStream Out translation.
+INFO (XSTRM-275): Number of vertexes in the 'polygon' with starting point (196700, 5520) on layer '2' is 656. These vertices will be represented using 657 points in the GDS. This number exceeds the maximum limit, 200, defined by 'maxVertices'. The 'polygon' will be chopped into smaller polygons during XStream Out translation.
+INFO (XSTRM-275): Number of vertexes in the 'polygon' with starting point (196700, 890) on layer '2' is 656. These vertices will be represented using 657 points in the GDS. This number exceeds the maximum limit, 200, defined by 'maxVertices'. The 'polygon' will be chopped into smaller polygons during XStream Out translation.
+INFO (XSTRM-275): Number of vertexes in the 'polygon' with starting point (196700, 144420) on layer '2' is 656. These vertices will be represented using 657 points in the GDS. This number exceeds the maximum limit, 200, defined by 'maxVertices'. The 'polygon' will be chopped into smaller polygons during XStream Out translation.
+
+Summary of Objects Translated:
+	Scalar Instances:                       0
+	Array Instances:                        0
+	Polygons:                               928
+	Paths:                                  77073
+	Rectangles:                             91458
+	Lines:                                  0
+	Arcs:                                   0
+	Donuts:                                 0
+	Dots:                                   0
+	Ellipses:                               0
+	Boundaries:                             0
+	Area Blockages:                         0
+	Layer Blockages:                        0
+	Area Halos:                             0
+	Markers:                                0
+	Rows:                                   0
+	Stitch:                                 0
+	Standard Vias                           91506
+	Custom Vias:                            0
+	CdsGen Vias:                            0
+	Pathsegs:                               0
+	Text:                                   5467
+	TextDisplay:                            0
+	Cells:                                  11
+
+Elapsed Time: 0.6s   User Time: 0.2s   CPU Time: 0.0s   Peak VM: 21916KB
+INFO (XSTRM-234): Translation completed. '0' error(s) and '1' warning(s) found.

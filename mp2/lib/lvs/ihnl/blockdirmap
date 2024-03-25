@@ -1,4 +1,4 @@
-CADENCE IHNL111427
+CADENCE IHNL111428
 
 stdcell_rv32Lib inv schematic cds0
 stdcell_rv32Lib trans schematic cds1
@@ -27,3 +27,4 @@ stdcell_rv32Lib mux6 schematic cds23
 bitslice_rv32Lib mem_mux schematic cds24
 bitslice_rv32Lib rd_mux schematic cds25
 bitslice_rv32Lib bitslice schematic cds26
+bitslice_rv32Lib datapath schematic cds27
