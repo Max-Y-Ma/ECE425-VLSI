@@ -1,0 +1,16 @@
+#
+# Edit Lock-Stake file. CAUTION: Please do not change.
+#
+# Information about current Edit Lock Owner.
+#
+LockStakeVersion               1.1
+LoginName                      maxma2
+HostName                       linux-ssh-03.ews.illinois.edu
+ProcessIdentifier              174934
+ProcessCreationTime_UTC        1711318893
+ProcessCreationTime_Readable   Sun Mar 24 17:21:33 2024 CDT
+AppIdentifier                  /software/cadence-2023-05/ICADVM201/tools/dfII/bin/64bit/libManager
+OSType                         lnx86
+ReasonForPlacingEditLock       log file
+FilePathUsedToEditLock         /home/maxma2/Documents/Coursework/ece425/mp2/lib/libManager.log
+TimeEditLocked                 Sun Mar 24 17:21:34 2024 CDT
