@@ -2,7 +2,7 @@
 lvs_LvsOutFile RUNDIR /home/maxma2/Documents/Coursework/ece425/mp2/lib/lvs
 lvs_LvsfVersion 4
 lvs_LvsInputSummary {0 0 0}
-lvs_LvsComparisonSummary {5 0 5 0}
+lvs_LvsComparisonSummary {5 1 5 0}
 lvs_SourceCase NO
 lvs_LayoutCase NO
 lvs_PowerName VDD
@@ -11,4 +11,4 @@ lvs_GroundName GROUND
 lvs_LvsOutFile LVS_REPORT datapath.lvs.report
 lvs_LvsOutFile SOURCE_NETLIST datapath.src.net
 lvs_LvsOutFile RULES_FILE _calibreLVS.rul_
-lvs_LvsRunTimes 1711404492 1711404493
+lvs_LvsRunTimes 1711421204 1711421204

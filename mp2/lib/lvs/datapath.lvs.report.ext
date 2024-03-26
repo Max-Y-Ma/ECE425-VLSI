@@ -11,7 +11,7 @@
 
 REPORT FILE NAME:         datapath.lvs.report.ext
 LAYOUT NAME:              datapath.calibre.db ('datapath')
-CREATION TIME:            Mon Mar 25 17:08:09 2024
+CREATION TIME:            Mon Mar 25 21:46:41 2024
 CURRENT DIRECTORY:        /home/maxma2/Documents/Coursework/ece425/mp2/lib/lvs
 USER NAME:                maxma2
 CALIBRE VERSION:          v2022.4_16.8    Mon Oct 3 17:12:27 PDT 2022
@@ -22,632 +22,620 @@ Extraction Errors and Warnings for cell "datapath"
 --------------------------------------------------
 
 WARNING:  Short circuit - Different names on one net:
-          Net Id:  196
-          (1)  name  "shift_amount<0>"  at location  (116.5375,72.9875)  on layer  15 "metal3"
-          (2)  name  "shift_out<0>"  at location  (111.3525,70.645)  on layer  15 "metal3"
-          (3)  name  "shift_out<0>"  at location  (116.3725,71.85)  on layer  15 "metal3"
-          The name "shift_amount<0>" was assigned to the net.
+          Net Id:  198
+          (1)  name  "shift_amount<2>"  at location  (118.5275,72.98)  on layer  15 "metal3"
+          (2)  name  "shift_out<10>"  at location  (111.3525,66.015)  on layer  15 "metal3"
+          (3)  name  "shift_out<10>"  at location  (111.8725,69.685)  on layer  15 "metal3"
+          (4)  name  "shift_out<10>"  at location  (116.3725,67.22)  on layer  15 "metal3"
+          The name "shift_amount<2>" was assigned to the net.
+
+WARNING:  Short circuit - Different names on one net:
+          Net Id:  199
+          (1)  name  "shift_amount<1>"  at location  (117.5325,73.11)  on layer  15 "metal3"
+          (2)  name  "shift_out<5>"  at location  (111.3525,68.33)  on layer  15 "metal3"
+          (3)  name  "shift_out<5>"  at location  (111.8725,72)  on layer  15 "metal3"
+          (4)  name  "shift_out<5>"  at location  (116.3725,69.535)  on layer  15 "metal3"
+          The name "shift_amount<1>" was assigned to the net.
+
+WARNING:  Short circuit - Different names on one net:
+          Net Id:  208
+          (1)  name  "shift_out<22>"  at location  (113.3525,54.44)  on layer  15 "metal3"
+          (2)  name  "shift_out<22>"  at location  (113.8775,72.0225)  on layer  15 "metal3"
+          (3)  name  "shift_out<22>"  at location  (118.8375,62.61)  on layer  15 "metal3"
+          (4)  name  "shift_out<84>"  at location  (115.865,72.03)  on layer  15 "metal3"
+          The name "shift_out<22>" was assigned to the net.
+
+WARNING:  Short circuit - Different names on one net:
+          Net Id:  219
+          (1)  name  "shift_amount<4>"  at location  (120.5175,72.9775)  on layer  15 "metal3"
+          (2)  name  "shift_out<20>"  at location  (111.3525,61.385)  on layer  15 "metal3"
+          (3)  name  "shift_out<20>"  at location  (111.8725,65.055)  on layer  15 "metal3"
+          (4)  name  "shift_out<20>"  at location  (116.3725,62.59)  on layer  15 "metal3"
+          The name "shift_amount<4>" was assigned to the net.
 
 WARNING:  Open circuit - Same name on different nets:
           Name:  "shift_out<102>"
-          (1)  at location  (113.3525,17.4)  on layer  15 "metal3"  on net id  578
-          (2)  at location  (113.8775,34.9825)  on layer  15 "metal3"  on net id  447
-          (3)  at location  (118.8375,25.57)  on layer  15 "metal3"  on net id  513
-          The name was assigned to net 578 .
+          (1)  at location  (113.3525,17.4)  on layer  15 "metal3"  on net id  490
+          (2)  at location  (118.8375,25.57)  on layer  15 "metal3"  on net id  490
+          (3)  at location  (113.8775,34.9825)  on layer  15 "metal3"  on net id  427
+          The name was assigned to net 490 .
 
 WARNING:  Open circuit - Same name on different nets:
           Name:  "shift_out<103>"
-          (1)  at location  (114.335,8.275)  on layer  15 "metal3"  on net id  645
-          (2)  at location  (114.8725,44.08)  on layer  15 "metal3"  on net id  384
-          (3)  at location  (119.8325,25.575)  on layer  15 "metal3"  on net id  517
-          The name was assigned to net 645 .
-
-WARNING:  Open circuit - Same name on different nets:
-          Name:  "shift_out<104>"
-          (1)  at location  (115.865,62.77)  on layer  15 "metal3"  on net id  253
-          (2)  at location  (120.8275,25.6775)  on layer  15 "metal3"  on net id  521
-          The name was assigned to net 253 .
-
-WARNING:  Open circuit - Same name on different nets:
-          Name:  "shift_out<107>"
-          (1)  at location  (113.3525,15.085)  on layer  15 "metal3"  on net id  611
-          (2)  at location  (113.8775,32.6675)  on layer  15 "metal3"  on net id  500
-          (3)  at location  (118.8375,23.255)  on layer  15 "metal3"  on net id  556
-          The name was assigned to net 611 .
-
-WARNING:  Open circuit - Same name on different nets:
-          Name:  "shift_out<108>"
-          (1)  at location  (114.335,5.96)  on layer  15 "metal3"  on net id  679
-          (2)  at location  (114.8725,41.765)  on layer  15 "metal3"  on net id  419
-          (3)  at location  (119.8325,23.26)  on layer  15 "metal3"  on net id  558
-          The name was assigned to net 679 .
-
-WARNING:  Open circuit - Same name on different nets:
-          Name:  "shift_out<109>"
-          (1)  at location  (115.865,60.455)  on layer  15 "metal3"  on net id  286
-          (2)  at location  (120.8275,23.3625)  on layer  15 "metal3"  on net id  560
-          The name was assigned to net 286 .
-
-WARNING:  Open circuit - Same name on different nets:
-          Name:  "shift_out<112>"
-          (1)  at location  (113.3525,12.77)  on layer  15 "metal3"  on net id  610
-          (2)  at location  (113.8775,30.3525)  on layer  15 "metal3"  on net id  499
-          (3)  at location  (118.8375,20.94)  on layer  15 "metal3"  on net id  555
-          The name was assigned to net 610 .
-
-WARNING:  Open circuit - Same name on different nets:
-          Name:  "shift_out<113>"
-          (1)  at location  (114.335,3.645)  on layer  15 "metal3"  on net id  678
-          (2)  at location  (114.8725,39.45)  on layer  15 "metal3"  on net id  418
-          (3)  at location  (119.8325,20.945)  on layer  15 "metal3"  on net id  557
-          The name was assigned to net 678 .
-
-WARNING:  Open circuit - Same name on different nets:
-          Name:  "shift_out<114>"
-          (1)  at location  (115.865,58.14)  on layer  15 "metal3"  on net id  285
-          (2)  at location  (120.8275,21.0475)  on layer  15 "metal3"  on net id  559
-          The name was assigned to net 285 .
-
-WARNING:  Open circuit - Same name on different nets:
-          Name:  "shift_out<117>"
-          (1)  at location  (113.3525,10.455)  on layer  15 "metal3"  on net id  643
-          (2)  at location  (113.8775,28.0375)  on layer  15 "metal3"  on net id  498
-          (3)  at location  (118.8375,18.625)  on layer  15 "metal3"  on net id  588
-          The name was assigned to net 643 .
-
-WARNING:  Open circuit - Same name on different nets:
-          Name:  "shift_out<118>"
-          (1)  at location  (114.335,1.33)  on layer  15 "metal3"  on net id  677
-          (2)  at location  (114.8725,37.135)  on layer  15 "metal3"  on net id  452
-          (3)  at location  (119.8325,18.63)  on layer  15 "metal3"  on net id  590
-          The name was assigned to net 677 .
-
-WARNING:  Open circuit - Same name on different nets:
-          Name:  "shift_out<119>"
-          (1)  at location  (115.865,55.825)  on layer  15 "metal3"  on net id  319
-          (2)  at location  (120.8275,18.7325)  on layer  15 "metal3"  on net id  592
-          The name was assigned to net 319 .
-
-WARNING:  Open circuit - Same name on different nets:
-          Name:  "shift_out<122>"
-          (1)  at location  (113.3525,8.14)  on layer  15 "metal3"  on net id  642
-          (2)  at location  (113.8775,25.7225)  on layer  15 "metal3"  on net id  497
-          (3)  at location  (118.8375,16.31)  on layer  15 "metal3"  on net id  587
-          The name was assigned to net 642 .
-
-WARNING:  Open circuit - Same name on different nets:
-          Name:  "shift_out<123>"
-          (1)  at location  (114.8725,34.82)  on layer  15 "metal3"  on net id  451
-          (2)  at location  (119.8325,16.315)  on layer  15 "metal3"  on net id  589
-          The name was assigned to net 451 .
-
-WARNING:  Open circuit - Same name on different nets:
-          Name:  "shift_out<124>"
-          (1)  at location  (115.865,53.51)  on layer  15 "metal3"  on net id  318
-          (2)  at location  (120.8275,16.4175)  on layer  15 "metal3"  on net id  591
-          The name was assigned to net 318 .
-
-WARNING:  Open circuit - Same name on different nets:
-          Name:  "shift_out<127>"
-          (1)  at location  (113.3525,5.825)  on layer  15 "metal3"  on net id  676
-          (2)  at location  (113.8775,23.4075)  on layer  15 "metal3"  on net id  548
-          (3)  at location  (118.8375,13.995)  on layer  15 "metal3"  on net id  619
-          The name was assigned to net 676 .
-
-WARNING:  Open circuit - Same name on different nets:
-          Name:  "shift_out<128>"
-          (1)  at location  (114.8725,32.505)  on layer  15 "metal3"  on net id  508
-          (2)  at location  (119.8325,14)  on layer  15 "metal3"  on net id  621
-          The name was assigned to net 508 .
-
-WARNING:  Open circuit - Same name on different nets:
-          Name:  "shift_out<129>"
-          (1)  at location  (115.865,51.195)  on layer  15 "metal3"  on net id  353
-          (2)  at location  (120.8275,14.1025)  on layer  15 "metal3"  on net id  623
-          The name was assigned to net 353 .
-
-WARNING:  Open circuit - Same name on different nets:
-          Name:  "shift_out<12>"
-          (1)  at location  (113.3525,59.07)  on layer  15 "metal3"  on net id  279
-          (2)  at location  (118.8375,67.24)  on layer  15 "metal3"  on net id  213
-          The name was assigned to net 279 .
-
-WARNING:  Open circuit - Same name on different nets:
-          Name:  "shift_out<132>"
-          (1)  at location  (113.3525,3.51)  on layer  15 "metal3"  on net id  675
-          (2)  at location  (113.8775,21.0925)  on layer  15 "metal3"  on net id  547
-          (3)  at location  (118.8375,11.68)  on layer  15 "metal3"  on net id  618
-          The name was assigned to net 675 .
-
-WARNING:  Open circuit - Same name on different nets:
-          Name:  "shift_out<133>"
-          (1)  at location  (114.8725,30.19)  on layer  15 "metal3"  on net id  507
-          (2)  at location  (119.8325,11.685)  on layer  15 "metal3"  on net id  620
-          The name was assigned to net 507 .
-
-WARNING:  Open circuit - Same name on different nets:
-          Name:  "shift_out<134>"
-          (1)  at location  (115.865,48.88)  on layer  15 "metal3"  on net id  352
-          (2)  at location  (120.8275,11.7875)  on layer  15 "metal3"  on net id  622
-          The name was assigned to net 352 .
-
-WARNING:  Open circuit - Same name on different nets:
-          Name:  "shift_out<137>"
-          (1)  at location  (113.3525,1.195)  on layer  15 "metal3"  on net id  674
-          (2)  at location  (113.8775,18.7775)  on layer  15 "metal3"  on net id  581
-          (3)  at location  (118.8375,9.365)  on layer  15 "metal3"  on net id  650
-          The name was assigned to net 674 .
-
-WARNING:  Open circuit - Same name on different nets:
-          Name:  "shift_out<138>"
-          (1)  at location  (114.8725,27.875)  on layer  15 "metal3"  on net id  506
-          (2)  at location  (119.8325,9.37)  on layer  15 "metal3"  on net id  652
-          The name was assigned to net 506 .
-
-WARNING:  Open circuit - Same name on different nets:
-          Name:  "shift_out<139>"
-          (1)  at location  (115.865,46.565)  on layer  15 "metal3"  on net id  387
-          (2)  at location  (120.8275,9.4725)  on layer  15 "metal3"  on net id  654
-          The name was assigned to net 387 .
-
-WARNING:  Open circuit - Same name on different nets:
-          Name:  "shift_out<13>"
-          (1)  at location  (114.335,49.945)  on layer  15 "metal3"  on net id  348
-          (2)  at location  (119.8325,67.245)  on layer  15 "metal3"  on net id  217
-          The name was assigned to net 348 .
-
-WARNING:  Open circuit - Same name on different nets:
-          Name:  "shift_out<142>"
-          (1)  at location  (113.8775,16.4625)  on layer  15 "metal3"  on net id  580
-          (2)  at location  (118.8375,7.05)  on layer  15 "metal3"  on net id  649
-          The name was assigned to net 580 .
-
-WARNING:  Open circuit - Same name on different nets:
-          Name:  "shift_out<143>"
-          (1)  at location  (114.8725,25.56)  on layer  15 "metal3"  on net id  505
-          (2)  at location  (119.8325,7.055)  on layer  15 "metal3"  on net id  651
-          The name was assigned to net 505 .
-
-WARNING:  Open circuit - Same name on different nets:
-          Name:  "shift_out<144>"
-          (1)  at location  (115.865,44.25)  on layer  15 "metal3"  on net id  386
-          (2)  at location  (120.8275,7.1575)  on layer  15 "metal3"  on net id  653
-          The name was assigned to net 386 .
-
-WARNING:  Open circuit - Same name on different nets:
-          Name:  "shift_out<147>"
-          (1)  at location  (113.8775,14.1475)  on layer  15 "metal3"  on net id  613
-          (2)  at location  (118.8375,4.735)  on layer  15 "metal3"  on net id  686
-          The name was assigned to net 613 .
-
-WARNING:  Open circuit - Same name on different nets:
-          Name:  "shift_out<148>"
-          (1)  at location  (114.8725,23.245)  on layer  15 "metal3"  on net id  552
-          (2)  at location  (119.8325,4.74)  on layer  15 "metal3"  on net id  689
-          The name was assigned to net 552 .
-
-WARNING:  Open circuit - Same name on different nets:
-          Name:  "shift_out<149>"
-          (1)  at location  (115.865,41.935)  on layer  15 "metal3"  on net id  421
-          (2)  at location  (120.8275,4.8425)  on layer  15 "metal3"  on net id  692
-          The name was assigned to net 421 .
-
-WARNING:  Open circuit - Same name on different nets:
-          Name:  "shift_out<14>"
-          (1)  at location  (115.33,31.29)  on layer  15 "metal3"  on net id  511
-          (2)  at location  (120.8275,67.3475)  on layer  15 "metal3"  on net id  221
-          The name was assigned to net 511 .
-
-WARNING:  Open circuit - Same name on different nets:
-          Name:  "shift_out<152>"
-          (1)  at location  (113.8775,11.8325)  on layer  15 "metal3"  on net id  612
-          (2)  at location  (118.8375,2.42)  on layer  15 "metal3"  on net id  685
+          (1)  at location  (114.335,8.275)  on layer  15 "metal3"  on net id  612
+          (2)  at location  (114.8725,44.08)  on layer  15 "metal3"  on net id  368
+          (3)  at location  (119.8325,25.575)  on layer  15 "metal3"  on net id  491
           The name was assigned to net 612 .
 
 WARNING:  Open circuit - Same name on different nets:
-          Name:  "shift_out<153>"
-          (1)  at location  (114.8725,20.93)  on layer  15 "metal3"  on net id  551
-          (2)  at location  (119.8325,2.425)  on layer  15 "metal3"  on net id  688
+          Name:  "shift_out<104>"
+          (1)  at location  (115.8525,62.77)  on layer  15 "metal3"  on net id  251
+          (2)  at location  (120.8275,25.6775)  on layer  15 "metal3"  on net id  495
+          The name was assigned to net 251 .
+
+WARNING:  Open circuit - Same name on different nets:
+          Name:  "shift_out<107>"
+          (1)  at location  (113.3525,15.085)  on layer  15 "metal3"  on net id  513
+          (2)  at location  (118.8375,23.255)  on layer  15 "metal3"  on net id  513
+          (3)  at location  (113.8775,32.6675)  on layer  15 "metal3"  on net id  477
+          The name was assigned to net 513 .
+
+WARNING:  Open circuit - Same name on different nets:
+          Name:  "shift_out<108>"
+          (1)  at location  (114.335,5.96)  on layer  15 "metal3"  on net id  642
+          (2)  at location  (114.8725,41.765)  on layer  15 "metal3"  on net id  402
+          (3)  at location  (119.8325,23.26)  on layer  15 "metal3"  on net id  530
+          The name was assigned to net 642 .
+
+WARNING:  Open circuit - Same name on different nets:
+          Name:  "shift_out<109>"
+          (1)  at location  (115.865,60.455)  on layer  15 "metal3"  on net id  279
+          (2)  at location  (120.8275,23.3625)  on layer  15 "metal3"  on net id  532
+          The name was assigned to net 279 .
+
+WARNING:  Open circuit - Same name on different nets:
+          Name:  "shift_out<112>"
+          (1)  at location  (113.3525,12.77)  on layer  15 "metal3"  on net id  528
+          (2)  at location  (118.8375,20.94)  on layer  15 "metal3"  on net id  528
+          (3)  at location  (113.8775,30.3525)  on layer  15 "metal3"  on net id  476
+          The name was assigned to net 528 .
+
+WARNING:  Open circuit - Same name on different nets:
+          Name:  "shift_out<113>"
+          (1)  at location  (114.335,3.645)  on layer  15 "metal3"  on net id  641
+          (2)  at location  (114.8725,39.45)  on layer  15 "metal3"  on net id  401
+          (3)  at location  (119.8325,20.945)  on layer  15 "metal3"  on net id  529
+          The name was assigned to net 641 .
+
+WARNING:  Open circuit - Same name on different nets:
+          Name:  "shift_out<114>"
+          (1)  at location  (115.865,58.14)  on layer  15 "metal3"  on net id  65
+          (2)  at location  (120.8275,21.0475)  on layer  15 "metal3"  on net id  531
+          The name was assigned to net 65 .
+
+WARNING:  Open circuit - Same name on different nets:
+          Name:  "shift_out<117>"
+          (1)  at location  (113.3525,10.455)  on layer  15 "metal3"  on net id  544
+          (2)  at location  (118.8375,18.625)  on layer  15 "metal3"  on net id  544
+          (3)  at location  (113.8775,28.0375)  on layer  15 "metal3"  on net id  475
+          The name was assigned to net 544 .
+
+WARNING:  Open circuit - Same name on different nets:
+          Name:  "shift_out<118>"
+          (1)  at location  (114.335,1.33)  on layer  15 "metal3"  on net id  640
+          (2)  at location  (114.8725,37.135)  on layer  15 "metal3"  on net id  432
+          (3)  at location  (119.8325,18.63)  on layer  15 "metal3"  on net id  560
+          The name was assigned to net 640 .
+
+WARNING:  Open circuit - Same name on different nets:
+          Name:  "shift_out<119>"
+          (1)  at location  (115.865,55.825)  on layer  15 "metal3"  on net id  308
+          (2)  at location  (120.8275,18.7325)  on layer  15 "metal3"  on net id  562
+          The name was assigned to net 308 .
+
+WARNING:  Open circuit - Same name on different nets:
+          Name:  "shift_out<122>"
+          (1)  at location  (113.3525,8.14)  on layer  15 "metal3"  on net id  558
+          (2)  at location  (118.8375,16.31)  on layer  15 "metal3"  on net id  558
+          (3)  at location  (113.8775,25.7225)  on layer  15 "metal3"  on net id  474
+          The name was assigned to net 558 .
+
+WARNING:  Open circuit - Same name on different nets:
+          Name:  "shift_out<123>"
+          (1)  at location  (114.8725,34.82)  on layer  15 "metal3"  on net id  431
+          (2)  at location  (119.8325,16.315)  on layer  15 "metal3"  on net id  559
+          The name was assigned to net 431 .
+
+WARNING:  Open circuit - Same name on different nets:
+          Name:  "shift_out<124>"
+          (1)  at location  (115.865,53.51)  on layer  15 "metal3"  on net id  307
+          (2)  at location  (120.8275,16.4175)  on layer  15 "metal3"  on net id  561
+          The name was assigned to net 307 .
+
+WARNING:  Open circuit - Same name on different nets:
+          Name:  "shift_out<127>"
+          (1)  at location  (113.3525,5.825)  on layer  15 "metal3"  on net id  574
+          (2)  at location  (118.8375,13.995)  on layer  15 "metal3"  on net id  574
+          (3)  at location  (113.8775,23.4075)  on layer  15 "metal3"  on net id  521
+          The name was assigned to net 574 .
+
+WARNING:  Open circuit - Same name on different nets:
+          Name:  "shift_out<128>"
+          (1)  at location  (114.8725,32.505)  on layer  15 "metal3"  on net id  485
+          (2)  at location  (119.8325,14)  on layer  15 "metal3"  on net id  589
+          The name was assigned to net 485 .
+
+WARNING:  Open circuit - Same name on different nets:
+          Name:  "shift_out<129>"
+          (1)  at location  (115.865,51.195)  on layer  15 "metal3"  on net id  340
+          (2)  at location  (120.8275,14.1025)  on layer  15 "metal3"  on net id  591
+          The name was assigned to net 340 .
+
+WARNING:  Open circuit - Same name on different nets:
+          Name:  "shift_out<132>"
+          (1)  at location  (113.3525,3.51)  on layer  15 "metal3"  on net id  587
+          (2)  at location  (118.8375,11.68)  on layer  15 "metal3"  on net id  587
+          (3)  at location  (113.8775,21.0925)  on layer  15 "metal3"  on net id  520
+          The name was assigned to net 587 .
+
+WARNING:  Open circuit - Same name on different nets:
+          Name:  "shift_out<133>"
+          (1)  at location  (114.8725,30.19)  on layer  15 "metal3"  on net id  484
+          (2)  at location  (119.8325,11.685)  on layer  15 "metal3"  on net id  588
+          The name was assigned to net 484 .
+
+WARNING:  Open circuit - Same name on different nets:
+          Name:  "shift_out<134>"
+          (1)  at location  (115.865,48.88)  on layer  15 "metal3"  on net id  339
+          (2)  at location  (120.8275,11.7875)  on layer  15 "metal3"  on net id  590
+          The name was assigned to net 339 .
+
+WARNING:  Open circuit - Same name on different nets:
+          Name:  "shift_out<137>"
+          (1)  at location  (113.3525,1.195)  on layer  15 "metal3"  on net id  604
+          (2)  at location  (118.8375,9.365)  on layer  15 "metal3"  on net id  604
+          (3)  at location  (113.8775,18.7775)  on layer  15 "metal3"  on net id  552
+          The name was assigned to net 604 .
+
+WARNING:  Open circuit - Same name on different nets:
+          Name:  "shift_out<138>"
+          (1)  at location  (114.8725,27.875)  on layer  15 "metal3"  on net id  483
+          (2)  at location  (119.8325,9.37)  on layer  15 "metal3"  on net id  618
+          The name was assigned to net 483 .
+
+WARNING:  Open circuit - Same name on different nets:
+          Name:  "shift_out<139>"
+          (1)  at location  (115.865,46.565)  on layer  15 "metal3"  on net id  371
+          (2)  at location  (120.8275,9.4725)  on layer  15 "metal3"  on net id  620
+          The name was assigned to net 371 .
+
+WARNING:  Open circuit - Same name on different nets:
+          Name:  "shift_out<13>"
+          (1)  at location  (114.335,49.945)  on layer  15 "metal3"  on net id  335
+          (2)  at location  (119.8325,67.245)  on layer  15 "metal3"  on net id  216
+          The name was assigned to net 335 .
+
+WARNING:  Open circuit - Same name on different nets:
+          Name:  "shift_out<142>"
+          (1)  at location  (113.8775,16.4625)  on layer  15 "metal3"  on net id  551
+          (2)  at location  (118.8375,7.05)  on layer  15 "metal3"  on net id  616
           The name was assigned to net 551 .
 
 WARNING:  Open circuit - Same name on different nets:
-          Name:  "shift_out<154>"
-          (1)  at location  (115.865,39.62)  on layer  15 "metal3"  on net id  420
-          (2)  at location  (120.8275,2.5275)  on layer  15 "metal3"  on net id  691
-          The name was assigned to net 420 .
+          Name:  "shift_out<143>"
+          (1)  at location  (114.8725,25.56)  on layer  15 "metal3"  on net id  482
+          (2)  at location  (119.8325,7.055)  on layer  15 "metal3"  on net id  617
+          The name was assigned to net 482 .
 
 WARNING:  Open circuit - Same name on different nets:
-          Name:  "shift_out<156>"
-          (1)  at location  (112.8775,4.735)  on layer  15 "metal3"  on net id  673
-          (2)  at location  (117.8425,0.11)  on layer  15 "metal3"  on net id  683
-          The name was assigned to net 673 .
+          Name:  "shift_out<144>"
+          (1)  at location  (115.865,44.25)  on layer  15 "metal3"  on net id  370
+          (2)  at location  (120.8275,7.1575)  on layer  15 "metal3"  on net id  619
+          The name was assigned to net 370 .
 
 WARNING:  Open circuit - Same name on different nets:
-          Name:  "shift_out<157>"
-          (1)  at location  (113.8775,9.5175)  on layer  15 "metal3"  on net id  644
-          (2)  at location  (118.8375,0.105)  on layer  15 "metal3"  on net id  684
-          The name was assigned to net 644 .
-
-WARNING:  Open circuit - Same name on different nets:
-          Name:  "shift_out<158>"
-          (1)  at location  (114.8725,18.615)  on layer  15 "metal3"  on net id  584
-          (2)  at location  (119.8325,0.11)  on layer  15 "metal3"  on net id  687
-          The name was assigned to net 584 .
-
-WARNING:  Open circuit - Same name on different nets:
-          Name:  "shift_out<159>"
-          (1)  at location  (115.865,37.305)  on layer  15 "metal3"  on net id  455
-          (2)  at location  (120.8275,0.2125)  on layer  15 "metal3"  on net id  690
-          The name was assigned to net 455 .
-
-WARNING:  Open circuit - Same name on different nets:
-          Name:  "shift_out<17>"
-          (1)  at location  (113.3525,56.755)  on layer  15 "metal3"  on net id  312
-          (2)  at location  (118.8375,64.925)  on layer  15 "metal3"  on net id  256
-          The name was assigned to net 312 .
-
-WARNING:  Open circuit - Same name on different nets:
-          Name:  "shift_out<18>"
-          (1)  at location  (114.335,47.63)  on layer  15 "metal3"  on net id  383
-          (2)  at location  (119.8325,64.93)  on layer  15 "metal3"  on net id  258
-          The name was assigned to net 383 .
-
-WARNING:  Open circuit - Same name on different nets:
-          Name:  "shift_out<19>"
-          (1)  at location  (115.33,28.975)  on layer  15 "metal3"  on net id  510
-          (2)  at location  (120.8275,65.0325)  on layer  15 "metal3"  on net id  260
-          The name was assigned to net 510 .
-
-WARNING:  Open circuit - Same name on different nets:
-          Name:  "shift_out<22>"
-          (1)  at location  (113.3525,54.44)  on layer  15 "metal3"  on net id  311
-          (2)  at location  (113.8775,72.0225)  on layer  15 "metal3"  on net id  204
-          (3)  at location  (118.8375,62.61)  on layer  15 "metal3"  on net id  255
-          The name was assigned to net 311 .
-
-WARNING:  Open circuit - Same name on different nets:
-          Name:  "shift_out<23>"
-          (1)  at location  (114.335,45.315)  on layer  15 "metal3"  on net id  382
-          (2)  at location  (119.8325,62.615)  on layer  15 "metal3"  on net id  257
-          The name was assigned to net 382 .
-
-WARNING:  Open circuit - Same name on different nets:
-          Name:  "shift_out<24>"
-          (1)  at location  (115.33,26.66)  on layer  15 "metal3"  on net id  509
-          (2)  at location  (120.8275,62.7175)  on layer  15 "metal3"  on net id  259
-          The name was assigned to net 509 .
-
-WARNING:  Open circuit - Same name on different nets:
-          Name:  "shift_out<27>"
-          (1)  at location  (113.3525,52.125)  on layer  15 "metal3"  on net id  345
-          (2)  at location  (113.8775,69.7075)  on layer  15 "metal3"  on net id  203
-          (3)  at location  (118.8375,60.295)  on layer  15 "metal3"  on net id  288
-          The name was assigned to net 345 .
-
-WARNING:  Open circuit - Same name on different nets:
-          Name:  "shift_out<28>"
-          (1)  at location  (114.335,43)  on layer  15 "metal3"  on net id  417
-          (2)  at location  (119.8325,60.3)  on layer  15 "metal3"  on net id  290
-          The name was assigned to net 417 .
-
-WARNING:  Open circuit - Same name on different nets:
-          Name:  "shift_out<29>"
-          (1)  at location  (115.33,24.345)  on layer  15 "metal3"  on net id  554
-          (2)  at location  (120.8275,60.4025)  on layer  15 "metal3"  on net id  292
-          The name was assigned to net 554 .
-
-WARNING:  Open circuit - Same name on different nets:
-          Name:  "shift_out<2>"
-          (1)  at location  (113.3525,63.7)  on layer  15 "metal3"  on net id  248
-          (2)  at location  (118.8375,71.87)  on layer  15 "metal3"  on net id  215
-          The name was assigned to net 248 .
-
-WARNING:  Open circuit - Same name on different nets:
-          Name:  "shift_out<32>"
-          (1)  at location  (113.3525,49.81)  on layer  15 "metal3"  on net id  344
-          (2)  at location  (113.8775,67.3925)  on layer  15 "metal3"  on net id  202
-          (3)  at location  (118.8375,57.98)  on layer  15 "metal3"  on net id  287
-          The name was assigned to net 344 .
-
-WARNING:  Open circuit - Same name on different nets:
-          Name:  "shift_out<33>"
-          (1)  at location  (114.335,40.685)  on layer  15 "metal3"  on net id  416
-          (2)  at location  (119.8325,57.985)  on layer  15 "metal3"  on net id  289
-          The name was assigned to net 416 .
-
-WARNING:  Open circuit - Same name on different nets:
-          Name:  "shift_out<34>"
-          (1)  at location  (115.33,22.03)  on layer  15 "metal3"  on net id  553
-          (2)  at location  (120.8275,58.0875)  on layer  15 "metal3"  on net id  291
-          The name was assigned to net 553 .
-
-WARNING:  Open circuit - Same name on different nets:
-          Name:  "shift_out<37>"
-          (1)  at location  (113.3525,47.495)  on layer  15 "metal3"  on net id  379
-          (2)  at location  (113.8775,65.0775)  on layer  15 "metal3"  on net id  250
-          (3)  at location  (118.8375,55.665)  on layer  15 "metal3"  on net id  321
-          The name was assigned to net 379 .
-
-WARNING:  Open circuit - Same name on different nets:
-          Name:  "shift_out<38>"
-          (1)  at location  (114.335,38.37)  on layer  15 "metal3"  on net id  450
-          (2)  at location  (119.8325,55.67)  on layer  15 "metal3"  on net id  323
-          The name was assigned to net 450 .
-
-WARNING:  Open circuit - Same name on different nets:
-          Name:  "shift_out<39>"
-          (1)  at location  (115.33,19.715)  on layer  15 "metal3"  on net id  586
-          (2)  at location  (120.8275,55.7725)  on layer  15 "metal3"  on net id  325
-          The name was assigned to net 586 .
-
-WARNING:  Open circuit - Same name on different nets:
-          Name:  "shift_out<3>"
-          (1)  at location  (114.335,54.575)  on layer  15 "metal3"  on net id  315
-          (2)  at location  (119.8325,71.875)  on layer  15 "metal3"  on net id  219
-          The name was assigned to net 315 .
-
-WARNING:  Open circuit - Same name on different nets:
-          Name:  "shift_out<42>"
-          (1)  at location  (113.3525,45.18)  on layer  15 "metal3"  on net id  378
-          (2)  at location  (113.8775,62.7625)  on layer  15 "metal3"  on net id  249
-          (3)  at location  (118.8375,53.35)  on layer  15 "metal3"  on net id  320
-          The name was assigned to net 378 .
-
-WARNING:  Open circuit - Same name on different nets:
-          Name:  "shift_out<43>"
-          (1)  at location  (114.335,36.055)  on layer  15 "metal3"  on net id  449
-          (2)  at location  (114.8725,71.86)  on layer  15 "metal3"  on net id  207
-          (3)  at location  (119.8325,53.355)  on layer  15 "metal3"  on net id  322
-          The name was assigned to net 449 .
-
-WARNING:  Open circuit - Same name on different nets:
-          Name:  "shift_out<44>"
-          (1)  at location  (115.33,17.4)  on layer  15 "metal3"  on net id  585
-          (2)  at location  (120.8275,53.4575)  on layer  15 "metal3"  on net id  324
-          The name was assigned to net 585 .
-
-WARNING:  Open circuit - Same name on different nets:
-          Name:  "shift_out<47>"
-          (1)  at location  (113.3525,42.865)  on layer  15 "metal3"  on net id  413
-          (2)  at location  (113.8775,60.4475)  on layer  15 "metal3"  on net id  282
-          (3)  at location  (118.8375,51.035)  on layer  15 "metal3"  on net id  355
-          The name was assigned to net 413 .
-
-WARNING:  Open circuit - Same name on different nets:
-          Name:  "shift_out<48>"
-          (1)  at location  (114.335,33.74)  on layer  15 "metal3"  on net id  504
-          (2)  at location  (114.8725,69.545)  on layer  15 "metal3"  on net id  206
-          (3)  at location  (119.8325,51.04)  on layer  15 "metal3"  on net id  357
-          The name was assigned to net 504 .
-
-WARNING:  Open circuit - Same name on different nets:
-          Name:  "shift_out<49>"
-          (1)  at location  (115.33,15.085)  on layer  15 "metal3"  on net id  617
-          (2)  at location  (120.8275,51.1425)  on layer  15 "metal3"  on net id  359
-          The name was assigned to net 617 .
-
-WARNING:  Open circuit - Same name on different nets:
-          Name:  "shift_out<4>"
-          (1)  at location  (115.33,35.92)  on layer  15 "metal3"  on net id  453
-          (2)  at location  (120.8275,71.875)  on layer  15 "metal3"  on net id  223
-          The name was assigned to net 453 .
-
-WARNING:  Open circuit - Same name on different nets:
-          Name:  "shift_out<52>"
-          (1)  at location  (113.3525,40.55)  on layer  15 "metal3"  on net id  412
-          (2)  at location  (113.8775,58.1325)  on layer  15 "metal3"  on net id  281
-          (3)  at location  (118.8375,48.72)  on layer  15 "metal3"  on net id  354
-          The name was assigned to net 412 .
-
-WARNING:  Open circuit - Same name on different nets:
-          Name:  "shift_out<53>"
-          (1)  at location  (114.335,31.425)  on layer  15 "metal3"  on net id  503
-          (2)  at location  (114.8725,67.23)  on layer  15 "metal3"  on net id  205
-          (3)  at location  (119.8325,48.725)  on layer  15 "metal3"  on net id  356
-          The name was assigned to net 503 .
-
-WARNING:  Open circuit - Same name on different nets:
-          Name:  "shift_out<54>"
-          (1)  at location  (115.33,12.77)  on layer  15 "metal3"  on net id  616
-          (2)  at location  (120.8275,48.8275)  on layer  15 "metal3"  on net id  358
-          The name was assigned to net 616 .
-
-WARNING:  Open circuit - Same name on different nets:
-          Name:  "shift_out<57>"
-          (1)  at location  (113.3525,38.235)  on layer  15 "metal3"  on net id  446
-          (2)  at location  (113.8775,55.8175)  on layer  15 "metal3"  on net id  314
-          (3)  at location  (118.8375,46.405)  on layer  15 "metal3"  on net id  389
-          The name was assigned to net 446 .
-
-WARNING:  Open circuit - Same name on different nets:
-          Name:  "shift_out<58>"
-          (1)  at location  (114.335,29.11)  on layer  15 "metal3"  on net id  502
-          (2)  at location  (114.8725,64.915)  on layer  15 "metal3"  on net id  252
-          (3)  at location  (119.8325,46.41)  on layer  15 "metal3"  on net id  391
-          The name was assigned to net 502 .
-
-WARNING:  Open circuit - Same name on different nets:
-          Name:  "shift_out<59>"
-          (1)  at location  (115.33,10.455)  on layer  15 "metal3"  on net id  648
-          (2)  at location  (120.8275,46.5125)  on layer  15 "metal3"  on net id  393
-          The name was assigned to net 648 .
-
-WARNING:  Open circuit - Same name on different nets:
-          Name:  "shift_out<62>"
-          (1)  at location  (113.3525,35.92)  on layer  15 "metal3"  on net id  445
-          (2)  at location  (113.8775,53.5025)  on layer  15 "metal3"  on net id  313
-          (3)  at location  (118.8375,44.09)  on layer  15 "metal3"  on net id  388
-          The name was assigned to net 445 .
-
-WARNING:  Open circuit - Same name on different nets:
-          Name:  "shift_out<63>"
-          (1)  at location  (114.335,26.795)  on layer  15 "metal3"  on net id  501
-          (2)  at location  (114.8725,62.6)  on layer  15 "metal3"  on net id  251
-          (3)  at location  (119.8325,44.095)  on layer  15 "metal3"  on net id  390
-          The name was assigned to net 501 .
-
-WARNING:  Open circuit - Same name on different nets:
-          Name:  "shift_out<64>"
-          (1)  at location  (115.33,8.14)  on layer  15 "metal3"  on net id  647
-          (2)  at location  (120.8275,44.1975)  on layer  15 "metal3"  on net id  392
-          The name was assigned to net 647 .
-
-WARNING:  Open circuit - Same name on different nets:
-          Name:  "shift_out<67>"
-          (1)  at location  (113.3525,33.605)  on layer  15 "metal3"  on net id  496
-          (2)  at location  (113.8775,51.1875)  on layer  15 "metal3"  on net id  347
-          (3)  at location  (118.8375,41.775)  on layer  15 "metal3"  on net id  423
-          The name was assigned to net 496 .
-
-WARNING:  Open circuit - Same name on different nets:
-          Name:  "shift_out<68>"
-          (1)  at location  (114.335,24.48)  on layer  15 "metal3"  on net id  550
-          (2)  at location  (114.8725,60.285)  on layer  15 "metal3"  on net id  284
-          (3)  at location  (119.8325,41.78)  on layer  15 "metal3"  on net id  425
-          The name was assigned to net 550 .
-
-WARNING:  Open circuit - Same name on different nets:
-          Name:  "shift_out<69>"
-          (1)  at location  (115.33,5.825)  on layer  15 "metal3"  on net id  682
-          (2)  at location  (120.8275,41.8825)  on layer  15 "metal3"  on net id  427
-          The name was assigned to net 682 .
-
-WARNING:  Open circuit - Same name on different nets:
-          Name:  "shift_out<72>"
-          (1)  at location  (113.3525,31.29)  on layer  15 "metal3"  on net id  495
-          (2)  at location  (113.8775,48.8725)  on layer  15 "metal3"  on net id  346
-          (3)  at location  (118.8375,39.46)  on layer  15 "metal3"  on net id  422
-          The name was assigned to net 495 .
-
-WARNING:  Open circuit - Same name on different nets:
-          Name:  "shift_out<73>"
-          (1)  at location  (114.335,22.165)  on layer  15 "metal3"  on net id  549
-          (2)  at location  (114.8725,57.97)  on layer  15 "metal3"  on net id  283
-          (3)  at location  (119.8325,39.465)  on layer  15 "metal3"  on net id  424
-          The name was assigned to net 549 .
-
-WARNING:  Open circuit - Same name on different nets:
-          Name:  "shift_out<74>"
-          (1)  at location  (115.33,3.51)  on layer  15 "metal3"  on net id  681
-          (2)  at location  (120.8275,39.5675)  on layer  15 "metal3"  on net id  426
-          The name was assigned to net 681 .
-
-WARNING:  Open circuit - Same name on different nets:
-          Name:  "shift_out<77>"
-          (1)  at location  (113.3525,28.975)  on layer  15 "metal3"  on net id  494
-          (2)  at location  (113.8775,46.5575)  on layer  15 "metal3"  on net id  381
-          (3)  at location  (118.8375,37.145)  on layer  15 "metal3"  on net id  458
-          The name was assigned to net 494 .
-
-WARNING:  Open circuit - Same name on different nets:
-          Name:  "shift_out<78>"
-          (1)  at location  (114.335,19.85)  on layer  15 "metal3"  on net id  583
-          (2)  at location  (114.8725,55.655)  on layer  15 "metal3"  on net id  317
-          (3)  at location  (119.8325,37.15)  on layer  15 "metal3"  on net id  460
-          The name was assigned to net 583 .
-
-WARNING:  Open circuit - Same name on different nets:
-          Name:  "shift_out<79>"
-          (1)  at location  (115.33,1.195)  on layer  15 "metal3"  on net id  680
-          (2)  at location  (120.8275,37.2525)  on layer  15 "metal3"  on net id  462
-          The name was assigned to net 680 .
-
-WARNING:  Open circuit - Same name on different nets:
-          Name:  "shift_out<7>"
-          (1)  at location  (113.3525,61.385)  on layer  15 "metal3"  on net id  280
-          (2)  at location  (118.8375,69.555)  on layer  15 "metal3"  on net id  214
-          The name was assigned to net 280 .
-
-WARNING:  Open circuit - Same name on different nets:
-          Name:  "shift_out<82>"
-          (1)  at location  (113.3525,26.66)  on layer  15 "metal3"  on net id  493
-          (2)  at location  (113.8775,44.2425)  on layer  15 "metal3"  on net id  380
-          (3)  at location  (118.8375,34.83)  on layer  15 "metal3"  on net id  457
-          The name was assigned to net 493 .
-
-WARNING:  Open circuit - Same name on different nets:
-          Name:  "shift_out<83>"
-          (1)  at location  (114.335,17.535)  on layer  15 "metal3"  on net id  582
-          (2)  at location  (114.8725,53.34)  on layer  15 "metal3"  on net id  316
-          (3)  at location  (119.8325,34.835)  on layer  15 "metal3"  on net id  459
+          Name:  "shift_out<147>"
+          (1)  at location  (113.8775,14.1475)  on layer  15 "metal3"  on net id  582
+          (2)  at location  (118.8375,4.735)  on layer  15 "metal3"  on net id  649
           The name was assigned to net 582 .
 
 WARNING:  Open circuit - Same name on different nets:
-          Name:  "shift_out<84>"
-          (1)  at location  (115.865,72.03)  on layer  15 "metal3"  on net id  210
-          (2)  at location  (120.8275,34.9375)  on layer  15 "metal3"  on net id  461
+          Name:  "shift_out<148>"
+          (1)  at location  (114.8725,23.245)  on layer  15 "metal3"  on net id  525
+          (2)  at location  (119.8325,4.74)  on layer  15 "metal3"  on net id  652
+          The name was assigned to net 525 .
+
+WARNING:  Open circuit - Same name on different nets:
+          Name:  "shift_out<149>"
+          (1)  at location  (115.865,41.935)  on layer  15 "metal3"  on net id  404
+          (2)  at location  (120.8275,4.8425)  on layer  15 "metal3"  on net id  655
+          The name was assigned to net 404 .
+
+WARNING:  Open circuit - Same name on different nets:
+          Name:  "shift_out<14>"
+          (1)  at location  (115.33,31.29)  on layer  15 "metal3"  on net id  488
+          (2)  at location  (120.8275,67.3475)  on layer  15 "metal3"  on net id  220
+          The name was assigned to net 488 .
+
+WARNING:  Open circuit - Same name on different nets:
+          Name:  "shift_out<152>"
+          (1)  at location  (113.8775,11.8325)  on layer  15 "metal3"  on net id  581
+          (2)  at location  (118.8375,2.42)  on layer  15 "metal3"  on net id  648
+          The name was assigned to net 581 .
+
+WARNING:  Open circuit - Same name on different nets:
+          Name:  "shift_out<153>"
+          (1)  at location  (114.8725,20.93)  on layer  15 "metal3"  on net id  524
+          (2)  at location  (119.8325,2.425)  on layer  15 "metal3"  on net id  651
+          The name was assigned to net 524 .
+
+WARNING:  Open circuit - Same name on different nets:
+          Name:  "shift_out<154>"
+          (1)  at location  (115.865,39.62)  on layer  15 "metal3"  on net id  403
+          (2)  at location  (120.8275,2.5275)  on layer  15 "metal3"  on net id  654
+          The name was assigned to net 403 .
+
+WARNING:  Open circuit - Same name on different nets:
+          Name:  "shift_out<156>"
+          (1)  at location  (112.8775,4.735)  on layer  15 "metal3"  on net id  639
+          (2)  at location  (117.8425,0.11)  on layer  15 "metal3"  on net id  646
+          The name was assigned to net 639 .
+
+WARNING:  Open circuit - Same name on different nets:
+          Name:  "shift_out<157>"
+          (1)  at location  (113.8775,9.5175)  on layer  15 "metal3"  on net id  611
+          (2)  at location  (118.8375,0.105)  on layer  15 "metal3"  on net id  647
+          The name was assigned to net 611 .
+
+WARNING:  Open circuit - Same name on different nets:
+          Name:  "shift_out<158>"
+          (1)  at location  (114.8725,18.615)  on layer  15 "metal3"  on net id  555
+          (2)  at location  (119.8325,0.11)  on layer  15 "metal3"  on net id  650
+          The name was assigned to net 555 .
+
+WARNING:  Open circuit - Same name on different nets:
+          Name:  "shift_out<159>"
+          (1)  at location  (115.865,37.305)  on layer  15 "metal3"  on net id  435
+          (2)  at location  (120.8275,0.2125)  on layer  15 "metal3"  on net id  653
+          The name was assigned to net 435 .
+
+WARNING:  Open circuit - Same name on different nets:
+          Name:  "shift_out<18>"
+          (1)  at location  (114.335,47.63)  on layer  15 "metal3"  on net id  367
+          (2)  at location  (119.8325,64.93)  on layer  15 "metal3"  on net id  254
+          The name was assigned to net 367 .
+
+WARNING:  Open circuit - Same name on different nets:
+          Name:  "shift_out<19>"
+          (1)  at location  (115.33,28.975)  on layer  15 "metal3"  on net id  487
+          (2)  at location  (120.8275,65.0325)  on layer  15 "metal3"  on net id  256
+          The name was assigned to net 487 .
+
+WARNING:  Open circuit - Same name on different nets:
+          Name:  "shift_out<23>"
+          (1)  at location  (114.335,45.315)  on layer  15 "metal3"  on net id  366
+          (2)  at location  (119.8325,62.615)  on layer  15 "metal3"  on net id  253
+          The name was assigned to net 366 .
+
+WARNING:  Open circuit - Same name on different nets:
+          Name:  "shift_out<24>"
+          (1)  at location  (115.33,26.66)  on layer  15 "metal3"  on net id  486
+          (2)  at location  (120.8275,62.7175)  on layer  15 "metal3"  on net id  255
+          The name was assigned to net 486 .
+
+WARNING:  Open circuit - Same name on different nets:
+          Name:  "shift_out<27>"
+          (1)  at location  (113.8775,69.7075)  on layer  15 "metal3"  on net id  207
+          (2)  at location  (118.8375,60.295)  on layer  15 "metal3"  on net id  207
+          (3)  at location  (113.3525,52.125)  on layer  15 "metal3"  on net id  332
+          The name was assigned to net 207 .
+
+WARNING:  Open circuit - Same name on different nets:
+          Name:  "shift_out<28>"
+          (1)  at location  (114.335,43)  on layer  15 "metal3"  on net id  400
+          (2)  at location  (119.8325,60.3)  on layer  15 "metal3"  on net id  281
+          The name was assigned to net 400 .
+
+WARNING:  Open circuit - Same name on different nets:
+          Name:  "shift_out<29>"
+          (1)  at location  (115.33,24.345)  on layer  15 "metal3"  on net id  527
+          (2)  at location  (120.8275,60.4025)  on layer  15 "metal3"  on net id  283
+          The name was assigned to net 527 .
+
+WARNING:  Open circuit - Same name on different nets:
+          Name:  "shift_out<32>"
+          (1)  at location  (113.8775,67.3925)  on layer  15 "metal3"  on net id  206
+          (2)  at location  (118.8375,57.98)  on layer  15 "metal3"  on net id  206
+          (3)  at location  (113.3525,49.81)  on layer  15 "metal3"  on net id  331
+          The name was assigned to net 206 .
+
+WARNING:  Open circuit - Same name on different nets:
+          Name:  "shift_out<33>"
+          (1)  at location  (114.335,40.685)  on layer  15 "metal3"  on net id  399
+          (2)  at location  (119.8325,57.985)  on layer  15 "metal3"  on net id  280
+          The name was assigned to net 399 .
+
+WARNING:  Open circuit - Same name on different nets:
+          Name:  "shift_out<34>"
+          (1)  at location  (115.33,22.03)  on layer  15 "metal3"  on net id  526
+          (2)  at location  (120.8275,58.0875)  on layer  15 "metal3"  on net id  282
+          The name was assigned to net 526 .
+
+WARNING:  Open circuit - Same name on different nets:
+          Name:  "shift_out<37>"
+          (1)  at location  (113.8775,65.0775)  on layer  15 "metal3"  on net id  248
+          (2)  at location  (118.8375,55.665)  on layer  15 "metal3"  on net id  248
+          (3)  at location  (113.3525,47.495)  on layer  15 "metal3"  on net id  363
+          The name was assigned to net 248 .
+
+WARNING:  Open circuit - Same name on different nets:
+          Name:  "shift_out<38>"
+          (1)  at location  (114.335,38.37)  on layer  15 "metal3"  on net id  430
+          (2)  at location  (119.8325,55.67)  on layer  15 "metal3"  on net id  310
+          The name was assigned to net 430 .
+
+WARNING:  Open circuit - Same name on different nets:
+          Name:  "shift_out<39>"
+          (1)  at location  (115.33,19.715)  on layer  15 "metal3"  on net id  557
+          (2)  at location  (120.8275,55.7725)  on layer  15 "metal3"  on net id  312
+          The name was assigned to net 557 .
+
+WARNING:  Open circuit - Same name on different nets:
+          Name:  "shift_out<3>"
+          (1)  at location  (114.335,54.575)  on layer  15 "metal3"  on net id  304
+          (2)  at location  (119.8325,71.875)  on layer  15 "metal3"  on net id  218
+          The name was assigned to net 304 .
+
+WARNING:  Open circuit - Same name on different nets:
+          Name:  "shift_out<42>"
+          (1)  at location  (113.3525,45.18)  on layer  15 "metal3"  on net id  362
+          (2)  at location  (113.8775,62.7625)  on layer  15 "metal3"  on net id  242
+          (3)  at location  (118.8375,53.35)  on layer  15 "metal3"  on net id  309
+          The name was assigned to net 362 .
+
+WARNING:  Open circuit - Same name on different nets:
+          Name:  "shift_out<43>"
+          (1)  at location  (114.8725,71.86)  on layer  15 "metal3"  on net id  211
+          (2)  at location  (119.8325,53.355)  on layer  15 "metal3"  on net id  211
+          (3)  at location  (114.335,36.055)  on layer  15 "metal3"  on net id  429
+          The name was assigned to net 211 .
+
+WARNING:  Open circuit - Same name on different nets:
+          Name:  "shift_out<44>"
+          (1)  at location  (115.33,17.4)  on layer  15 "metal3"  on net id  556
+          (2)  at location  (120.8275,53.4575)  on layer  15 "metal3"  on net id  311
+          The name was assigned to net 556 .
+
+WARNING:  Open circuit - Same name on different nets:
+          Name:  "shift_out<47>"
+          (1)  at location  (113.8775,60.4475)  on layer  15 "metal3"  on net id  276
+          (2)  at location  (118.8375,51.035)  on layer  15 "metal3"  on net id  276
+          (3)  at location  (113.3525,42.865)  on layer  15 "metal3"  on net id  396
+          The name was assigned to net 276 .
+
+WARNING:  Open circuit - Same name on different nets:
+          Name:  "shift_out<48>"
+          (1)  at location  (114.8725,69.545)  on layer  15 "metal3"  on net id  210
+          (2)  at location  (119.8325,51.04)  on layer  15 "metal3"  on net id  210
+          (3)  at location  (114.335,33.74)  on layer  15 "metal3"  on net id  481
           The name was assigned to net 210 .
 
 WARNING:  Open circuit - Same name on different nets:
-          Name:  "shift_out<87>"
-          (1)  at location  (113.3525,24.345)  on layer  15 "metal3"  on net id  546
-          (2)  at location  (113.8775,41.9275)  on layer  15 "metal3"  on net id  415
-          (3)  at location  (118.8375,32.515)  on layer  15 "metal3"  on net id  516
-          The name was assigned to net 546 .
+          Name:  "shift_out<49>"
+          (1)  at location  (115.33,15.085)  on layer  15 "metal3"  on net id  586
+          (2)  at location  (120.8275,51.1425)  on layer  15 "metal3"  on net id  342
+          The name was assigned to net 586 .
 
 WARNING:  Open circuit - Same name on different nets:
-          Name:  "shift_out<88>"
-          (1)  at location  (114.335,15.22)  on layer  15 "metal3"  on net id  615
-          (2)  at location  (114.8725,51.025)  on layer  15 "metal3"  on net id  351
-          (3)  at location  (119.8325,32.52)  on layer  15 "metal3"  on net id  520
-          The name was assigned to net 615 .
+          Name:  "shift_out<4>"
+          (1)  at location  (115.33,35.92)  on layer  15 "metal3"  on net id  433
+          (2)  at location  (120.8275,71.875)  on layer  15 "metal3"  on net id  222
+          The name was assigned to net 433 .
 
 WARNING:  Open circuit - Same name on different nets:
-          Name:  "shift_out<89>"
-          (1)  at location  (115.865,69.715)  on layer  15 "metal3"  on net id  209
-          (2)  at location  (120.8275,32.6225)  on layer  15 "metal3"  on net id  524
+          Name:  "shift_out<52>"
+          (1)  at location  (113.8775,58.1325)  on layer  15 "metal3"  on net id  275
+          (2)  at location  (118.8375,48.72)  on layer  15 "metal3"  on net id  275
+          (3)  at location  (113.3525,40.55)  on layer  15 "metal3"  on net id  395
+          The name was assigned to net 275 .
+
+WARNING:  Open circuit - Same name on different nets:
+          Name:  "shift_out<53>"
+          (1)  at location  (114.8725,67.23)  on layer  15 "metal3"  on net id  209
+          (2)  at location  (119.8325,48.725)  on layer  15 "metal3"  on net id  209
+          (3)  at location  (114.335,31.425)  on layer  15 "metal3"  on net id  480
           The name was assigned to net 209 .
 
 WARNING:  Open circuit - Same name on different nets:
-          Name:  "shift_out<8>"
-          (1)  at location  (114.335,52.26)  on layer  15 "metal3"  on net id  349
-          (2)  at location  (119.8325,69.56)  on layer  15 "metal3"  on net id  218
-          The name was assigned to net 349 .
+          Name:  "shift_out<54>"
+          (1)  at location  (115.33,12.77)  on layer  15 "metal3"  on net id  585
+          (2)  at location  (120.8275,48.8275)  on layer  15 "metal3"  on net id  341
+          The name was assigned to net 585 .
 
 WARNING:  Open circuit - Same name on different nets:
-          Name:  "shift_out<92>"
-          (1)  at location  (113.3525,22.03)  on layer  15 "metal3"  on net id  545
-          (2)  at location  (113.8775,39.6125)  on layer  15 "metal3"  on net id  414
-          (3)  at location  (118.8375,30.2)  on layer  15 "metal3"  on net id  515
-          The name was assigned to net 545 .
+          Name:  "shift_out<57>"
+          (1)  at location  (113.3525,38.235)  on layer  15 "metal3"  on net id  426
+          (2)  at location  (113.8775,55.8175)  on layer  15 "metal3"  on net id  303
+          (3)  at location  (118.8375,46.405)  on layer  15 "metal3"  on net id  372
+          The name was assigned to net 426 .
 
 WARNING:  Open circuit - Same name on different nets:
-          Name:  "shift_out<93>"
-          (1)  at location  (114.335,12.905)  on layer  15 "metal3"  on net id  614
-          (2)  at location  (114.8725,48.71)  on layer  15 "metal3"  on net id  350
-          (3)  at location  (119.8325,30.205)  on layer  15 "metal3"  on net id  519
+          Name:  "shift_out<58>"
+          (1)  at location  (114.8725,64.915)  on layer  15 "metal3"  on net id  250
+          (2)  at location  (119.8325,46.41)  on layer  15 "metal3"  on net id  250
+          (3)  at location  (114.335,29.11)  on layer  15 "metal3"  on net id  479
+          The name was assigned to net 250 .
+
+WARNING:  Open circuit - Same name on different nets:
+          Name:  "shift_out<59>"
+          (1)  at location  (115.33,10.455)  on layer  15 "metal3"  on net id  615
+          (2)  at location  (120.8275,46.5125)  on layer  15 "metal3"  on net id  374
+          The name was assigned to net 615 .
+
+WARNING:  Open circuit - Same name on different nets:
+          Name:  "shift_out<62>"
+          (1)  at location  (113.3525,35.92)  on layer  15 "metal3"  on net id  355
+          (2)  at location  (118.8375,44.09)  on layer  15 "metal3"  on net id  355
+          (3)  at location  (113.8775,53.5025)  on layer  15 "metal3"  on net id  302
+          The name was assigned to net 355 .
+
+WARNING:  Open circuit - Same name on different nets:
+          Name:  "shift_out<63>"
+          (1)  at location  (114.8725,62.6)  on layer  15 "metal3"  on net id  249
+          (2)  at location  (119.8325,44.095)  on layer  15 "metal3"  on net id  249
+          (3)  at location  (114.335,26.795)  on layer  15 "metal3"  on net id  478
+          The name was assigned to net 249 .
+
+WARNING:  Open circuit - Same name on different nets:
+          Name:  "shift_out<64>"
+          (1)  at location  (115.33,8.14)  on layer  15 "metal3"  on net id  614
+          (2)  at location  (120.8275,44.1975)  on layer  15 "metal3"  on net id  373
           The name was assigned to net 614 .
 
 WARNING:  Open circuit - Same name on different nets:
+          Name:  "shift_out<67>"
+          (1)  at location  (113.3525,33.605)  on layer  15 "metal3"  on net id  387
+          (2)  at location  (118.8375,41.775)  on layer  15 "metal3"  on net id  387
+          (3)  at location  (113.8775,51.1875)  on layer  15 "metal3"  on net id  334
+          The name was assigned to net 387 .
+
+WARNING:  Open circuit - Same name on different nets:
+          Name:  "shift_out<68>"
+          (1)  at location  (114.8725,60.285)  on layer  15 "metal3"  on net id  278
+          (2)  at location  (119.8325,41.78)  on layer  15 "metal3"  on net id  278
+          (3)  at location  (114.335,24.48)  on layer  15 "metal3"  on net id  523
+          The name was assigned to net 278 .
+
+WARNING:  Open circuit - Same name on different nets:
+          Name:  "shift_out<69>"
+          (1)  at location  (115.33,5.825)  on layer  15 "metal3"  on net id  645
+          (2)  at location  (120.8275,41.8825)  on layer  15 "metal3"  on net id  406
+          The name was assigned to net 645 .
+
+WARNING:  Open circuit - Same name on different nets:
+          Name:  "shift_out<72>"
+          (1)  at location  (113.3525,31.29)  on layer  15 "metal3"  on net id  388
+          (2)  at location  (118.8375,39.46)  on layer  15 "metal3"  on net id  388
+          (3)  at location  (113.8775,48.8725)  on layer  15 "metal3"  on net id  333
+          The name was assigned to net 388 .
+
+WARNING:  Open circuit - Same name on different nets:
+          Name:  "shift_out<73>"
+          (1)  at location  (114.8725,57.97)  on layer  15 "metal3"  on net id  277
+          (2)  at location  (119.8325,39.465)  on layer  15 "metal3"  on net id  277
+          (3)  at location  (114.335,22.165)  on layer  15 "metal3"  on net id  522
+          The name was assigned to net 277 .
+
+WARNING:  Open circuit - Same name on different nets:
+          Name:  "shift_out<74>"
+          (1)  at location  (115.33,3.51)  on layer  15 "metal3"  on net id  644
+          (2)  at location  (120.8275,39.5675)  on layer  15 "metal3"  on net id  405
+          The name was assigned to net 644 .
+
+WARNING:  Open circuit - Same name on different nets:
+          Name:  "shift_out<77>"
+          (1)  at location  (113.3525,28.975)  on layer  15 "metal3"  on net id  420
+          (2)  at location  (118.8375,37.145)  on layer  15 "metal3"  on net id  420
+          (3)  at location  (113.8775,46.5575)  on layer  15 "metal3"  on net id  365
+          The name was assigned to net 420 .
+
+WARNING:  Open circuit - Same name on different nets:
+          Name:  "shift_out<78>"
+          (1)  at location  (114.335,19.85)  on layer  15 "metal3"  on net id  554
+          (2)  at location  (114.8725,55.655)  on layer  15 "metal3"  on net id  306
+          (3)  at location  (119.8325,37.15)  on layer  15 "metal3"  on net id  438
+          The name was assigned to net 554 .
+
+WARNING:  Open circuit - Same name on different nets:
+          Name:  "shift_out<79>"
+          (1)  at location  (115.33,1.195)  on layer  15 "metal3"  on net id  643
+          (2)  at location  (120.8275,37.2525)  on layer  15 "metal3"  on net id  440
+          The name was assigned to net 643 .
+
+WARNING:  Open circuit - Same name on different nets:
+          Name:  "shift_out<82>"
+          (1)  at location  (113.3525,26.66)  on layer  15 "metal3"  on net id  419
+          (2)  at location  (118.8375,34.83)  on layer  15 "metal3"  on net id  419
+          (3)  at location  (113.8775,44.2425)  on layer  15 "metal3"  on net id  364
+          The name was assigned to net 419 .
+
+WARNING:  Open circuit - Same name on different nets:
+          Name:  "shift_out<83>"
+          (1)  at location  (114.335,17.535)  on layer  15 "metal3"  on net id  553
+          (2)  at location  (114.8725,53.34)  on layer  15 "metal3"  on net id  305
+          (3)  at location  (119.8325,34.835)  on layer  15 "metal3"  on net id  437
+          The name was assigned to net 553 .
+
+WARNING:  Open circuit - Same name on different nets:
+          Name:  "shift_out<87>"
+          (1)  at location  (113.3525,24.345)  on layer  15 "metal3"  on net id  459
+          (2)  at location  (118.8375,32.515)  on layer  15 "metal3"  on net id  459
+          (3)  at location  (113.8775,41.9275)  on layer  15 "metal3"  on net id  398
+          The name was assigned to net 459 .
+
+WARNING:  Open circuit - Same name on different nets:
+          Name:  "shift_out<88>"
+          (1)  at location  (114.335,15.22)  on layer  15 "metal3"  on net id  584
+          (2)  at location  (114.8725,51.025)  on layer  15 "metal3"  on net id  338
+          (3)  at location  (119.8325,32.52)  on layer  15 "metal3"  on net id  494
+          The name was assigned to net 584 .
+
+WARNING:  Open circuit - Same name on different nets:
+          Name:  "shift_out<89>"
+          (1)  at location  (115.865,69.715)  on layer  15 "metal3"  on net id  213
+          (2)  at location  (120.8275,32.6225)  on layer  15 "metal3"  on net id  498
+          The name was assigned to net 213 .
+
+WARNING:  Open circuit - Same name on different nets:
+          Name:  "shift_out<8>"
+          (1)  at location  (114.335,52.26)  on layer  15 "metal3"  on net id  336
+          (2)  at location  (119.8325,69.56)  on layer  15 "metal3"  on net id  217
+          The name was assigned to net 336 .
+
+WARNING:  Open circuit - Same name on different nets:
+          Name:  "shift_out<92>"
+          (1)  at location  (113.3525,22.03)  on layer  15 "metal3"  on net id  460
+          (2)  at location  (118.8375,30.2)  on layer  15 "metal3"  on net id  460
+          (3)  at location  (113.8775,39.6125)  on layer  15 "metal3"  on net id  397
+          The name was assigned to net 460 .
+
+WARNING:  Open circuit - Same name on different nets:
+          Name:  "shift_out<93>"
+          (1)  at location  (114.335,12.905)  on layer  15 "metal3"  on net id  583
+          (2)  at location  (114.8725,48.71)  on layer  15 "metal3"  on net id  337
+          (3)  at location  (119.8325,30.205)  on layer  15 "metal3"  on net id  493
+          The name was assigned to net 583 .
+
+WARNING:  Open circuit - Same name on different nets:
           Name:  "shift_out<94>"
-          (1)  at location  (115.865,67.4)  on layer  15 "metal3"  on net id  208
-          (2)  at location  (120.8275,30.3075)  on layer  15 "metal3"  on net id  523
-          The name was assigned to net 208 .
+          (1)  at location  (115.865,67.4)  on layer  15 "metal3"  on net id  212
+          (2)  at location  (120.8275,30.3075)  on layer  15 "metal3"  on net id  497
+          The name was assigned to net 212 .
 
 WARNING:  Open circuit - Same name on different nets:
           Name:  "shift_out<97>"
-          (1)  at location  (113.3525,19.715)  on layer  15 "metal3"  on net id  579
-          (2)  at location  (113.8775,37.2975)  on layer  15 "metal3"  on net id  448
-          (3)  at location  (118.8375,27.885)  on layer  15 "metal3"  on net id  514
-          The name was assigned to net 579 .
+          (1)  at location  (113.3525,19.715)  on layer  15 "metal3"  on net id  461
+          (2)  at location  (118.8375,27.885)  on layer  15 "metal3"  on net id  461
+          (3)  at location  (113.8775,37.2975)  on layer  15 "metal3"  on net id  428
+          The name was assigned to net 461 .
 
 WARNING:  Open circuit - Same name on different nets:
           Name:  "shift_out<98>"
-          (1)  at location  (114.8725,46.395)  on layer  15 "metal3"  on net id  385
-          (2)  at location  (119.8325,27.89)  on layer  15 "metal3"  on net id  518
-          The name was assigned to net 385 .
+          (1)  at location  (114.8725,46.395)  on layer  15 "metal3"  on net id  369
+          (2)  at location  (119.8325,27.89)  on layer  15 "metal3"  on net id  492
+          The name was assigned to net 369 .
 
 WARNING:  Open circuit - Same name on different nets:
           Name:  "shift_out<99>"
-          (1)  at location  (115.865,65.085)  on layer  15 "metal3"  on net id  254
-          (2)  at location  (120.8275,27.9925)  on layer  15 "metal3"  on net id  522
-          The name was assigned to net 254 .
+          (1)  at location  (115.865,65.085)  on layer  15 "metal3"  on net id  252
+          (2)  at location  (120.8275,27.9925)  on layer  15 "metal3"  on net id  496
+          The name was assigned to net 252 .
 
 WARNING:  Open circuit - Same name on different nets:
           Name:  "shift_out<9>"
-          (1)  at location  (115.33,33.605)  on layer  15 "metal3"  on net id  512
-          (2)  at location  (120.8275,69.6625)  on layer  15 "metal3"  on net id  222
-          The name was assigned to net 512 .
+          (1)  at location  (115.33,33.605)  on layer  15 "metal3"  on net id  489
+          (2)  at location  (120.8275,69.6625)  on layer  15 "metal3"  on net id  221
+          The name was assigned to net 489 .
 
 WARNING:  Open circuit - Same name on different nets:
           Name:  "vdd!"
@@ -9856,139 +9844,104 @@ WARNING: Top level port name "vdd!" on net 64 at location (64.3525,5.9425) alrea
 WARNING: Top level port name "vdd!" on net 64 at location (61.6525,5.9425) already used on net 60; ignored.
 WARNING: Top level port name "vdd!" on net 64 at location (58.9525,5.9425) already used on net 60; ignored.
 WARNING: Top level port name "vdd!" on net 64 at location (56.2525,5.9425) already used on net 60; ignored.
-WARNING: Top level port name "shift_out<32>" on net 202 at location (113.8775,67.3925) already used on net 344; ignored.
-WARNING: Top level port name "shift_out<27>" on net 203 at location (113.8775,69.7075) already used on net 345; ignored.
-WARNING: Top level port name "shift_out<22>" on net 204 at location (113.8775,72.0225) already used on net 311; ignored.
-WARNING: Top level port name "shift_out<53>" on net 205 at location (114.8725,67.23) already used on net 503; ignored.
-WARNING: Top level port name "shift_out<48>" on net 206 at location (114.8725,69.545) already used on net 504; ignored.
-WARNING: Top level port name "shift_out<43>" on net 207 at location (114.8725,71.86) already used on net 449; ignored.
-WARNING: Top level port name "shift_out<12>" on net 213 at location (118.8375,67.24) already used on net 279; ignored.
-WARNING: Top level port name "shift_out<7>" on net 214 at location (118.8375,69.555) already used on net 280; ignored.
-WARNING: Top level port name "shift_out<2>" on net 215 at location (118.8375,71.87) already used on net 248; ignored.
-WARNING: Top level port name "shift_out<13>" on net 217 at location (119.8325,67.245) already used on net 348; ignored.
-WARNING: Top level port name "shift_out<8>" on net 218 at location (119.8325,69.56) already used on net 349; ignored.
-WARNING: Top level port name "shift_out<3>" on net 219 at location (119.8325,71.875) already used on net 315; ignored.
-WARNING: Top level port name "shift_out<14>" on net 221 at location (120.8275,67.3475) already used on net 511; ignored.
-WARNING: Top level port name "shift_out<9>" on net 222 at location (120.8275,69.6625) already used on net 512; ignored.
-WARNING: Top level port name "shift_out<4>" on net 223 at location (120.8275,71.875) already used on net 453; ignored.
-WARNING: Top level port name "shift_out<42>" on net 249 at location (113.8775,62.7625) already used on net 378; ignored.
-WARNING: Top level port name "shift_out<37>" on net 250 at location (113.8775,65.0775) already used on net 379; ignored.
-WARNING: Top level port name "shift_out<63>" on net 251 at location (114.8725,62.6) already used on net 501; ignored.
-WARNING: Top level port name "shift_out<58>" on net 252 at location (114.8725,64.915) already used on net 502; ignored.
-WARNING: Top level port name "shift_out<22>" on net 255 at location (118.8375,62.61) already used on net 311; ignored.
-WARNING: Top level port name "shift_out<17>" on net 256 at location (118.8375,64.925) already used on net 312; ignored.
-WARNING: Top level port name "shift_out<23>" on net 257 at location (119.8325,62.615) already used on net 382; ignored.
-WARNING: Top level port name "shift_out<18>" on net 258 at location (119.8325,64.93) already used on net 383; ignored.
-WARNING: Top level port name "shift_out<24>" on net 259 at location (120.8275,62.7175) already used on net 509; ignored.
-WARNING: Top level port name "shift_out<19>" on net 260 at location (120.8275,65.0325) already used on net 510; ignored.
-WARNING: Top level port name "shift_out<52>" on net 281 at location (113.8775,58.1325) already used on net 412; ignored.
-WARNING: Top level port name "shift_out<47>" on net 282 at location (113.8775,60.4475) already used on net 413; ignored.
-WARNING: Top level port name "shift_out<73>" on net 283 at location (114.8725,57.97) already used on net 549; ignored.
-WARNING: Top level port name "shift_out<68>" on net 284 at location (114.8725,60.285) already used on net 550; ignored.
-WARNING: Top level port name "shift_out<32>" on net 287 at location (118.8375,57.98) already used on net 344; ignored.
-WARNING: Top level port name "shift_out<27>" on net 288 at location (118.8375,60.295) already used on net 345; ignored.
-WARNING: Top level port name "shift_out<33>" on net 289 at location (119.8325,57.985) already used on net 416; ignored.
-WARNING: Top level port name "shift_out<28>" on net 290 at location (119.8325,60.3) already used on net 417; ignored.
-WARNING: Top level port name "shift_out<34>" on net 291 at location (120.8275,58.0875) already used on net 553; ignored.
-WARNING: Top level port name "shift_out<29>" on net 292 at location (120.8275,60.4025) already used on net 554; ignored.
-WARNING: Top level port name "shift_out<62>" on net 313 at location (113.8775,53.5025) already used on net 445; ignored.
-WARNING: Top level port name "shift_out<57>" on net 314 at location (113.8775,55.8175) already used on net 446; ignored.
-WARNING: Top level port name "shift_out<83>" on net 316 at location (114.8725,53.34) already used on net 582; ignored.
-WARNING: Top level port name "shift_out<78>" on net 317 at location (114.8725,55.655) already used on net 583; ignored.
-WARNING: Top level port name "shift_out<42>" on net 320 at location (118.8375,53.35) already used on net 378; ignored.
-WARNING: Top level port name "shift_out<37>" on net 321 at location (118.8375,55.665) already used on net 379; ignored.
-WARNING: Top level port name "shift_out<43>" on net 322 at location (119.8325,53.355) already used on net 449; ignored.
-WARNING: Top level port name "shift_out<38>" on net 323 at location (119.8325,55.67) already used on net 450; ignored.
-WARNING: Top level port name "shift_out<44>" on net 324 at location (120.8275,53.4575) already used on net 585; ignored.
-WARNING: Top level port name "shift_out<39>" on net 325 at location (120.8275,55.7725) already used on net 586; ignored.
-WARNING: Top level port name "shift_out<72>" on net 346 at location (113.8775,48.8725) already used on net 495; ignored.
-WARNING: Top level port name "shift_out<67>" on net 347 at location (113.8775,51.1875) already used on net 496; ignored.
-WARNING: Top level port name "shift_out<93>" on net 350 at location (114.8725,48.71) already used on net 614; ignored.
-WARNING: Top level port name "shift_out<88>" on net 351 at location (114.8725,51.025) already used on net 615; ignored.
-WARNING: Top level port name "shift_out<52>" on net 354 at location (118.8375,48.72) already used on net 412; ignored.
-WARNING: Top level port name "shift_out<47>" on net 355 at location (118.8375,51.035) already used on net 413; ignored.
-WARNING: Top level port name "shift_out<53>" on net 356 at location (119.8325,48.725) already used on net 503; ignored.
-WARNING: Top level port name "shift_out<48>" on net 357 at location (119.8325,51.04) already used on net 504; ignored.
-WARNING: Top level port name "shift_out<54>" on net 358 at location (120.8275,48.8275) already used on net 616; ignored.
-WARNING: Top level port name "shift_out<49>" on net 359 at location (120.8275,51.1425) already used on net 617; ignored.
-WARNING: Top level port name "shift_out<82>" on net 380 at location (113.8775,44.2425) already used on net 493; ignored.
-WARNING: Top level port name "shift_out<77>" on net 381 at location (113.8775,46.5575) already used on net 494; ignored.
-WARNING: Top level port name "shift_out<103>" on net 384 at location (114.8725,44.08) already used on net 645; ignored.
-WARNING: Top level port name "shift_out<62>" on net 388 at location (118.8375,44.09) already used on net 445; ignored.
-WARNING: Top level port name "shift_out<57>" on net 389 at location (118.8375,46.405) already used on net 446; ignored.
-WARNING: Top level port name "shift_out<63>" on net 390 at location (119.8325,44.095) already used on net 501; ignored.
-WARNING: Top level port name "shift_out<58>" on net 391 at location (119.8325,46.41) already used on net 502; ignored.
-WARNING: Top level port name "shift_out<64>" on net 392 at location (120.8275,44.1975) already used on net 647; ignored.
-WARNING: Top level port name "shift_out<59>" on net 393 at location (120.8275,46.5125) already used on net 648; ignored.
-WARNING: Top level port name "shift_out<92>" on net 414 at location (113.8775,39.6125) already used on net 545; ignored.
-WARNING: Top level port name "shift_out<87>" on net 415 at location (113.8775,41.9275) already used on net 546; ignored.
-WARNING: Top level port name "shift_out<113>" on net 418 at location (114.8725,39.45) already used on net 678; ignored.
-WARNING: Top level port name "shift_out<108>" on net 419 at location (114.8725,41.765) already used on net 679; ignored.
-WARNING: Top level port name "shift_out<72>" on net 422 at location (118.8375,39.46) already used on net 495; ignored.
-WARNING: Top level port name "shift_out<67>" on net 423 at location (118.8375,41.775) already used on net 496; ignored.
-WARNING: Top level port name "shift_out<73>" on net 424 at location (119.8325,39.465) already used on net 549; ignored.
-WARNING: Top level port name "shift_out<68>" on net 425 at location (119.8325,41.78) already used on net 550; ignored.
-WARNING: Top level port name "shift_out<74>" on net 426 at location (120.8275,39.5675) already used on net 681; ignored.
-WARNING: Top level port name "shift_out<69>" on net 427 at location (120.8275,41.8825) already used on net 682; ignored.
-WARNING: Top level port name "shift_out<102>" on net 447 at location (113.8775,34.9825) already used on net 578; ignored.
-WARNING: Top level port name "shift_out<97>" on net 448 at location (113.8775,37.2975) already used on net 579; ignored.
-WARNING: Top level port name "shift_out<118>" on net 452 at location (114.8725,37.135) already used on net 677; ignored.
-WARNING: Top level port name "shift_out<82>" on net 457 at location (118.8375,34.83) already used on net 493; ignored.
-WARNING: Top level port name "shift_out<77>" on net 458 at location (118.8375,37.145) already used on net 494; ignored.
-WARNING: Top level port name "shift_out<83>" on net 459 at location (119.8325,34.835) already used on net 582; ignored.
-WARNING: Top level port name "shift_out<78>" on net 460 at location (119.8325,37.15) already used on net 583; ignored.
-WARNING: Top level port name "shift_out<84>" on net 461 at location (120.8275,34.9375) already used on net 210; ignored.
-WARNING: Top level port name "shift_out<79>" on net 462 at location (120.8275,37.2525) already used on net 680; ignored.
-WARNING: Top level port name "shift_out<122>" on net 497 at location (113.8775,25.7225) already used on net 642; ignored.
-WARNING: Top level port name "shift_out<117>" on net 498 at location (113.8775,28.0375) already used on net 643; ignored.
-WARNING: Top level port name "shift_out<112>" on net 499 at location (113.8775,30.3525) already used on net 610; ignored.
-WARNING: Top level port name "shift_out<107>" on net 500 at location (113.8775,32.6675) already used on net 611; ignored.
-WARNING: Top level port name "shift_out<102>" on net 513 at location (118.8375,25.57) already used on net 578; ignored.
-WARNING: Top level port name "shift_out<97>" on net 514 at location (118.8375,27.885) already used on net 579; ignored.
-WARNING: Top level port name "shift_out<92>" on net 515 at location (118.8375,30.2) already used on net 545; ignored.
-WARNING: Top level port name "shift_out<87>" on net 516 at location (118.8375,32.515) already used on net 546; ignored.
-WARNING: Top level port name "shift_out<103>" on net 517 at location (119.8325,25.575) already used on net 645; ignored.
-WARNING: Top level port name "shift_out<98>" on net 518 at location (119.8325,27.89) already used on net 385; ignored.
-WARNING: Top level port name "shift_out<93>" on net 519 at location (119.8325,30.205) already used on net 614; ignored.
-WARNING: Top level port name "shift_out<88>" on net 520 at location (119.8325,32.52) already used on net 615; ignored.
-WARNING: Top level port name "shift_out<104>" on net 521 at location (120.8275,25.6775) already used on net 253; ignored.
-WARNING: Top level port name "shift_out<99>" on net 522 at location (120.8275,27.9925) already used on net 254; ignored.
-WARNING: Top level port name "shift_out<94>" on net 523 at location (120.8275,30.3075) already used on net 208; ignored.
-WARNING: Top level port name "shift_out<89>" on net 524 at location (120.8275,32.6225) already used on net 209; ignored.
-WARNING: Top level port name "shift_out<132>" on net 547 at location (113.8775,21.0925) already used on net 675; ignored.
-WARNING: Top level port name "shift_out<127>" on net 548 at location (113.8775,23.4075) already used on net 676; ignored.
-WARNING: Top level port name "shift_out<112>" on net 555 at location (118.8375,20.94) already used on net 610; ignored.
-WARNING: Top level port name "shift_out<107>" on net 556 at location (118.8375,23.255) already used on net 611; ignored.
-WARNING: Top level port name "shift_out<113>" on net 557 at location (119.8325,20.945) already used on net 678; ignored.
-WARNING: Top level port name "shift_out<108>" on net 558 at location (119.8325,23.26) already used on net 679; ignored.
-WARNING: Top level port name "shift_out<114>" on net 559 at location (120.8275,21.0475) already used on net 285; ignored.
-WARNING: Top level port name "shift_out<109>" on net 560 at location (120.8275,23.3625) already used on net 286; ignored.
-WARNING: Top level port name "shift_out<137>" on net 581 at location (113.8775,18.7775) already used on net 674; ignored.
-WARNING: Top level port name "shift_out<122>" on net 587 at location (118.8375,16.31) already used on net 642; ignored.
-WARNING: Top level port name "shift_out<117>" on net 588 at location (118.8375,18.625) already used on net 643; ignored.
-WARNING: Top level port name "shift_out<123>" on net 589 at location (119.8325,16.315) already used on net 451; ignored.
-WARNING: Top level port name "shift_out<118>" on net 590 at location (119.8325,18.63) already used on net 677; ignored.
-WARNING: Top level port name "shift_out<124>" on net 591 at location (120.8275,16.4175) already used on net 318; ignored.
-WARNING: Top level port name "shift_out<119>" on net 592 at location (120.8275,18.7325) already used on net 319; ignored.
-WARNING: Top level port name "shift_out<132>" on net 618 at location (118.8375,11.68) already used on net 675; ignored.
-WARNING: Top level port name "shift_out<127>" on net 619 at location (118.8375,13.995) already used on net 676; ignored.
-WARNING: Top level port name "shift_out<133>" on net 620 at location (119.8325,11.685) already used on net 507; ignored.
-WARNING: Top level port name "shift_out<128>" on net 621 at location (119.8325,14) already used on net 508; ignored.
-WARNING: Top level port name "shift_out<134>" on net 622 at location (120.8275,11.7875) already used on net 352; ignored.
-WARNING: Top level port name "shift_out<129>" on net 623 at location (120.8275,14.1025) already used on net 353; ignored.
-WARNING: Top level port name "shift_out<142>" on net 649 at location (118.8375,7.05) already used on net 580; ignored.
-WARNING: Top level port name "shift_out<137>" on net 650 at location (118.8375,9.365) already used on net 674; ignored.
-WARNING: Top level port name "shift_out<143>" on net 651 at location (119.8325,7.055) already used on net 505; ignored.
-WARNING: Top level port name "shift_out<138>" on net 652 at location (119.8325,9.37) already used on net 506; ignored.
-WARNING: Top level port name "shift_out<144>" on net 653 at location (120.8275,7.1575) already used on net 386; ignored.
-WARNING: Top level port name "shift_out<139>" on net 654 at location (120.8275,9.4725) already used on net 387; ignored.
-WARNING: Top level port name "shift_out<156>" on net 683 at location (117.8425,0.11) already used on net 673; ignored.
-WARNING: Top level port name "shift_out<157>" on net 684 at location (118.8375,0.105) already used on net 644; ignored.
-WARNING: Top level port name "shift_out<152>" on net 685 at location (118.8375,2.42) already used on net 612; ignored.
-WARNING: Top level port name "shift_out<147>" on net 686 at location (118.8375,4.735) already used on net 613; ignored.
-WARNING: Top level port name "shift_out<158>" on net 687 at location (119.8325,0.11) already used on net 584; ignored.
-WARNING: Top level port name "shift_out<153>" on net 688 at location (119.8325,2.425) already used on net 551; ignored.
-WARNING: Top level port name "shift_out<148>" on net 689 at location (119.8325,4.74) already used on net 552; ignored.
-WARNING: Top level port name "shift_out<159>" on net 690 at location (120.8275,0.2125) already used on net 455; ignored.
-WARNING: Top level port name "shift_out<154>" on net 691 at location (120.8275,2.5275) already used on net 420; ignored.
-WARNING: Top level port name "shift_out<149>" on net 692 at location (120.8275,4.8425) already used on net 421; ignored.
+WARNING: Top level port name "shift_out<13>" on net 216 at location (119.8325,67.245) already used on net 335; ignored.
+WARNING: Top level port name "shift_out<8>" on net 217 at location (119.8325,69.56) already used on net 336; ignored.
+WARNING: Top level port name "shift_out<3>" on net 218 at location (119.8325,71.875) already used on net 304; ignored.
+WARNING: Top level port name "shift_out<14>" on net 220 at location (120.8275,67.3475) already used on net 488; ignored.
+WARNING: Top level port name "shift_out<9>" on net 221 at location (120.8275,69.6625) already used on net 489; ignored.
+WARNING: Top level port name "shift_out<4>" on net 222 at location (120.8275,71.875) already used on net 433; ignored.
+WARNING: Top level port name "shift_out<42>" on net 242 at location (113.8775,62.7625) already used on net 362; ignored.
+WARNING: Top level port name "shift_out<23>" on net 253 at location (119.8325,62.615) already used on net 366; ignored.
+WARNING: Top level port name "shift_out<18>" on net 254 at location (119.8325,64.93) already used on net 367; ignored.
+WARNING: Top level port name "shift_out<24>" on net 255 at location (120.8275,62.7175) already used on net 486; ignored.
+WARNING: Top level port name "shift_out<19>" on net 256 at location (120.8275,65.0325) already used on net 487; ignored.
+WARNING: Top level port name "shift_out<33>" on net 280 at location (119.8325,57.985) already used on net 399; ignored.
+WARNING: Top level port name "shift_out<28>" on net 281 at location (119.8325,60.3) already used on net 400; ignored.
+WARNING: Top level port name "shift_out<34>" on net 282 at location (120.8275,58.0875) already used on net 526; ignored.
+WARNING: Top level port name "shift_out<29>" on net 283 at location (120.8275,60.4025) already used on net 527; ignored.
+WARNING: Top level port name "shift_out<62>" on net 302 at location (113.8775,53.5025) already used on net 355; ignored.
+WARNING: Top level port name "shift_out<57>" on net 303 at location (113.8775,55.8175) already used on net 426; ignored.
+WARNING: Top level port name "shift_out<83>" on net 305 at location (114.8725,53.34) already used on net 553; ignored.
+WARNING: Top level port name "shift_out<78>" on net 306 at location (114.8725,55.655) already used on net 554; ignored.
+WARNING: Top level port name "shift_out<42>" on net 309 at location (118.8375,53.35) already used on net 362; ignored.
+WARNING: Top level port name "shift_out<38>" on net 310 at location (119.8325,55.67) already used on net 430; ignored.
+WARNING: Top level port name "shift_out<44>" on net 311 at location (120.8275,53.4575) already used on net 556; ignored.
+WARNING: Top level port name "shift_out<39>" on net 312 at location (120.8275,55.7725) already used on net 557; ignored.
+WARNING: Top level port name "shift_out<32>" on net 331 at location (113.3525,49.81) already used on net 206; ignored.
+WARNING: Top level port name "shift_out<27>" on net 332 at location (113.3525,52.125) already used on net 207; ignored.
+WARNING: Top level port name "shift_out<72>" on net 333 at location (113.8775,48.8725) already used on net 388; ignored.
+WARNING: Top level port name "shift_out<67>" on net 334 at location (113.8775,51.1875) already used on net 387; ignored.
+WARNING: Top level port name "shift_out<93>" on net 337 at location (114.8725,48.71) already used on net 583; ignored.
+WARNING: Top level port name "shift_out<88>" on net 338 at location (114.8725,51.025) already used on net 584; ignored.
+WARNING: Top level port name "shift_out<54>" on net 341 at location (120.8275,48.8275) already used on net 585; ignored.
+WARNING: Top level port name "shift_out<49>" on net 342 at location (120.8275,51.1425) already used on net 586; ignored.
+WARNING: Top level port name "shift_out<37>" on net 363 at location (113.3525,47.495) already used on net 248; ignored.
+WARNING: Top level port name "shift_out<82>" on net 364 at location (113.8775,44.2425) already used on net 419; ignored.
+WARNING: Top level port name "shift_out<77>" on net 365 at location (113.8775,46.5575) already used on net 420; ignored.
+WARNING: Top level port name "shift_out<103>" on net 368 at location (114.8725,44.08) already used on net 612; ignored.
+WARNING: Top level port name "shift_out<57>" on net 372 at location (118.8375,46.405) already used on net 426; ignored.
+WARNING: Top level port name "shift_out<64>" on net 373 at location (120.8275,44.1975) already used on net 614; ignored.
+WARNING: Top level port name "shift_out<59>" on net 374 at location (120.8275,46.5125) already used on net 615; ignored.
+WARNING: Top level port name "shift_out<52>" on net 395 at location (113.3525,40.55) already used on net 275; ignored.
+WARNING: Top level port name "shift_out<47>" on net 396 at location (113.3525,42.865) already used on net 276; ignored.
+WARNING: Top level port name "shift_out<92>" on net 397 at location (113.8775,39.6125) already used on net 460; ignored.
+WARNING: Top level port name "shift_out<87>" on net 398 at location (113.8775,41.9275) already used on net 459; ignored.
+WARNING: Top level port name "shift_out<113>" on net 401 at location (114.8725,39.45) already used on net 641; ignored.
+WARNING: Top level port name "shift_out<108>" on net 402 at location (114.8725,41.765) already used on net 642; ignored.
+WARNING: Top level port name "shift_out<74>" on net 405 at location (120.8275,39.5675) already used on net 644; ignored.
+WARNING: Top level port name "shift_out<69>" on net 406 at location (120.8275,41.8825) already used on net 645; ignored.
+WARNING: Top level port name "shift_out<102>" on net 427 at location (113.8775,34.9825) already used on net 490; ignored.
+WARNING: Top level port name "shift_out<97>" on net 428 at location (113.8775,37.2975) already used on net 461; ignored.
+WARNING: Top level port name "shift_out<43>" on net 429 at location (114.335,36.055) already used on net 211; ignored.
+WARNING: Top level port name "shift_out<118>" on net 432 at location (114.8725,37.135) already used on net 640; ignored.
+WARNING: Top level port name "shift_out<83>" on net 437 at location (119.8325,34.835) already used on net 553; ignored.
+WARNING: Top level port name "shift_out<78>" on net 438 at location (119.8325,37.15) already used on net 554; ignored.
+WARNING: Top level port name "shift_out<79>" on net 440 at location (120.8275,37.2525) already used on net 643; ignored.
+WARNING: Top level port name "shift_out<122>" on net 474 at location (113.8775,25.7225) already used on net 558; ignored.
+WARNING: Top level port name "shift_out<117>" on net 475 at location (113.8775,28.0375) already used on net 544; ignored.
+WARNING: Top level port name "shift_out<112>" on net 476 at location (113.8775,30.3525) already used on net 528; ignored.
+WARNING: Top level port name "shift_out<107>" on net 477 at location (113.8775,32.6675) already used on net 513; ignored.
+WARNING: Top level port name "shift_out<63>" on net 478 at location (114.335,26.795) already used on net 249; ignored.
+WARNING: Top level port name "shift_out<58>" on net 479 at location (114.335,29.11) already used on net 250; ignored.
+WARNING: Top level port name "shift_out<53>" on net 480 at location (114.335,31.425) already used on net 209; ignored.
+WARNING: Top level port name "shift_out<48>" on net 481 at location (114.335,33.74) already used on net 210; ignored.
+WARNING: Top level port name "shift_out<103>" on net 491 at location (119.8325,25.575) already used on net 612; ignored.
+WARNING: Top level port name "shift_out<98>" on net 492 at location (119.8325,27.89) already used on net 369; ignored.
+WARNING: Top level port name "shift_out<93>" on net 493 at location (119.8325,30.205) already used on net 583; ignored.
+WARNING: Top level port name "shift_out<88>" on net 494 at location (119.8325,32.52) already used on net 584; ignored.
+WARNING: Top level port name "shift_out<104>" on net 495 at location (120.8275,25.6775) already used on net 251; ignored.
+WARNING: Top level port name "shift_out<99>" on net 496 at location (120.8275,27.9925) already used on net 252; ignored.
+WARNING: Top level port name "shift_out<94>" on net 497 at location (120.8275,30.3075) already used on net 212; ignored.
+WARNING: Top level port name "shift_out<89>" on net 498 at location (120.8275,32.6225) already used on net 213; ignored.
+WARNING: Top level port name "shift_out<132>" on net 520 at location (113.8775,21.0925) already used on net 587; ignored.
+WARNING: Top level port name "shift_out<127>" on net 521 at location (113.8775,23.4075) already used on net 574; ignored.
+WARNING: Top level port name "shift_out<73>" on net 522 at location (114.335,22.165) already used on net 277; ignored.
+WARNING: Top level port name "shift_out<68>" on net 523 at location (114.335,24.48) already used on net 278; ignored.
+WARNING: Top level port name "shift_out<113>" on net 529 at location (119.8325,20.945) already used on net 641; ignored.
+WARNING: Top level port name "shift_out<108>" on net 530 at location (119.8325,23.26) already used on net 642; ignored.
+WARNING: Top level port name "shift_out<114>" on net 531 at location (120.8275,21.0475) already used on net 65; ignored.
+WARNING: Top level port name "shift_out<109>" on net 532 at location (120.8275,23.3625) already used on net 279; ignored.
+WARNING: Top level port name "shift_out<137>" on net 552 at location (113.8775,18.7775) already used on net 604; ignored.
+WARNING: Top level port name "shift_out<123>" on net 559 at location (119.8325,16.315) already used on net 431; ignored.
+WARNING: Top level port name "shift_out<118>" on net 560 at location (119.8325,18.63) already used on net 640; ignored.
+WARNING: Top level port name "shift_out<124>" on net 561 at location (120.8275,16.4175) already used on net 307; ignored.
+WARNING: Top level port name "shift_out<119>" on net 562 at location (120.8275,18.7325) already used on net 308; ignored.
+WARNING: Top level port name "shift_out<133>" on net 588 at location (119.8325,11.685) already used on net 484; ignored.
+WARNING: Top level port name "shift_out<128>" on net 589 at location (119.8325,14) already used on net 485; ignored.
+WARNING: Top level port name "shift_out<134>" on net 590 at location (120.8275,11.7875) already used on net 339; ignored.
+WARNING: Top level port name "shift_out<129>" on net 591 at location (120.8275,14.1025) already used on net 340; ignored.
+WARNING: Top level port name "shift_out<142>" on net 616 at location (118.8375,7.05) already used on net 551; ignored.
+WARNING: Top level port name "shift_out<143>" on net 617 at location (119.8325,7.055) already used on net 482; ignored.
+WARNING: Top level port name "shift_out<138>" on net 618 at location (119.8325,9.37) already used on net 483; ignored.
+WARNING: Top level port name "shift_out<144>" on net 619 at location (120.8275,7.1575) already used on net 370; ignored.
+WARNING: Top level port name "shift_out<139>" on net 620 at location (120.8275,9.4725) already used on net 371; ignored.
+WARNING: Top level port name "shift_out<156>" on net 646 at location (117.8425,0.11) already used on net 639; ignored.
+WARNING: Top level port name "shift_out<157>" on net 647 at location (118.8375,0.105) already used on net 611; ignored.
+WARNING: Top level port name "shift_out<152>" on net 648 at location (118.8375,2.42) already used on net 581; ignored.
+WARNING: Top level port name "shift_out<147>" on net 649 at location (118.8375,4.735) already used on net 582; ignored.
+WARNING: Top level port name "shift_out<158>" on net 650 at location (119.8325,0.11) already used on net 555; ignored.
+WARNING: Top level port name "shift_out<153>" on net 651 at location (119.8325,2.425) already used on net 524; ignored.
+WARNING: Top level port name "shift_out<148>" on net 652 at location (119.8325,4.74) already used on net 525; ignored.
+WARNING: Top level port name "shift_out<159>" on net 653 at location (120.8275,0.2125) already used on net 435; ignored.
+WARNING: Top level port name "shift_out<154>" on net 654 at location (120.8275,2.5275) already used on net 403; ignored.
+WARNING: Top level port name "shift_out<149>" on net 655 at location (120.8275,4.8425) already used on net 404; ignored.
