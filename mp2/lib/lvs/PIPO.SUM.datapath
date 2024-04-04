@@ -2,7 +2,7 @@
 Product   : Virtuoso(R) XStream Out
 Program   : @(#)$CDS: strmout version ICADVM20.1-64b 05/03/2023 09:29 (cpgsrv12) $
           : sub-version  ICADVM20.1-64b.500.32 
-Started at: 04-Apr-2024  12:57:09
+Started at: 04-Apr-2024  13:46:57
 User Name : maxma2
 Host Name : dcl-l440-16.ews.illinois.edu
 Directory : /home/maxma2/Documents/Coursework/ece425/mp2/lib
@@ -15,34 +15,34 @@ Info: Cellview Rev Num:99,  Tech Rev Num:59
 ---------------------------------------------------------------------------------------------------------------------------------------
 Library/Cell/View               Instance Array   Polygon  Rect   Path   PathSeg   Text   TextDisplay   Line   Dot   Arc   Donut   Ellipse 
 ---------------------------------------------------------------------------------------------------------------------------------------
-NCSU_TechLib_FreePDK45/M4_M3/layout                             0        0       0        3      0      0         0      0             0      0     0     0       0       
-NCSU_TechLib_FreePDK45/M1_POLY/layout                           0        0       0        3      0      0         0      0             0      0     0     0       0       
-NCSU_TechLib_FreePDK45/M1_POLY/layout                           0        0       0        3      0      0         0      0             0      0     0     0       0       
-bitslice_rv32Lib/datapath/layout                                0        0       928      91425  77364  0         5473   0             0      0     0     0       0       
-NCSU_TechLib_FreePDK45/M2_M1/layout                             0        0       0        3      0      0         0      0             0      0     0     0       0       
-NCSU_TechLib_FreePDK45/M2_M1/layout                             0        0       0        3      0      0         0      0             0      0     0     0       0       
-NCSU_TechLib_FreePDK45/PTAP/layout                              0        0       0        5      0      0         0      0             0      0     0     0       0       
-NCSU_TechLib_FreePDK45/M3_M2/layout                             0        0       0        3      0      0         0      0             0      0     0     0       0       
 NCSU_TechLib_FreePDK45/NTAP/layout                              0        0       0        5      0      0         0      0             0      0     0     0       0       
 NCSU_TechLib_FreePDK45/M6_M5/layout                             0        0       0        3      0      0         0      0             0      0     0     0       0       
 NCSU_TechLib_FreePDK45/M5_M4/layout                             0        0       0        3      0      0         0      0             0      0     0     0       0       
+NCSU_TechLib_FreePDK45/M3_M2/layout                             0        0       0        3      0      0         0      0             0      0     0     0       0       
+NCSU_TechLib_FreePDK45/M4_M3/layout                             0        0       0        3      0      0         0      0             0      0     0     0       0       
+bitslice_rv32Lib/datapath/layout                                0        0       928      91425  77367  0         5473   0             0      0     0     0       0       
+NCSU_TechLib_FreePDK45/M1_POLY/layout                           0        0       0        3      0      0         0      0             0      0     0     0       0       
+NCSU_TechLib_FreePDK45/M1_POLY/layout                           0        0       0        3      0      0         0      0             0      0     0     0       0       
+NCSU_TechLib_FreePDK45/M2_M1/layout                             0        0       0        3      0      0         0      0             0      0     0     0       0       
+NCSU_TechLib_FreePDK45/M2_M1/layout                             0        0       0        3      0      0         0      0             0      0     0     0       0       
+NCSU_TechLib_FreePDK45/PTAP/layout                              0        0       0        5      0      0         0      0             0      0     0     0       0       
 ---------------------------------------------------------------------------------------------------------------------------------------
 
                        Individual Cell Statistics - Advanced Objects
 --------------------------------------------------------------------------------------------------------------------------------------------
 Library/Cell/View               PRBdy    OtherBdy   AreaBlkg   LayerBlkg  AreaHalo   Row   Marker   Stitch   CustVia   StdVia    CdsGenVia
 --------------------------------------------------------------------------------------------------------------------------------------------
-NCSU_TechLib_FreePDK45/M4_M3/layout                             0        0          0          0          0          0     0        0        0         0         0        
-NCSU_TechLib_FreePDK45/M1_POLY/layout                           0        0          0          0          0          0     0        0        0         0         0        
-NCSU_TechLib_FreePDK45/M1_POLY/layout                           0        0          0          0          0          0     0        0        0         0         0        
-bitslice_rv32Lib/datapath/layout                                0        0          0          0          0          0     0        0        0         92195     0        
-NCSU_TechLib_FreePDK45/M2_M1/layout                             0        0          0          0          0          0     0        0        0         0         0        
-NCSU_TechLib_FreePDK45/M2_M1/layout                             0        0          0          0          0          0     0        0        0         0         0        
-NCSU_TechLib_FreePDK45/PTAP/layout                              0        0          0          0          0          0     0        0        0         0         0        
-NCSU_TechLib_FreePDK45/M3_M2/layout                             0        0          0          0          0          0     0        0        0         0         0        
 NCSU_TechLib_FreePDK45/NTAP/layout                              0        0          0          0          0          0     0        0        0         0         0        
 NCSU_TechLib_FreePDK45/M6_M5/layout                             0        0          0          0          0          0     0        0        0         0         0        
 NCSU_TechLib_FreePDK45/M5_M4/layout                             0        0          0          0          0          0     0        0        0         0         0        
+NCSU_TechLib_FreePDK45/M3_M2/layout                             0        0          0          0          0          0     0        0        0         0         0        
+NCSU_TechLib_FreePDK45/M4_M3/layout                             0        0          0          0          0          0     0        0        0         0         0        
+bitslice_rv32Lib/datapath/layout                                0        0          0          0          0          0     0        0        0         92327     0        
+NCSU_TechLib_FreePDK45/M1_POLY/layout                           0        0          0          0          0          0     0        0        0         0         0        
+NCSU_TechLib_FreePDK45/M1_POLY/layout                           0        0          0          0          0          0     0        0        0         0         0        
+NCSU_TechLib_FreePDK45/M2_M1/layout                             0        0          0          0          0          0     0        0        0         0         0        
+NCSU_TechLib_FreePDK45/M2_M1/layout                             0        0          0          0          0          0     0        0        0         0         0        
+NCSU_TechLib_FreePDK45/PTAP/layout                              0        0          0          0          0          0     0        0        0         0         0        
 ---------------------------------------------------------------------------------------------------------------------------------------
 
                        Statistics of Layers 
@@ -54,7 +54,7 @@ nimplant        drawing         4       0         0        8801     0        0  
 nwell           drawing         3       0         320      2657     0        0        0             0    0   0   0     0      0      
 via4            drawing         18      0         0        1        0        0        0             0    0   0   0     0      0      
 metal5          drawing         19      0         0        2        160      0        0             0    0   0   0     0      0      
-metal2          drawing         13      0         192      3        17528    0        0             0    0   0   0     0      0      
+metal2          drawing         13      0         192      3        17529    0        0             0    0   0   0     0      0      
 via2            drawing         14      0         0        1        0        0        0             0    0   0   0     0      0      
 metal1          drawing         11      0         0        1671     29115    4678     0             0    0   0   0     0      0      
 background      drawing         254     0         0        192      0        0        0             0    0   0   0     0      0      
@@ -64,7 +64,7 @@ contact         drawing         10      0         0        47364    0        0  
 metal4          drawing         17      0         0        2        617      0        0             0    0   0   0     0      0      
 via3            drawing         16      0         0        1        0        0        0             0    0   0   0     0      0      
 pimplant        drawing         5       0         64       8705     0        0        0             0    0   0   0     0      0      
-metal3          drawing         15      0         0        2        8728     763      0             0    0   0   0     0      0      
+metal3          drawing         15      0         0        2        8730     763      0             0    0   0   0     0      0      
 via5            drawing         20      0         0        1        0        0        0             0    0   0   0     0      0      
 pwell           drawing         2       0         288      2593     0        32       0             0    0   0   0     0      0      
 metal6          drawing         21      0         0        1        128      0        0             0    0   0   0     0      0      
@@ -75,7 +75,7 @@ Summary of Objects Translated:
 	Scalar Instances:		0
 	Array Instances:		0
 	Polygons:			928
-	Paths:				77364
+	Paths:				77367
 	Rectangles:			91459
 	Lines:				0
 	Arcs:				0
@@ -89,7 +89,7 @@ Summary of Objects Translated:
 	Markers:			0
 	Rows:				0
 	Stitches:			0
-	Standard Vias:			92195
+	Standard Vias:			92327
 	Custom Vias:			0
 	CdsGen Vias:			0
 	Pathsegs:			0
