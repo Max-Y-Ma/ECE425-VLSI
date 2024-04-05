@@ -1,0 +1,16 @@
+#
+# Edit Lock-Stake file. CAUTION: Please do not change.
+#
+# Information about current Edit Lock Owner.
+#
+LockStakeVersion               1.1
+LoginName                      maxma2
+HostName                       dcl-l416-04.ews.illinois.edu
+ProcessIdentifier              114947
+ProcessCreationTime_UTC        1712263601
+ProcessCreationTime_Readable   Thu Apr  4 15:46:41 2024 CDT
+AppIdentifier                  /software/cadence-2023-05/ICADVM201/tools.lnx86/dfII/bin/64bit/virtuoso
+OSType                         lnx86
+ReasonForPlacingEditLock       
+FilePathUsedToEditLock         /home/maxma2/Documents/Coursework/ece425/mp2/lib/bitslice_rv32Lib/bitslice/physConfig/physExpand.cfg
+TimeEditLocked                 Thu Apr  4 16:20:05 2024 CDT

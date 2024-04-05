@@ -2,9 +2,9 @@
 Product   : Virtuoso(R) XStream Out
 Program   : @(#)$CDS: strmout version ICADVM20.1-64b 05/03/2023 09:29 (cpgsrv12) $
           : sub-version  ICADVM20.1-64b.500.32 
-Started at: 04-Apr-2024  13:46:57
+Started at: 04-Apr-2024  19:53:34
 User Name : maxma2
-Host Name : dcl-l440-16.ews.illinois.edu
+Host Name : dcl-l416-04.ews.illinois.edu
 Directory : /home/maxma2/Documents/Coursework/ece425/mp2/lib
 CADENCE Design Systems, Inc.
 ********************************************************************************
@@ -26,16 +26,16 @@ case                                    Preserve
 convertDot                              node
 convertPcellPin                         geometry
 
-INFO (XSTRM-223): 1. Translating stdVia NCSU_TechLib_FreePDK45/PTAP/layout as STRUCTURE PTAP_CDNS_712256417550.
-INFO (XSTRM-223): 2. Translating stdVia NCSU_TechLib_FreePDK45/NTAP/layout as STRUCTURE NTAP_CDNS_712256417551.
-INFO (XSTRM-223): 3. Translating stdVia NCSU_TechLib_FreePDK45/M1_POLY/layout as STRUCTURE M1_POLY_CDNS_712256417552.
-INFO (XSTRM-223): 4. Translating stdVia NCSU_TechLib_FreePDK45/M2_M1/layout as STRUCTURE M2_M1_CDNS_712256417553.
-INFO (XSTRM-223): 5. Translating stdVia NCSU_TechLib_FreePDK45/M3_M2/layout as STRUCTURE M3_M2_CDNS_712256417554.
-INFO (XSTRM-223): 6. Translating stdVia NCSU_TechLib_FreePDK45/M1_POLY/layout as STRUCTURE M1_POLY_CDNS_712256417555.
-INFO (XSTRM-223): 7. Translating stdVia NCSU_TechLib_FreePDK45/M2_M1/layout as STRUCTURE M2_M1_CDNS_712256417556.
-INFO (XSTRM-223): 8. Translating stdVia NCSU_TechLib_FreePDK45/M4_M3/layout as STRUCTURE M4_M3_CDNS_712256417557.
-INFO (XSTRM-223): 9. Translating stdVia NCSU_TechLib_FreePDK45/M5_M4/layout as STRUCTURE M5_M4_CDNS_712256417558.
-INFO (XSTRM-223): 10. Translating stdVia NCSU_TechLib_FreePDK45/M6_M5/layout as STRUCTURE M6_M5_CDNS_712256417559.
+INFO (XSTRM-223): 1. Translating stdVia NCSU_TechLib_FreePDK45/PTAP/layout as STRUCTURE PTAP_CDNS_712278414430.
+INFO (XSTRM-223): 2. Translating stdVia NCSU_TechLib_FreePDK45/NTAP/layout as STRUCTURE NTAP_CDNS_712278414431.
+INFO (XSTRM-223): 3. Translating stdVia NCSU_TechLib_FreePDK45/M1_POLY/layout as STRUCTURE M1_POLY_CDNS_712278414432.
+INFO (XSTRM-223): 4. Translating stdVia NCSU_TechLib_FreePDK45/M2_M1/layout as STRUCTURE M2_M1_CDNS_712278414433.
+INFO (XSTRM-223): 5. Translating stdVia NCSU_TechLib_FreePDK45/M3_M2/layout as STRUCTURE M3_M2_CDNS_712278414434.
+INFO (XSTRM-223): 6. Translating stdVia NCSU_TechLib_FreePDK45/M1_POLY/layout as STRUCTURE M1_POLY_CDNS_712278414435.
+INFO (XSTRM-223): 7. Translating stdVia NCSU_TechLib_FreePDK45/M2_M1/layout as STRUCTURE M2_M1_CDNS_712278414436.
+INFO (XSTRM-223): 8. Translating stdVia NCSU_TechLib_FreePDK45/M4_M3/layout as STRUCTURE M4_M3_CDNS_712278414437.
+INFO (XSTRM-223): 9. Translating stdVia NCSU_TechLib_FreePDK45/M5_M4/layout as STRUCTURE M5_M4_CDNS_712278414438.
+INFO (XSTRM-223): 10. Translating stdVia NCSU_TechLib_FreePDK45/M6_M5/layout as STRUCTURE M6_M5_CDNS_712278414439.
 INFO (XSTRM-223): 11. Translating cellView bitslice_rv32Lib/datapath/layout as STRUCTURE datapath.
 INFO (XSTRM-180): You have not used the '-objectMap' option. The design has instance(s) of at least one of following OpenAccess objects: oaBlockage, oaBoundary, oaRow, and oaMarker. Any information about these objects will not be translated into the generated stream file. Use the '-objectMap' option to translate/preserve these objects using XStream.
 INFO (XSTRM-275): Number of vertexes in the 'polygon' with starting point (196700, 141220) on layer '3' is 658. These vertices will be represented using 659 points in the GDS. This number exceeds the maximum limit, 200, defined by 'maxVertices'. The 'polygon' will be chopped into smaller polygons during XStream Out translation.
@@ -108,7 +108,7 @@ Summary of Objects Translated:
 	Scalar Instances:                       0
 	Array Instances:                        0
 	Polygons:                               928
-	Paths:                                  77367
+	Paths:                                  77373
 	Rectangles:                             91459
 	Lines:                                  0
 	Arcs:                                   0
@@ -122,13 +122,13 @@ Summary of Objects Translated:
 	Markers:                                0
 	Rows:                                   0
 	Stitch:                                 0
-	Standard Vias                           92327
+	Standard Vias                           92335
 	Custom Vias:                            0
 	CdsGen Vias:                            0
 	Pathsegs:                               0
-	Text:                                   5473
+	Text:                                   5466
 	TextDisplay:                            0
 	Cells:                                  11
 
-Elapsed Time: 0.6s   User Time: 0.2s   CPU Time: 0.0s   Peak VM: 16356KB
+Elapsed Time: 0.8s   User Time: 0.2s   CPU Time: 0.1s   Peak VM: 16376KB
 INFO (XSTRM-234): Translation completed. '0' error(s) and '1' warning(s) found.

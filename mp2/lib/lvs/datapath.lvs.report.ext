@@ -11,36 +11,10 @@
 
 REPORT FILE NAME:         datapath.lvs.report.ext
 LAYOUT NAME:              datapath.calibre.db ('datapath')
-CREATION TIME:            Thu Apr  4 13:47:01 2024
+CREATION TIME:            Thu Apr  4 19:53:38 2024
 CURRENT DIRECTORY:        /home/maxma2/Documents/Coursework/ece425/mp2/lib/lvs
 USER NAME:                maxma2
 CALIBRE VERSION:          v2022.4_16.8    Mon Oct 3 17:12:27 PDT 2022
 
 
 
-Extraction Errors and Warnings for cell "datapath"
---------------------------------------------------
-
-WARNING:  Short circuit - Different names on one net:
-          Net Id:  6
-          (1)  name  "shift_out<37>"  at location  (113.8775,65.0775)  on layer  15 "metal3"
-          (2)  name  "shift_out<38>"  at location  (114.335,38.37)  on layer  15 "metal3"
-          (3)  name  "shift_out<38>"  at location  (119.8325,55.67)  on layer  15 "metal3"
-          The name "shift_out<37>" was assigned to the net.
-
-WARNING:  Short circuit - Different names on one net:
-          Net Id:  292
-          (1)  name  "shift_out98>"  at location  (114.335,10.59)  on layer  15 "metal3"
-          (2)  name  "shift_out<98>"  at location  (114.8725,46.395)  on layer  15 "metal3"
-          (3)  name  "shift_out<98>"  at location  (119.8325,27.89)  on layer  15 "metal3"
-          The name "shift_out98>" was assigned to the net.
-
-WARNING:  Open circuit - Same name on different nets:
-          Name:  "shift_out<37>"
-          (1)  at location  (113.3525,47.495)  on layer  15 "metal3"  on net id  240
-          (2)  at location  (118.8375,55.665)  on layer  15 "metal3"  on net id  240
-          (3)  at location  (113.8775,65.0775)  on layer  15 "metal3"  on net id  6
-          The name was assigned to net 240 .
-
-
-WARNING: Top level port name "shift_out<37>" on net 6 at location (113.8775,65.0775) already used on net 240; ignored.

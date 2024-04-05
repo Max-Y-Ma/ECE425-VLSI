@@ -11,4 +11,4 @@ lvs_GroundName GROUND
 lvs_LvsOutFile LVS_REPORT bitslice.lvs.report
 lvs_LvsOutFile SOURCE_NETLIST bitslice.src.net
 lvs_LvsOutFile RULES_FILE _calibreLVS.rul_
-lvs_LvsRunTimes 1711248060 1711248060
+lvs_LvsRunTimes 1712265623 1712265623
