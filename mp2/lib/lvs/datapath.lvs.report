@@ -16,7 +16,7 @@ LAYOUT NAME:              datapath.sp ('datapath')
 SOURCE NAME:              datapath.src.net ('datapath')
 RULE FILE:                _calibreLVS.rul_
 RULE FILE TITLE:          LVS Rule File for FreePDK45
-CREATION TIME:            Thu Apr  4 19:53:42 2024
+CREATION TIME:            Thu Apr  4 21:15:46 2024
 CURRENT DIRECTORY:        /home/maxma2/Documents/Coursework/ece425/mp2/lib/lvs
 USER NAME:                maxma2
 CALIBRE VERSION:          v2022.4_16.8    Mon Oct 3 17:12:27 PDT 2022
@@ -27,15 +27,13 @@ CALIBRE VERSION:          v2022.4_16.8    Mon Oct 3 17:12:27 PDT 2022
 
 
 
-                  #   #         #####################  
-                   # #          #                   #  
-                    #           #     INCORRECT     #  
-                   # #          #                   #  
-                  #   #         #####################  
+                         #       ###################       _   _   
+                        #        #                 #       *   *   
+                   #   #         #     CORRECT     #         |     
+                    # #          #                 #       \___/  
+                     #           ###################               
 
 
-  Error:    Different numbers of ports.
-  Error:    Layout names missing in source.
 
 
 **************************************************************************************************************
@@ -44,7 +42,7 @@ CALIBRE VERSION:          v2022.4_16.8    Mon Oct 3 17:12:27 PDT 2022
 
   Result         Layout                        Source
   -----------    -----------                   --------------
-  INCORRECT      datapath                      datapath
+  CORRECT        datapath                      datapath
 
 
 
@@ -162,15 +160,13 @@ o LVS Setup:
 
 
 
-                  #   #         #####################  
-                   # #          #                   #  
-                    #           #     INCORRECT     #  
-                   # #          #                   #  
-                  #   #         #####################  
+                         #       ###################       _   _   
+                        #        #                 #       *   *   
+                   #   #         #     CORRECT     #         |     
+                    # #          #                 #       \___/  
+                     #           ###################               
 
 
-  Error:    Different numbers of ports (see below).
-  Error:    Layout names missing in source.
 
 LAYOUT CELL NAME:         datapath
 SOURCE CELL NAME:         datapath
@@ -182,7 +178,7 @@ INITIAL NUMBERS OF OBJECTS
 
                 Layout    Source         Component Type
                 ------    ------         --------------
- Ports:            439       283    *
+ Ports:            280       283    *
 
  Nets:           10356     10359    *
 
@@ -197,7 +193,7 @@ NUMBERS OF OBJECTS AFTER TRANSFORMATION
 
                 Layout    Source         Component Type
                 ------    ------         --------------
- Ports:            439       280    *
+ Ports:            280       280
 
  Nets:            7634      7634
 
@@ -220,136 +216,6 @@ NUMBERS OF OBJECTS AFTER TRANSFORMATION
 
 
 **************************************************************************************************************
-                                 INCORRECT OBJECTS
-**************************************************************************************************************
-
-
-LEGEND:
--------
-
-  ne  = Naming Error (same layout name found in source
-        circuit, but object was matched otherwise).
-
-
-**************************************************************************************************************
-                                   INCORRECT PORTS
-
-DISC#  LAYOUT NAME                                               SOURCE NAME
-**************************************************************************************************************
-
-  1    SHIFT_OUT<18> on net: SHIFT_OUT<18>                       ** missing port **
-  2    SHIFT_OUT<28> on net: SHIFT_OUT<28>                       ** missing port **
-  3    SHIFT_OUT<38> on net: SHIFT_OUT<38>                       ** missing port **
-  4    SHIFT_OUT<48> on net: SHIFT_OUT<48>                       ** missing port **
-  5    SHIFT_OUT<9> on net: SHIFT_OUT<9>                         ** missing port **
-  6    SHIFT_OUT<114> on net: SHIFT_OUT<114>                     ** missing port **
-  7    SHIFT_OUT<13> on net: SHIFT_OUT<13>                       ** missing port **
-  8    SHIFT_OUT<3> on net: SHIFT_OUT<3>                         ** missing port **
-  9    SHIFT_OUT<2> on net: SHIFT_OUT<2>                         ** missing port **
- 10    SHIFT_OUT<7> on net: SHIFT_OUT<7>                         ** missing port **
- 11    SHIFT_OUT<12> on net: SHIFT_OUT<12>                       ** missing port **
- 12    SHIFT_OUT<16> on net: SHIFT_OUT<16>                       ** missing port **
- 13    SHIFT_OUT<10> on net: SHIFT_OUT<10>                       ** missing port **
- 14    SHIFT_OUT<5> on net: SHIFT_OUT<5>                         ** missing port **
- 15    SHIFT_OUT<0> on net: SHIFT_OUT<0>                         ** missing port **
- 16    SHIFT_OUT<15> on net: SHIFT_OUT<15>                       ** missing port **
- 17    SHIFT_OUT<6> on net: SHIFT_OUT<6>                         ** missing port **
- 18    SHIFT_OUT<1> on net: SHIFT_OUT<1>                         ** missing port **
- 19    SHIFT_OUT<21> on net: SHIFT_OUT<21>                       ** missing port **
- 20    SHIFT_OUT<11> on net: SHIFT_OUT<11>                       ** missing port **
- 21    SHIFT_OUT<32> on net: SHIFT_OUT<32>                       ** missing port **
- 22    SHIFT_OUT<27> on net: SHIFT_OUT<27>                       ** missing port **
- 23    SHIFT_OUT<22> on net: SHIFT_OUT<22>                       ** missing port **
- 24    SHIFT_OUT<53> on net: SHIFT_OUT<53>                       ** missing port **
- 25    SHIFT_OUT<43> on net: SHIFT_OUT<43>                       ** missing port **
- 26    SHIFT_OUT<94> on net: SHIFT_OUT<94>                       ** missing port **
- 27    SHIFT_OUT<89> on net: SHIFT_OUT<89>                       ** missing port **
- 28    SHIFT_OUT<84> on net: SHIFT_OUT<84>                       ** missing port **
- 29    SHIFT_OUT<14> on net: SHIFT_OUT<14>                       ** missing port **
- 30    SHIFT_OUT<4> on net: SHIFT_OUT<4>                         ** missing port **
- 31    SHIFT_OUT<23> on net: SHIFT_OUT<23>                       ** missing port **
- 32    SHIFT_OUT<17> on net: SHIFT_OUT<17>                       ** missing port **
- 33    SHIFT_OUT<42> on net: SHIFT_OUT<42>                       ** missing port **
- 34    SHIFT_OUT<26> on net: SHIFT_OUT<26>                       ** missing port **
- 35    SHIFT_OUT<20> on net: SHIFT_OUT<20>                       ** missing port **
- 36    SHIFT_OUT<25> on net: SHIFT_OUT<25>                       ** missing port **
- 37    SHIFT_OUT<31> on net: SHIFT_OUT<31>                       ** missing port **
- 38    SHIFT_OUT<37> on net: SHIFT_OUT<37>                       ** missing port **
- 39    SHIFT_OUT<63> on net: SHIFT_OUT<63>                       ** missing port **
- 40    SHIFT_OUT<58> on net: SHIFT_OUT<58>                       ** missing port **
- 41    SHIFT_OUT<104> on net: SHIFT_OUT<104>                     ** missing port **
- 42    SHIFT_OUT<99> on net: SHIFT_OUT<99>                       ** missing port **
- 43    SHIFT_OUT<24> on net: SHIFT_OUT<24>                       ** missing port **
- 44    SHIFT_OUT<19> on net: SHIFT_OUT<19>                       ** missing port **
- 45    SHIFT_OUT<33> on net: SHIFT_OUT<33>                       ** missing port **
- 46    SHIFT_OUT<36> on net: SHIFT_OUT<36>                       ** missing port **
- 47    SHIFT_OUT<30> on net: SHIFT_OUT<30>                       ** missing port **
- 48    SHIFT_OUT<35> on net: SHIFT_OUT<35>                       ** missing port **
- 49    SHIFT_OUT<41> on net: SHIFT_OUT<41>                       ** missing port **
- 50    SHIFT_OUT<52> on net: SHIFT_OUT<52>                       ** missing port **
-
-
-
-**************************************************************************************************************
-                                      PORT NAME ERRORS
-
-DISC#   LAYOUT NAME                                              SOURCE NAME
-**************************************************************************************************************
- 51     SHIFT_OUT<18>                                            ** missing name **
- 52     SHIFT_OUT<28>                                            ** missing name **
- 53     SHIFT_OUT<38>                                            ** missing name **
- 54     SHIFT_OUT<48>                                            ** missing name **
- 55     SHIFT_OUT<9>                                             ** missing name **
- 56     SHIFT_OUT<114>                                           ** missing name **
- 57     SHIFT_OUT<13>                                            ** missing name **
- 58     SHIFT_OUT<3>                                             ** missing name **
- 59     SHIFT_OUT<2>                                             ** missing name **
- 60     SHIFT_OUT<7>                                             ** missing name **
- 61     SHIFT_OUT<12>                                            ** missing name **
- 62     SHIFT_OUT<16>                                            ** missing name **
- 63     SHIFT_OUT<10>                                            ** missing name **
- 64     SHIFT_OUT<5>                                             ** missing name **
- 65     SHIFT_OUT<0>                                             ** missing name **
- 66     SHIFT_OUT<15>                                            ** missing name **
- 67     SHIFT_OUT<6>                                             ** missing name **
- 68     SHIFT_OUT<1>                                             ** missing name **
- 69     SHIFT_OUT<21>                                            ** missing name **
- 70     SHIFT_OUT<11>                                            ** missing name **
- 71     SHIFT_OUT<32>                                            ** missing name **
- 72     SHIFT_OUT<27>                                            ** missing name **
- 73     SHIFT_OUT<22>                                            ** missing name **
- 74     SHIFT_OUT<53>                                            ** missing name **
- 75     SHIFT_OUT<43>                                            ** missing name **
- 76     SHIFT_OUT<94>                                            ** missing name **
- 77     SHIFT_OUT<89>                                            ** missing name **
- 78     SHIFT_OUT<84>                                            ** missing name **
- 79     SHIFT_OUT<14>                                            ** missing name **
- 80     SHIFT_OUT<4>                                             ** missing name **
- 81     SHIFT_OUT<23>                                            ** missing name **
- 82     SHIFT_OUT<17>                                            ** missing name **
- 83     SHIFT_OUT<42>                                            ** missing name **
- 84     SHIFT_OUT<26>                                            ** missing name **
- 85     SHIFT_OUT<20>                                            ** missing name **
- 86     SHIFT_OUT<25>                                            ** missing name **
- 87     SHIFT_OUT<31>                                            ** missing name **
- 88     SHIFT_OUT<37>                                            ** missing name **
- 89     SHIFT_OUT<63>                                            ** missing name **
- 90     SHIFT_OUT<58>                                            ** missing name **
- 91     SHIFT_OUT<104>                                           ** missing name **
- 92     SHIFT_OUT<99>                                            ** missing name **
- 93     SHIFT_OUT<24>                                            ** missing name **
- 94     SHIFT_OUT<19>                                            ** missing name **
- 95     SHIFT_OUT<33>                                            ** missing name **
- 96     SHIFT_OUT<36>                                            ** missing name **
- 97     SHIFT_OUT<30>                                            ** missing name **
- 98     SHIFT_OUT<35>                                            ** missing name **
- 99     SHIFT_OUT<41>                                            ** missing name **
-100     SHIFT_OUT<52>                                            ** missing name **
-
-
-
-
-**************************************************************************************************************
                                INFORMATION AND WARNINGS
 **************************************************************************************************************
 
@@ -357,7 +223,7 @@ DISC#   LAYOUT NAME                                              SOURCE NAME
                   Matched    Matched    Unmatched    Unmatched    Component
                    Layout     Source       Layout       Source    Type
                   -------    -------    ---------    ---------    ---------
-   Ports:             280        280          159            0
+   Ports:             280        280            0            0
 
    Nets:             7634       7634            0            0
 
@@ -391,16 +257,6 @@ o Initial Correspondence Points:
                  RS1_SEL<24> RS2_SEL<24> RD_SEL<23> RS1_SEL<23> RS2_SEL<23> RD_SEL<22>
                  RS1_SEL<22> RS2_SEL<22> RD_SEL<21> RS1_SEL<21> RS2_SEL<21> RD_SEL<20>
                  RS1_SEL<20>
-   Nets:         SHIFT_OUT<18> SHIFT_OUT<28> SHIFT_OUT<38> SHIFT_OUT<48> SHIFT_OUT<9>
-                 SHIFT_OUT<114> SHIFT_OUT<13> SHIFT_OUT<3> SHIFT_OUT<2> SHIFT_OUT<7>
-                 SHIFT_OUT<12> SHIFT_OUT<16> SHIFT_OUT<10> SHIFT_OUT<5> SHIFT_OUT<0>
-                 SHIFT_OUT<15> SHIFT_OUT<6> SHIFT_OUT<1> SHIFT_OUT<21> SHIFT_OUT<11>
-                 SHIFT_OUT<32> SHIFT_OUT<27> SHIFT_OUT<22> SHIFT_OUT<53> SHIFT_OUT<43>
-                 SHIFT_OUT<94> SHIFT_OUT<89> SHIFT_OUT<84> SHIFT_OUT<14> SHIFT_OUT<4>
-                 SHIFT_OUT<23> SHIFT_OUT<17> SHIFT_OUT<42> SHIFT_OUT<26> SHIFT_OUT<20>
-                 SHIFT_OUT<25> SHIFT_OUT<31> SHIFT_OUT<37> SHIFT_OUT<63> SHIFT_OUT<58>
-                 SHIFT_OUT<104> SHIFT_OUT<99> SHIFT_OUT<24> SHIFT_OUT<19> SHIFT_OUT<33>
-                 SHIFT_OUT<36> SHIFT_OUT<30> SHIFT_OUT<35> SHIFT_OUT<41> SHIFT_OUT<52>
 
 
 **************************************************************************************************************
@@ -408,4 +264,4 @@ o Initial Correspondence Points:
 **************************************************************************************************************
 
 Total CPU Time:      0 sec
-Total Elapsed Time:  1 sec
+Total Elapsed Time:  0 sec

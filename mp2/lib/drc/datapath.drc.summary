@@ -3,7 +3,7 @@
 ==================================================================================
 === CALIBRE::DRC-H SUMMARY REPORT
 ===
-Execution Date/Time:       Thu Apr  4 19:30:43 2024
+Execution Date/Time:       Thu Apr  4 21:14:52 2024
 Calibre Version:           v2022.4_16.8    Mon Oct 3 17:12:27 PDT 2022
 Rule File Pathname:        _calibreDRC.rul_
 Rule File Title:           
@@ -234,7 +234,7 @@ RULECHECK Antenna.metal10 ... TOTAL Result Count = 0 (0)
 ----------------------------------------------------------------------------------
 --- SUMMARY
 ---
-TOTAL CPU Time:                  3
+TOTAL CPU Time:                  4
 TOTAL REAL Time:                 4
 TOTAL Original Layer Geometries: 169568 (476302)
 TOTAL DRC RuleChecks Executed:   167

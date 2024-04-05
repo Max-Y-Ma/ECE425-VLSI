@@ -1,0 +1,506 @@
+.
+├── bitslice_rv32Lib.tar
+├── datapath.drc.summary
+├── datapath.lvs.report
+├── ece425mp1_maxma2.tar
+├── hdl
+│   ├── control.sv
+│   └── cpu.sv
+├── ihnl
+│   ├── blockdirmap
+│   ├── cds0
+│   │   ├── control
+│   │   ├── map
+│   │   ├── netlist
+│   │   ├── netlist.footer
+│   │   └── netlist.header
+│   ├── cds1
+│   │   ├── control
+│   │   ├── map
+│   │   ├── netlist
+│   │   ├── netlist.footer
+│   │   └── netlist.header
+│   ├── cds10
+│   │   ├── control
+│   │   ├── map
+│   │   ├── netlist
+│   │   ├── netlist.footer
+│   │   └── netlist.header
+│   ├── cds11
+│   │   ├── control
+│   │   ├── map
+│   │   ├── netlist
+│   │   ├── netlist.footer
+│   │   └── netlist.header
+│   ├── cds12
+│   │   ├── control
+│   │   ├── map
+│   │   ├── netlist
+│   │   ├── netlist.footer
+│   │   └── netlist.header
+│   ├── cds13
+│   │   ├── control
+│   │   ├── netlist
+│   │   ├── netlist.footer
+│   │   └── netlist.header
+│   ├── cds14
+│   │   ├── control
+│   │   ├── netlist
+│   │   ├── netlist.footer
+│   │   └── netlist.header
+│   ├── cds15
+│   │   ├── control
+│   │   ├── netlist
+│   │   ├── netlist.footer
+│   │   └── netlist.header
+│   ├── cds16
+│   │   ├── control
+│   │   ├── netlist
+│   │   ├── netlist.footer
+│   │   └── netlist.header
+│   ├── cds17
+│   │   ├── control
+│   │   ├── netlist
+│   │   ├── netlist.footer
+│   │   └── netlist.header
+│   ├── cds18
+│   │   ├── control
+│   │   ├── netlist
+│   │   ├── netlist.footer
+│   │   └── netlist.header
+│   ├── cds19
+│   │   ├── control
+│   │   ├── netlist
+│   │   ├── netlist.footer
+│   │   └── netlist.header
+│   ├── cds2
+│   │   ├── control
+│   │   ├── netlist
+│   │   ├── netlist.footer
+│   │   └── netlist.header
+│   ├── cds20
+│   │   ├── control
+│   │   ├── netlist
+│   │   ├── netlist.footer
+│   │   └── netlist.header
+│   ├── cds21
+│   │   ├── control
+│   │   ├── map
+│   │   ├── netlist
+│   │   ├── netlist.footer
+│   │   └── netlist.header
+│   ├── cds22
+│   │   ├── control
+│   │   ├── map
+│   │   ├── netlist
+│   │   ├── netlist.footer
+│   │   └── netlist.header
+│   ├── cds23
+│   │   ├── control
+│   │   ├── netlist
+│   │   ├── netlist.footer
+│   │   └── netlist.header
+│   ├── cds24
+│   │   ├── control
+│   │   ├── map
+│   │   ├── netlist
+│   │   ├── netlist.footer
+│   │   └── netlist.header
+│   ├── cds25
+│   │   ├── control
+│   │   ├── map
+│   │   ├── netlist
+│   │   ├── netlist.footer
+│   │   └── netlist.header
+│   ├── cds26
+│   │   ├── control
+│   │   ├── map
+│   │   ├── netlist
+│   │   ├── netlist.footer
+│   │   └── netlist.header
+│   ├── cds27
+│   │   ├── control
+│   │   ├── map
+│   │   ├── netlist
+│   │   ├── netlist.footer
+│   │   └── netlist.header
+│   ├── cds3
+│   │   ├── control
+│   │   ├── netlist
+│   │   ├── netlist.footer
+│   │   └── netlist.header
+│   ├── cds4
+│   │   ├── control
+│   │   ├── netlist
+│   │   ├── netlist.footer
+│   │   └── netlist.header
+│   ├── cds5
+│   │   ├── control
+│   │   ├── netlist
+│   │   ├── netlist.footer
+│   │   └── netlist.header
+│   ├── cds6
+│   │   ├── control
+│   │   ├── netlist
+│   │   ├── netlist.footer
+│   │   └── netlist.header
+│   ├── cds7
+│   │   ├── control
+│   │   ├── map
+│   │   ├── netlist
+│   │   ├── netlist.footer
+│   │   └── netlist.header
+│   ├── cds8
+│   │   ├── control
+│   │   ├── map
+│   │   ├── netlist
+│   │   ├── netlist.footer
+│   │   └── netlist.header
+│   ├── cds9
+│   │   ├── control
+│   │   ├── map
+│   │   ├── netlist
+│   │   ├── netlist.footer
+│   │   └── netlist.header
+│   ├── control
+│   └── globalmap
+├── layout
+│   ├── alu.hd.png
+│   ├── alu.png
+│   ├── bit1.hd.png
+│   ├── bit1.png
+│   ├── bit2.hd.png
+│   ├── bit2.png
+│   ├── bitslice1.png
+│   ├── bitslice2.png
+│   ├── bitslice.hd.png
+│   ├── buf.hd.png
+│   ├── buf.png
+│   ├── cmp.hd.png
+│   ├── cmp.png
+│   ├── datapath.hd.png
+│   ├── datapath.png
+│   ├── datapath.super.hd.png
+│   ├── dlatch.hd.png
+│   ├── dlatch.png
+│   ├── fa.hd.png
+│   ├── fa.png
+│   ├── inv.hd.png
+│   ├── inv.png
+│   ├── mem_mux.hd.png
+│   ├── mem_mux.png
+│   ├── mux2.hd.png
+│   ├── mux2.png
+│   ├── mux4.hd.png
+│   ├── mux4.png
+│   ├── mux5.hd.png
+│   ├── mux5.png
+│   ├── mux6.hd.png
+│   ├── mux6.png
+│   ├── muxinv2.hd.png
+│   ├── muxinv2.png
+│   ├── muxinv4.hd.png
+│   ├── muxinv4.png
+│   ├── nand2.hd.png
+│   ├── nand2.png
+│   ├── nor2.hd.png
+│   ├── nor2.png
+│   ├── pcadder.hd.png
+│   ├── pcadder.png
+│   ├── pc.hd.png
+│   ├── pc.png
+│   ├── rd_mux.hd.png
+│   ├── rd_mux.png
+│   ├── reg1w1.hd.png
+│   ├── reg1w1.png
+│   ├── reg2w32_1.png
+│   ├── reg2w32_2.png
+│   ├── reg2w32.hd.png
+│   ├── regfile1.png
+│   ├── regfile2.png
+│   ├── regfile.hd.png
+│   ├── rs2_inverter.hd.png
+│   ├── rs2_inverter.png
+│   ├── shift.hd.png
+│   ├── shift.png
+│   ├── trans.hd.png
+│   ├── trans.png
+│   ├── xnor2.hd.png
+│   └── xnor2.png
+├── lvs_drc
+│   ├── alu.drc.summary
+│   ├── alu.lvs.report
+│   ├── bit1.drc.summary
+│   ├── bit1.lvs.report
+│   ├── bit2.drc.summary
+│   ├── bit2.lvs.report
+│   ├── bitslice.drc.summary
+│   ├── bitslice.lvs.report
+│   ├── buf.drc.summary
+│   ├── buf.lvs.report
+│   ├── cmp.drc.summary
+│   ├── cmp.lvs.report
+│   ├── datapath.drc.summary
+│   ├── datapath.lvs.report
+│   ├── dlatch.drc.summary
+│   ├── dlatch.lvs.report
+│   ├── fa.drc.summary
+│   ├── fa.lvs.report
+│   ├── inv.drc.summary
+│   ├── inv.lvs.report
+│   ├── mem_mux.drc.summary
+│   ├── mem_mux.lvs.report
+│   ├── mux2.drc.summary
+│   ├── mux2.lvs.report
+│   ├── mux4.drc.summary
+│   ├── mux4.lvs.report
+│   ├── mux5.drc.summary
+│   ├── mux5.lvs.report
+│   ├── mux6.drc.summary
+│   ├── mux6.lvs.report
+│   ├── muxinv2.drc.summary
+│   ├── muxinv2.lvs.report
+│   ├── muxinv4.drc.summary
+│   ├── muxinv4.lvs.report
+│   ├── nand2.drc.summary
+│   ├── nand2.lvs.report
+│   ├── nor2.drc.summary
+│   ├── nor2.lvs.report
+│   ├── pcadder.drc.summary
+│   ├── pcadder.lvs.report
+│   ├── pc.drc.summary
+│   ├── pc.lvs.report
+│   ├── rd_mux.drc.summary
+│   ├── rd_mux.lvs.report
+│   ├── reg1w1.drc.summary
+│   ├── reg1w1.lvs.report
+│   ├── reg2w32.drc.summary
+│   ├── reg2w32.lvs.report
+│   ├── regfile.drc.summary
+│   ├── regfile.lvs.report
+│   ├── rs2_inverter.drc.summary
+│   ├── rs2_inverter.lvs.report
+│   ├── shift.drc.summary
+│   ├── shift.lvs.report
+│   ├── trans.drc.summary
+│   ├── trans.lvs.report
+│   ├── xnor2.drc.summary
+│   └── xnor2.lvs.report
+├── README.md
+├── schematics
+│   ├── alu.png
+│   ├── bit1.png
+│   ├── bit2.png
+│   ├── bitslice.png
+│   ├── buf.png
+│   ├── cmp.png
+│   ├── datapath1.png
+│   ├── datapath2.png
+│   ├── datapath3.png
+│   ├── datapath.png
+│   ├── dlatch.png
+│   ├── fa.png
+│   ├── inv.png
+│   ├── mem_mux.png
+│   ├── mux2.png
+│   ├── mux4.png
+│   ├── mux5.png
+│   ├── mux6.png
+│   ├── muxinv2.png
+│   ├── muxinv4.png
+│   ├── nand2.png
+│   ├── nor2.png
+│   ├── pcadder.png
+│   ├── pc.png
+│   ├── rd_mux.png
+│   ├── reg1w1.png
+│   ├── reg2w32.png
+│   ├── regfile.png
+│   ├── rs2_inverter.png
+│   ├── shift.png
+│   ├── trans.png
+│   └── xnor2.png
+├── sim
+│   ├── bin
+│   │   ├── generate_memory_file.sh
+│   │   ├── link.ld
+│   │   └── startup.s
+│   ├── hdl
+│   │   ├── control.sv
+│   │   └── cpu.sv
+│   ├── hvl
+│   │   ├── generate.py
+│   │   ├── magic_dual_port.sv
+│   │   ├── mon_itf.sv
+│   │   ├── monitor.sv
+│   │   ├── mos.sv
+│   │   ├── rvfimon.v
+│   │   └── top_tb.sv
+│   ├── ihnl
+│   │   ├── blockdirmap
+│   │   ├── cds0
+│   │   │   ├── control
+│   │   │   ├── map
+│   │   │   ├── netlist
+│   │   │   ├── netlist.footer
+│   │   │   └── netlist.header
+│   │   ├── cds1
+│   │   │   ├── control
+│   │   │   ├── map
+│   │   │   ├── netlist
+│   │   │   ├── netlist.footer
+│   │   │   └── netlist.header
+│   │   ├── cds10
+│   │   │   ├── control
+│   │   │   ├── map
+│   │   │   ├── netlist
+│   │   │   ├── netlist.footer
+│   │   │   └── netlist.header
+│   │   ├── cds11
+│   │   │   ├── control
+│   │   │   ├── map
+│   │   │   ├── netlist
+│   │   │   ├── netlist.footer
+│   │   │   └── netlist.header
+│   │   ├── cds12
+│   │   │   ├── control
+│   │   │   ├── map
+│   │   │   ├── netlist
+│   │   │   ├── netlist.footer
+│   │   │   └── netlist.header
+│   │   ├── cds13
+│   │   │   ├── control
+│   │   │   ├── netlist
+│   │   │   ├── netlist.footer
+│   │   │   └── netlist.header
+│   │   ├── cds14
+│   │   │   ├── control
+│   │   │   ├── netlist
+│   │   │   ├── netlist.footer
+│   │   │   └── netlist.header
+│   │   ├── cds15
+│   │   │   ├── control
+│   │   │   ├── netlist
+│   │   │   ├── netlist.footer
+│   │   │   └── netlist.header
+│   │   ├── cds16
+│   │   │   ├── control
+│   │   │   ├── netlist
+│   │   │   ├── netlist.footer
+│   │   │   └── netlist.header
+│   │   ├── cds17
+│   │   │   ├── control
+│   │   │   ├── netlist
+│   │   │   ├── netlist.footer
+│   │   │   └── netlist.header
+│   │   ├── cds18
+│   │   │   ├── control
+│   │   │   ├── netlist
+│   │   │   ├── netlist.footer
+│   │   │   └── netlist.header
+│   │   ├── cds19
+│   │   │   ├── control
+│   │   │   ├── netlist
+│   │   │   ├── netlist.footer
+│   │   │   └── netlist.header
+│   │   ├── cds2
+│   │   │   ├── control
+│   │   │   ├── netlist
+│   │   │   ├── netlist.footer
+│   │   │   └── netlist.header
+│   │   ├── cds20
+│   │   │   ├── control
+│   │   │   ├── netlist
+│   │   │   ├── netlist.footer
+│   │   │   └── netlist.header
+│   │   ├── cds21
+│   │   │   ├── control
+│   │   │   ├── map
+│   │   │   ├── netlist
+│   │   │   ├── netlist.footer
+│   │   │   └── netlist.header
+│   │   ├── cds22
+│   │   │   ├── control
+│   │   │   ├── map
+│   │   │   ├── netlist
+│   │   │   ├── netlist.footer
+│   │   │   └── netlist.header
+│   │   ├── cds23
+│   │   │   ├── control
+│   │   │   ├── netlist
+│   │   │   ├── netlist.footer
+│   │   │   └── netlist.header
+│   │   ├── cds24
+│   │   │   ├── control
+│   │   │   ├── map
+│   │   │   ├── netlist
+│   │   │   ├── netlist.footer
+│   │   │   └── netlist.header
+│   │   ├── cds25
+│   │   │   ├── control
+│   │   │   ├── map
+│   │   │   ├── netlist
+│   │   │   ├── netlist.footer
+│   │   │   └── netlist.header
+│   │   ├── cds26
+│   │   │   ├── control
+│   │   │   ├── map
+│   │   │   ├── netlist
+│   │   │   ├── netlist.footer
+│   │   │   └── netlist.header
+│   │   ├── cds27
+│   │   │   ├── control
+│   │   │   ├── map
+│   │   │   ├── netlist
+│   │   │   ├── netlist.footer
+│   │   │   └── netlist.header
+│   │   ├── cds3
+│   │   │   ├── control
+│   │   │   ├── netlist
+│   │   │   ├── netlist.footer
+│   │   │   └── netlist.header
+│   │   ├── cds4
+│   │   │   ├── control
+│   │   │   ├── netlist
+│   │   │   ├── netlist.footer
+│   │   │   └── netlist.header
+│   │   ├── cds5
+│   │   │   ├── control
+│   │   │   ├── netlist
+│   │   │   ├── netlist.footer
+│   │   │   └── netlist.header
+│   │   ├── cds6
+│   │   │   ├── control
+│   │   │   ├── netlist
+│   │   │   ├── netlist.footer
+│   │   │   └── netlist.header
+│   │   ├── cds7
+│   │   │   ├── control
+│   │   │   ├── map
+│   │   │   ├── netlist
+│   │   │   ├── netlist.footer
+│   │   │   └── netlist.header
+│   │   ├── cds8
+│   │   │   ├── control
+│   │   │   ├── map
+│   │   │   ├── netlist
+│   │   │   ├── netlist.footer
+│   │   │   └── netlist.header
+│   │   ├── cds9
+│   │   │   ├── control
+│   │   │   ├── map
+│   │   │   ├── netlist
+│   │   │   ├── netlist.footer
+│   │   │   └── netlist.header
+│   │   ├── control
+│   │   └── globalmap
+│   ├── sim
+│   │   ├── Makefile
+│   │   └── vcs_warn.config
+│   └── testcode
+│       └── test.s
+├── stdcell_rv32Lib.tar
+├── tree.txt
+└── verdi.png
+
+68 directories, 435 files
