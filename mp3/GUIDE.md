@@ -66,7 +66,7 @@ In the folder where you usually launch Virtuoso, run:
 $ abstract
 ```
 
-A new (Windows 98 lookin) window should pop up. Inside the window:
+A new (Windows XP lookin) window should pop up. Inside the window:
 
 - File --> Library --> Open
 - Select your standard cell library
