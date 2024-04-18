@@ -10,3 +10,4 @@ DEFINE NCSU_Devices_FreePDK45 $PDK_DIR/ncsu_basekit/lib/NCSU_Devices_FreePDK45
 DEFINE stdcell_425Lib /home/maxma2/Documents/Coursework/ece425/mp3/lib/virtuoso/stdcell_425Lib
 DEFINE stdcell_rv32Lib stdcell_rv32Lib
 DEFINE bitslice_rv32Lib bitslice_rv32Lib
+DEFINE control /home/maxma2/Documents/Coursework/ece425/mp3/lib/virtuoso/control
