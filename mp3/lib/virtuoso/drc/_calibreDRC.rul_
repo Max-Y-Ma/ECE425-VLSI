@@ -1,19 +1,19 @@
 //
-//  Rule file generated on Wed Apr 17 23:40:44 2024
+//  Rule file generated on Thu Apr 18 13:03:44 2024
 //  by Calibre Interactive v2022.4_16.8    Mon Oct 3 17:12:31 PDT 2022
 //
 //      *** PLEASE DO NOT MODIFY THIS FILE ***
 //
 //
 
-LAYOUT PATH "inv.calibre.db"
+LAYOUT PATH "and2.calibre.db"
 LAYOUT SYSTEM GDSII
-LAYOUT PRIMARY "inv"
+LAYOUT PRIMARY "and2"
 
-DRC RESULTS DATABASE "inv.drc.results" ASCII
+DRC RESULTS DATABASE "and2.drc.results" ASCII
 DRC CELL NAME YES CELL SPACE XFORM
 
-DRC SUMMARY REPORT "inv.drc.summary" REPLACE HIER
+DRC SUMMARY REPORT "and2.drc.summary" REPLACE HIER
 
 DRC MAXIMUM RESULTS 1000
 

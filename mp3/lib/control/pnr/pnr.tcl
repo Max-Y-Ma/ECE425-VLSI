@@ -41,7 +41,7 @@ init_design
 connectGlobalNets
 
 # DONE floorplan your design. Put the size of your chip that you want here.
-floorPlan -site CoreSite -s 100 100 10 10 10 10
+floorPlan -site CoreSite -s 100 10 10 10 10 10
 
 # create the horizontal vdd! and vss! wires used by the standard cells.
 sroute -allowJogging 0 -allowLayerChange 0 -crossoverViaLayerRange { metal7 metal1 } -layerChangeRange { metal7 metal1 } -nets { vss! vdd! }
@@ -66,7 +66,7 @@ setDesignMode -bottomRoutingLayer metal1 -topRoutingLayer metal6
 # placeInstance ...
 
 # DONE specify where are the pins
-editPin -pin {clk, imem_rdata, dmem_write, dmem_wmask, rs1_sel, rs2_sel, rd_sel, alu_mux_1_sel, alu_mux_2_sel, alu_inv_rs2, alu_cin, alu_op, shift_msb, shift_dir, cmp_mux_sel, pc_mux_sel, mem_mux_sel, rd_mux_sel, cmp_out, imm, cmp_lt, cmp_eq, cmp_a_31, cmp_b_31} -cell control -layer metal3
+# editPin -pin {clk, imem_rdata, dmem_write, dmem_wmask, rs1_sel, rs2_sel, rd_sel, alu_mux_1_sel, alu_mux_2_sel, alu_inv_rs2, alu_cin, alu_op, shift_msb, shift_dir, cmp_mux_sel, pc_mux_sel, mem_mux_sel, rd_mux_sel, cmp_out, imm, cmp_lt, cmp_eq, cmp_a_31, cmp_b_31} -layer metal3
 
 # DONE uncomment the two below command to do pnr. These steps takes innovus more time.
 

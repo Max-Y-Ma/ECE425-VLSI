@@ -415,70 +415,8 @@ END M4_M3_viaB
 
 SITE CoreSite
   CLASS CORE ;
-  SYMMETRY Y ;
   SIZE 0.005 BY 1.3075 ;
 END CoreSite
-
-MACRO and2
-  CLASS CORE ;
-  ORIGIN 0 -0.1 ;
-  FOREIGN and2 0 0.1 ;
-  SIZE 0.7525 BY 1.3075 ;
-  SYMMETRY X Y ;
-  SITE CoreSite ;
-  PIN A
-    DIRECTION INPUT ;
-    USE SIGNAL ;
-    PORT
-      LAYER metal1 ;
-        RECT 0.085 0.7775 0.15 0.9125 ;
-    END
-  END A
-  PIN B
-    DIRECTION INPUT ;
-    USE SIGNAL ;
-    PORT
-      LAYER metal1 ;
-        RECT 0.375 0.7925 0.44 0.9275 ;
-    END
-  END B
-  PIN Z
-    DIRECTION OUTPUT ;
-    USE SIGNAL ;
-    PORT
-      LAYER metal1 ;
-        RECT 0.6325 0.265 0.6975 1.2425 ;
-    END
-  END Z
-  PIN vdd!
-    DIRECTION INOUT ;
-    USE POWER ;
-    SHAPE ABUTMENT ;
-    PORT
-      LAYER metal1 ;
-        RECT 0 1.3075 0.7525 1.5075 ;
-        RECT 0.4325 0.9925 0.4975 1.5075 ;
-        RECT 0.055 0.9925 0.12 1.5075 ;
-    END
-  END vdd!
-  PIN vss!
-    DIRECTION INOUT ;
-    USE GROUND ;
-    SHAPE ABUTMENT ;
-    PORT
-      LAYER metal1 ;
-        RECT 0 0 0.7525 0.2 ;
-        RECT 0.4325 0 0.4975 0.515 ;
-    END
-  END vss!
-  OBS
-    LAYER metal1 ;
-      RECT 0.2425 0.6275 0.3075 1.2425 ;
-      RECT 0.49 0.5925 0.555 0.7275 ;
-      RECT 0.055 0.6275 0.555 0.6925 ;
-      RECT 0.055 0.265 0.12 0.6925 ;
-  END
-END and2
 
 MACRO aoi21
   CLASS CORE ;

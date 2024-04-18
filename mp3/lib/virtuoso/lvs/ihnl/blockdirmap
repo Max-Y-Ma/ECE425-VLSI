@@ -1,0 +1,5 @@
+CADENCE IHNL11143
+
+stdcell_425Lib nand2 schematic cds0
+stdcell_425Lib inv schematic cds1
+stdcell_425Lib and2 schematic cds2

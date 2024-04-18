@@ -36,7 +36,7 @@ library(stdcells) {
   }
 
   cell (nand2) {
-    area : 1.1344;
+    area : 0.8291;
     pin(A)  {
       direction : input;
     }
@@ -46,35 +46,6 @@ library(stdcells) {
     pin(Z)  {
       direction : output;
       function : "(!(A B))";
-      timing() {
-        related_pin : "A B";
-        cell_rise(scalar) {
-          values("0.0");
-        }
-        rise_transition(scalar) {
-          values("0.0");
-        }
-        cell_fall(scalar) {
-          values("0.0");
-        }
-        fall_transition(scalar) {
-          values("0.0");
-        }
-      }
-    }
-  }
-
-  cell (and2) {
-    area : 1.1344;
-    pin(A)  {
-      direction : input;
-    }
-    pin(B)  {
-      direction : input;
-    }
-    pin(Z)  {
-      direction : output;
-      function : "(A B)";
       timing() {
         related_pin : "A B";
         cell_rise(scalar) {

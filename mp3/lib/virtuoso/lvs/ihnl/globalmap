@@ -1,0 +1,12 @@
+CADENCE IHNL11140
+$model
+stdcell_425Lib/inv/schematic inv
+stdcell_425Lib/nand2/schematic nand2
+stdcell_425Lib/and2/schematic and2
+$endmodel
+$net
+vss! vss!
+vdd! vdd!
+$endnet
+$param
+$endparam
