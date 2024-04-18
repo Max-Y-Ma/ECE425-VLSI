@@ -41,23 +41,23 @@ init_design
 connectGlobalNets
 
 # DONE floorplan your design. Put the size of your chip that you want here.
-floorPlan -site CoreSite -s 100 10 0 0 0 0
+floorPlan -site CoreSite -s 100 100 10 10 10 10
 
 # create the horizontal vdd! and vss! wires used by the standard cells.
 sroute -allowJogging 0 -allowLayerChange 0 -crossoverViaLayerRange { metal7 metal1 } -layerChangeRange { metal7 metal1 } -nets { vss! vdd! }
 
 # create a power ring around your processor, connecting all the vss! and vdd! together physically.
-addRing -follow io -offset {top 2 bottom 2 left 2 right 2} -spacing {top 2 bottom 2 left 2 right 2} -width {top 2 bottom 2 left 2 right 2} -layer {top metal7 bottom metal7 left metal8 right metal8} -nets { vss! vdd! }
+addRing -follow core -offset {top 2 bottom 2 left 2 right 2} -spacing {top 2 bottom 2 left 2 right 2} -width {top 2 bottom 2 left 2 right 2} -layer {top metal7 bottom metal7 left metal8 right metal8} -nets { vss! vdd! }
 
 # DONE add power grid
-# vertical "stripes" on metal8
-addStripe -nets {vss! vdd!} -layer metal8 -direction vertical -width 0.4 -spacing 0.4 -set_to_set_distance 0.8 -start 0
-
 # specify via transitions
-setAddStripeMode -stacked_via_bottom_layer 8 -stacked_via_top_layer 7
+setAddStripeMode -stacked_via_bottom_layer 7 -stacked_via_top_layer 8
 
 # horizontal "stripes"
-addStripe -nets {vss! vdd!} -layer metal7 -direction horizontal -width 0.4 -spacing 0.4 -set_to_set_distance 0.8 -start 0
+addStripe -nets {vss! vdd!} -layer metal7 -direction horizontal -width 0.4 -spacing 2 -set_to_set_distance 4.8
+
+# vertical "stripes" on metal8
+addStripe -nets {vss! vdd!} -layer metal8 -direction vertical -width 0.4 -spacing 2 -set_to_set_distance 4.8
 
 # DONE restrict routing to only metal 6
 setDesignMode -bottomRoutingLayer metal1 -topRoutingLayer metal6

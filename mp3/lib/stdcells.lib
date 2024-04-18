@@ -223,7 +223,7 @@ library(stdcells) {
       direction : output;
       function : "I_Q";
       timing() {
-        related_pin : "CLK";
+        related_pin : "EN";
         timing_type : rising_edge;
         cell_rise(scalar) {
           values("0.0");
@@ -243,7 +243,7 @@ library(stdcells) {
       direction : output;
       function : "I_QN";
       timing() {
-        related_pin : "CLK";
+        related_pin : "EN";
         timing_type : rising_edge;
         cell_rise(scalar) {
           values("0.0");

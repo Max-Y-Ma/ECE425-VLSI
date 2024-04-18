@@ -15,8 +15,8 @@ catch { setDelayCalMode -engine aae }
 catch { setDelayCalMode -ignoreNetLoad false }
 catch { setImportMode -discardFloatingVNets false }
 catch { setImportMode -keepEmptyModule true }
-catch { setAddStripeMode -stacked_via_bottom_layer 8 }
-catch { setAddStripeMode -stacked_via_top_layer 7 }
+catch { setAddStripeMode -stacked_via_bottom_layer 7 }
+catch { setAddStripeMode -stacked_via_top_layer 8 }
 catch { setRouteMode -earlyGlobalRouteSecondPG false }
 catch { setFPlanMode -cellsForExtraSites {} }
 catch { setFPlanMode -defaultTechSite CoreSite }
