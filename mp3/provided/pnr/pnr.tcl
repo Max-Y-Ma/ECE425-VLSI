@@ -41,14 +41,14 @@ init_design
 connectGlobalNets
 
 # TODO floorplan your design. Put the size of your chip that you want here.
-# floorPlan -site CoreSite -s $TODO $TODO 0 0 0 0
+# floorPlan -site CoreSite -s $TODO $TODO 10 10 10 10
 
 # create the horizontal vdd! and vss! wires used by the standard cells.
 sroute -allowJogging 0 -allowLayerChange 0 -crossoverViaLayerRange { metal7 metal1 } -layerChangeRange { metal7 metal1 } -nets { vss! vdd! }
 
 # create a power ring around your processor, connecting all the vss! and vdd! together physically.
 addRing \
-	-follow io \
+	-follow core \
 	-offset {top 2 bottom 2 left 2 right 2} \
 	-spacing {top 2 bottom 2 left 2 right 2} \
 	-width {top 2 bottom 2 left 2 right 2} \
