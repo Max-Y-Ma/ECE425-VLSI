@@ -31,13 +31,18 @@ args = "-spreadType SIDE -side BOTTOM -layer metal3"
 with open('control_pins.txt', 'w') as pinfile:
     pinfile.write(f"setPinAssignMode -pinEditInBatch true\n")
 
+    pin_string = "{"
     for pin in pinList:
         if "[" in pin:
             count = int(pin.split("[")[1][:-1])
             pin_name = pin.split("[")[0]
             for i in range(count):
-                pinfile.write(f"editPin {args} -pin {pin_name}[{i}]\n")
+                pin_string += f"{pin_name}[{i}] "
         else:
-            pinfile.write(f"editPin {args} -pin {pin}\n")
+            pin_string += f"{pin} "
+    pin_string = pin_string[:-1]
+    pin_string += "}"
+    
+    pinfile.write(f"editPin {args} -pin {pin_string}\n")
 
     pinfile.write(f"setPinAssignMode -pinEditInBatch false\n")
