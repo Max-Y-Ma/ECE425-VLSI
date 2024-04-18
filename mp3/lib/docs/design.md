@@ -55,10 +55,10 @@
 - The cells portion describes the layout of your cells in two parts
     - The pins, which show the layer and the shapes of the connections 
     - The blockages/obstructions, which describes metals used inside to make the standard cell work.
-- ❌ Follow the tutorial on extracting the `.lef` for the Virtuoso Standard Cell Library
+- ✅ Follow the tutorial on extracting the `.lef` for the Virtuoso Standard Cell Library
 
 # Auto PnR Controller
-- ❌ Run Design Compiler on `controller.sv` to obtain the gate level netlist
+- ✅ Run Design Compiler on `controller.sv` to obtain the gate level netlist
 - ❌ Launch Innovus inside the `pnr` directory
 - ❌ Complete the `pnr.tcl` script using the `man <command>` pages
 - ❌ Make a copy of the Virtuoso Library in preparation to import `Innovus GDS`
