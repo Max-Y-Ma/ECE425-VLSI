@@ -66,9 +66,8 @@
 - ✅ Import the generated `GFSII` file into Virtuoso
 
 # Controller and Datapath Integration
-- ❌ Modify the PnR controller floorplan to optimize for `datapath` integration
-- ❌ Export controller to Virtuoso and complete layout with datapath
-    - Pass LVS?
+- ✅ Modify the PnR controller floorplan to optimize for `datapath` integration
+- ✅ Export controller to Virtuoso and complete layout with datapath
 
 # Auto PnR Full CPU with only standard cell
 - ❌ Modify `pnr.tcl` to layout the entire CPU (controller + datapath)

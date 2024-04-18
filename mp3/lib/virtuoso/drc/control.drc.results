@@ -1,0 +1,1318 @@
+control 2000
+Well.1
+0 0 2 Apr 18 16:15:41 2024                     
+Rule File Pathname: _calibreDRC.rul_
+Nwell and Pwell must not overlap
+Well.2
+0 0 2 Apr 18 16:15:41 2024                     
+Rule File Pathname: _calibreDRC.rul_
+Min spacing of pwell to nwell = 0.225
+Well.4
+1 1 2 Apr 18 16:15:41 2024                     
+Rule File Pathname: _calibreDRC.rul_
+Min width of well = 0.2
+e 1 2
+CN control c 1 0 0 1 0 0 0
+54247 23045 54310 23045
+54310 23440 54373 23440
+Poly.1
+0 0 2 Apr 18 16:15:41 2024                     
+Rule File Pathname: _calibreDRC.rul_
+Min width of poly = 0.05
+Poly.2
+0 0 2 Apr 18 16:15:41 2024                     
+Rule File Pathname: _calibreDRC.rul_
+Min spacing of gate poly = 0.14
+Poly.3
+0 0 2 Apr 18 16:15:41 2024                     
+Rule File Pathname: _calibreDRC.rul_
+Min extension of poly past active = 0.05
+Poly.4
+0 0 2 Apr 18 16:15:41 2024                     
+Rule File Pathname: _calibreDRC.rul_
+Minimum active enclosure of gate = 0.07
+Poly.5
+0 0 2 Apr 18 16:15:41 2024                     
+Rule File Pathname: _calibreDRC.rul_
+Minimum spacing of poly to active = 0.05
+Poly.6
+0 0 2 Apr 18 16:15:41 2024                     
+Rule File Pathname: _calibreDRC.rul_
+Minimum spacing of field poly = 0.075
+Active.1
+0 0 2 Apr 18 16:15:41 2024                     
+Rule File Pathname: _calibreDRC.rul_
+Minimum width of active = 0.09
+Active.2
+79 79 2 Apr 18 16:15:41 2024                   
+Rule File Pathname: _calibreDRC.rul_
+Minimum spacing of active areas =  0.08
+e 1 2
+CN control c 1 0 0 1 0 0 0
+25810 22665 25810 22845
+25910 22665 25910 22845
+e 2 2
+31980 22665 31980 22845
+31990 22665 31990 22845
+e 3 2
+38630 22665 38630 22845
+38730 22660 38730 22840
+e 4 2
+39560 22665 39560 22845
+39700 22665 39700 22845
+e 5 2
+42180 22665 42180 22845
+42310 22665 42310 22845
+e 6 2
+46700 22670 46700 22850
+46820 22660 46820 22840
+e 7 2
+50030 22665 50030 22845
+50160 22665 50160 22845
+e 8 2
+55300 22660 55300 22840
+55310 22665 55310 22845
+e 9 2
+56620 22665 56620 22845
+56690 22665 56690 22845
+e 10 2
+60440 22665 60440 22845
+60550 22665 60550 22845
+e 11 2
+68080 22665 68080 22845
+68150 22665 68150 22845
+e 12 2
+68780 22665 68780 22845
+68850 22665 68850 22845
+e 13 2
+69030 22665 69030 22845
+69040 22665 69040 22845
+e 14 2
+76720 22665 76720 22845
+76870 22665 76870 22845
+e 15 2
+93380 22665 93380 22845
+93510 22665 93510 22845
+e 16 2
+97660 22665 97660 22845
+97790 22665 97790 22845
+e 17 2
+98460 22665 98460 22845
+98490 22665 98490 22845
+e 18 2
+105350 22665 105350 22845
+105490 22665 105490 22845
+e 19 2
+106020 22665 106020 22845
+106130 22665 106130 22845
+e 20 2
+110260 22665 110260 22845
+110270 22665 110270 22845
+e 21 2
+111590 22665 111590 22845
+111600 22665 111600 22845
+e 22 2
+111780 22665 111780 22845
+111830 22665 111830 22845
+e 23 2
+116640 22665 116640 22845
+116690 22665 116690 22845
+e 24 2
+118990 22665 118990 22845
+119050 22665 119050 22845
+e 25 2
+120900 22665 120900 22845
+120980 22665 120980 22845
+e 26 2
+121600 22665 121600 22845
+121730 22665 121730 22845
+e 27 2
+123880 22665 123880 22845
+124030 22665 124030 22845
+e 28 2
+127330 22665 127330 22845
+127370 22665 127370 22845
+e 29 2
+128120 22665 128120 22845
+128260 22665 128260 22845
+e 30 2
+129260 22665 129260 22845
+129330 22665 129330 22845
+e 31 2
+129960 22665 129960 22845
+130030 22665 130030 22845
+e 32 2
+132300 22665 132300 22845
+132350 22665 132350 22845
+e 33 2
+135330 22665 135330 22845
+135410 22665 135410 22845
+e 34 2
+136030 22665 136030 22845
+136110 22665 136110 22845
+e 35 2
+137240 22665 137240 22845
+137350 22665 137350 22845
+e 36 2
+137940 22665 137940 22845
+138050 22665 138050 22845
+e 37 2
+140210 22665 140210 22845
+140290 22665 140290 22845
+e 38 2
+144080 22665 144080 22845
+144190 22665 144190 22845
+e 39 2
+144780 22665 144780 22845
+144890 22665 144890 22845
+e 40 2
+145410 22665 145410 22845
+145420 22665 145420 22845
+e 41 2
+146300 22665 146300 22845
+146335 22665 146335 22845
+e 42 2
+150910 22665 150910 22845
+150990 22665 150990 22845
+e 43 2
+151610 22665 151610 22845
+151690 22665 151690 22845
+e 44 2
+151870 22665 151870 22845
+151880 22665 151880 22845
+e 45 2
+153830 22665 153830 22845
+153970 22665 153970 22845
+e 46 2
+156540 22665 156540 22845
+156690 22665 156690 22845
+e 47 2
+159090 22665 159090 22845
+159100 22665 159100 22845
+e 48 2
+163460 22665 163460 22845
+163500 22665 163500 22845
+e 49 2
+166820 22665 166820 22845
+166930 22665 166930 22845
+e 50 2
+169410 22665 169410 22845
+169550 22665 169550 22845
+e 51 2
+171820 22665 171820 22845
+171830 22665 171830 22845
+e 52 2
+176320 22665 176320 22845
+176450 22665 176450 22845
+e 53 2
+177140 22665 177140 22845
+177150 22665 177150 22845
+e 54 2
+178910 22665 178910 22845
+179050 22665 179050 22845
+e 55 2
+182840 22665 182840 22845
+182870 22665 182870 22845
+e 56 2
+185860 22665 185860 22845
+185950 22665 185950 22845
+e 57 2
+191880 22665 191880 22845
+191970 22665 191970 22845
+e 58 2
+194110 22665 194110 22845
+194150 22660 194150 22840
+e 59 2
+199120 22665 199120 22845
+199190 22665 199190 22845
+e 60 2
+201020 22665 201020 22845
+201160 22665 201160 22845
+e 61 2
+209750 22665 209750 22845
+209830 22665 209830 22845
+e 62 2
+210150 22665 210150 22845
+210270 22665 210270 22845
+e 63 2
+215840 22665 215840 22845
+215970 22665 215970 22845
+e 64 2
+219190 22665 219190 22845
+219340 22665 219340 22845
+e 65 2
+223470 22665 223470 22845
+223570 22665 223570 22845
+e 66 2
+224170 22665 224170 22845
+224270 22665 224270 22845
+e 67 2
+226140 22665 226140 22845
+226290 22665 226290 22845
+e 68 2
+226840 22665 226840 22845
+226990 22665 226990 22845
+e 69 2
+230970 22665 230970 22845
+231120 22665 231120 22845
+e 70 2
+232940 22665 232940 22845
+233040 22665 233040 22845
+e 71 2
+234140 22665 234140 22845
+234260 22665 234260 22845
+e 72 2
+238700 22665 238700 22845
+238750 22665 238750 22845
+e 73 2
+240220 22665 240220 22845
+240290 22665 240290 22845
+e 74 2
+240920 22665 240920 22845
+240990 22665 240990 22845
+e 75 2
+241670 22665 241670 22845
+241810 22665 241810 22845
+e 76 2
+242370 22665 242370 22845
+242510 22665 242510 22845
+e 77 2
+242690 22665 242690 22845
+242700 22665 242700 22845
+e 78 2
+247135 22665 247135 22845
+247150 22665 247150 22845
+e 79 2
+249660 22665 249660 22845
+249765 22665 249765 22845
+Active.3
+0 0 2 Apr 18 16:15:41 2024                     
+Rule File Pathname: _calibreDRC.rul_
+Minimum well enclosure of active = 0.055
+Active.4
+0 0 2 Apr 18 16:15:41 2024                     
+Rule File Pathname: _calibreDRC.rul_
+Active must be inside well
+Implant.1
+0 0 2 Apr 18 16:15:41 2024                     
+Rule File Pathname: _calibreDRC.rul_
+Minimum spacing of implant to gate = 0.07
+Implant.2
+0 0 2 Apr 18 16:15:41 2024                     
+Rule File Pathname: _calibreDRC.rul_
+Minimum spacing of implant to contact = 0.025
+Implant.3
+38 38 2 Apr 18 16:15:41 2024                   
+Rule File Pathname: _calibreDRC.rul_
+Minimum spacing of implant = 0.045
+e 1 2
+CN control c 1 0 0 1 0 0 0
+31980 22665 31980 22845
+31990 22665 31990 22845
+e 2 2
+55300 22660 55300 22840
+55310 22665 55310 22845
+e 3 2
+56620 22665 56620 22845
+56690 22665 56690 22845
+e 4 2
+68080 22665 68080 22845
+68150 22665 68150 22845
+e 5 2
+68780 22665 68780 22845
+68850 22665 68850 22845
+e 6 2
+69030 22665 69030 22845
+69040 22665 69040 22845
+e 7 2
+98460 22665 98460 22845
+98490 22665 98490 22845
+e 8 2
+110260 22665 110260 22845
+110270 22665 110270 22845
+e 9 2
+111590 22665 111590 22845
+111600 22665 111600 22845
+e 10 2
+111780 22665 111780 22845
+111830 22665 111830 22845
+e 11 2
+116640 22665 116640 22845
+116690 22665 116690 22845
+e 12 2
+118990 22665 118990 22845
+119050 22665 119050 22845
+e 13 2
+120900 22665 120900 22845
+120980 22665 120980 22845
+e 14 2
+127330 22665 127330 22845
+127370 22665 127370 22845
+e 15 2
+129260 22665 129260 22845
+129330 22665 129330 22845
+e 16 2
+129960 22665 129960 22845
+130030 22665 130030 22845
+e 17 2
+132300 22665 132300 22845
+132350 22665 132350 22845
+e 18 2
+135330 22665 135330 22845
+135410 22665 135410 22845
+e 19 2
+136030 22665 136030 22845
+136110 22665 136110 22845
+e 20 2
+140210 22665 140210 22845
+140290 22665 140290 22845
+e 21 2
+145410 22665 145410 22845
+145420 22665 145420 22845
+e 22 2
+146300 22665 146300 22845
+146335 22665 146335 22845
+e 23 2
+150910 22665 150910 22845
+150990 22665 150990 22845
+e 24 2
+151610 22665 151610 22845
+151690 22665 151690 22845
+e 25 2
+151870 22665 151870 22845
+151880 22665 151880 22845
+e 26 2
+159090 22665 159090 22845
+159100 22665 159100 22845
+e 27 2
+163460 22665 163460 22845
+163500 22665 163500 22845
+e 28 2
+171820 22665 171820 22845
+171830 22665 171830 22845
+e 29 2
+177140 22665 177140 22845
+177150 22665 177150 22845
+e 30 2
+182840 22665 182840 22845
+182870 22665 182870 22845
+e 31 2
+194110 22665 194110 22845
+194150 22660 194150 22840
+e 32 2
+199120 22665 199120 22845
+199190 22665 199190 22845
+e 33 2
+209750 22665 209750 22845
+209830 22665 209830 22845
+e 34 2
+238700 22665 238700 22845
+238750 22665 238750 22845
+e 35 2
+240220 22665 240220 22845
+240290 22665 240290 22845
+e 36 2
+240920 22665 240920 22845
+240990 22665 240990 22845
+e 37 2
+242690 22665 242690 22845
+242700 22665 242700 22845
+e 38 2
+247135 22665 247135 22845
+247150 22665 247150 22845
+Implant.4
+0 0 2 Apr 18 16:15:41 2024                     
+Rule File Pathname: _calibreDRC.rul_
+Minimum width of implant = 0.045
+Implant.6
+0 0 2 Apr 18 16:15:41 2024                     
+Rule File Pathname: _calibreDRC.rul_
+Nimplant and pimplant must not overlap
+Contact.1
+2 2 2 Apr 18 16:15:41 2024                     
+Rule File Pathname: _calibreDRC.rul_
+Minimum width of contact = 0.065
+e 1 2
+CN control c 1 0 0 1 0 0 0
+74209 22690 74225 22690
+74245 22815 74261 22815
+e 2 2
+74225 22687 74225 22690
+74245 22815 74245 22818
+Contact.2
+48 48 2 Apr 18 16:15:41 2024                   
+Rule File Pathname: _calibreDRC.rul_
+Minimum spacing of contact = 0.075
+e 1 2
+CN control c 1 0 0 1 0 0 0
+31955 22690 31955 22820
+32015 22690 32015 22820
+e 2 2
+51420 22690 51420 22820
+51425 22690 51425 22820
+e 3 2
+55275 22685 55275 22815
+55335 22690 55335 22820
+e 4 2
+56595 22690 56595 22820
+56715 22690 56715 22820
+e 5 2
+68055 22690 68055 22820
+68175 22690 68175 22820
+e 6 2
+68755 22690 68755 22820
+68875 22690 68875 22820
+e 7 2
+69005 22690 69005 22820
+69065 22690 69065 22820
+e 8 2
+95245 22690 95245 22820
+95255 22690 95255 22820
+e 9 2
+98435 22690 98435 22820
+98515 22690 98515 22820
+e 10 2
+110235 22690 110235 22820
+110295 22690 110295 22820
+e 11 2
+111565 22690 111565 22820
+111625 22690 111625 22820
+e 12 2
+111755 22690 111755 22820
+111855 22690 111855 22820
+e 13 2
+116615 22690 116615 22820
+116715 22690 116715 22820
+e 14 2
+118965 22690 118965 22820
+119075 22690 119075 22820
+e 15 2
+120875 22690 120875 22820
+121005 22690 121005 22820
+e 16 2
+127305 22690 127305 22820
+127395 22690 127395 22820
+e 17 2
+129235 22690 129235 22820
+129355 22690 129355 22820
+e 18 2
+129935 22690 129935 22820
+130055 22690 130055 22820
+e 19 2
+132275 22690 132275 22820
+132375 22690 132375 22820
+e 20 2
+135305 22690 135305 22820
+135435 22690 135435 22820
+e 21 2
+136005 22690 136005 22820
+136135 22690 136135 22820
+e 22 2
+136265 22690 136265 22820
+136275 22690 136275 22820
+e 23 2
+140185 22690 140185 22820
+140315 22690 140315 22820
+e 24 2
+145385 22690 145385 22820
+145445 22690 145445 22820
+e 25 2
+146275 22690 146275 22820
+146360 22690 146360 22820
+e 26 2
+150885 22690 150885 22820
+151015 22690 151015 22820
+e 27 2
+151585 22690 151585 22820
+151715 22690 151715 22820
+e 28 2
+151845 22690 151845 22820
+151905 22690 151905 22820
+e 29 2
+159065 22690 159065 22820
+159125 22690 159125 22820
+e 30 2
+161535 22690 161535 22820
+161560 22690 161560 22820
+e 31 2
+163435 22690 163435 22820
+163525 22690 163525 22820
+e 32 2
+171795 22690 171795 22820
+171855 22690 171855 22820
+e 33 2
+177115 22690 177115 22820
+177175 22690 177175 22820
+e 34 2
+182815 22690 182815 22820
+182895 22690 182895 22820
+e 35 2
+185835 22690 185835 22820
+185975 22690 185975 22820
+e 36 2
+186805 22690 186805 22820
+186845 22690 186845 22820
+e 37 2
+191855 22690 191855 22820
+191995 22690 191995 22820
+e 38 2
+194085 22690 194085 22820
+194175 22685 194175 22815
+e 39 2
+199095 22690 199095 22820
+199215 22690 199215 22820
+e 40 2
+209725 22690 209725 22820
+209855 22690 209855 22820
+e 41 2
+209985 22690 209985 22820
+209995 22690 209995 22820
+e 42 2
+213405 22690 213405 22820
+213445 22690 213445 22820
+e 43 2
+238675 22690 238675 22820
+238775 22690 238775 22820
+e 44 2
+240195 22690 240195 22820
+240315 22690 240315 22820
+e 45 2
+240895 22690 240895 22820
+241015 22690 241015 22820
+e 46 2
+242665 22690 242665 22820
+242725 22690 242725 22820
+e 47 2
+246605 22690 246605 22820
+246635 22690 246635 22820
+e 48 2
+247110 22690 247110 22820
+247175 22690 247175 22820
+Contact.3
+0 0 2 Apr 18 16:15:41 2024                     
+Rule File Pathname: _calibreDRC.rul_
+Contact must be inside metal1 and active or poly
+Contact.4
+0 0 2 Apr 18 16:15:41 2024                     
+Rule File Pathname: _calibreDRC.rul_
+Minimum active enclosure of contact = 0.005
+Contact.5
+0 0 2 Apr 18 16:15:41 2024                     
+Rule File Pathname: _calibreDRC.rul_
+Minimum poly enclosure of contact = 0.005
+Contact.6
+0 0 2 Apr 18 16:15:41 2024                     
+Rule File Pathname: _calibreDRC.rul_
+Minimum spacing of contact to poly = 0.035
+Metal1.1
+0 0 2 Apr 18 16:15:41 2024                     
+Rule File Pathname: _calibreDRC.rul_
+Minimum width of metal1 = 0.065
+Metal1.2
+25 25 2 Apr 18 16:15:41 2024                   
+Rule File Pathname: _calibreDRC.rul_
+Minimum spacing of metal1 = 0.065
+e 1 2
+CN nand2 c 1 0 0 1 26260 22555 70
+110 1030 240 1030
+80 1150 290 1150
+e 2 2
+CN control c 1 0 0 1 0 0 0
+38820 22425 38950 22425
+38784 22550 38986 22550
+e 3 2
+54274 22425 54320 22425
+54310 22550 54356 22550
+e 4 2
+54565 22425 54695 22425
+54529 22550 54731 22550
+e 5 2
+54940 22425 55070 22425
+54904 22550 55106 22550
+e 6 2
+73354 22425 73475 22425
+73390 22550 73511 22550
+e 7 2
+73720 22425 73850 22425
+73684 22550 73886 22550
+e 8 2
+74740 22425 74870 22425
+74704 22550 74906 22550
+e 9 2
+113365 22425 113495 22425
+113329 22550 113531 22550
+e 10 2
+193550 22425 193680 22425
+193514 22550 193716 22550
+e 11 2
+194305 22425 194435 22425
+194269 22550 194471 22550
+e 12 2
+46895 22430 47025 22430
+46845 22550 47075 22550
+e 13 2
+47690 22430 47820 22430
+47654 22555 47856 22555
+e 14 2
+38369 22955 38571 22955
+38405 23080 38535 23080
+e 15 2
+39164 22955 39366 22955
+39200 23080 39330 23080
+e 16 2
+54759 22955 54961 22955
+54795 23080 54925 23080
+e 17 2
+55554 22955 55756 22955
+55590 23080 55720 23080
+e 18 2
+73839 22955 74041 22955
+73875 23080 74005 23080
+e 19 2
+74634 22955 74836 22955
+74670 23080 74800 23080
+e 20 2
+113289 22955 113491 22955
+113325 23080 113455 23080
+e 21 2
+114084 22955 114286 22955
+114120 23080 114250 23080
+e 22 2
+193789 22955 193991 22955
+193825 23080 193955 23080
+e 23 2
+194584 22955 194786 22955
+194620 23080 194750 23080
+e 24 2
+46445 22960 46675 22960
+46495 23080 46625 23080
+e 25 2
+47240 22960 47470 22960
+47290 23080 47420 23080
+Metal1.3
+3 3 2 Apr 18 16:15:41 2024                     
+Rule File Pathname: _calibreDRC.rul_
+Metal1 must extend past contact by 0.035 on two opposite sides
+p 1 8
+CN control c 1 0 0 1 0 0 0
+74115 22690
+74225 22690
+74225 22685
+74355 22685
+74355 22815
+74245 22815
+74245 22820
+74115 22820
+p 2 8
+112975 22685
+113105 22685
+113105 22690
+113145 22690
+113145 22820
+113015 22820
+113015 22815
+112975 22815
+p 3 8
+113675 22685
+113805 22685
+113805 22690
+113845 22690
+113845 22820
+113715 22820
+113715 22815
+113675 22815
+Metal1.4
+0 0 2 Apr 18 16:15:41 2024                     
+Rule File Pathname: _calibreDRC.rul_
+Metal1 must extend past via1 by 0.035 on two opposite sides
+Via1.1
+0 0 2 Apr 18 16:15:41 2024                     
+Rule File Pathname: _calibreDRC.rul_
+Minimum width of via1 = 0.065
+Via1.2
+0 0 2 Apr 18 16:15:41 2024                     
+Rule File Pathname: _calibreDRC.rul_
+Minimum spacing of via1 = 0.075
+Via1.3
+0 0 2 Apr 18 16:15:41 2024                     
+Rule File Pathname: _calibreDRC.rul_
+Via1 must be inside metal1
+Via1.4
+0 0 2 Apr 18 16:15:41 2024                     
+Rule File Pathname: _calibreDRC.rul_
+Via1 must be inside metal2
+Metal2.1
+0 0 2 Apr 18 16:15:41 2024                     
+Rule File Pathname: _calibreDRC.rul_
+Minimum width of metal2 = 0.07
+Metal2.2
+0 0 2 Apr 18 16:15:41 2024                     
+Rule File Pathname: _calibreDRC.rul_
+Minimum spacing of metal2 = 0.07
+Metal2.3
+0 0 2 Apr 18 16:15:41 2024                     
+Rule File Pathname: _calibreDRC.rul_
+Metal2 must extend past via1 by 0.035 on two opposite sides
+Metal2.4
+0 0 2 Apr 18 16:15:41 2024                     
+Rule File Pathname: _calibreDRC.rul_
+Metal2 must extend past via2 by 0.035 on two opposite sides
+Via2.1
+0 0 2 Apr 18 16:15:41 2024                     
+Rule File Pathname: _calibreDRC.rul_
+Minimum width of via2 = 0.07
+Via2.2
+0 0 2 Apr 18 16:15:41 2024                     
+Rule File Pathname: _calibreDRC.rul_
+Minimum spacing of via2 = 0.085
+Via2.3
+0 0 2 Apr 18 16:15:41 2024                     
+Rule File Pathname: _calibreDRC.rul_
+Via2 must be inside metal2
+Via2.4
+0 0 2 Apr 18 16:15:41 2024                     
+Rule File Pathname: _calibreDRC.rul_
+Via2 must be inside metal3
+Metal3.1
+0 0 2 Apr 18 16:15:41 2024                     
+Rule File Pathname: _calibreDRC.rul_
+Minimum width of metal3 = 0.07
+Metal3.2
+0 0 2 Apr 18 16:15:41 2024                     
+Rule File Pathname: _calibreDRC.rul_
+Minimum spacing of metal3 = 0.07
+Metal3.3
+0 0 2 Apr 18 16:15:41 2024                     
+Rule File Pathname: _calibreDRC.rul_
+Metal3 must extend past via2 by 0.035 on two opposite sides
+Metal3.4
+0 0 2 Apr 18 16:15:41 2024                     
+Rule File Pathname: _calibreDRC.rul_
+Metal3 must extend past via3 by 0.035 on two opposite sides
+Via3.1
+0 0 2 Apr 18 16:15:41 2024                     
+Rule File Pathname: _calibreDRC.rul_
+Minimum width of via3 = 0.07
+Via3.2
+0 0 2 Apr 18 16:15:41 2024                     
+Rule File Pathname: _calibreDRC.rul_
+Minimum spacing of via3 = 0.085
+Via3.3
+0 0 2 Apr 18 16:15:41 2024                     
+Rule File Pathname: _calibreDRC.rul_
+Via3 must be inside metal3
+Via3.4
+0 0 2 Apr 18 16:15:41 2024                     
+Rule File Pathname: _calibreDRC.rul_
+Via3 must be inside metal4
+Metal4.1
+0 0 2 Apr 18 16:15:41 2024                     
+Rule File Pathname: _calibreDRC.rul_
+Minimum width of metal4 = 0.14
+Metal4.2
+0 0 2 Apr 18 16:15:41 2024                     
+Rule File Pathname: _calibreDRC.rul_
+Minimum spacing of metal4 = 0.14
+Metal4.3
+0 0 2 Apr 18 16:15:41 2024                     
+Rule File Pathname: _calibreDRC.rul_
+Minimum enclosure of metal4 around via3
+Via4.1
+0 0 2 Apr 18 16:15:41 2024                     
+Rule File Pathname: _calibreDRC.rul_
+Minimum width of via4 = 0.14
+Via4.2
+0 0 2 Apr 18 16:15:41 2024                     
+Rule File Pathname: _calibreDRC.rul_
+Minimum spacing of via4 = 0.16
+Via4.3
+0 0 2 Apr 18 16:15:41 2024                     
+Rule File Pathname: _calibreDRC.rul_
+Via4 must be inside metal4
+Via4.4
+0 0 2 Apr 18 16:15:41 2024                     
+Rule File Pathname: _calibreDRC.rul_
+Via4 must be inside metal5
+Metal5.1
+0 0 2 Apr 18 16:15:41 2024                     
+Rule File Pathname: _calibreDRC.rul_
+Minimum width of metal5 = 0.14
+Metal5.2
+0 0 2 Apr 18 16:15:41 2024                     
+Rule File Pathname: _calibreDRC.rul_
+Minimum spacing of metal5 = 0.14
+Metal5.3
+0 0 2 Apr 18 16:15:41 2024                     
+Rule File Pathname: _calibreDRC.rul_
+Minimum enclosure of metal5 around via4
+Via5.1
+0 0 2 Apr 18 16:15:41 2024                     
+Rule File Pathname: _calibreDRC.rul_
+Minimum width of via5 = 0.14
+Via5.2
+0 0 2 Apr 18 16:15:41 2024                     
+Rule File Pathname: _calibreDRC.rul_
+Minimum spacing of via5 = 0.16
+Via5.3
+0 0 2 Apr 18 16:15:41 2024                     
+Rule File Pathname: _calibreDRC.rul_
+Via5 must be inside metal5
+Via5.4
+0 0 2 Apr 18 16:15:41 2024                     
+Rule File Pathname: _calibreDRC.rul_
+Via5 must be inside metal6
+Metal6.1
+0 0 2 Apr 18 16:15:41 2024                     
+Rule File Pathname: _calibreDRC.rul_
+Minimum width of metal6 = 0.14
+Metal6.2
+0 0 2 Apr 18 16:15:41 2024                     
+Rule File Pathname: _calibreDRC.rul_
+Minimum spacing of metal6 = 0.14
+Metal6.3
+0 0 2 Apr 18 16:15:41 2024                     
+Rule File Pathname: _calibreDRC.rul_
+Minimum enclosure of metal6 around via5
+Via6.1
+0 0 2 Apr 18 16:15:41 2024                     
+Rule File Pathname: _calibreDRC.rul_
+Minimum width of via6 = 0.14
+Via6.2
+0 0 2 Apr 18 16:15:41 2024                     
+Rule File Pathname: _calibreDRC.rul_
+Minimum spacing of via6 = 0.16
+Via6.3
+0 0 2 Apr 18 16:15:41 2024                     
+Rule File Pathname: _calibreDRC.rul_
+Via6 must be inside metal6
+Via6.4
+0 0 2 Apr 18 16:15:41 2024                     
+Rule File Pathname: _calibreDRC.rul_
+Via6 must be inside metal7
+Metal7.1
+0 0 2 Apr 18 16:15:41 2024                     
+Rule File Pathname: _calibreDRC.rul_
+Minimum width of metal7 = 0.4
+Metal7.2
+0 0 2 Apr 18 16:15:41 2024                     
+Rule File Pathname: _calibreDRC.rul_
+Minimum spacing of metal7 = 0.4
+Metal7.3
+0 0 2 Apr 18 16:15:41 2024                     
+Rule File Pathname: _calibreDRC.rul_
+Minimum enclosure of metal7 around via6
+Via7.1
+0 0 2 Apr 18 16:15:41 2024                     
+Rule File Pathname: _calibreDRC.rul_
+Minimum width of via7 = 0.4
+Via7.2
+0 0 2 Apr 18 16:15:41 2024                     
+Rule File Pathname: _calibreDRC.rul_
+Minimum spacing of via7 = 0.44
+Via7.3
+0 0 2 Apr 18 16:15:41 2024                     
+Rule File Pathname: _calibreDRC.rul_
+Via7 must be inside metal7
+Via7.4
+0 0 2 Apr 18 16:15:41 2024                     
+Rule File Pathname: _calibreDRC.rul_
+Via7 must be inside metal8
+Metal8.1
+0 0 2 Apr 18 16:15:41 2024                     
+Rule File Pathname: _calibreDRC.rul_
+Minimum width of metal8 = 0.4
+Metal8.2
+0 0 2 Apr 18 16:15:41 2024                     
+Rule File Pathname: _calibreDRC.rul_
+Minimum spacing of metal8 = 0.4
+Metal8.3
+0 0 2 Apr 18 16:15:41 2024                     
+Rule File Pathname: _calibreDRC.rul_
+Minimum enclosure of metal8 around via7
+Via8.1
+0 0 2 Apr 18 16:15:41 2024                     
+Rule File Pathname: _calibreDRC.rul_
+Minimum width of via8 = 0.4
+Via8.2
+0 0 2 Apr 18 16:15:41 2024                     
+Rule File Pathname: _calibreDRC.rul_
+Minimum spacing of via8 = 0.44
+Via8.3
+0 0 2 Apr 18 16:15:41 2024                     
+Rule File Pathname: _calibreDRC.rul_
+Via8 must be inside metal8
+Via8.4
+0 0 2 Apr 18 16:15:41 2024                     
+Rule File Pathname: _calibreDRC.rul_
+Via8 must be inside metal9
+Metal9.1
+0 0 2 Apr 18 16:15:41 2024                     
+Rule File Pathname: _calibreDRC.rul_
+Minimum width of metal9 = 0.8
+Metal9.2
+0 0 2 Apr 18 16:15:41 2024                     
+Rule File Pathname: _calibreDRC.rul_
+Minimum spacing of metal9 = 0.8
+Metal9.3
+0 0 2 Apr 18 16:15:41 2024                     
+Rule File Pathname: _calibreDRC.rul_
+Minimum enclosure of metal9 around via8
+Via9.1
+0 0 2 Apr 18 16:15:41 2024                     
+Rule File Pathname: _calibreDRC.rul_
+Minimum width of via9 = 0.8
+Via9.2
+0 0 2 Apr 18 16:15:41 2024                     
+Rule File Pathname: _calibreDRC.rul_
+Minimum spacing of via9 = 0.88
+Via9.3
+0 0 2 Apr 18 16:15:41 2024                     
+Rule File Pathname: _calibreDRC.rul_
+Via9 must be inside metal9
+Via9.4
+0 0 2 Apr 18 16:15:41 2024                     
+Rule File Pathname: _calibreDRC.rul_
+Via9 must be inside metal10
+Metal10.1
+0 0 2 Apr 18 16:15:41 2024                     
+Rule File Pathname: _calibreDRC.rul_
+Minimum width of metal10 = 0.8
+Metal10.2
+0 0 2 Apr 18 16:15:41 2024                     
+Rule File Pathname: _calibreDRC.rul_
+Minimum spacing of metal10 = 0.8
+Metal10.3
+0 0 2 Apr 18 16:15:41 2024                     
+Rule File Pathname: _calibreDRC.rul_
+Minimum enclosure of metal10 around via9
+Metal1.5
+0 0 2 Apr 18 16:15:41 2024                     
+Rule File Pathname: _calibreDRC.rul_
+Minimum spacing of metal1 wider than 0.09 & longer than 0.3 = 0.09
+Metal1.6
+0 0 2 Apr 18 16:15:41 2024                     
+Rule File Pathname: _calibreDRC.rul_
+Minimum spacing of metal1 wider than 0.27 & longer than 0.9 = 0.27
+Metal1.7
+0 0 2 Apr 18 16:15:41 2024                     
+Rule File Pathname: _calibreDRC.rul_
+Minimum spacing of metal1 wider than 0.5 & longer than 1.8 = 0.5
+Metal1.8
+0 0 2 Apr 18 16:15:41 2024                     
+Rule File Pathname: _calibreDRC.rul_
+Minimum spacing of metal1 wider than 0.9 & longer than 2.7 = 0.9
+Metal1.9
+0 0 2 Apr 18 16:15:41 2024                     
+Rule File Pathname: _calibreDRC.rul_
+Minimum spacing of metal1 wider than 1.5 & longer than 4.0 = 1.5
+Metal2.5
+0 0 2 Apr 18 16:15:41 2024                     
+Rule File Pathname: _calibreDRC.rul_
+Minimum spacing of metal2 wider than 0.09 & longer than 0.3 = 0.09
+Metal2.6
+0 0 2 Apr 18 16:15:41 2024                     
+Rule File Pathname: _calibreDRC.rul_
+Minimum spacing of metal2 wider than 0.27 & longer than 0.9 = 0.27
+Metal2.7
+0 0 2 Apr 18 16:15:41 2024                     
+Rule File Pathname: _calibreDRC.rul_
+Minimum spacing of metal2 wider than 0.5 & longer than 1.8 = 0.5
+Metal2.8
+0 0 2 Apr 18 16:15:41 2024                     
+Rule File Pathname: _calibreDRC.rul_
+Minimum spacing of metal2 wider than 0.9 & longer than 2.7 = 0.9
+Metal2.9
+0 0 2 Apr 18 16:15:41 2024                     
+Rule File Pathname: _calibreDRC.rul_
+Minimum spacing of metal2 wider than 1.5 & longer than 4.0 = 1.5
+Metal3.5
+0 0 2 Apr 18 16:15:41 2024                     
+Rule File Pathname: _calibreDRC.rul_
+Minimum spacing of metal3 wider than 0.09 & longer than 0.3 = 0.09
+Metal3.6
+0 0 2 Apr 18 16:15:41 2024                     
+Rule File Pathname: _calibreDRC.rul_
+Minimum spacing of metal3 wider than 0.27 & longer than 0.9 = 0.27
+Metal3.7
+0 0 2 Apr 18 16:15:41 2024                     
+Rule File Pathname: _calibreDRC.rul_
+Minimum spacing of metal3 wider than 0.5 & longer than 1.8 = 0.5
+Metal3.8
+0 0 2 Apr 18 16:15:41 2024                     
+Rule File Pathname: _calibreDRC.rul_
+Minimum spacing of metal3 wider than 0.9 & longer than 2.7 = 0.9
+Metal3.9
+0 0 2 Apr 18 16:15:41 2024                     
+Rule File Pathname: _calibreDRC.rul_
+Minimum spacing of metal3 wider than 1.5 & longer than 4.0 = 1.5
+Metal4.5
+0 0 2 Apr 18 16:15:41 2024                     
+Rule File Pathname: _calibreDRC.rul_
+Minimum spacing of metal4 wider than 0.27 & longer than 0.9 = 0.27
+Metal4.6
+0 0 2 Apr 18 16:15:41 2024                     
+Rule File Pathname: _calibreDRC.rul_
+Minimum spacing of metal4 wider than 0.5 & longer than 1.8 = 0.5
+Metal4.7
+0 0 2 Apr 18 16:15:41 2024                     
+Rule File Pathname: _calibreDRC.rul_
+Minimum spacing of metal4 wider than 0.9 & longer than 2.7 = 0.9
+Metal4.8
+0 0 2 Apr 18 16:15:41 2024                     
+Rule File Pathname: _calibreDRC.rul_
+Minimum spacing of metal4 wider than 1.5 & longer than 4.0 = 1.5
+Metal5.5
+0 0 2 Apr 18 16:15:41 2024                     
+Rule File Pathname: _calibreDRC.rul_
+Minimum spacing of metal5 wider than 0.27 & longer than 0.9 = 0.27
+Metal5.6
+0 0 2 Apr 18 16:15:41 2024                     
+Rule File Pathname: _calibreDRC.rul_
+Minimum spacing of metal5 wider than 0.5 & longer than 1.8 = 0.5
+Metal5.7
+0 0 2 Apr 18 16:15:41 2024                     
+Rule File Pathname: _calibreDRC.rul_
+Minimum spacing of metal5 wider than 0.9 & longer than 2.7 = 0.9
+Metal5.8
+0 0 2 Apr 18 16:15:41 2024                     
+Rule File Pathname: _calibreDRC.rul_
+Minimum spacing of metal5 wider than 1.5 & longer than 4.0 = 1.5
+Metal6.5
+0 0 2 Apr 18 16:15:41 2024                     
+Rule File Pathname: _calibreDRC.rul_
+Minimum spacing of metal6 wider than 0.27 & longer than 0.9 = 0.27
+Metal6.6
+0 0 2 Apr 18 16:15:41 2024                     
+Rule File Pathname: _calibreDRC.rul_
+Minimum spacing of metal6 wider than 0.5 & longer than 1.8 = 0.5
+Metal6.7
+0 0 2 Apr 18 16:15:41 2024                     
+Rule File Pathname: _calibreDRC.rul_
+Minimum spacing of metal6 wider than 0.9 & longer than 2.7 = 0.9
+Metal6.8
+0 0 2 Apr 18 16:15:41 2024                     
+Rule File Pathname: _calibreDRC.rul_
+Minimum spacing of metal6 wider than 1.5 & longer than 4.0 = 1.5
+Metal7.5
+0 0 2 Apr 18 16:15:41 2024                     
+Rule File Pathname: _calibreDRC.rul_
+Minimum spacing of metal7 wider than 0.5 & longer than 1.8 = 0.5
+Metal7.6
+0 0 2 Apr 18 16:15:41 2024                     
+Rule File Pathname: _calibreDRC.rul_
+Minimum spacing of metal7 wider than 0.9 & longer than 2.7 = 0.9
+Metal7.7
+0 0 2 Apr 18 16:15:41 2024                     
+Rule File Pathname: _calibreDRC.rul_
+Minimum spacing of metal7 wider than 1.5 & longer than 4.0 = 1.5
+Metal8.5
+0 0 2 Apr 18 16:15:41 2024                     
+Rule File Pathname: _calibreDRC.rul_
+Minimum spacing of metal8 wider than 0.5 & longer than 1.8 = 0.5
+Metal8.6
+0 0 2 Apr 18 16:15:41 2024                     
+Rule File Pathname: _calibreDRC.rul_
+Minimum spacing of metal8 wider than 0.9 & longer than 2.7 = 0.9
+Metal8.7
+0 0 2 Apr 18 16:15:41 2024                     
+Rule File Pathname: _calibreDRC.rul_
+Minimum spacing of metal8 wider than 1.5 & longer than 4.0 = 1.5
+Metal9.5
+0 0 2 Apr 18 16:15:41 2024                     
+Rule File Pathname: _calibreDRC.rul_
+Minimum spacing of metal9 wider than 0.9 & longer than 2.7 = 0.9
+Metal9.6
+0 0 2 Apr 18 16:15:41 2024                     
+Rule File Pathname: _calibreDRC.rul_
+Minimum spacing of metal9 wider than 1.5 & longer than 4.0 = 1.5
+Metal10.5
+0 0 2 Apr 18 16:15:41 2024                     
+Rule File Pathname: _calibreDRC.rul_
+Minimum spacing of metal10 wider than 0.9 & longer than 2.7 = 0.9
+Metal10.6
+0 0 2 Apr 18 16:15:41 2024                     
+Rule File Pathname: _calibreDRC.rul_
+Minimum spacing of metal10 wider than 1.5 & longer than 4.0 = 1.5
+Grid.1
+0 0 2 Apr 18 16:15:41 2024                     
+Rule File Pathname: _calibreDRC.rul_
+All shapes must be on a 2.5 nm grid
+Grid.2
+0 0 2 Apr 18 16:15:41 2024                     
+Rule File Pathname: _calibreDRC.rul_
+All shapes must be on a 2.5 nm grid
+Grid.3
+0 0 2 Apr 18 16:15:41 2024                     
+Rule File Pathname: _calibreDRC.rul_
+All shapes must be on a 2.5 nm grid
+Grid.4
+0 0 2 Apr 18 16:15:41 2024                     
+Rule File Pathname: _calibreDRC.rul_
+All shapes must be on a 2.5 nm grid
+Grid.5
+0 0 2 Apr 18 16:15:41 2024                     
+Rule File Pathname: _calibreDRC.rul_
+All shapes must be on a 2.5 nm grid
+Grid.6
+0 0 2 Apr 18 16:15:41 2024                     
+Rule File Pathname: _calibreDRC.rul_
+All shapes must be on a 2.5 nm grid
+Grid.7
+0 0 2 Apr 18 16:15:41 2024                     
+Rule File Pathname: _calibreDRC.rul_
+All shapes must be on a 2.5 nm grid
+Grid.8
+0 0 2 Apr 18 16:15:41 2024                     
+Rule File Pathname: _calibreDRC.rul_
+All shapes must be on a 2.5 nm grid
+Grid.9
+0 0 2 Apr 18 16:15:41 2024                     
+Rule File Pathname: _calibreDRC.rul_
+All shapes must be on a 2.5 nm grid
+Grid.10
+0 0 2 Apr 18 16:15:41 2024                     
+Rule File Pathname: _calibreDRC.rul_
+All shapes must be on a 2.5 nm grid
+Grid.11
+0 0 2 Apr 18 16:15:41 2024                     
+Rule File Pathname: _calibreDRC.rul_
+All shapes must be on a 2.5 nm grid
+Grid.12
+0 0 2 Apr 18 16:15:41 2024                     
+Rule File Pathname: _calibreDRC.rul_
+All shapes must be on a 2.5 nm grid
+Grid.13
+0 0 2 Apr 18 16:15:41 2024                     
+Rule File Pathname: _calibreDRC.rul_
+All shapes must be on a 2.5 nm grid
+Grid.14
+0 0 2 Apr 18 16:15:41 2024                     
+Rule File Pathname: _calibreDRC.rul_
+All shapes must be on a 2.5 nm grid
+Grid.15
+0 0 2 Apr 18 16:15:41 2024                     
+Rule File Pathname: _calibreDRC.rul_
+All shapes must be on a 2.5 nm grid
+Grid.16
+0 0 2 Apr 18 16:15:41 2024                     
+Rule File Pathname: _calibreDRC.rul_
+All shapes must be on a 2.5 nm grid
+Grid.17
+0 0 2 Apr 18 16:15:41 2024                     
+Rule File Pathname: _calibreDRC.rul_
+All shapes must be on a 2.5 nm grid
+Grid.18
+0 0 2 Apr 18 16:15:41 2024                     
+Rule File Pathname: _calibreDRC.rul_
+All shapes must be on a 2.5 nm grid
+Grid.19
+0 0 2 Apr 18 16:15:41 2024                     
+Rule File Pathname: _calibreDRC.rul_
+All shapes must be on a 2.5 nm grid
+Grid.20
+0 0 2 Apr 18 16:15:41 2024                     
+Rule File Pathname: _calibreDRC.rul_
+All shapes must be on a 2.5 nm grid
+Grid.21
+0 0 2 Apr 18 16:15:41 2024                     
+Rule File Pathname: _calibreDRC.rul_
+All shapes must be on a 2.5 nm grid
+Grid.22
+0 0 2 Apr 18 16:15:41 2024                     
+Rule File Pathname: _calibreDRC.rul_
+All shapes must be on a 2.5 nm grid
+Grid.23
+0 0 2 Apr 18 16:15:41 2024                     
+Rule File Pathname: _calibreDRC.rul_
+All shapes must be on a 2.5 nm grid
+Grid.24
+0 0 2 Apr 18 16:15:41 2024                     
+Rule File Pathname: _calibreDRC.rul_
+All shapes must be on a 2.5 nm grid
+Grid.25
+0 0 2 Apr 18 16:15:41 2024                     
+Rule File Pathname: _calibreDRC.rul_
+All shapes must be on a 2.5 nm grid
+Grid.26
+0 0 2 Apr 18 16:15:41 2024                     
+Rule File Pathname: _calibreDRC.rul_
+All shapes must be on a 2.5 nm grid
+Antenna.poly
+0 0 2 Apr 18 16:15:41 2024                     
+Rule File Pathname: _calibreDRC.rul_
+Maximum allowed field poly area to antenna area is 100:1. Connect diode to relax constraint.
+Antenna.metal1
+0 0 2 Apr 18 16:15:41 2024                     
+Rule File Pathname: _calibreDRC.rul_
+Maximum allowed (poly + metal 1) antenna area to gate area is 300:1. Connect diode to relax constraint.
+Antenna.metal2
+0 0 2 Apr 18 16:15:41 2024                     
+Rule File Pathname: _calibreDRC.rul_
+[Area(poly)+Area(Metal 1)]:Area(Gate) should be < 300:1 to prevent plasma induced damage.
+Antenna.metal3
+0 0 2 Apr 18 16:15:41 2024                     
+Rule File Pathname: _calibreDRC.rul_
+[Area(poly)+Area(Metal 1)+Area(Metal 2)]:Area(Gate) should be < 300:1 to prevent plasma induced gate oxide damage.
+Antenna.metal4
+2 2 2 Apr 18 16:15:41 2024                     
+Rule File Pathname: _calibreDRC.rul_
+[Area(poly)+Area(Metal 1)+Area(Metal 2)+Area(Metal 3)]:Area(Gate) should be < 300:1 to prevent plasma induced gate oxide damage
+p 1 4
+CN control c 1 0 0 1 0 0 0
+20770 50
+21050 50
+21050 11350
+20770 11350
+p 2 10
+173650 11070
+173930 11070
+173930 22090
+175330 22090
+175330 21710
+175610 21710
+175610 22370
+173930 22370
+173930 22750
+173650 22750
+Antenna.metal5
+0 0 2 Apr 18 16:15:41 2024                     
+Rule File Pathname: _calibreDRC.rul_
+[Area(poly+M1+M2+M3+M4):Area(Gate) should be < 300:1 to prevent plasma induced gate oxide damage
+Antenna.metal6
+0 0 2 Apr 18 16:15:41 2024                     
+Rule File Pathname: _calibreDRC.rul_
+[Area(poly+M1+M2+M3+M4+M5)]:Area(Gate) should be < 300:1 to prevent plasma induced gate oxide damage
+Antenna.metal7
+0 0 2 Apr 18 16:15:41 2024                     
+Rule File Pathname: _calibreDRC.rul_
+[Area(poly+M1+M2+M3+M4+M5+M6)]:Area(Gate) should be < 300:1 to prevent plasma induced gate oxide damage
+Antenna.metal8
+0 0 2 Apr 18 16:15:41 2024                     
+Rule File Pathname: _calibreDRC.rul_
+[Area(poly+M1+M2+M3+M4+M5+M6+M7)]:Area(Gate) should be < 300:1 to prevent plasma induced gate oxide damage
+Antenna.metal9
+0 0 2 Apr 18 16:15:41 2024                     
+Rule File Pathname: _calibreDRC.rul_
+[Area(poly+M1+M2+M3+M4+M5+M6+M7+M8)]:Area(Gate) should be < 300:1 to prevent plasma induced gate oxide damage
+Antenna.metal10
+0 0 2 Apr 18 16:15:41 2024                     
+Rule File Pathname: _calibreDRC.rul_
+[Area(poly+M1+M2+M3+M4+M5+M6+M7+M8+M9)]:Area(Gate) should be < 300:1 to prevent plasma induced gate oxide damage
+__RVE_ERROR_TAG2__
+0 0 16 Apr 18 16:18:15 2024
+Well.4 2 1
+0
+Active.2 10 1
+0000000000000000000000000000000000000000000000000000000000000000000000000000000
+Implant.3 15 1
+00000000000000000000000000000000000000
+Contact.1 18 1
+00
+Contact.2 19 1
+000000000000000000000000000000000000000000000000
+Metal1.2 25 1
+1000000000000000000000000
+Metal1.3 26 1
+000
+Antenna.metal4 160 1
+00

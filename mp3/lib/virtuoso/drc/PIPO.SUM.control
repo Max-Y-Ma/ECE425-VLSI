@@ -1,0 +1,131 @@
+********************************************************************************
+Product   : Virtuoso(R) XStream Out
+Program   : @(#)$CDS: strmout version ICADVM20.1-64b 05/03/2023 09:29 (cpgsrv12) $
+          : sub-version  ICADVM20.1-64b.500.32 
+Started at: 18-Apr-2024  16:15:39
+User Name : maxma2
+Host Name : dcl-l440-28.ews.illinois.edu
+Directory : /home/maxma2/Documents/Coursework/ece425/mp3/lib/virtuoso
+CADENCE Design Systems, Inc.
+********************************************************************************
+Info: Cellview Rev Num:99,  Tech Rev Num:59
+
+
+                       Individual Cell Statistics - Basic Objects
+---------------------------------------------------------------------------------------------------------------------------------------
+Library/Cell/View               Instance Array   Polygon  Rect   Path   PathSeg   Text   TextDisplay   Line   Dot   Arc   Donut   Ellipse 
+---------------------------------------------------------------------------------------------------------------------------------------
+NCSU_TechLib_FreePDK45/M4_M3/layout                             0        0       0        3      0      0         0      0             0      0     0     0       0       
+NCSU_TechLib_FreePDK45/M8_M7/layout                             0        0       0        4      0      0         0      0             0      0     0     0       0       
+NCSU_TechLib_FreePDK45/M8_M7/layout                             0        0       0        4      0      0         0      0             0      0     0     0       0       
+NCSU_TechLib_FreePDK45/M8_M7/layout                             0        0       0        3      0      0         0      0             0      0     0     0       0       
+NCSU_TechLib_FreePDK45/M3_M2/layout                             0        0       0        3      0      0         0      0             0      0     0     0       0       
+NCSU_TechLib_FreePDK45/M3_M2/layout                             0        0       0        3      0      0         0      0             0      0     0     0       0       
+NCSU_TechLib_FreePDK45/M3_M2/layout                             0        0       0        3      0      0         0      0             0      0     0     0       0       
+NCSU_TechLib_FreePDK45/M2_M1/layout                             0        0       0        3      0      0         0      0             0      0     0     0       0       
+NCSU_TechLib_FreePDK45/M8_M7/layout                             0        0       0        6      0      0         0      0             0      0     0     0       0       
+control/mux2/layout             0        0       1        45     23     0         6      0             0      0     0     0       0       
+NCSU_TechLib_FreePDK45/M2_M1/layout                             0        0       0        3      0      0         0      0             0      0     0     0       0       
+control/nor2/layout             0        0       0        19     6      0         5      0             0      0     0     0       0       
+NCSU_TechLib_FreePDK45/M2_M1/layout                             0        0       0        3      0      0         0      0             0      0     0     0       0       
+control/xor2/layout             0        0       3        40     19     0         5      0             0      0     0     0       0       
+NCSU_TechLib_FreePDK45/M1_POLY/layout                           0        0       0        3      0      0         0      0             0      0     0     0       0       
+control/inv/layout              0        0       0        17     4      0         4      0             0      0     0     0       0       
+NCSU_TechLib_FreePDK45/NTAP/layout                              0        0       0        5      0      0         0      0             0      0     0     0       0       
+control/nand2/layout            0        0       0        20     6      0         5      0             0      0     0     0       0       
+control/control/layout          339      0       0        244    4401   0         189    0             0      0     0     0       0       
+NCSU_TechLib_FreePDK45/M5_M4/layout                             0        0       0        3      0      0         0      0             0      0     0     0       0       
+control/aoi21/layout            0        0       2        22     10     0         6      0             0      0     0     0       0       
+control/oai21/layout            0        0       2        22     10     0         6      0             0      0     0     0       0       
+NCSU_TechLib_FreePDK45/M4_M3/layout                             0        0       0        3      0      0         0      0             0      0     0     0       0       
+control/or2/layout              0        0       2        23     9      0         5      0             0      0     0     0       0       
+NCSU_TechLib_FreePDK45/PTAP/layout                              0        0       0        5      0      0         0      0             0      0     0     0       0       
+---------------------------------------------------------------------------------------------------------------------------------------
+
+                       Individual Cell Statistics - Advanced Objects
+--------------------------------------------------------------------------------------------------------------------------------------------
+Library/Cell/View               PRBdy    OtherBdy   AreaBlkg   LayerBlkg  AreaHalo   Row   Marker   Stitch   CustVia   StdVia    CdsGenVia
+--------------------------------------------------------------------------------------------------------------------------------------------
+NCSU_TechLib_FreePDK45/M4_M3/layout                             0        0          0          0          0          0     0        0        0         0         0        
+NCSU_TechLib_FreePDK45/M8_M7/layout                             0        0          0          0          0          0     0        0        0         0         0        
+NCSU_TechLib_FreePDK45/M8_M7/layout                             0        0          0          0          0          0     0        0        0         0         0        
+NCSU_TechLib_FreePDK45/M8_M7/layout                             0        0          0          0          0          0     0        0        0         0         0        
+NCSU_TechLib_FreePDK45/M3_M2/layout                             0        0          0          0          0          0     0        0        0         0         0        
+NCSU_TechLib_FreePDK45/M3_M2/layout                             0        0          0          0          0          0     0        0        0         0         0        
+NCSU_TechLib_FreePDK45/M3_M2/layout                             0        0          0          0          0          0     0        0        0         0         0        
+NCSU_TechLib_FreePDK45/M2_M1/layout                             0        0          0          0          0          0     0        0        0         0         0        
+NCSU_TechLib_FreePDK45/M8_M7/layout                             0        0          0          0          0          0     0        0        0         0         0        
+control/mux2/layout             0        0          0          0          0          0     0        0        0         20        0        
+NCSU_TechLib_FreePDK45/M2_M1/layout                             0        0          0          0          0          0     0        0        0         0         0        
+control/nor2/layout             0        0          0          0          0          0     0        0        0         5         0        
+NCSU_TechLib_FreePDK45/M2_M1/layout                             0        0          0          0          0          0     0        0        0         0         0        
+control/xor2/layout             0        0          0          0          0          0     0        0        0         19        0        
+NCSU_TechLib_FreePDK45/M1_POLY/layout                           0        0          0          0          0          0     0        0        0         0         0        
+control/inv/layout              0        0          0          0          0          0     0        0        0         3         0        
+NCSU_TechLib_FreePDK45/NTAP/layout                              0        0          0          0          0          0     0        0        0         0         0        
+control/nand2/layout            0        0          0          0          0          0     0        0        0         5         0        
+control/control/layout          0        0          0          0          0          0     0        0        0         2306      0        
+NCSU_TechLib_FreePDK45/M5_M4/layout                             0        0          0          0          0          0     0        0        0         0         0        
+control/aoi21/layout            0        0          0          0          0          0     0        0        0         8         0        
+control/oai21/layout            0        0          0          0          0          0     0        0        0         8         0        
+NCSU_TechLib_FreePDK45/M4_M3/layout                             0        0          0          0          0          0     0        0        0         0         0        
+control/or2/layout              0        0          0          0          0          0     0        0        0         6         0        
+NCSU_TechLib_FreePDK45/PTAP/layout                              0        0          0          0          0          0     0        0        0         0         0        
+---------------------------------------------------------------------------------------------------------------------------------------
+
+                       Statistics of Layers 
+---------------------------------------------------------------------------------------------------------------------------------------
+Cadence         Cadence         Stream  Stream   
+Layer           Purpose         Layer   Datatype  Polygon  Rect     Path     Text     TextDisplay   Line Dot Arc Donut Ellipse Pathseg
+---------------------------------------------------------------------------------------------------------------------------------------
+via7            drawing         24      0         0        9        0        0        0             0    0   0   0     0      0      
+nwell           drawing         3       0         0        22       0        0        0             0    0   0   0     0      0      
+via4            drawing         18      0         0        1        0        0        0             0    0   0   0     0      0      
+metal5          drawing         19      0         0        1        51       0        0             0    0   0   0     0      0      
+metal2          drawing         13      0         0        10       1841     0        0             0    0   0   0     0      0      
+via2            drawing         14      0         0        3        0        0        0             0    0   0   0     0      0      
+metal1          drawing         11      0         0        27       915      53       0             0    0   0   0     0      0      
+nimplant        drawing         4       0         2        10       0        0        0             0    0   0   0     0      0      
+background      drawing         254     0         0        36       0        0        0             0    0   0   0     0      0      
+metal7          drawing         23      0         0        10       0        0        0             0    0   0   0     0      0      
+via1            drawing         12      0         0        3        0        0        0             0    0   0   0     0      0      
+poly            drawing         9       0         0        13       25       0        0             0    0   0   0     0      0      
+contact         drawing         10      0         0        66       0        0        0             0    0   0   0     0      0      
+metal4          drawing         17      0         0        3        164      0        0             0    0   0   0     0      0      
+via3            drawing         16      0         0        2        0        0        0             0    0   0   0     0      0      
+pimplant        drawing         5       0         2        10       0        0        0             0    0   0   0     0      0      
+metal3          drawing         15      0         0        183      1492     178      0             0    0   0   0     0      0      
+metal8          drawing         25      0         0        57       0        0        0             0    0   0   0     0      0      
+pwell           drawing         2       0         2        23       0        0        0             0    0   0   0     0      0      
+active          drawing         1       0         4        20       0        0        0             0    0   0   0     0      0      
+---------------------------------------------------------------------------------------------------------------------------------------
+
+Summary of Objects Translated:
+	Scalar Instances:		339
+	Array Instances:		0
+	Polygons:			10
+	Paths:				4488
+	Rectangles:			509
+	Lines:				0
+	Arcs:				0
+	Donuts:				0
+	Dots:				0
+	Ellipses:			0
+	Boundaries:			0
+	Area Blockages:			0
+	Layer Blockages:		0
+	Area Halos:			0
+	Markers:			0
+	Rows:				0
+	Stitches:			0
+	Standard Vias:			2380
+	Custom Vias:			0
+	CdsGen Vias:			0
+	Pathsegs:			0
+	Text:				231
+	TextDisplay:		0
+	Cells:				25
+Design Libraries: 
+
+DEFINE control	/home/maxma2/Documents/Coursework/ece425/mp3/lib/virtuoso/control
+DEFINE NCSU_TechLib_FreePDK45	/class/ece425/FreePDK45/ncsu_basekit/lib/NCSU_TechLib_FreePDK45
