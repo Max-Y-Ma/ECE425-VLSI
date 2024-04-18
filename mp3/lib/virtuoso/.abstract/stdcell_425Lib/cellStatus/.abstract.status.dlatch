@@ -1,0 +1,6 @@
+cUiSelectCellP {dlatch}
+cUiSetViewStatus {dlatch} {layout} {1}
+cUiSetViewStatus {dlatch} {logical} {0}
+cUiSetViewStatus {dlatch} {abstract.pin} {1}
+cUiSetViewStatus {dlatch} {abstract.ext} {1}
+cUiSetViewStatus {dlatch} {abstract} {3}

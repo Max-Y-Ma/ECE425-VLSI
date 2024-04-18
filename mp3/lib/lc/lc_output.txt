@@ -1,0 +1,67 @@
+ 
+                             Library Compiler (TM)
+                                 DesignWare (R)
+
+               Version R-2020.09-SP5 for linux64 - Apr 14, 2021 
+
+                    Copyright (c) 1988 - 2021 Synopsys, Inc.
+   This software and the associated documentation are proprietary to Synopsys,
+ Inc. This software may only be used in accordance with the terms and conditions
+ of a written license agreement with Synopsys, Inc. All other use, reproduction,
+            or distribution of this software is strictly prohibited.
+
+Initializing...
+read_lib  ../stdcells.lib
+Reading '/home/maxma2/Documents/Coursework/ece425/mp3/lib/stdcells.lib' ...
+Warning: Line 1, The 'default_fanout_load' attribute is not specified. Using 1.00. (LBDB-172)
+Warning: Line 1, The 'default_inout_pin_cap' attribute is not specified. Using 1.00. (LBDB-172)
+Warning: Line 1, The 'default_input_pin_cap' attribute is not specified. Using 1.00. (LBDB-172)
+Warning: Line 1, The 'default_output_pin_cap' attribute is not specified. Using 0.00. (LBDB-172)
+Warning: Line 1, The default_operating_conditions is not defined. operating_conditions "nom_pvt" is created 
+        and set as the default_operating_conditions. (LBDB-662)
+Warning: Line 1, The attribute 'slew_lower_threshold_pct_rise' is not specified. (LBDB-605)
+Warning: Line 1, The attribute 'slew_upper_threshold_pct_rise' is not specified. (LBDB-605)
+Warning: Line 1, The attribute 'slew_lower_threshold_pct_fall' is not specified. (LBDB-605)
+Warning: Line 1, The attribute 'slew_upper_threshold_pct_fall' is not specified. (LBDB-605)
+Warning: Line 1, The attribute 'input_threshold_pct_rise' is not specified. (LBDB-605)
+Warning: Line 1, The attribute 'output_threshold_pct_rise' is not specified. (LBDB-605)
+Warning: Line 1, The attribute 'input_threshold_pct_fall' is not specified. (LBDB-605)
+Warning: Line 1, The attribute 'output_threshold_pct_fall' is not specified. (LBDB-605)
+Warning: Line 14, Cell 'INV', pin 'A', The 'capacitance' attribute is not specified. Using 1.00. (LBDB-172)
+Warning: Line 40, Cell 'NAND2', pin 'A', The 'capacitance' attribute is not specified. Using 1.00. (LBDB-172)
+Warning: Line 43, Cell 'NAND2', pin 'B', The 'capacitance' attribute is not specified. Using 1.00. (LBDB-172)
+Warning: Line 69, Cell 'AND2', pin 'A', The 'capacitance' attribute is not specified. Using 1.00. (LBDB-172)
+Warning: Line 72, Cell 'AND2', pin 'B', The 'capacitance' attribute is not specified. Using 1.00. (LBDB-172)
+Warning: Line 98, Cell 'AOI21', pin 'A', The 'capacitance' attribute is not specified. Using 1.00. (LBDB-172)
+Warning: Line 101, Cell 'AOI21', pin 'B', The 'capacitance' attribute is not specified. Using 1.00. (LBDB-172)
+Warning: Line 104, Cell 'AOI21', pin 'C', The 'capacitance' attribute is not specified. Using 1.00. (LBDB-172)
+Warning: Line 130, Cell 'BUF', pin 'A', The 'capacitance' attribute is not specified. Using 1.00. (LBDB-172)
+Warning: Line 160, Cell 'DFF', pin 'CLK', The 'capacitance' attribute is not specified. Using 1.00. (LBDB-172)
+Warning: Line 164, Cell 'DFF', pin 'D', The 'capacitance' attribute is not specified. Using 1.00. (LBDB-172)
+Warning: Line 215, Cell 'DLATCH', pin 'CLK', The 'capacitance' attribute is not specified. Using 1.00. (LBDB-172)
+Warning: Line 219, Cell 'DLATCH', pin 'D', The 'capacitance' attribute is not specified. Using 1.00. (LBDB-172)
+Warning: Line 266, Cell 'MUX2', pin 'A', The 'capacitance' attribute is not specified. Using 1.00. (LBDB-172)
+Warning: Line 269, Cell 'MUX2', pin 'B', The 'capacitance' attribute is not specified. Using 1.00. (LBDB-172)
+Warning: Line 272, Cell 'MUX2', pin 'S', The 'capacitance' attribute is not specified. Using 1.00. (LBDB-172)
+Warning: Line 298, Cell 'NOR2', pin 'A', The 'capacitance' attribute is not specified. Using 1.00. (LBDB-172)
+Warning: Line 301, Cell 'NOR2', pin 'B', The 'capacitance' attribute is not specified. Using 1.00. (LBDB-172)
+Warning: Line 327, Cell 'OAI21', pin 'A', The 'capacitance' attribute is not specified. Using 1.00. (LBDB-172)
+Warning: Line 330, Cell 'OAI21', pin 'B', The 'capacitance' attribute is not specified. Using 1.00. (LBDB-172)
+Warning: Line 333, Cell 'OAI21', pin 'C', The 'capacitance' attribute is not specified. Using 1.00. (LBDB-172)
+Warning: Line 359, Cell 'OR2', pin 'A', The 'capacitance' attribute is not specified. Using 1.00. (LBDB-172)
+Warning: Line 362, Cell 'OR2', pin 'B', The 'capacitance' attribute is not specified. Using 1.00. (LBDB-172)
+Warning: Line 388, Cell 'XNOR2', pin 'A', The 'capacitance' attribute is not specified. Using 1.00. (LBDB-172)
+Warning: Line 391, Cell 'XNOR2', pin 'B', The 'capacitance' attribute is not specified. Using 1.00. (LBDB-172)
+Warning: Line 417, Cell 'XOR2', pin 'A', The 'capacitance' attribute is not specified. Using 1.00. (LBDB-172)
+Warning: Line 420, Cell 'XOR2', pin 'B', The 'capacitance' attribute is not specified. Using 1.00. (LBDB-172)
+Technology library 'stdcells' read successfully
+1
+write_lib stdcells
+Wrote the 'stdcells' library to 'stdcells.db' successfully
+1
+exit
+Maximum memory usage for this session: 83.32 MB
+CPU usage for this session:      1 seconds (  0.00 hours)
+Elapsed time for this session:      3 seconds (  0.00 hours)
+Thank you for using Library Compiler.
+

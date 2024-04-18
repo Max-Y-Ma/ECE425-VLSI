@@ -1,7 +1,7 @@
 ✅ 🟨 ❌
 
 # Standard Cell Liberty Timing File (.lib)
-- ❌ Create an entry for every single standard cell
+- ✅ Create an entry for every single standard cell
     - Cell name and pin name should match the `Virtuoso Library`
     - Fill in area information
     - Example: This is an example from `gscl45nm.lib`
@@ -47,7 +47,7 @@
                 }
             }
         }
-- ❌ Run `lc_shell -batch -f lc.tcl` to compile to accepted format
+- ✅ Run `lc_shell -batch -f lc.tcl` to compile to accepted format
 
 #  Standard Cell Library Exchange Format (.lef)
 - The technology `.lef` contains information about the manufacturing process we are using. 
