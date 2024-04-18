@@ -1,4 +1,4 @@
-# File Created by maxma2 at Wed Apr 17 20:39:54 2024
+# File Created by maxma2 at Thu Apr 18 13:43:47 2024
 # assisted by CdsLibEditor
 DEFINE analogLib $CDSHOME/tools/dfII/etc/cdslib/artist/analogLib
 DEFINE US_8ths $CDSHOME/tools/dfII/etc/cdslib/sheets/US_8ths
@@ -8,3 +8,5 @@ DEFINE NCSU_TechLib_FreePDK45 $PDK_DIR/ncsu_basekit/lib/NCSU_TechLib_FreePDK45
 DEFINE NCSU_Devices_FreePDK45 $PDK_DIR/ncsu_basekit/lib/NCSU_Devices_FreePDK45
 #Removed by ddDeleteObj: DEFINE stdcells stdcells
 DEFINE stdcell_425Lib /home/maxma2/Documents/Coursework/ece425/mp3/lib/virtuoso/stdcell_425Lib
+DEFINE stdcell_rv32Lib stdcell_rv32Lib
+DEFINE bitslice_rv32Lib bitslice_rv32Lib

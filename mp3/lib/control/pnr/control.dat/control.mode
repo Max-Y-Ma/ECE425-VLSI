@@ -13,6 +13,7 @@ catch {setNanoRouteMode -quiet -routeStrictlyHonorNonDefaultRule "false"}
 catch { setIlmMode -keepHighFanoutPorts true -keepLoopBack false -keepInstInSdc false -keepFlatten true }
 catch { setDelayCalMode -engine aae }
 catch { setDelayCalMode -ignoreNetLoad false }
+catch { setPinAssignMode -pinEditInBatch false }
 catch { setImportMode -discardFloatingVNets false }
 catch { setImportMode -keepEmptyModule true }
 catch { setAddStripeMode -stacked_via_bottom_layer 7 }
