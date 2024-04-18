@@ -9,7 +9,7 @@ library(stdcells) {
   leakage_power_unit : "1nW";
   capacitive_load_unit (1,pf);
 
-  cell (INV) {
+  cell (inv) {
     area : 0.5427;
     pin(A)  {
       direction : input;
@@ -35,7 +35,7 @@ library(stdcells) {
     }
   }
 
-  cell (NAND2) {
+  cell (nand2) {
     area : 1.1344;
     pin(A)  {
       direction : input;
@@ -64,7 +64,7 @@ library(stdcells) {
     }
   }
 
-  cell (AND2) {
+  cell (and2) {
     area : 1.1344;
     pin(A)  {
       direction : input;
@@ -93,7 +93,7 @@ library(stdcells) {
     }
   }
 
-  cell (AOI21) {
+  cell (aoi21) {
     area : 1.1344;
     pin(A)  {
       direction : input;
@@ -125,7 +125,7 @@ library(stdcells) {
     }
   }
 
-  cell (BUF) {
+  cell (buf) {
     area : 0.8291;
     pin(A)  {
       direction : input;
@@ -151,7 +151,7 @@ library(stdcells) {
     }
   }
 
-  cell (DFF) {
+  cell (dff) {
     area : 6.5463;
     ff (I_Q,I_QN) {
       next_state : "D";
@@ -206,13 +206,13 @@ library(stdcells) {
     }
   }
 
-  cell (DLATCH) {
+  cell (dlatch) {
     area : 3.6821;
     latch (I_Q,I_QN) {
       data_in : "D";
-      enable : "CLK";
+      enable : "EN";
     }
-    pin(CLK)  {
+    pin(EN)  {
       direction : input;
       clock : true;
     }
@@ -261,7 +261,7 @@ library(stdcells) {
     }
   }
 
-  cell (MUX2) {
+  cell (mux2) {
     area : 2.4499;
     pin(A)  {
       direction : input;
@@ -293,7 +293,7 @@ library(stdcells) {
     }
   }
 
-  cell (NOR2) {
+  cell (nor2) {
     area : 0.8291;
     pin(A)  {
       direction : input;
@@ -322,7 +322,7 @@ library(stdcells) {
     }
   }
 
-  cell (OAI21) {
+  cell (oai21) {
     area : 1.1457;
     pin(A)  {
       direction : input;
@@ -354,7 +354,7 @@ library(stdcells) {
     }
   }
 
-  cell (OR2) {
+  cell (or2) {
     area : 1.1457;
     pin(A)  {
       direction : input;
@@ -383,7 +383,7 @@ library(stdcells) {
     }
   }
 
-  cell (XNOR2) {
+  cell (xnor2) {
     area : 1.9296;
     pin(A)  {
       direction : input;
@@ -412,7 +412,7 @@ library(stdcells) {
     }
   }
 
-  cell (XOR2) {
+  cell (xor2) {
     area : 1.9221;
     pin(A)  {
       direction : input;

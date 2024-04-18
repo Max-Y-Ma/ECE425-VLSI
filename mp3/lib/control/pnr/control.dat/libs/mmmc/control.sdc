@@ -1,0 +1,1 @@
+/home/maxma2/Documents/Coursework/ece425/mp3/lib/control/synth/outputs/control.sdc

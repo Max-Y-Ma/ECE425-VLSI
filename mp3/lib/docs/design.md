@@ -59,8 +59,9 @@
 
 # Auto PnR Controller
 - ✅ Run Design Compiler on `controller.sv` to obtain the gate level netlist
-- ❌ Launch Innovus inside the `pnr` directory
+- ✅ Launch Innovus inside the `pnr` directory
 - ❌ Complete the `pnr.tcl` script using the `man <command>` pages
+    - `https://cornell-ece5745.github.io/ece5745-S02-back-end/`
 - ❌ Make a copy of the Virtuoso Library in preparation to import `Innovus GDS`
 - ❌ Import the generated `GFSII` file into Virtuoso
 

@@ -1,6 +1,6 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Abstract Options File
-;; Abstract_Generator version sub-version  ICADVM20.1-64b.500.32  on Apr 17 22:39:53 2024
+;; Abstract_Generator version sub-version  ICADVM20.1-64b.500.32  on Apr 17 22:08:15 2024
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 absSetOption( "DateTimeLog"                "false")
@@ -210,7 +210,7 @@ absSetBinOption( "Core" "AbstractAdjustExcludeNetNames" "^((V(DD|CC))|(v(dd|cc))
 absSetBinOption( "Core" "AbstractAdjustFollowRingPin" "false")
 absSetBinOption( "Core" "AbstractAdjustPowerGeometryGroups" "single")
 absSetBinOption( "Core" "AbstractAdjustPowerGeometryGroupsEastWest" "none")
-absSetBinOption( "Core" "AbstractAdjustPowerRailOp"  "vdd! abutment 0.2 1.3075 vss! abutment 0.2 0")
+absSetBinOption( "Core" "AbstractAdjustPowerRailOp"  "")
 absSetBinOption( "Core" "AbstractAdjustPowerRailOpTable" "")
 absSetBinOption( "Core" "AbstractAdjustPowerRailWidth" "0")
 absSetBinOption( "Core" "AbstractAdjustEdgeTowardsCore" "north")
@@ -263,7 +263,7 @@ absSetBinOption( "Core" "AbstractAdjustStairStepCover" "partial")
 absSetBinOption( "Core" "AbstractAdjustStairStepWidth" "0.0325")
 absSetBinOption( "Core" "AbstractFractureRectilinearShapes" "false")
 absSetBinOption( "Core" "AbstractRemoveRedundantBlockages" "false")
-absSetBinOption( "Core" "AbstractSiteName"           "CoreSite")
+absSetBinOption( "Core" "AbstractSiteName"           "")
 absSetBinOption( "Core" "AbstractSiteNameDefine"     "")
 absSetBinOption( "Core" "AbstractSiteArrayPattern"   "false")
 absSetBinOption( "Core" "AbstractSiteArrayCells"     "")
