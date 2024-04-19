@@ -4,4 +4,4 @@ all:
 
 .PHONY: clean
 clean:
-	rm *.log stdcells.db lc_output.txt 
+	rm *.log regfile.db lc_output.txt 

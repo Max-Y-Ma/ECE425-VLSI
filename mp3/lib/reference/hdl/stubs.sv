@@ -54,7 +54,6 @@ module regfile_stub(
     input   logic           rd_mux_out,
     output  logic           rs1_rdata,
     output  logic           rs2_rdata,
-    output  logic   [31:0]  rf_data
 );
     assign rs1_rdata = |(rs1_sel & rf_data);
     assign rs2_rdata = |(rs2_sel & rf_data);

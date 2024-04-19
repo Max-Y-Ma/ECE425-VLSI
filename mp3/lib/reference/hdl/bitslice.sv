@@ -48,8 +48,6 @@ module bitslice (
     output  logic           cmp_lt_out,
     output  logic           cmp_src_a,
     output  logic           cmp_src_b,
-
-    output  logic  [31:0]   rf_data
 );
 
             logic           alu_mux_1_out;
