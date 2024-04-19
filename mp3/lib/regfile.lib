@@ -35,9 +35,13 @@ library(regfile) {
 
   cell (regfile) {
     area : 124.9189;
-    latch_bank (IQ, IQN, 32) {
-      enable : "rd_sel" ;
-      data_in : "rd_mux_out" ;
+    latch_bank (IQL, IQLN, 32) {
+      enable : "rd_sel";
+      data_in : "rd_mux_out";
+    }
+    ff_bank (IQF, IQFN, 32) {
+      next_state : "rf_latch";
+      clocked_on : "clk";
     }
     pin(clk)  {
       direction : input;
@@ -58,10 +62,47 @@ library(regfile) {
       bus_type : regfile_sel;
       direction : input;
     }
+    bus (rf_latch) {
+      bus_type : regfile_data;
+      direction : internal;
+      function : "IQL";
+      timing() {
+        related_pin : "rd_sel";
+        timing_type : rising_edge;
+        cell_rise(scalar) {
+          values("0.0");
+        }
+        rise_transition(scalar) {
+          values("0.0");
+        }
+        cell_fall(scalar) {
+          values("0.0");
+        }
+        fall_transition(scalar) {
+          values("0.0");
+        }
+      }
+    }
     bus (rf_data) {
       bus_type : regfile_data;
       direction : internal;
-      function : "IQ";
+      function : "IQF";
+      timing() {
+        related_pin : "clk";
+        timing_type : rising_edge;
+        cell_rise(scalar) {
+          values("0.0");
+        }
+        rise_transition(scalar) {
+          values("0.0");
+        }
+        cell_fall(scalar) {
+          values("0.0");
+        }
+        fall_transition(scalar) {
+          values("0.0");
+        }
+      }
     }
     bus(rs1_rdata)  {
       bus_type : regfile_out;

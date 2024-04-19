@@ -27,26 +27,26 @@ Warning: Line 1, The attribute 'input_threshold_pct_rise' is not specified. (LBD
 Warning: Line 1, The attribute 'output_threshold_pct_rise' is not specified. (LBDB-605)
 Warning: Line 1, The attribute 'input_threshold_pct_fall' is not specified. (LBDB-605)
 Warning: Line 1, The attribute 'output_threshold_pct_fall' is not specified. (LBDB-605)
-Warning: Line 42, Cell 'regfile', pin 'clk', The 'capacitance' attribute is not specified. Using 1.00. (LBDB-172)
-Warning: Line 46, Cell 'regfile', pin 'rd_mux_out', The 'capacitance' attribute is not specified. Using 1.00. (LBDB-172)
-Warning: Line 49, Cell 'regfile', pin 'rs1_sel[31]', The 'capacitance' attribute is not specified. Using 1.00. (LBDB-172)
-Warning: Line 53, Cell 'regfile', pin 'rs2_sel[31]', The 'capacitance' attribute is not specified. Using 1.00. (LBDB-172)
-Warning: Line 57, Cell 'regfile', pin 'rd_sel[31]', The 'capacitance' attribute is not specified. Using 1.00. (LBDB-172)
-Warning: Line 66, Cell 'regfile', The 'rs1_rdata' Pin/bus on the 'regfile' cell has no 'function' attribute.
-        The cell becomes a black box. (LIBG-16)
-Warning: Line 73, Cell 'regfile', The 'rs2_rdata' Pin/bus on the 'regfile' cell has no 'function' attribute.
-        The cell becomes a black box. (LIBG-16)
-Warning: Line 36, Cell 'regfile', Failed to recognize the functionality of cell 'regfile'. (LIBG-10)
+Warning: Line 46, Cell 'regfile', pin 'clk', The 'capacitance' attribute is not specified. Using 1.00. (LBDB-172)
+Warning: Line 50, Cell 'regfile', pin 'rd_mux_out', The 'capacitance' attribute is not specified. Using 1.00. (LBDB-172)
+Warning: Line 53, Cell 'regfile', pin 'rs1_sel[31]', The 'capacitance' attribute is not specified. Using 1.00. (LBDB-172)
+Warning: Line 57, Cell 'regfile', pin 'rs2_sel[31]', The 'capacitance' attribute is not specified. Using 1.00. (LBDB-172)
+Warning: Line 61, Cell 'regfile', pin 'rd_sel[31]', The 'capacitance' attribute is not specified. Using 1.00. (LBDB-172)
+Error: Line 111, Cell 'regfile', A bad 'IQF' pin name in the 'regfile' cell. (LIBG-3)
+Error: Line 118, Cell 'regfile', A bad 'IQF' pin name in the 'regfile' cell. (LIBG-3)
+Error: Line 0, Cell 'regfile', An invalid '(IQF********************************&rs1_sel[0])|(IQF*******************************&rs1_sel[1])|(IQF******************************&rs1_sel[2])|(IQF*****************************&rs1_sel[3])|(IQF****************************&rs1_sel[4])|(IQF***************************&rs1_sel[5])|(IQF**************************&rs1_sel[6])|(IQF*************************&rs1_sel[7])|(IQF************************&rs1_sel[8])|(IQF***********************&rs1_sel[9])|(IQF**********************&rs1_sel[10])|(IQF*********************&rs1_sel[11])|(IQF********************&rs1_sel[12])|(IQF*******************&rs1_sel[13])|(IQF******************&rs1_sel[14])|(IQF*****************&rs1_sel[15])|(IQF****************&rs1_sel[16])|(IQF***************&rs1_sel[17])|(IQF**************&rs1_sel[18])|(IQF*************&rs1_sel[19])|(IQF************&rs1_sel[20])|(IQF***********&rs1_sel[21])|(IQF**********&rs1_sel[22])|(IQF*********&rs1_sel[23])|(IQF********&rs1_sel[24])|(IQF*******&rs1_sel[25])|(IQF******&rs1_sel[26])|(IQF*****&rs1_sel[27])|(IQF****&rs1_sel[28])|(IQF***&rs1_sel[29])|(IQF**&rs1_sel[30])|(IQF*&rs1_sel[31])' function string in the 'regfile' cell. (LIBG-2)
+Error: Line 0, Cell 'regfile', An invalid '(IQF********************************&rs2_sel[0])|(IQF*******************************&rs2_sel[1])|(IQF******************************&rs2_sel[2])|(IQF*****************************&rs2_sel[3])|(IQF****************************&rs2_sel[4])|(IQF***************************&rs2_sel[5])|(IQF**************************&rs2_sel[6])|(IQF*************************&rs2_sel[7])|(IQF************************&rs2_sel[8])|(IQF***********************&rs2_sel[9])|(IQF**********************&rs2_sel[10])|(IQF*********************&rs2_sel[11])|(IQF********************&rs2_sel[12])|(IQF*******************&rs2_sel[13])|(IQF******************&rs2_sel[14])|(IQF*****************&rs2_sel[15])|(IQF****************&rs2_sel[16])|(IQF***************&rs2_sel[17])|(IQF**************&rs2_sel[18])|(IQF*************&rs2_sel[19])|(IQF************&rs2_sel[20])|(IQF***********&rs2_sel[21])|(IQF**********&rs2_sel[22])|(IQF*********&rs2_sel[23])|(IQF********&rs2_sel[24])|(IQF*******&rs2_sel[25])|(IQF******&rs2_sel[26])|(IQF*****&rs2_sel[27])|(IQF****&rs2_sel[28])|(IQF***&rs2_sel[29])|(IQF**&rs2_sel[30])|(IQF*&rs2_sel[31])' function string in the 'regfile' cell. (LIBG-2)
+Error: Line 0, Cell 'regfile', A bad 'IQF' pin name in the 'regfile' cell. (LIBG-3)
 Warning: Line 36, Cell 'regfile', Cell(regfile): The function cannot be recognized 
         during functional optimization by Design Compiler. (LIBG-205)
-Technology library 'regfile' read successfully
-1
+Warning: Line 36, Cell 'regfile', Failed to recognize the functionality of cell 'regfile'. (LIBG-10)
+0
 write_lib regfile
-Wrote the 'regfile' library to 'regfile.db' successfully
-1
+Warning: The 'regfile' library has not been read in yet. (UIL-3)
+0
 exit
-Maximum memory usage for this session: 88.58 MB
-CPU usage for this session:      2 seconds (  0.00 hours)
+Maximum memory usage for this session: 89.27 MB
+CPU usage for this session:      1 seconds (  0.00 hours)
 Elapsed time for this session:      3 seconds (  0.00 hours)
 Thank you for using Library Compiler.
 
