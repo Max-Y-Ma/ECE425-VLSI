@@ -1380,7 +1380,7 @@ MACRO regfile
   CLASS CORE ;
   ORIGIN 0 0 ;
   FOREIGN regfile 0 0 ;
-  SIZE 88.91 BY 1.405 ;
+  SIZE 88.91 BY 1.3075 ;
   SYMMETRY X Y ;
   SITE CoreSite ;
   PIN clk

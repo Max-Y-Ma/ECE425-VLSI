@@ -41,7 +41,7 @@ init_design
 connectGlobalNets
 
 # DONE floorplan your design. Put the size of your chip that you want here.
-floorPlan -site CoreSite -s 130 130 10 10 10 10
+floorPlan -site CoreSite -s 90 90 10 10 10 10
 
 # create the horizontal vdd! and vss! wires used by the standard cells.
 sroute -allowJogging 0 -allowLayerChange 0 -crossoverViaLayerRange { metal7 metal1 } -layerChangeRange { metal7 metal1 } -nets { vss! vdd! }
@@ -62,8 +62,39 @@ addStripe -nets {vss! vdd!} -layer metal8 -direction vertical -width 0.4 -spacin
 # DONE restrict routing to only metal 6
 setDesignMode -bottomRoutingLayer metal1 -topRoutingLayer metal6
 
-# TODO for the regfile part, place the regfile marco
-# placeInstance ...
+# DONE for the regfile part, place the regfile macro
+placeInstance datapath/bitslices[0].bitslice/regfile 0 0 -softFixed
+placeInstance datapath/bitslices[1].bitslice/regfile 0 2 -softFixed
+placeInstance datapath/bitslices[2].bitslice/regfile 0 4 -softFixed
+placeInstance datapath/bitslices[3].bitslice/regfile 0 6 -softFixed
+placeInstance datapath/bitslices[4].bitslice/regfile 0 8 -softFixed
+placeInstance datapath/bitslices[5].bitslice/regfile 0 10 -softFixed
+placeInstance datapath/bitslices[6].bitslice/regfile 0 12 -softFixed
+placeInstance datapath/bitslices[7].bitslice/regfile 0 14 -softFixed
+placeInstance datapath/bitslices[8].bitslice/regfile 0 16 -softFixed
+placeInstance datapath/bitslices[9].bitslice/regfile 0 18 -softFixed
+placeInstance datapath/bitslices[10].bitslice/regfile 0 20 -softFixed
+placeInstance datapath/bitslices[11].bitslice/regfile 0 22 -softFixed
+placeInstance datapath/bitslices[12].bitslice/regfile 0 24 -softFixed
+placeInstance datapath/bitslices[13].bitslice/regfile 0 26 -softFixed
+placeInstance datapath/bitslices[14].bitslice/regfile 0 28 -softFixed
+placeInstance datapath/bitslices[15].bitslice/regfile 0 30 -softFixed
+placeInstance datapath/bitslices[16].bitslice/regfile 0 32 -softFixed
+placeInstance datapath/bitslices[17].bitslice/regfile 0 34 -softFixed
+placeInstance datapath/bitslices[18].bitslice/regfile 0 36 -softFixed
+placeInstance datapath/bitslices[19].bitslice/regfile 0 38 -softFixed
+placeInstance datapath/bitslices[20].bitslice/regfile 0 40 -softFixed
+placeInstance datapath/bitslices[21].bitslice/regfile 0 42 -softFixed
+placeInstance datapath/bitslices[22].bitslice/regfile 0 44 -softFixed
+placeInstance datapath/bitslices[23].bitslice/regfile 0 46 -softFixed
+placeInstance datapath/bitslices[24].bitslice/regfile 0 48 -softFixed
+placeInstance datapath/bitslices[25].bitslice/regfile 0 50 -softFixed
+placeInstance datapath/bitslices[26].bitslice/regfile 0 52 -softFixed
+placeInstance datapath/bitslices[27].bitslice/regfile 0 54 -softFixed
+placeInstance datapath/bitslices[28].bitslice/regfile 0 56 -softFixed
+placeInstance datapath/bitslices[29].bitslice/regfile 0 58 -softFixed
+placeInstance datapath/bitslices[30].bitslice/regfile 0 60 -softFixed
+placeInstance datapath/bitslices[31].bitslice/regfile 0 62 -softFixed
 
 # DONE specify where are the pins
 setPinAssignMode -pinEditInBatch true
