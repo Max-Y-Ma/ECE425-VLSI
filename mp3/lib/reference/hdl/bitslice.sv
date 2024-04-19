@@ -73,19 +73,19 @@ module bitslice (
     shift           shift           (.*);
     cmp             cmp             (.*);
 
-    mux2 alu_mux_1(
+    MUX2 alu_mux_1(
         .a(rs1_rdata),
         .b(pc),
         .s(alu_mux_1_sel),
         .z(alu_mux_1_out)
     );
-    mux2 alu_mux_2(
+    MUX2 alu_mux_2(
         .a(rs2_after_inv),
         .b(imm),
         .s(alu_mux_2_sel),
         .z(alu_mux_2_out)
     );
-    mux2 cmp_mux(
+    MUX2 cmp_mux(
         .a(rs2_rdata),
         .b(imm),
         .s(cmp_mux_sel),

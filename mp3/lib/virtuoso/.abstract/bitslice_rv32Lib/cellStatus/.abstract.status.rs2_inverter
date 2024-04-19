@@ -1,0 +1,5 @@
+cUiSetViewStatus {rs2_inverter} {layout} {1}
+cUiSetViewStatus {rs2_inverter} {logical} {0}
+cUiSetViewStatus {rs2_inverter} {abstract.pin} {0}
+cUiSetViewStatus {rs2_inverter} {abstract.ext} {0}
+cUiSetViewStatus {rs2_inverter} {abstract} {0}

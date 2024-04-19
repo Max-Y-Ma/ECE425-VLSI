@@ -1,0 +1,5 @@
+cUiSetViewStatus {pcadder} {layout} {1}
+cUiSetViewStatus {pcadder} {logical} {0}
+cUiSetViewStatus {pcadder} {abstract.pin} {0}
+cUiSetViewStatus {pcadder} {abstract.ext} {0}
+cUiSetViewStatus {pcadder} {abstract} {0}

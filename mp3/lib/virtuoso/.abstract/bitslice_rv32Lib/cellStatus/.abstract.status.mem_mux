@@ -1,0 +1,5 @@
+cUiSetViewStatus {mem_mux} {layout} {1}
+cUiSetViewStatus {mem_mux} {logical} {0}
+cUiSetViewStatus {mem_mux} {abstract.pin} {0}
+cUiSetViewStatus {mem_mux} {abstract.ext} {0}
+cUiSetViewStatus {mem_mux} {abstract} {0}

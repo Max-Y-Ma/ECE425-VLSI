@@ -1,0 +1,55 @@
+ 
+                             Library Compiler (TM)
+                                 DesignWare (R)
+
+               Version R-2020.09-SP5 for linux64 - Apr 14, 2021 
+
+                    Copyright (c) 1988 - 2021 Synopsys, Inc.
+   This software and the associated documentation are proprietary to Synopsys,
+ Inc. This software may only be used in accordance with the terms and conditions
+ of a written license agreement with Synopsys, Inc. All other use, reproduction,
+            or distribution of this software is strictly prohibited.
+
+Initializing...
+read_lib  ../regfile.lib
+Reading '/home/maxma2/Documents/Coursework/ece425/mp3/lib/regfile.lib' ...
+Warning: Line 1, The 'default_fanout_load' attribute is not specified. Using 1.00. (LBDB-172)
+Warning: Line 1, The 'default_inout_pin_cap' attribute is not specified. Using 1.00. (LBDB-172)
+Warning: Line 1, The 'default_input_pin_cap' attribute is not specified. Using 1.00. (LBDB-172)
+Warning: Line 1, The 'default_output_pin_cap' attribute is not specified. Using 0.00. (LBDB-172)
+Warning: Line 1, The default_operating_conditions is not defined. operating_conditions "nom_pvt" is created 
+        and set as the default_operating_conditions. (LBDB-662)
+Warning: Line 1, The attribute 'slew_lower_threshold_pct_rise' is not specified. (LBDB-605)
+Warning: Line 1, The attribute 'slew_upper_threshold_pct_rise' is not specified. (LBDB-605)
+Warning: Line 1, The attribute 'slew_lower_threshold_pct_fall' is not specified. (LBDB-605)
+Warning: Line 1, The attribute 'slew_upper_threshold_pct_fall' is not specified. (LBDB-605)
+Warning: Line 1, The attribute 'input_threshold_pct_rise' is not specified. (LBDB-605)
+Warning: Line 1, The attribute 'output_threshold_pct_rise' is not specified. (LBDB-605)
+Warning: Line 1, The attribute 'input_threshold_pct_fall' is not specified. (LBDB-605)
+Warning: Line 1, The attribute 'output_threshold_pct_fall' is not specified. (LBDB-605)
+Warning: Line 27, Cell 'regfile', pin 'clk', The 'capacitance' attribute is not specified. Using 1.00. (LBDB-172)
+Warning: Line 31, Cell 'regfile', pin 'rd_mux_out', The 'capacitance' attribute is not specified. Using 1.00. (LBDB-172)
+Warning: Line 34, Cell 'regfile', pin 'rs1_sel[31]', The 'capacitance' attribute is not specified. Using 1.00. (LBDB-172)
+Warning: Line 38, Cell 'regfile', pin 'rs2_sel[31]', The 'capacitance' attribute is not specified. Using 1.00. (LBDB-172)
+Warning: Line 42, Cell 'regfile', pin 'rd_sel[31]', The 'capacitance' attribute is not specified. Using 1.00. (LBDB-172)
+Warning: Line 34, Cell 'regfile', The 'rs1_sel[31]' pin/bus is unused in the 'regfile' cell.
+ (LIBG-37)
+Warning: Line 38, Cell 'regfile', The 'rs2_sel[31]' pin/bus is unused in the 'regfile' cell.
+ (LIBG-37)
+Warning: Line 42, Cell 'regfile', The 'rd_sel[31]' pin/bus is unused in the 'regfile' cell.
+ (LIBG-37)
+Information: Line 21, Cell 'regfile', Complex function sequential cell will skip
+ sequential cell timing consistency check. (LIBG-275)
+Warning: Line 21, Cell 'regfile' contains unused input pin(s).
+        It is labeled dont_use and dont_touch. (LIBG-211)
+Technology library 'stdcells' read successfully
+1
+write_lib regfile
+Warning: The 'regfile' library has not been read in yet. (UIL-3)
+0
+exit
+Maximum memory usage for this session: 83.33 MB
+CPU usage for this session:      1 seconds (  0.00 hours)
+Elapsed time for this session:      4 seconds (  0.00 hours)
+Thank you for using Library Compiler.
+

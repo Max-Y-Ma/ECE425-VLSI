@@ -1,0 +1,6 @@
+cUiSelectCellP {regfile}
+cUiSetViewStatus {regfile} {layout} {1}
+cUiSetViewStatus {regfile} {logical} {0}
+cUiSetViewStatus {regfile} {abstract.pin} {1}
+cUiSetViewStatus {regfile} {abstract.ext} {1}
+cUiSetViewStatus {regfile} {abstract} {3}

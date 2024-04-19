@@ -1,0 +1,5 @@
+cUiSetViewStatus {bitslice} {layout} {1}
+cUiSetViewStatus {bitslice} {logical} {0}
+cUiSetViewStatus {bitslice} {abstract.pin} {0}
+cUiSetViewStatus {bitslice} {abstract.ext} {0}
+cUiSetViewStatus {bitslice} {abstract} {0}

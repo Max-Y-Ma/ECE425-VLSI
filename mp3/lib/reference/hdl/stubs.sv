@@ -46,7 +46,7 @@ module pcadder(
     assign pcp4     = add_temp[0];
 endmodule
 
-module regfile(
+module regfile_stub(
     input   logic           clk,
     input   logic   [31:0]  rd_sel,
     input   logic   [31:0]  rs1_sel,
@@ -91,7 +91,7 @@ module rs2_inverter(
     assign rs2_after_inv = rs2_rdata ^ alu_inv_rs2;
 endmodule
 
-module mux2 (
+module MUX2 (
     input   logic           a, b, s,
     output  logic           z
 );

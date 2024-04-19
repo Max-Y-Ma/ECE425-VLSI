@@ -6,11 +6,11 @@
 LockStakeVersion               1.1
 LoginName                      maxma2
 HostName                       dcl-l440-28.ews.illinois.edu
-ProcessIdentifier              76552
-ProcessCreationTime_UTC        1713462235
-ProcessCreationTime_Readable   Thu Apr 18 12:43:55 2024 CDT
+ProcessIdentifier              282460
+ProcessCreationTime_UTC        1713484452
+ProcessCreationTime_Readable   Thu Apr 18 18:54:12 2024 CDT
 AppIdentifier                  /software/cadence-2023-05/ICADVM201/tools/dfII/bin/64bit/libManager
 OSType                         lnx86
 ReasonForPlacingEditLock       log file
 FilePathUsedToEditLock         /home/maxma2/Documents/Coursework/ece425/mp3/lib/virtuoso/libManager.log
-TimeEditLocked                 Thu Apr 18 12:43:55 2024 CDT
+TimeEditLocked                 Thu Apr 18 18:54:12 2024 CDT

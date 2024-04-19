@@ -1,0 +1,5 @@
+cUiSetViewStatus {datapath} {layout} {1}
+cUiSetViewStatus {datapath} {logical} {0}
+cUiSetViewStatus {datapath} {abstract.pin} {0}
+cUiSetViewStatus {datapath} {abstract.ext} {0}
+cUiSetViewStatus {datapath} {abstract} {0}
