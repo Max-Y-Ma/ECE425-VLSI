@@ -47,7 +47,7 @@ module bitslice (
     output  logic           cmp_eq_out,
     output  logic           cmp_lt_out,
     output  logic           cmp_src_a,
-    output  logic           cmp_src_b,
+    output  logic           cmp_src_b
 );
 
             logic           alu_mux_1_out;

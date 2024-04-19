@@ -50,9 +50,6 @@ module datapath(
             logic   [31:0]      b_cmp_a;
             logic   [31:0]      b_cmp_b;
 
-            logic   [31:0][31:0] rf_data;
-            logic   [31:0]      real_rf_data[32];
-
     always_comb begin
         b_cmp_out           = {31'd0, cmp_out};
         b_alu_cin[0]        = alu_cin;
@@ -73,11 +70,6 @@ module datapath(
             for (int j = 0; j < 5; j++) begin
                 shift_in_from_right     [i][j] = (i-2**j <  0) ? 1'b0       : shift_out[i-2**j][j];
                 shift_in_from_left      [i][j] = (i+2**j > 31) ? shift_msb : shift_out[i+2**j][j];
-            end
-        end
-        for (int i = 0; i < 32; i++) begin
-            for (int j = 0; j < 32; j++) begin
-                real_rf_data[i][j] = rf_data[j][i];
             end
         end
     end
@@ -111,7 +103,6 @@ module datapath(
             .cmp_src_a                  (b_cmp_a[i]                     ),
             .cmp_src_b                  (b_cmp_b[i]                     ),
             .pc                         (imem_addr[i]                   ),
-            .rf_data                    (rf_data[i]                     ),
             .*
         );
     end endgenerate

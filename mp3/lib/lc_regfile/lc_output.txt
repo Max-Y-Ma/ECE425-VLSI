@@ -30,23 +30,44 @@ Warning: Line 1, The attribute 'output_threshold_pct_fall' is not specified. (LB
 Warning: Line 38, Cell 'regfile', pin 'clk', The 'capacitance' attribute is not specified. Using 1.00. (LBDB-172)
 Warning: Line 42, Cell 'regfile', pin 'rd_mux_out', The 'capacitance' attribute is not specified. Using 1.00. (LBDB-172)
 Warning: Line 45, Cell 'regfile', pin 'rd_sel[31]', The 'capacitance' attribute is not specified. Using 1.00. (LBDB-172)
-Warning: Line 74, Cell 'regfile', pin 'rs1_sel[31]', The 'capacitance' attribute is not specified. Using 1.00. (LBDB-172)
-Warning: Line 78, Cell 'regfile', pin 'rs2_sel[31]', The 'capacitance' attribute is not specified. Using 1.00. (LBDB-172)
-Warning: Line 82, Cell 'regfile', The 'rs1_rdata' Pin/bus on the 'regfile' cell has no 'function' attribute.
-        The cell becomes a black box. (LIBG-16)
-Warning: Line 89, Cell 'regfile', The 'rs2_rdata' Pin/bus on the 'regfile' cell has no 'function' attribute.
-        The cell becomes a black box. (LIBG-16)
-Warning: Line 36, Cell 'regfile', Failed to recognize the functionality of cell 'regfile'. (LIBG-10)
+Warning: Line 305, Cell 'regfile', pin 'rs1_sel[31]', The 'capacitance' attribute is not specified. Using 1.00. (LBDB-172)
+Warning: Line 309, Cell 'regfile', pin 'rs2_sel[31]', The 'capacitance' attribute is not specified. Using 1.00. (LBDB-172)
+Warning: Line 331, Cell 'inv', pin 'A', The 'capacitance' attribute is not specified. Using 1.00. (LBDB-172)
+Warning: Line 357, Cell 'nand2', pin 'A', The 'capacitance' attribute is not specified. Using 1.00. (LBDB-172)
+Warning: Line 360, Cell 'nand2', pin 'B', The 'capacitance' attribute is not specified. Using 1.00. (LBDB-172)
+Warning: Line 386, Cell 'aoi21', pin 'A', The 'capacitance' attribute is not specified. Using 1.00. (LBDB-172)
+Warning: Line 389, Cell 'aoi21', pin 'B', The 'capacitance' attribute is not specified. Using 1.00. (LBDB-172)
+Warning: Line 392, Cell 'aoi21', pin 'C', The 'capacitance' attribute is not specified. Using 1.00. (LBDB-172)
+Warning: Line 418, Cell 'buf', pin 'A', The 'capacitance' attribute is not specified. Using 1.00. (LBDB-172)
+Warning: Line 448, Cell 'dff', pin 'CLK', The 'capacitance' attribute is not specified. Using 1.00. (LBDB-172)
+Warning: Line 452, Cell 'dff', pin 'D', The 'capacitance' attribute is not specified. Using 1.00. (LBDB-172)
+Warning: Line 503, Cell 'dlatch', pin 'EN', The 'capacitance' attribute is not specified. Using 1.00. (LBDB-172)
+Warning: Line 507, Cell 'dlatch', pin 'D', The 'capacitance' attribute is not specified. Using 1.00. (LBDB-172)
+Warning: Line 554, Cell 'mux2', pin 'A', The 'capacitance' attribute is not specified. Using 1.00. (LBDB-172)
+Warning: Line 557, Cell 'mux2', pin 'B', The 'capacitance' attribute is not specified. Using 1.00. (LBDB-172)
+Warning: Line 560, Cell 'mux2', pin 'S', The 'capacitance' attribute is not specified. Using 1.00. (LBDB-172)
+Warning: Line 586, Cell 'nor2', pin 'A', The 'capacitance' attribute is not specified. Using 1.00. (LBDB-172)
+Warning: Line 589, Cell 'nor2', pin 'B', The 'capacitance' attribute is not specified. Using 1.00. (LBDB-172)
+Warning: Line 615, Cell 'oai21', pin 'A', The 'capacitance' attribute is not specified. Using 1.00. (LBDB-172)
+Warning: Line 618, Cell 'oai21', pin 'B', The 'capacitance' attribute is not specified. Using 1.00. (LBDB-172)
+Warning: Line 621, Cell 'oai21', pin 'C', The 'capacitance' attribute is not specified. Using 1.00. (LBDB-172)
+Warning: Line 647, Cell 'or2', pin 'A', The 'capacitance' attribute is not specified. Using 1.00. (LBDB-172)
+Warning: Line 650, Cell 'or2', pin 'B', The 'capacitance' attribute is not specified. Using 1.00. (LBDB-172)
+Warning: Line 676, Cell 'xnor2', pin 'A', The 'capacitance' attribute is not specified. Using 1.00. (LBDB-172)
+Warning: Line 679, Cell 'xnor2', pin 'B', The 'capacitance' attribute is not specified. Using 1.00. (LBDB-172)
+Warning: Line 705, Cell 'xor2', pin 'A', The 'capacitance' attribute is not specified. Using 1.00. (LBDB-172)
+Warning: Line 708, Cell 'xor2', pin 'B', The 'capacitance' attribute is not specified. Using 1.00. (LBDB-172)
 Warning: Line 36, Cell 'regfile', Cell(regfile): The function cannot be recognized 
         during functional optimization by Design Compiler. (LIBG-205)
-Technology library 'regfile' read successfully
+Warning: Line 36, Cell 'regfile', Failed to recognize the functionality of cell 'regfile'. (LIBG-10)
+Technology library 'stdcells' read successfully
 1
-write_lib regfile
-Wrote the 'regfile' library to 'regfile.db' successfully
+write_lib stdcells
+Wrote the 'stdcells' library to 'stdcells.db' successfully
 1
 exit
-Maximum memory usage for this session: 88.82 MB
-CPU usage for this session:      2 seconds (  0.00 hours)
+Maximum memory usage for this session: 89.01 MB
+CPU usage for this session:      3 seconds (  0.00 hours)
 Elapsed time for this session:      3 seconds (  0.00 hours)
 Thank you for using Library Compiler.
 

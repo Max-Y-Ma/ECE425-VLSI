@@ -1,96 +1,128 @@
-pin (rf_data[0]) {
-	 function : "IQF0";
+ff (IQF0, IQFN0) {
+	 next_state : "rd_mux_out";
+	 clocked_on : "(clk)";
 }
-pin (rf_data[1]) {
-	 function : "IQF1";
+ff (IQF1, IQFN1) {
+	 next_state : "rd_mux_out";
+	 clocked_on : "(clk)";
 }
-pin (rf_data[2]) {
-	 function : "IQF2";
+ff (IQF2, IQFN2) {
+	 next_state : "rd_mux_out";
+	 clocked_on : "(clk)";
 }
-pin (rf_data[3]) {
-	 function : "IQF3";
+ff (IQF3, IQFN3) {
+	 next_state : "rd_mux_out";
+	 clocked_on : "(clk)";
 }
-pin (rf_data[4]) {
-	 function : "IQF4";
+ff (IQF4, IQFN4) {
+	 next_state : "rd_mux_out";
+	 clocked_on : "(clk)";
 }
-pin (rf_data[5]) {
-	 function : "IQF5";
+ff (IQF5, IQFN5) {
+	 next_state : "rd_mux_out";
+	 clocked_on : "(clk)";
 }
-pin (rf_data[6]) {
-	 function : "IQF6";
+ff (IQF6, IQFN6) {
+	 next_state : "rd_mux_out";
+	 clocked_on : "(clk)";
 }
-pin (rf_data[7]) {
-	 function : "IQF7";
+ff (IQF7, IQFN7) {
+	 next_state : "rd_mux_out";
+	 clocked_on : "(clk)";
 }
-pin (rf_data[8]) {
-	 function : "IQF8";
+ff (IQF8, IQFN8) {
+	 next_state : "rd_mux_out";
+	 clocked_on : "(clk)";
 }
-pin (rf_data[9]) {
-	 function : "IQF9";
+ff (IQF9, IQFN9) {
+	 next_state : "rd_mux_out";
+	 clocked_on : "(clk)";
 }
-pin (rf_data[10]) {
-	 function : "IQF10";
+ff (IQF10, IQFN10) {
+	 next_state : "rd_mux_out";
+	 clocked_on : "(clk)";
 }
-pin (rf_data[11]) {
-	 function : "IQF11";
+ff (IQF11, IQFN11) {
+	 next_state : "rd_mux_out";
+	 clocked_on : "(clk)";
 }
-pin (rf_data[12]) {
-	 function : "IQF12";
+ff (IQF12, IQFN12) {
+	 next_state : "rd_mux_out";
+	 clocked_on : "(clk)";
 }
-pin (rf_data[13]) {
-	 function : "IQF13";
+ff (IQF13, IQFN13) {
+	 next_state : "rd_mux_out";
+	 clocked_on : "(clk)";
 }
-pin (rf_data[14]) {
-	 function : "IQF14";
+ff (IQF14, IQFN14) {
+	 next_state : "rd_mux_out";
+	 clocked_on : "(clk)";
 }
-pin (rf_data[15]) {
-	 function : "IQF15";
+ff (IQF15, IQFN15) {
+	 next_state : "rd_mux_out";
+	 clocked_on : "(clk)";
 }
-pin (rf_data[16]) {
-	 function : "IQF16";
+ff (IQF16, IQFN16) {
+	 next_state : "rd_mux_out";
+	 clocked_on : "(clk)";
 }
-pin (rf_data[17]) {
-	 function : "IQF17";
+ff (IQF17, IQFN17) {
+	 next_state : "rd_mux_out";
+	 clocked_on : "(clk)";
 }
-pin (rf_data[18]) {
-	 function : "IQF18";
+ff (IQF18, IQFN18) {
+	 next_state : "rd_mux_out";
+	 clocked_on : "(clk)";
 }
-pin (rf_data[19]) {
-	 function : "IQF19";
+ff (IQF19, IQFN19) {
+	 next_state : "rd_mux_out";
+	 clocked_on : "(clk)";
 }
-pin (rf_data[20]) {
-	 function : "IQF20";
+ff (IQF20, IQFN20) {
+	 next_state : "rd_mux_out";
+	 clocked_on : "(clk)";
 }
-pin (rf_data[21]) {
-	 function : "IQF21";
+ff (IQF21, IQFN21) {
+	 next_state : "rd_mux_out";
+	 clocked_on : "(clk)";
 }
-pin (rf_data[22]) {
-	 function : "IQF22";
+ff (IQF22, IQFN22) {
+	 next_state : "rd_mux_out";
+	 clocked_on : "(clk)";
 }
-pin (rf_data[23]) {
-	 function : "IQF23";
+ff (IQF23, IQFN23) {
+	 next_state : "rd_mux_out";
+	 clocked_on : "(clk)";
 }
-pin (rf_data[24]) {
-	 function : "IQF24";
+ff (IQF24, IQFN24) {
+	 next_state : "rd_mux_out";
+	 clocked_on : "(clk)";
 }
-pin (rf_data[25]) {
-	 function : "IQF25";
+ff (IQF25, IQFN25) {
+	 next_state : "rd_mux_out";
+	 clocked_on : "(clk)";
 }
-pin (rf_data[26]) {
-	 function : "IQF26";
+ff (IQF26, IQFN26) {
+	 next_state : "rd_mux_out";
+	 clocked_on : "(clk)";
 }
-pin (rf_data[27]) {
-	 function : "IQF27";
+ff (IQF27, IQFN27) {
+	 next_state : "rd_mux_out";
+	 clocked_on : "(clk)";
 }
-pin (rf_data[28]) {
-	 function : "IQF28";
+ff (IQF28, IQFN28) {
+	 next_state : "rd_mux_out";
+	 clocked_on : "(clk)";
 }
-pin (rf_data[29]) {
-	 function : "IQF29";
+ff (IQF29, IQFN29) {
+	 next_state : "rd_mux_out";
+	 clocked_on : "(clk)";
 }
-pin (rf_data[30]) {
-	 function : "IQF30";
+ff (IQF30, IQFN30) {
+	 next_state : "rd_mux_out";
+	 clocked_on : "(clk)";
 }
-pin (rf_data[31]) {
-	 function : "IQF31";
+ff (IQF31, IQFN31) {
+	 next_state : "rd_mux_out";
+	 clocked_on : "(clk)";
 }

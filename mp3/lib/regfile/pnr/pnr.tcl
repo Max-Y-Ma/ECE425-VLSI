@@ -17,7 +17,7 @@ set init_verilog ../synth/outputs/$design_toplevel.v
 # when you add your regfile lef, it is here
 # if you want to supply more than one lef use the following syntax:
 # set init_lef_file "1.lef 2.lef"
-set init_lef_file ../../stdcells.lef
+set init_lef_file ../../regfile.lef
 
 # actually set the top level cell name
 set init_top_cell $design_toplevel

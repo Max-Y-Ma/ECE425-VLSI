@@ -1,4 +1,4 @@
-library(regfile) {
+library(stdcells) {
 
   delay_model : table_lookup;
 
@@ -46,30 +46,261 @@ library(regfile) {
       bus_type : regfile_sel;
       direction : input;
     }
-    ff_bank (IQ, IQN, 32) {
+    ff (IQF0, IQFN0) {
       next_state : "rd_mux_out";
       clocked_on : "(clk&rd_sel[0])";
     }
-    bus (rf_data) {
-      bus_type : regfile_data;
+    ff (IQF1, IQFN1) {
+      next_state : "rd_mux_out";
+      clocked_on : "(clk&rd_sel[1])";
+    }
+    ff (IQF2, IQFN2) {
+      next_state : "rd_mux_out";
+      clocked_on : "(clk&rd_sel[2])";
+    }
+    ff (IQF3, IQFN3) {
+      next_state : "rd_mux_out";
+      clocked_on : "(clk&rd_sel[3])";
+    }
+    ff (IQF4, IQFN4) {
+      next_state : "rd_mux_out";
+      clocked_on : "(clk&rd_sel[4])";
+    }
+    ff (IQF5, IQFN5) {
+      next_state : "rd_mux_out";
+      clocked_on : "(clk&rd_sel[5])";
+    }
+    ff (IQF6, IQFN6) {
+      next_state : "rd_mux_out";
+      clocked_on : "(clk&rd_sel[6])";
+    }
+    ff (IQF7, IQFN7) {
+      next_state : "rd_mux_out";
+      clocked_on : "(clk&rd_sel[7])";
+    }
+    ff (IQF8, IQFN8) {
+      next_state : "rd_mux_out";
+      clocked_on : "(clk&rd_sel[8])";
+    }
+    ff (IQF9, IQFN9) {
+      next_state : "rd_mux_out";
+      clocked_on : "(clk&rd_sel[9])";
+    }
+    ff (IQF10, IQFN10) {
+      next_state : "rd_mux_out";
+      clocked_on : "(clk&rd_sel[10])";
+    }
+    ff (IQF11, IQFN11) {
+      next_state : "rd_mux_out";
+      clocked_on : "(clk&rd_sel[11])";
+    }
+    ff (IQF12, IQFN12) {
+      next_state : "rd_mux_out";
+      clocked_on : "(clk&rd_sel[12])";
+    }
+    ff (IQF13, IQFN13) {
+      next_state : "rd_mux_out";
+      clocked_on : "(clk&rd_sel[13])";
+    }
+    ff (IQF14, IQFN14) {
+      next_state : "rd_mux_out";
+      clocked_on : "(clk&rd_sel[14])";
+    }
+    ff (IQF15, IQFN15) {
+      next_state : "rd_mux_out";
+      clocked_on : "(clk&rd_sel[15])";
+    }
+    ff (IQF16, IQFN16) {
+      next_state : "rd_mux_out";
+      clocked_on : "(clk&rd_sel[16])";
+    }
+    ff (IQF17, IQFN17) {
+      next_state : "rd_mux_out";
+      clocked_on : "(clk&rd_sel[17])";
+    }
+    ff (IQF18, IQFN18) {
+      next_state : "rd_mux_out";
+      clocked_on : "(clk&rd_sel[18])";
+    }
+    ff (IQF19, IQFN19) {
+      next_state : "rd_mux_out";
+      clocked_on : "(clk&rd_sel[19])";
+    }
+    ff (IQF20, IQFN20) {
+      next_state : "rd_mux_out";
+      clocked_on : "(clk&rd_sel[20])";
+    }
+    ff (IQF21, IQFN21) {
+      next_state : "rd_mux_out";
+      clocked_on : "(clk&rd_sel[21])";
+    }
+    ff (IQF22, IQFN22) {
+      next_state : "rd_mux_out";
+      clocked_on : "(clk&rd_sel[22])";
+    }
+    ff (IQF23, IQFN23) {
+      next_state : "rd_mux_out";
+      clocked_on : "(clk&rd_sel[23])";
+    }
+    ff (IQF24, IQFN24) {
+      next_state : "rd_mux_out";
+      clocked_on : "(clk&rd_sel[24])";
+    }
+    ff (IQF25, IQFN25) {
+      next_state : "rd_mux_out";
+      clocked_on : "(clk&rd_sel[25])";
+    }
+    ff (IQF26, IQFN26) {
+      next_state : "rd_mux_out";
+      clocked_on : "(clk&rd_sel[26])";
+    }
+    ff (IQF27, IQFN27) {
+      next_state : "rd_mux_out";
+      clocked_on : "(clk&rd_sel[27])";
+    }
+    ff (IQF28, IQFN28) {
+      next_state : "rd_mux_out";
+      clocked_on : "(clk&rd_sel[28])";
+    }
+    ff (IQF29, IQFN29) {
+      next_state : "rd_mux_out";
+      clocked_on : "(clk&rd_sel[29])";
+    }
+    ff (IQF30, IQFN30) {
+      next_state : "rd_mux_out";
+      clocked_on : "(clk&rd_sel[30])";
+    }
+    ff (IQF31, IQFN31) {
+      next_state : "rd_mux_out";
+      clocked_on : "(clk&rd_sel[31])";
+    }
+    pin (rf_data[0]) {
       direction : internal;
-      function : "IQ";
-      timing() {
-        related_pin : "clk";
-        timing_type : rising_edge;
-        cell_rise(scalar) {
-          values("0.0");
-        }
-        rise_transition(scalar) {
-          values("0.0");
-        }
-        cell_fall(scalar) {
-          values("0.0");
-        }
-        fall_transition(scalar) {
-          values("0.0");
-        }
-      }
+      function : "IQF0";
+    }
+    pin (rf_data[1]) {
+      direction : internal;
+      function : "IQF1";
+    }
+    pin (rf_data[2]) {
+      direction : internal;
+      function : "IQF2";
+    }
+    pin (rf_data[3]) {
+      direction : internal;
+      function : "IQF3";
+    }
+    pin (rf_data[4]) {
+      direction : internal;
+      function : "IQF4";
+    }
+    pin (rf_data[5]) {
+      direction : internal;
+      function : "IQF5";
+    }
+    pin (rf_data[6]) {
+      direction : internal;
+      function : "IQF6";
+    }
+    pin (rf_data[7]) {
+      direction : internal;
+      function : "IQF7";
+    }
+    pin (rf_data[8]) {
+      direction : internal;
+      function : "IQF8";
+    }
+    pin (rf_data[9]) {
+      direction : internal;
+      function : "IQF9";
+    }
+    pin (rf_data[10]) {
+      direction : internal;
+      function : "IQF10";
+    }
+    pin (rf_data[11]) {
+      direction : internal;
+      function : "IQF11";
+    }
+    pin (rf_data[12]) {
+      direction : internal;
+      function : "IQF12";
+    }
+    pin (rf_data[13]) {
+      direction : internal;
+      function : "IQF13";
+    }
+    pin (rf_data[14]) {
+      direction : internal;
+      function : "IQF14";
+    }
+    pin (rf_data[15]) {
+      direction : internal;
+      function : "IQF15";
+    }
+    pin (rf_data[16]) {
+      direction : internal;
+      function : "IQF16";
+    }
+    pin (rf_data[17]) {
+      direction : internal;
+      function : "IQF17";
+    }
+    pin (rf_data[18]) {
+      direction : internal;
+      function : "IQF18";
+    }
+    pin (rf_data[19]) {
+      direction : internal;
+      function : "IQF19";
+    }
+    pin (rf_data[20]) {
+      direction : internal;
+      function : "IQF20";
+    }
+    pin (rf_data[21]) {
+      direction : internal;
+      function : "IQF21";
+    }
+    pin (rf_data[22]) {
+      direction : internal;
+      function : "IQF22";
+    }
+    pin (rf_data[23]) {
+      direction : internal;
+      function : "IQF23";
+    }
+    pin (rf_data[24]) {
+      direction : internal;
+      function : "IQF24";
+    }
+    pin (rf_data[25]) {
+      direction : internal;
+      function : "IQF25";
+    }
+    pin (rf_data[26]) {
+      direction : internal;
+      function : "IQF26";
+    }
+    pin (rf_data[27]) {
+      direction : internal;
+      function : "IQF27";
+    }
+    pin (rf_data[28]) {
+      direction : internal;
+      function : "IQF28";
+    }
+    pin (rf_data[29]) {
+      direction : internal;
+      function : "IQF29";
+    }
+    pin (rf_data[30]) {
+      direction : internal;
+      function : "IQF30";
+    }
+    pin (rf_data[31]) {
+      direction : internal;
+      function : "IQF31";
     }
     bus(rs1_sel) {
       bus_type : regfile_sel;
@@ -91,6 +322,409 @@ library(regfile) {
       direction : output;
       pin(rs2_rdata[0]) {
         function : "((rf_data[0]&rs2_sel[0])|(rf_data[1]&rs2_sel[1])|(rf_data[2]&rs2_sel[2])|(rf_data[3]&rs2_sel[3])|(rf_data[4]&rs2_sel[4])|(rf_data[5]&rs2_sel[5])|(rf_data[6]&rs2_sel[6])|(rf_data[7]&rs2_sel[7])|(rf_data[8]&rs2_sel[8])|(rf_data[9]&rs2_sel[9])|(rf_data[10]&rs2_sel[10])|(rf_data[11]&rs2_sel[11])|(rf_data[12]&rs2_sel[12])|(rf_data[13]&rs2_sel[13])|(rf_data[14]&rs2_sel[14])|(rf_data[15]&rs2_sel[15])|(rf_data[16]&rs2_sel[16])|(rf_data[17]&rs2_sel[17])|(rf_data[18]&rs2_sel[18])|(rf_data[19]&rs2_sel[19])|(rf_data[20]&rs2_sel[20])|(rf_data[21]&rs2_sel[21])|(rf_data[22]&rs2_sel[22])|(rf_data[23]&rs2_sel[23])|(rf_data[24]&rs2_sel[24])|(rf_data[25]&rs2_sel[25])|(rf_data[26]&rs2_sel[26])|(rf_data[27]&rs2_sel[27])|(rf_data[28]&rs2_sel[28])|(rf_data[29]&rs2_sel[29])|(rf_data[30]&rs2_sel[30])|(rf_data[31]&rs2_sel[31]))";
+      }
+    }
+  }
+
+  cell (inv) {
+    area : 0.5427;
+    pin(A)  {
+      direction : input;
+    }
+    pin(Z)  {
+      direction : output;
+      function : "(!A)";
+      timing() {
+        related_pin : "A";
+        cell_rise(scalar) {
+          values("0.0");
+        }
+        rise_transition(scalar) {
+          values("0.0");
+        }
+        cell_fall(scalar) {
+          values("0.0");
+        }
+        fall_transition(scalar) {
+          values("0.0");
+        }
+      }
+    }
+  }
+
+  cell (nand2) {
+    area : 0.8291;
+    pin(A)  {
+      direction : input;
+    }
+    pin(B)  {
+      direction : input;
+    }
+    pin(Z)  {
+      direction : output;
+      function : "(!(A B))";
+      timing() {
+        related_pin : "A B";
+        cell_rise(scalar) {
+          values("0.0");
+        }
+        rise_transition(scalar) {
+          values("0.0");
+        }
+        cell_fall(scalar) {
+          values("0.0");
+        }
+        fall_transition(scalar) {
+          values("0.0");
+        }
+      }
+    }
+  }
+
+  cell (aoi21) {
+    area : 1.1344;
+    pin(A)  {
+      direction : input;
+    }
+    pin(B)  {
+      direction : input;
+    }
+    pin(C)  {
+      direction : input;
+    }
+    pin(Z)  {
+      direction : output;
+      function : "(!((A B)+C))";
+      timing() {
+        related_pin : "A B C";
+        cell_rise(scalar) {
+          values("0.0");
+        }
+        rise_transition(scalar) {
+          values("0.0");
+        }
+        cell_fall(scalar) {
+          values("0.0");
+        }
+        fall_transition(scalar) {
+          values("0.0");
+        }
+      }
+    }
+  }
+
+  cell (buf) {
+    area : 0.8291;
+    pin(A)  {
+      direction : input;
+    }
+    pin(Z)  {
+      direction : output;
+      function : "A";
+      timing() {
+        related_pin : "A";
+        cell_rise(scalar) {
+          values("0.0");
+        }
+        rise_transition(scalar) {
+          values("0.0");
+        }
+        cell_fall(scalar) {
+          values("0.0");
+        }
+        fall_transition(scalar) {
+          values("0.0");
+        }
+      }
+    }
+  }
+
+  cell (dff) {
+    area : 6.5463;
+    ff (I_Q,I_QN) {
+      next_state : "D";
+      clocked_on : "CLK";
+    }
+    pin(CLK)  {
+      direction : input;
+      clock : true;
+    }
+    pin(D)  {
+      direction : input;
+    }
+    pin(Q)  {
+      direction : output;
+      function : "I_Q";
+      timing() {
+        related_pin : "CLK";
+        timing_type : rising_edge;
+        cell_rise(scalar) {
+          values("0.0");
+        }
+        rise_transition(scalar) {
+          values("0.0");
+        }
+        cell_fall(scalar) {
+          values("0.0");
+        }
+        fall_transition(scalar) {
+          values("0.0");
+        }
+      }
+    }
+    pin(Qb)  {
+      direction : output;
+      function : "I_QN";
+      timing() {
+        related_pin : "CLK";
+        timing_type : rising_edge;
+        cell_rise(scalar) {
+          values("0.0");
+        }
+        rise_transition(scalar) {
+          values("0.0");
+        }
+        cell_fall(scalar) {
+          values("0.0");
+        }
+        fall_transition(scalar) {
+          values("0.0");
+        }
+      }
+    }
+  }
+
+  cell (dlatch) {
+    area : 3.6821;
+    latch (I_Q,I_QN) {
+      data_in : "D";
+      enable : "EN";
+    }
+    pin(EN)  {
+      direction : input;
+      clock : true;
+    }
+    pin(D)  {
+      direction : input;
+    }
+    pin(Q)  {
+      direction : output;
+      function : "I_Q";
+      timing() {
+        related_pin : "EN";
+        timing_type : rising_edge;
+        cell_rise(scalar) {
+          values("0.0");
+        }
+        rise_transition(scalar) {
+          values("0.0");
+        }
+        cell_fall(scalar) {
+          values("0.0");
+        }
+        fall_transition(scalar) {
+          values("0.0");
+        }
+      }
+    }
+    pin(Qb)  {
+      direction : output;
+      function : "I_QN";
+      timing() {
+        related_pin : "EN";
+        timing_type : rising_edge;
+        cell_rise(scalar) {
+          values("0.0");
+        }
+        rise_transition(scalar) {
+          values("0.0");
+        }
+        cell_fall(scalar) {
+          values("0.0");
+        }
+        fall_transition(scalar) {
+          values("0.0");
+        }
+      }
+    }
+  }
+
+  cell (mux2) {
+    area : 2.4499;
+    pin(A)  {
+      direction : input;
+    }
+    pin(B)  {
+      direction : input;
+    }
+    pin(S)  {
+      direction : input;
+    }
+    pin(Z)  {
+      direction : output;
+      function : "(!((S A) + (!S B)))";
+      timing() {
+        related_pin : "A B S";
+        cell_rise(scalar) {
+          values("0.0");
+        }
+        rise_transition(scalar) {
+          values("0.0");
+        }
+        cell_fall(scalar) {
+          values("0.0");
+        }
+        fall_transition(scalar) {
+          values("0.0");
+        }
+      }
+    }
+  }
+
+  cell (nor2) {
+    area : 0.8291;
+    pin(A)  {
+      direction : input;
+    }
+    pin(B)  {
+      direction : input;
+    }
+    pin(Z)  {
+      direction : output;
+      function : "(!(A+B))";
+      timing() {
+        related_pin : "A B";
+        cell_rise(scalar) {
+          values("0.0");
+        }
+        rise_transition(scalar) {
+          values("0.0");
+        }
+        cell_fall(scalar) {
+          values("0.0");
+        }
+        fall_transition(scalar) {
+          values("0.0");
+        }
+      }
+    }
+  }
+
+  cell (oai21) {
+    area : 1.1457;
+    pin(A)  {
+      direction : input;
+    }
+    pin(B)  {
+      direction : input;
+    }
+    pin(C)  {
+      direction : input;
+    }
+    pin(Z)  {
+      direction : output;
+      function : "(!((A+B) C))";
+      timing() {
+        related_pin : "A B C";
+        cell_rise(scalar) {
+          values("0.0");
+        }
+        rise_transition(scalar) {
+          values("0.0");
+        }
+        cell_fall(scalar) {
+          values("0.0");
+        }
+        fall_transition(scalar) {
+          values("0.0");
+        }
+      }
+    }
+  }
+
+  cell (or2) {
+    area : 1.1457;
+    pin(A)  {
+      direction : input;
+    }
+    pin(B)  {
+      direction : input;
+    }
+    pin(Z)  {
+      direction : output;
+      function : "(A+B)";
+      timing() {
+        related_pin : "A B";
+        cell_rise(scalar) {
+          values("0.0");
+        }
+        rise_transition(scalar) {
+          values("0.0");
+        }
+        cell_fall(scalar) {
+          values("0.0");
+        }
+        fall_transition(scalar) {
+          values("0.0");
+        }
+      }
+    }
+  }
+
+  cell (xnor2) {
+    area : 1.9296;
+    pin(A)  {
+      direction : input;
+    }
+    pin(B)  {
+      direction : input;
+    }
+    pin(Z)  {
+      direction : output;
+      function : "(!(A^B))";
+      timing() {
+        related_pin : "A B";
+        cell_rise(scalar) {
+          values("0.0");
+        }
+        rise_transition(scalar) {
+          values("0.0");
+        }
+        cell_fall(scalar) {
+          values("0.0");
+        }
+        fall_transition(scalar) {
+          values("0.0");
+        }
+      }
+    }
+  }
+
+  cell (xor2) {
+    area : 1.9221;
+    pin(A)  {
+      direction : input;
+    }
+    pin(B)  {
+      direction : input;
+    }
+    pin(Z)  {
+      direction : output;
+      function : "(A^B)";
+      timing() {
+        related_pin : "A B";
+        cell_rise(scalar) {
+          values("0.0");
+        }
+        rise_transition(scalar) {
+          values("0.0");
+        }
+        cell_fall(scalar) {
+          values("0.0");
+        }
+        fall_transition(scalar) {
+          values("0.0");
+        }
       }
     }
   }

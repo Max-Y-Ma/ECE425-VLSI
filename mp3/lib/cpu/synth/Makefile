@@ -3,7 +3,7 @@ SHELL=/bin/bash -o pipefail
 
 export HDL_SRCS = $(shell find $(PWD)/../../reference/hdl -name '*.sv')
 
-export STD_CELL_LIB=../../lc/stdcells.db
+export STD_CELL_LIB=../../lc_stdcell/stdcells.db
 
 .PHONY: synth
 synth: clean
