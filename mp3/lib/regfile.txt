@@ -1,0 +1,96 @@
+pin (rf_data[0]) {
+	 function : "IQF0";
+}
+pin (rf_data[1]) {
+	 function : "IQF1";
+}
+pin (rf_data[2]) {
+	 function : "IQF2";
+}
+pin (rf_data[3]) {
+	 function : "IQF3";
+}
+pin (rf_data[4]) {
+	 function : "IQF4";
+}
+pin (rf_data[5]) {
+	 function : "IQF5";
+}
+pin (rf_data[6]) {
+	 function : "IQF6";
+}
+pin (rf_data[7]) {
+	 function : "IQF7";
+}
+pin (rf_data[8]) {
+	 function : "IQF8";
+}
+pin (rf_data[9]) {
+	 function : "IQF9";
+}
+pin (rf_data[10]) {
+	 function : "IQF10";
+}
+pin (rf_data[11]) {
+	 function : "IQF11";
+}
+pin (rf_data[12]) {
+	 function : "IQF12";
+}
+pin (rf_data[13]) {
+	 function : "IQF13";
+}
+pin (rf_data[14]) {
+	 function : "IQF14";
+}
+pin (rf_data[15]) {
+	 function : "IQF15";
+}
+pin (rf_data[16]) {
+	 function : "IQF16";
+}
+pin (rf_data[17]) {
+	 function : "IQF17";
+}
+pin (rf_data[18]) {
+	 function : "IQF18";
+}
+pin (rf_data[19]) {
+	 function : "IQF19";
+}
+pin (rf_data[20]) {
+	 function : "IQF20";
+}
+pin (rf_data[21]) {
+	 function : "IQF21";
+}
+pin (rf_data[22]) {
+	 function : "IQF22";
+}
+pin (rf_data[23]) {
+	 function : "IQF23";
+}
+pin (rf_data[24]) {
+	 function : "IQF24";
+}
+pin (rf_data[25]) {
+	 function : "IQF25";
+}
+pin (rf_data[26]) {
+	 function : "IQF26";
+}
+pin (rf_data[27]) {
+	 function : "IQF27";
+}
+pin (rf_data[28]) {
+	 function : "IQF28";
+}
+pin (rf_data[29]) {
+	 function : "IQF29";
+}
+pin (rf_data[30]) {
+	 function : "IQF30";
+}
+pin (rf_data[31]) {
+	 function : "IQF31";
+}
