@@ -70,13 +70,13 @@
 - ✅ Export controller to Virtuoso and complete layout with datapath
 
 # Auto PnR Full CPU with only standard cell
-- ❌ Modify `pnr.tcl` to layout the entire CPU (controller + datapath)
-- ❌ Export to Virtuoso
+- ✅ Modify `pnr.tcl` to layout the entire CPU (controller + datapath)
+- ✅ Export to Virtuoso
 
 # Auto PnR Full CPU with your register file
-- ❌ Complete the provided `regfile.lib` 
-- ❌ Export `regfile.lef` from Virtuoso without exporting the technology information
-- ❌ Synthesize custom regfile by referencing same name as `regfile.lib` 
+- ✅ Complete the provided `regfile.lib` 
+- ✅ Export `regfile.lef` from Virtuoso without exporting the technology information
+- ✅ Synthesize custom regfile by referencing same name as `regfile.lib` 
     - Remove existing regfile stub
     - Compile `regfile.lib` to `.db` format
-- ❌ Modify `pnr.tcl` to layout the entire CPU (controller + datapath) and custom register file
+- ✅ Modify `pnr.tcl` to layout the entire CPU (controller + datapath) and custom register file
